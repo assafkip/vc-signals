@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "created": "2026-01-30",
+    "last_updated": "2026-01-30",
+    "description": "Cybersecurity-focused VC firms with evidence of security investment thesis",
+    "schema_version": "1.0"
+  },
+  "firms": [
+    {
+      "firm_name": "Cyberstarts",
+      "website": "https://cyberstarts.com",
+      "evidence_links": [
+        "https://cyberstarts.com/portfolio",
+        "https://techcrunch.com/tag/cyberstarts/"
+      ],
+      "focus_notes": "Security-native fund founded by Check Point alumni. Portfolio: Wiz, Armis, Island, Torq, Cyera. Tier A security specialist.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "Israel",
+      "aum_estimate": "$500M+",
+      "stage_focus": ["pre-seed", "seed"]
+    },
+    {
+      "firm_name": "YL Ventures",
+      "website": "https://ylventures.com",
+      "evidence_links": [
+        "https://ylventures.com/portfolio",
+        "https://www.helpnetsecurity.com/2025/12/09/holly-ventures-early-stage-cyber-innovation-fund/"
+      ],
+      "focus_notes": "Israeli cybersecurity-focused VC. Annual State of Cyber Nation report. John Brennan launched Holly Ventures ($33M solo cyber fund).",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "Israel/US",
+      "aum_estimate": "$400M+",
+      "stage_focus": ["seed"]
+    },
+    {
+      "firm_name": "Team8",
+      "website": "https://team8.vc",
+      "evidence_links": [
+        "https://team8.vc/companies",
+        "https://www.checkpoint.com/press-releases/check-point-software-announces-new-ceo-reports-strong-2024-second-quarter-results/"
+      ],
+      "focus_notes": "Security company builder founded by ex-Unit 8200 leadership. Co-founder Nadav Zafrir became Check Point CEO. Builder-investor model.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "Israel",
+      "aum_estimate": "$1B+",
+      "stage_focus": ["seed", "series-a"]
+    },
+    {
+      "firm_name": "Ballistic Ventures",
+      "website": "https://www.ballisticventures.com",
+      "evidence_links": [
+        "https://www.ballisticventures.com/portfolio",
+        "https://techcrunch.com/2022/03/09/ballistic-ventures-raises-300m-cybersecurity-fund/"
+      ],
+      "focus_notes": "Security-only fund from ex-Kleiner Perkins security partner Ted Schlein and Kevin Mandia. $300M+ AUM.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$300M+",
+      "stage_focus": ["seed", "series-a"]
+    },
+    {
+      "firm_name": "Rain Capital",
+      "website": "https://raincapital.vc",
+      "evidence_links": [
+        "https://raincapital.substack.com/p/rain-capital-september-insights"
+      ],
+      "focus_notes": "Security-focused fund by Chenxi Wang (former Forrester analyst). AI security thesis, three generations of enterprise AI evolution.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$100M+",
+      "stage_focus": ["pre-seed", "seed"]
+    },
+    {
+      "firm_name": "NightDragon",
+      "website": "https://nightdragon.com",
+      "evidence_links": [
+        "https://nightdragon.com/portfolio"
+      ],
+      "focus_notes": "Founded by Dave DeWalt (ex-FireEye/McAfee CEO). Security and safety technology focus.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$750M+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    },
+    {
+      "firm_name": "Ten Eleven Ventures",
+      "website": "https://teneeleven.com",
+      "evidence_links": [
+        "https://teneeleven.com/portfolio",
+        "https://www.govinfosecurity.com/ais-role-in-cybersecurity-vc-alex-doll-breaks-down-a-28138"
+      ],
+      "focus_notes": "Early dedicated cybersecurity VC. Alex Doll RSAC 2025 interview on AI security. Deep operator experience valued.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$500M+",
+      "stage_focus": ["seed", "series-a"]
+    },
+    {
+      "firm_name": "ForgePoint Capital",
+      "website": "https://forgepointcap.com",
+      "evidence_links": [
+        "https://forgepointcap.com/portfolio",
+        "https://forgepointcap.com/perspectives/maisa-why-we-invested/"
+      ],
+      "focus_notes": "Security-focused fund with Trident Capital roots. Maisa AI investment ($25M) for hallucination-resistant AI agents.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$1B+",
+      "stage_focus": ["seed", "series-a", "series-b"]
+    },
+    {
+      "firm_name": "Glilot Capital",
+      "website": "https://glilotcapital.com",
+      "evidence_links": [
+        "https://www.calcalistech.com/ctechnews/article/sj500f7dsle"
+      ],
+      "focus_notes": "Israeli cyber specialists. Raised $500M (Sept 2025) reaching $1B+ AUM. Kleinstein: 'GenAI will have 360-degree impact on cybersecurity.'",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "Israel",
+      "aum_estimate": "$1B+",
+      "stage_focus": ["seed", "series-a"]
+    },
+    {
+      "firm_name": "SYN Ventures",
+      "website": "https://synventures.com",
+      "evidence_links": [
+        "https://www.conifers.ai/resources/conifers-ai-raises-25-million-in-funding-from-syn-ventures",
+        "https://www.prnewswire.com/news-releases/aiceberg-secures-10-million-in-seed-funding-to-transform-ai-from-a-business-risk-to-a-competitive-advantage-302393452.html"
+      ],
+      "focus_notes": "Cyber-only fund by Jay Leek (ex-Blackstone CISO). SOC alert fatigue thesis. Led Conifers.ai ($25M), AIceberg ($10M).",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$300M+",
+      "stage_focus": ["seed"]
+    },
+    {
+      "firm_name": "Boldstart Ventures",
+      "website": "https://boldstart.vc",
+      "evidence_links": [
+        "https://boldstart.vc/news/announcing-boldstart-fund-vii-inception-reloaded-250m-to-build-the-autonomous-enterprise/",
+        "https://boldstart.vc/news/from-inception-to-ai-security-leader-protectais-journey-to-exit-to-palo-alto-networks/"
+      ],
+      "focus_notes": "$250M Fund VII (2025) for 'autonomous enterprise'. Protect AI exit to Palo Alto ~$700M. Portfolio: Snyk, BigID, CrewAI.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$1.1B",
+      "stage_focus": ["pre-seed", "seed"]
+    },
+    {
+      "firm_name": "Greylock",
+      "website": "https://greylock.com",
+      "evidence_links": [
+        "https://greylock.com/portfolio-news/introducing-tenzai-autonomous-ai-hackers/",
+        "https://blog.7ai.com/302-days-from-stealth-to-the-largest-cybersecurity-series-a-in-history"
+      ],
+      "focus_notes": "Asheem Chandna 22-yr track record, zero losses. Led Tenzai $75M ('Autonomous AI Hackers'). 7AI board seat. Palo Alto Networks board.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$5B+",
+      "stage_focus": ["seed", "series-a"]
+    },
+    {
+      "firm_name": "Index Ventures",
+      "website": "https://indexventures.com",
+      "evidence_links": [
+        "https://www.indexventures.com/perspectives/securitys-agentic-era-starts-here-our-investment-in-7ai/",
+        "https://www.businesswire.com/news/home/20251204907769/en/Citing-the-Agentic-Security-Inflection-Point-7AI-Raises-Largest-Cybersecurity-A-Round-in-History-to-Bring-AI-Security-Agents-to-Enterprises"
+      ],
+      "focus_notes": "Shardul Shah led 7AI $130M Series A - largest cyber A round ever. 'Security's Agentic Era Starts Here' thesis. Portfolio: Datadog, Wiz, Coalition.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US/Europe",
+      "aum_estimate": "$10B+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    },
+    {
+      "firm_name": "Lightspeed Venture Partners",
+      "website": "https://lsvp.com",
+      "evidence_links": [
+        "https://intezer.com/blog/insights-from-humanx-2025-the-rise-of-the-ai-soc/"
+      ],
+      "focus_notes": "Arif Janmohamed leads Cyber60 report. HumanX 2025: 'Rise of the AI SOC' panel speaker. Board: Netskope.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$10B+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    },
+    {
+      "firm_name": "Sequoia Capital",
+      "website": "https://sequoiacap.com",
+      "evidence_links": [
+        "https://fortune.com/2025/06/18/traversal-emerges-from-stealth-with-48-million-from-sequoia-and-kleiner-perkins-to-reimagine-site-reliability-in-the-ai-era/"
+      ],
+      "focus_notes": "Bogomil Balkansky works with Wiz, Chainguard, Cyera. Traversal $48M investment. VMware/Google Cloud background.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$30B+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    },
+    {
+      "firm_name": "Accel",
+      "website": "https://accel.com",
+      "evidence_links": [
+        "https://www.accel.com/noteworthies/our-investment-in-legion-transforming-cybersecurity-operations",
+        "https://www.prophetsecurity.ai/blog/prophet-security-raises-30-million-series-a-led-by-accel"
+      ],
+      "focus_notes": "Ping Li cybersecurity focus. Legion investment 2024. Prophet Security $30M Series A - SOC alert overload thesis. Portfolio: CrowdStrike, Cyera, Netskope, Snyk.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$15B+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    },
+    {
+      "firm_name": "Amplify Partners",
+      "website": "https://amplifypartners.com",
+      "evidence_links": [
+        "https://amplifypartners.com/ai-engineering-report/"
+      ],
+      "focus_notes": "Sunil Dhaliwal former @stake. $400M Fund VI (June 2025). Investments: Splunk, Datadog. AI Engineering Report author. Distributed systems + security thesis.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$1B+",
+      "stage_focus": ["seed", "series-a"]
+    },
+    {
+      "firm_name": "Battery Ventures",
+      "website": "https://battery.com",
+      "evidence_links": [
+        "https://www.battery.com/blog/state-of-ai-2025/",
+        "https://www.battery.com/blog/what-it-means-to-be-ai-native-our-investment-in-levelpath/"
+      ],
+      "focus_notes": "Dharmesh Thakker cloud infra, security, DevOps. State of AI 2025 report. Portfolio exits: Bionic (CrowdStrike), Bridgecrew (Palo Alto), Normalyze (Proofpoint).",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US",
+      "aum_estimate": "$15B+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    },
+    {
+      "firm_name": "Bessemer Venture Partners",
+      "website": "https://bvp.com",
+      "evidence_links": [
+        "https://www.bvp.com/atlas/state-of-the-cloud-2025"
+      ],
+      "focus_notes": "Adam Fisher Tel Aviv office. Exits: Wix, Fiverr, Habana. Portfolio: Torq ($140M Series D, $1.2B valuation), Cymulate, Hibob.",
+      "confidence": "high",
+      "tier": "A",
+      "hq_location": "US/Israel",
+      "aum_estimate": "$20B+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    },
+    {
+      "firm_name": "Menlo Ventures",
+      "website": "https://menlovc.com",
+      "evidence_links": [
+        "https://menlovc.com/perspective/agents-for-security-and-the-opportunity-to-disrupt-securitys-giants/"
+      ],
+      "focus_notes": "'Agents for Security' thesis - autonomous AI agents reshaping security categories, opportunity to disrupt security giants.",
+      "confidence": "high",
+      "tier": "B",
+      "hq_location": "US",
+      "aum_estimate": "$5B+",
+      "stage_focus": ["seed", "series-a", "growth"]
+    }
+  ]
+}

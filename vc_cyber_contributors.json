@@ -1,0 +1,503 @@
+{
+  "metadata": {
+    "created": "2026-01-30",
+    "last_updated": "2026-01-30",
+    "description": "Top online contributors at cybersecurity VC firms - people who actively post, publish, and speak publicly",
+    "schema_version": "1.0",
+    "activity_window": "last_90_days",
+    "scoring_methodology": "x_posts(0-30) + linkedin_presence(0-20) + interviews(0-25) + blog_posts(0-25)"
+  },
+  "contributors": [
+    {
+      "person_name": "Ed Sim",
+      "firm_name": "Boldstart Ventures",
+      "title": "Founder & Managing Partner",
+      "linkedin_url": "https://www.linkedin.com/in/edsim",
+      "x_url": "https://twitter.com/edsim",
+      "blog_or_site_url": "https://boldstart.vc/news",
+      "evidence_links": [
+        "https://medium.com/boldstart-ventures/boldstart-technical-founder-summit-ai-giveth-and-ai-taketh-away-other-learnings-063b80479b94",
+        "https://boldstart.vc/news/announcing-boldstart-fund-vii-inception-reloaded-250m-to-build-the-autonomous-enterprise/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 25,
+        "linkedin_post_presence": true,
+        "interviews_count": 3,
+        "blog_posts_count": 4,
+        "last_seen_dates": {
+          "x": "2026-01",
+          "linkedin": "2026-01",
+          "blog": "2025-07"
+        }
+      },
+      "contributor_score": 85,
+      "tags": ["thesis", "portfolio", "AI security", "agentic", "autonomous enterprise"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Jay Leek",
+      "firm_name": "SYN Ventures",
+      "title": "Co-Founder & Managing Partner",
+      "linkedin_url": "https://www.linkedin.com/in/jayleek",
+      "x_url": "",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://www.linkedin.com/posts/jayleek_aiceberg-celebrates-10-million-in-seed-funding-activity-7303596188182704128-zkCr",
+        "https://www.conifers.ai/resources/conifers-ai-raises-25-million-in-funding-from-syn-ventures"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 0,
+        "last_seen_dates": {
+          "linkedin": "2025-03"
+        }
+      },
+      "contributor_score": 55,
+      "tags": ["thesis", "portfolio", "SOC", "alert fatigue", "AI SOC", "CISO background"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Shardul Shah",
+      "firm_name": "Index Ventures",
+      "title": "Partner",
+      "linkedin_url": "https://www.linkedin.com/in/shardul-shah-3589062/",
+      "x_url": "",
+      "blog_or_site_url": "https://www.indexventures.com/perspectives/",
+      "evidence_links": [
+        "https://www.indexventures.com/perspectives/securitys-agentic-era-starts-here-our-investment-in-7ai/",
+        "https://www.linkedin.com/posts/shardul-shah-3589062_securitys-agentic-era-starts-here-our-activity-7402392254780239872--5xe"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 1,
+        "blog_posts_count": 2,
+        "last_seen_dates": {
+          "linkedin": "2025-12",
+          "blog": "2025-12"
+        }
+      },
+      "contributor_score": 70,
+      "tags": ["thesis", "portfolio", "agentic", "AI security", "SOC"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Asheem Chandna",
+      "firm_name": "Greylock",
+      "title": "Partner",
+      "linkedin_url": "https://www.linkedin.com/in/chandna",
+      "x_url": "",
+      "blog_or_site_url": "https://greylock.com/blog",
+      "evidence_links": [
+        "https://greylock.com/portfolio-news/introducing-tenzai-autonomous-ai-hackers/",
+        "https://blog.7ai.com/302-days-from-stealth-to-the-largest-cybersecurity-series-a-in-history"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 3,
+        "last_seen_dates": {
+          "blog": "2025-11"
+        }
+      },
+      "contributor_score": 75,
+      "tags": ["thesis", "portfolio", "agentic security", "proactive defense", "board member"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Bogomil Balkansky",
+      "firm_name": "Sequoia Capital",
+      "title": "Partner",
+      "linkedin_url": "https://www.linkedin.com/in/balkansky",
+      "x_url": "https://twitter.com/balkansky",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://x.com/BogieBalkansky/status/1935349238013088162",
+        "https://fortune.com/2025/06/18/traversal-emerges-from-stealth-with-48-million-from-sequoia-and-kleiner-perkins-to-reimagine-site-reliability-in-the-ai-era/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 15,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 0,
+        "last_seen_dates": {
+          "x": "2025-06",
+          "linkedin": "2025-06"
+        }
+      },
+      "contributor_score": 65,
+      "tags": ["portfolio", "observability", "security", "skeptical LLM wrappers"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Arif Janmohamed",
+      "firm_name": "Lightspeed Venture Partners",
+      "title": "Partner",
+      "linkedin_url": "https://www.linkedin.com/in/arifj/",
+      "x_url": "",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://intezer.com/blog/insights-from-humanx-2025-the-rise-of-the-ai-soc/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 3,
+        "blog_posts_count": 1,
+        "last_seen_dates": {
+          "conference": "2025-04"
+        }
+      },
+      "contributor_score": 60,
+      "tags": ["thesis", "AI SOC", "Cyber60", "cloud infra"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Ping Li",
+      "firm_name": "Accel",
+      "title": "Partner",
+      "linkedin_url": "https://www.linkedin.com/in/pingli8/",
+      "x_url": "",
+      "blog_or_site_url": "https://www.accel.com/noteworthies",
+      "evidence_links": [
+        "https://www.accel.com/noteworthies/our-investment-in-legion-transforming-cybersecurity-operations",
+        "https://www.prophetsecurity.ai/blog/prophet-security-raises-30-million-series-a-led-by-accel"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 1,
+        "blog_posts_count": 2,
+        "last_seen_dates": {
+          "blog": "2024"
+        }
+      },
+      "contributor_score": 55,
+      "tags": ["thesis", "portfolio", "cybersecurity", "cloud", "SOC operations"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Dharmesh Thakker",
+      "firm_name": "Battery Ventures",
+      "title": "General Partner",
+      "linkedin_url": "https://www.linkedin.com/in/dthakker",
+      "x_url": "",
+      "blog_or_site_url": "https://www.battery.com/blog",
+      "evidence_links": [
+        "https://www.battery.com/blog/state-of-ai-2025/",
+        "https://www.battery.com/blog/what-it-means-to-be-ai-native-our-investment-in-levelpath/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 3,
+        "last_seen_dates": {
+          "blog": "2025-12"
+        }
+      },
+      "contributor_score": 70,
+      "tags": ["thesis", "portfolio", "AI", "cloud", "security", "DevOps"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Kobi Samboursky",
+      "firm_name": "Glilot Capital",
+      "title": "Managing Partner",
+      "linkedin_url": "https://linkedin.com/in/kobisamboursky",
+      "x_url": "",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://www.calcalistech.com/ctechnews/article/sj500f7dsle"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 0,
+        "last_seen_dates": {
+          "news": "2025-09"
+        }
+      },
+      "contributor_score": 50,
+      "tags": ["thesis", "portfolio", "AI", "cyber", "Israeli ecosystem"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Chenxi Wang",
+      "firm_name": "Rain Capital",
+      "title": "Founder & General Partner",
+      "linkedin_url": "https://www.linkedin.com/in/chenxiwang88",
+      "x_url": "",
+      "blog_or_site_url": "https://raincapital.substack.com",
+      "evidence_links": [
+        "https://raincapital.substack.com/p/rain-capital-september-insights"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 1,
+        "blog_posts_count": 4,
+        "last_seen_dates": {
+          "newsletter": "2024-09"
+        }
+      },
+      "contributor_score": 60,
+      "tags": ["thesis", "AI security", "agentic AI", "newsletter"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Liran Grinberg",
+      "firm_name": "Team8",
+      "title": "Partner",
+      "linkedin_url": "https://linkedin.com/in/lirangrinberg",
+      "x_url": "",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://www.govinfosecurity.com/expanding-role-cisos-in-tech-corporate-governance-a-28143"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 0,
+        "last_seen_dates": {
+          "news": "2025-04"
+        }
+      },
+      "contributor_score": 45,
+      "tags": ["portfolio", "CISO", "governance", "AI threat"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Alex Doll",
+      "firm_name": "Ten Eleven Ventures",
+      "title": "Founder & Managing Partner",
+      "linkedin_url": "https://linkedin.com/in/adollteneeleven",
+      "x_url": "",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://www.govinfosecurity.com/ais-role-in-cybersecurity-vc-alex-doll-breaks-down-a-28138"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 0,
+        "last_seen_dates": {
+          "news": "2025-04"
+        }
+      },
+      "contributor_score": 50,
+      "tags": ["thesis", "SIEM", "SOAR", "AI security", "operator background"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Don Dixon",
+      "firm_name": "ForgePoint Capital",
+      "title": "Founder & Managing Director",
+      "linkedin_url": "https://linkedin.com/in/dondixon",
+      "x_url": "",
+      "blog_or_site_url": "https://forgepointcap.com/perspectives",
+      "evidence_links": [
+        "https://forgepointcap.com/perspectives/maisa-why-we-invested/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 1,
+        "blog_posts_count": 2,
+        "last_seen_dates": {
+          "blog": "2025-08"
+        }
+      },
+      "contributor_score": 50,
+      "tags": ["thesis", "portfolio", "AI security", "compliance", "explainability"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Sunil Dhaliwal",
+      "firm_name": "Amplify Partners",
+      "title": "Founder & General Partner",
+      "linkedin_url": "https://www.linkedin.com/in/sunildhaliwal/",
+      "x_url": "",
+      "blog_or_site_url": "https://amplifypartners.com/ai-engineering-report",
+      "evidence_links": [
+        "https://amplifypartners.com/ai-engineering-report/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 2,
+        "last_seen_dates": {
+          "report": "2025"
+        }
+      },
+      "contributor_score": 60,
+      "tags": ["thesis", "AI engineering", "distributed systems", "security", "Forbes Midas"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Ofer Schreiber",
+      "firm_name": "YL Ventures",
+      "title": "Partner",
+      "linkedin_url": "https://www.linkedin.com/in/oferschr/",
+      "x_url": "",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://www.calcalistech.com/ctechnews/article/yu30z7v5g"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 0,
+        "last_seen_dates": {
+          "news": "2026-01"
+        }
+      },
+      "contributor_score": 50,
+      "tags": ["thesis", "velocity", "market share", "fundraising"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Venky Ganesan",
+      "firm_name": "Menlo Ventures",
+      "title": "Managing Director",
+      "linkedin_url": "https://linkedin.com/in/venkyganesan",
+      "x_url": "",
+      "blog_or_site_url": "https://menlovc.com/perspective",
+      "evidence_links": [
+        "https://menlovc.com/perspective/agents-for-security-and-the-opportunity-to-disrupt-securitys-giants/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 1,
+        "blog_posts_count": 2,
+        "last_seen_dates": {
+          "blog": "2025-11"
+        }
+      },
+      "contributor_score": 55,
+      "tags": ["thesis", "agentic", "security disruption"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Thomas Krane",
+      "firm_name": "Insight Partners",
+      "title": "Principal",
+      "linkedin_url": "https://linkedin.com/in/thomaskrane",
+      "x_url": "",
+      "blog_or_site_url": "https://www.insightpartners.com/ideas",
+      "evidence_links": [
+        "https://www.insightpartners.com/ideas/2026-investor-predictions/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 1,
+        "blog_posts_count": 1,
+        "last_seen_dates": {
+          "blog": "2025-12"
+        }
+      },
+      "contributor_score": 45,
+      "tags": ["thesis", "AI security", "agentic", "identity"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Ashu Garg",
+      "firm_name": "Foundation Capital",
+      "title": "General Partner",
+      "linkedin_url": "https://linkedin.com/in/ashugarg",
+      "x_url": "",
+      "blog_or_site_url": "https://foundationcapital.com",
+      "evidence_links": [
+        "https://foundationcapital.com/the-4-6t-service-as-software-opportunity-lessons-from-year-one/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 1,
+        "blog_posts_count": 2,
+        "last_seen_dates": {
+          "blog": "2025-07"
+        }
+      },
+      "contributor_score": 55,
+      "tags": ["thesis", "services as software", "AI outcomes"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Timothy Chen",
+      "firm_name": "Essence VC",
+      "title": "Founder & Managing Partner",
+      "linkedin_url": "https://www.linkedin.com/in/timchen/",
+      "x_url": "",
+      "blog_or_site_url": "",
+      "evidence_links": [
+        "https://techcrunch.com/2025/09/23/tim-chen-has-quietly-become-of-one-the-most-sought-after-solo-investors/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 0,
+        "linkedin_post_presence": true,
+        "interviews_count": 2,
+        "blog_posts_count": 0,
+        "last_seen_dates": {
+          "news": "2025-09"
+        }
+      },
+      "contributor_score": 50,
+      "tags": ["portfolio", "infra", "dev tools", "AI", "solo GP"],
+      "confidence": "high"
+    },
+    {
+      "person_name": "Jackson Moses",
+      "firm_name": "Silent Ventures",
+      "title": "Founder & Managing Partner",
+      "linkedin_url": "https://www.linkedin.com/in/jackson-moses/",
+      "x_url": "",
+      "blog_or_site_url": "https://www.jacksonmoses.com",
+      "evidence_links": [
+        "https://dallasinnovates.com/the-last-word-silent-ventures-jackson-moses-on-contrarian-defense-tech-bets/"
+      ],
+      "activity_window": "last_90_days",
+      "activity_signals": {
+        "x_posts_estimate": 5,
+        "linkedin_post_presence": true,
+        "interviews_count": 3,
+        "blog_posts_count": 1,
+        "last_seen_dates": {
+          "news": "2025-05"
+        }
+      },
+      "contributor_score": 55,
+      "tags": ["thesis", "defense tech", "cybersecurity", "national security"],
+      "confidence": "high"
+    }
+  ]
+}
