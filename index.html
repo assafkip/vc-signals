@@ -1538,12 +1538,18 @@
 
             if (dateFilter !== 'all') {
                 const now = new Date();
-                const cutoff = new Date();
-                if (dateFilter === '1day') cutoff.setDate(now.getDate() - 1);
-                else if (dateFilter === '7days') cutoff.setDate(now.getDate() - 7);
-                else if (dateFilter === '14days') cutoff.setDate(now.getDate() - 14);
-                else if (dateFilter === 'month') cutoff.setDate(now.getDate() - 30);
-                filtered = filtered.filter(s => !s.source_date || new Date(s.source_date) >= cutoff);
+                // Create cutoff at start of day in local time
+                const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                if (dateFilter === '1day') cutoff.setDate(cutoff.getDate() - 1);
+                else if (dateFilter === '7days') cutoff.setDate(cutoff.getDate() - 7);
+                else if (dateFilter === '14days') cutoff.setDate(cutoff.getDate() - 14);
+                else if (dateFilter === 'month') cutoff.setDate(cutoff.getDate() - 30);
+                filtered = filtered.filter(s => {
+                    if (!s.source_date) return true;
+                    const parts = s.source_date.split('-');
+                    const signalDate = new Date(parts[0], parts[1] - 1, parts[2]);
+                    return signalDate >= cutoff;
+                });
             }
             if (sourceFilter !== 'all') filtered = filtered.filter(s => s.source_type?.toLowerCase() === sourceFilter);
             if (personFilter !== 'all') filtered = filtered.filter(s => s.person_name === personFilter);
