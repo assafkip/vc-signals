@@ -119,11 +119,10 @@
                     <label>Time Range</label>
                     <select id="filterDate">
                         <option value="all">All Time</option>
-                        <option value="day">Past Day</option>
-                        <option value="week">Past Week</option>
-                        <option value="2weeks">Past 2 Weeks</option>
-                        <option value="3weeks">Past 3 Weeks</option>
                         <option value="month">Past Month</option>
+                        <option value="3months">Past 3 Months</option>
+                        <option value="6months">Past 6 Months</option>
+                        <option value="year">Past Year</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -1538,12 +1537,12 @@
             else if (typeFilter === 'soft') filtered = filtered.filter(s => s.signal_type === 'soft');
 
             if (dateFilter !== 'all') {
+                const now = new Date();
                 const cutoff = new Date();
-                if (dateFilter === 'day') cutoff.setDate(cutoff.getDate() - 1);
-                else if (dateFilter === 'week') cutoff.setDate(cutoff.getDate() - 7);
-                else if (dateFilter === '2weeks') cutoff.setDate(cutoff.getDate() - 14);
-                else if (dateFilter === '3weeks') cutoff.setDate(cutoff.getDate() - 21);
-                else if (dateFilter === 'month') cutoff.setDate(cutoff.getDate() - 30);
+                if (dateFilter === 'month') cutoff.setDate(now.getDate() - 30);
+                else if (dateFilter === '3months') cutoff.setMonth(now.getMonth() - 3);
+                else if (dateFilter === '6months') cutoff.setMonth(now.getMonth() - 6);
+                else if (dateFilter === 'year') cutoff.setFullYear(now.getFullYear() - 1);
                 filtered = filtered.filter(s => !s.source_date || new Date(s.source_date) >= cutoff);
             }
             if (sourceFilter !== 'all') filtered = filtered.filter(s => s.source_type?.toLowerCase() === sourceFilter);
