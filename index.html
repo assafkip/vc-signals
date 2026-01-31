@@ -119,10 +119,10 @@
                     <label>Time Range</label>
                     <select id="filterDate">
                         <option value="all">All Time</option>
+                        <option value="1day">Past 1 Day</option>
+                        <option value="7days">Past 7 Days</option>
+                        <option value="14days">Past 14 Days</option>
                         <option value="month">Past Month</option>
-                        <option value="3months">Past 3 Months</option>
-                        <option value="6months">Past 6 Months</option>
-                        <option value="year">Past Year</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -1539,10 +1539,10 @@
             if (dateFilter !== 'all') {
                 const now = new Date();
                 const cutoff = new Date();
-                if (dateFilter === 'month') cutoff.setDate(now.getDate() - 30);
-                else if (dateFilter === '3months') cutoff.setMonth(now.getMonth() - 3);
-                else if (dateFilter === '6months') cutoff.setMonth(now.getMonth() - 6);
-                else if (dateFilter === 'year') cutoff.setFullYear(now.getFullYear() - 1);
+                if (dateFilter === '1day') cutoff.setDate(now.getDate() - 1);
+                else if (dateFilter === '7days') cutoff.setDate(now.getDate() - 7);
+                else if (dateFilter === '14days') cutoff.setDate(now.getDate() - 14);
+                else if (dateFilter === 'month') cutoff.setDate(now.getDate() - 30);
                 filtered = filtered.filter(s => !s.source_date || new Date(s.source_date) >= cutoff);
             }
             if (sourceFilter !== 'all') filtered = filtered.filter(s => s.source_type?.toLowerCase() === sourceFilter);
