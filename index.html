@@ -1827,10 +1827,9 @@
                     <div class="signal-summary">${s.summary}</div>
                     ${s.excerpt ? `<div class="signal-excerpt">"${s.excerpt}"</div>` : ''}
                     <div class="signal-footer">
-                        <div class="signal-meta"><span>${s.source_date || 'N/A'}</span><span>Window: ${s.suggested_outreach_window || 'N/A'}</span></div>
+                        <div class="signal-meta"><span>${s.source_date || 'N/A'}</span></div>
                         ${s.source_url ? `<a href="${s.source_url}" target="_blank" class="signal-link">View Source →</a>` : ''}
                     </div>
-                    ${s.outreach_angle ? `<div class="outreach-tip"><strong>Outreach Angle</strong>${s.outreach_angle}</div>` : ''}
                 </div>
             `).join('');
         }
