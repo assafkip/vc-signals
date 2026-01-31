@@ -1,0 +1,606 @@
+{
+  "metadata": {
+    "created": "2026-01-30",
+    "last_updated": "2026-01-31",
+    "description": "KTLYST VC Monitoring Watchlist - People > Firms - Expanded to 37 firms",
+    "default_keywords": "security, detection, SOC, threat intel, infra, AI security, cybersecurity"
+  },
+  "watchlist": [
+    {
+      "person_name": "Lior Simon",
+      "role": "partner",
+      "firm": "Cyberstarts",
+      "linkedin_url": "https://www.linkedin.com/in/lior-simon-b4610577/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "Security-native fund (ex-Check Point). Portfolio: Wiz, Armis, Island, Torq.",
+      "last_checked": null
+    },
+    {
+      "person_name": "Ofer Schreiber",
+      "role": "partner",
+      "firm": "YL Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/oferschr/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "Israeli security-focused VC",
+      "last_checked": null
+    },
+    {
+      "person_name": "Liran Grinberg",
+      "role": "partner",
+      "firm": "Team8",
+      "linkedin_url": "https://linkedin.com/in/lirangrinberg",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "Team8 partner - security company builder",
+      "last_checked": null
+    },
+    {
+      "person_name": "Barmak Meftah",
+      "role": "partner",
+      "firm": "Ballistic Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/barmakmeftah/",
+      "x_url": "",
+      "website_or_blog_url": "https://ballisticventures.com",
+      "rss_feeds": [
+        "https://ballisticventures.com/feed/"
+      ],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "Ballistic Ventures - security-only fund, former AlienVault CEO",
+      "last_checked": null
+    },
+    {
+      "person_name": "Chenxi Wang",
+      "role": "partner",
+      "firm": "Rain Capital",
+      "linkedin_url": "https://www.linkedin.com/in/chenxiwang88",
+      "x_url": "",
+      "website_or_blog_url": "https://raincapital.substack.com",
+      "rss_feeds": [
+        "https://raincapital.substack.com/feed"
+      ],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "Rain Capital founder - security focused, AI security",
+      "last_checked": null
+    },
+    {
+      "person_name": "Dave DeWalt",
+      "role": "partner",
+      "firm": "NightDragon",
+      "linkedin_url": "https://www.linkedin.com/in/ddewalt/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "NightDragon founder - ex-FireEye/McAfee CEO",
+      "last_checked": null
+    },
+    {
+      "person_name": "Mark Hatfield",
+      "role": "partner",
+      "firm": "Ten Eleven Ventures",
+      "linkedin_url": "https://linkedin.com/in/mh1011",
+      "x_url": "",
+      "website_or_blog_url": "https://www.1011vc.com",
+      "rss_feeds": [
+        "https://www.1011vc.com/feed/"
+      ],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "Ten Eleven Ventures - security specialist",
+      "last_checked": null
+    },
+    {
+      "person_name": "Alberto Yepez",
+      "role": "partner",
+      "firm": "ForgePoint Capital",
+      "linkedin_url": "https://www.linkedin.com/in/albertoyepez",
+      "x_url": "",
+      "website_or_blog_url": "https://forgepointcap.com",
+      "rss_feeds": [
+        "https://forgepointcap.com/feed/"
+      ],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "ForgePoint Capital - security-focused fund",
+      "last_checked": null
+    },
+    {
+      "person_name": "Kobi Samboursky",
+      "role": "partner",
+      "firm": "Glilot Capital",
+      "linkedin_url": "https://linkedin.com/in/kobisamboursky",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, SOC, AI security, agentic, AI-native",
+      "priority": 1,
+      "notes": "TOP PRIORITY. $500M fund (Sept 2025) for AI + cyber. Portfolio: Noma (cyber for AI), Sweet (AI-native CNAPP). Thesis: 'AI relevance is THE factor' for valuations. Perfect storm thesis.",
+      "last_checked": null
+    },
+    {
+      "person_name": "Jay Leek",
+      "role": "partner",
+      "firm": "SYN Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/jayleek",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, SOC, threat intel, AI security, agentic, alert fatigue",
+      "priority": 1,
+      "notes": "TOP PRIORITY. SYN Ventures - cyber-only fund. Former Blackstone CISO. Led Conifers.ai (AI SOC), AIceberg. 10+ investments in 12 months. Thesis: SOC alert fatigue, shift from reactive to proactive.",
+      "last_checked": null
+    },
+    {
+      "person_name": "Hadar Paz",
+      "role": "partner",
+      "firm": "Hyperplane",
+      "linkedin_url": "https://linkedin.com/in/hadarpaz",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, SOC, threat intel, infra, AI security",
+      "priority": 1,
+      "notes": "Hyperplane VC - Israeli security background",
+      "last_checked": null
+    },
+    {
+      "person_name": "Ed Sim",
+      "role": "partner",
+      "firm": "Boldstart Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/edsim",
+      "x_url": "https://twitter.com/edsim",
+      "website_or_blog_url": "https://boldstart.vc",
+      "rss_feeds": [
+        "https://boldstart.vc/feed/",
+        "https://medium.com/feed/@edsim"
+      ],
+      "keywords": "security, detection, SOC, AI security, enterprise, agentic, autonomous enterprise",
+      "priority": 1,
+      "notes": "TOP PRIORITY. $250M Fund VII (2025) for 'autonomous enterprise'. Protect AI exit to PANW ~$700M. Portfolio: Snyk, BigID, CrewAI. Thesis: agentic AI, inception stage.",
+      "last_checked": null
+    },
+    {
+      "person_name": "Jon Sakoda",
+      "role": "partner",
+      "firm": "Decibel Partners",
+      "linkedin_url": "https://www.linkedin.com/in/jonsakoda/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, detection, enterprise, infra",
+      "priority": 2,
+      "notes": "Founding Partner Decibel. Former NEA GP, ex-Symantec (IMlogic acq.)",
+      "last_checked": null
+    },
+    {
+      "person_name": "Josh Kopelman",
+      "role": "partner",
+      "firm": "First Round Capital",
+      "linkedin_url": "https://www.linkedin.com/in/jkopelman",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [
+        "https://firstround.com/review/feed/"
+      ],
+      "keywords": "security, detection, enterprise, seed",
+      "priority": 2,
+      "notes": "Co-founded First Round. Notable: Uber, Mint.com. TurnTide acq. by Symantec",
+      "last_checked": null
+    },
+    {
+      "person_name": "Jonathan Lehr",
+      "role": "partner",
+      "firm": "Work-Bench",
+      "linkedin_url": "https://www.linkedin.com/in/jlehr1",
+      "x_url": "",
+      "website_or_blog_url": "https://www.work-bench.com",
+      "rss_feeds": [
+        "https://www.work-bench.com/blog-feed.xml"
+      ],
+      "keywords": "security, AI, dev tools, infrastructure, enterprise",
+      "priority": 2,
+      "notes": "Work-Bench co-founder. Exits: CoreOS (Red Hat $250M), Kensho (S&P $550M)",
+      "last_checked": null
+    },
+    {
+      "person_name": "Saar Gur",
+      "role": "partner",
+      "firm": "CRV",
+      "linkedin_url": "https://www.linkedin.com/in/saargur/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "enterprise, security, consumer",
+      "priority": 2,
+      "notes": "GP at CRV. Notable seeds: DoorDash, Dropbox. Forbes Midas 2024",
+      "last_checked": null
+    },
+    {
+      "person_name": "Ping Li",
+      "role": "partner",
+      "firm": "Accel",
+      "linkedin_url": "https://www.linkedin.com/in/pingli8/",
+      "x_url": "",
+      "website_or_blog_url": "https://www.accel.com",
+      "rss_feeds": [
+        "https://www.accel.com/feed/"
+      ],
+      "keywords": "security, cybersecurity, cloud, infra",
+      "priority": 1,
+      "notes": "Accel partner. Exits: Arista, Cloudera, Snyk, Sysdig - cybersecurity focus",
+      "last_checked": null
+    },
+    {
+      "person_name": "Arif Janmohamed",
+      "role": "partner",
+      "firm": "Lightspeed Venture Partners",
+      "linkedin_url": "https://www.linkedin.com/in/arifj/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [
+        "https://medium.com/feed/lightspeed-venture-partners"
+      ],
+      "keywords": "security, cloud, AI SOC, infrastructure, enterprise",
+      "priority": 1,
+      "notes": "HIGH PRIORITY. Leads Cyber60 report. HumanX 2025 speaker on 'Rise of AI SOC'. Board: Netskope. Thesis: AI security must 'create and protect value'. Tracks Prophet, Legion.",
+      "last_checked": null
+    },
+    {
+      "person_name": "Bogomil Balkansky",
+      "role": "partner",
+      "firm": "Sequoia Capital",
+      "linkedin_url": "https://www.linkedin.com/in/balkansky",
+      "x_url": "https://twitter.com/balkansky",
+      "website_or_blog_url": "",
+      "rss_feeds": [
+        "https://sequoiacap.com/feed/"
+      ],
+      "keywords": "security, cloud, infrastructure, devops, observability, agentic AI",
+      "priority": 1,
+      "notes": "Sequoia partner. Works with Wiz, Chainguard, Cyera. Active on X - skeptical of LLM wrappers, values proprietary data. VMware/Google Cloud background",
+      "last_checked": null
+    },
+    {
+      "person_name": "Asheem Chandna",
+      "role": "partner",
+      "firm": "Greylock",
+      "linkedin_url": "https://www.linkedin.com/in/chandna",
+      "x_url": "",
+      "website_or_blog_url": "https://greylock.com",
+      "rss_feeds": [
+        "https://greylock.com/feed/"
+      ],
+      "keywords": "security, cybersecurity, enterprise, agentic security, proactive defense",
+      "priority": 1,
+      "notes": "TOP PRIORITY. 22-yr track record, zero losses. Seed investor in 7AI ($130M Series A). Quote: 'Agentic security = next era of cybersecurity.' Values 'rigorous thinking' founders. Palo Alto Networks board.",
+      "last_checked": null
+    },
+    {
+      "person_name": "Theresia Gouw",
+      "role": "partner",
+      "firm": "Acrew Capital",
+      "linkedin_url": "https://www.linkedin.com/in/theresiagouw",
+      "x_url": "",
+      "website_or_blog_url": "https://perspectives.acrewcapital.com",
+      "rss_feeds": [
+        "https://perspectives.acrewcapital.com/feed"
+      ],
+      "keywords": "security, enterprise, infra",
+      "priority": 2,
+      "notes": "Acrew founder. Exits: Forescout, Imperva. First female Accel partner",
+      "last_checked": null
+    },
+    {
+      "person_name": "Sunil Dhaliwal",
+      "role": "partner",
+      "firm": "Amplify Partners",
+      "linkedin_url": "https://www.linkedin.com/in/sunildhaliwal/",
+      "x_url": "",
+      "website_or_blog_url": "https://www.amplifypartners.com",
+      "rss_feeds": [
+        "https://www.amplifypartners.com/feed/"
+      ],
+      "keywords": "security, information security, data infrastructure, AI",
+      "priority": 1,
+      "notes": "HIGH PRIORITY. $400M Fund VI (June 2025). Former @stake. Investments: Splunk, Datadog. Authors AI Engineering Report. Forbes Midas List. Thesis: distributed systems + security.",
+      "last_checked": null
+    },
+    {
+      "person_name": "Pejman Nozad",
+      "role": "partner",
+      "firm": "Pear VC",
+      "linkedin_url": "https://www.linkedin.com/in/pejman/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "enterprise, seed, early-stage",
+      "priority": 2,
+      "notes": "Pear VC founder. Seeds: DoorDash, Dropbox, Gusto. #1 Forbes Midas Seed 2023-2025",
+      "last_checked": null
+    },
+    {
+      "person_name": "Jeff Clavier",
+      "role": "partner",
+      "firm": "Uncork Capital",
+      "linkedin_url": "https://www.linkedin.com/in/jeffclavier",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "enterprise, consumer, seed",
+      "priority": 2,
+      "notes": "Uncork founder. Exits: Fitbit, SendGrid, Eventbrite, Postmates",
+      "last_checked": null
+    },
+    {
+      "person_name": "Mark Gorenberg",
+      "role": "partner",
+      "firm": "Zetta Venture Partners",
+      "linkedin_url": "https://www.linkedin.com/in/markgorenberg/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "AI, enterprise, data, machine learning",
+      "priority": 2,
+      "notes": "Zetta founder. First AI-for-enterprise focused fund. MIT Corporation Chair",
+      "last_checked": null
+    },
+    {
+      "person_name": "Tomasz Tunguz",
+      "role": "partner",
+      "firm": "Theory Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/tomasztunguz/",
+      "x_url": "",
+      "website_or_blog_url": "https://tomtunguz.com",
+      "rss_feeds": [
+        "https://tomtunguz.com/feed/"
+      ],
+      "keywords": "AI, SaaS, data infrastructure, enterprise",
+      "priority": 2,
+      "notes": "Theory founder (ex-Redpoint). Investments: Looker, Monte Carlo. Data-driven insights",
+      "last_checked": null
+    },
+    {
+      "person_name": "Samir Kaul",
+      "role": "partner",
+      "firm": "Khosla Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/samir-kaul-9227b64/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "AI, deep tech, infrastructure",
+      "priority": 2,
+      "notes": "Khosla founding partner. Exits: Guardant Health, Nutanix, Quantumscape",
+      "last_checked": null
+    },
+    {
+      "person_name": "Dharmesh Thakker",
+      "role": "partner",
+      "firm": "Battery Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/dthakker",
+      "x_url": "",
+      "website_or_blog_url": "https://www.battery.com",
+      "rss_feeds": [
+        "https://www.battery.com/blog/feed/"
+      ],
+      "keywords": "security, cloud, infrastructure, DevOps, AI",
+      "priority": 1,
+      "notes": "Battery GP. Cloud infra, security, DevOps focus. Ex-Intel Capital",
+      "last_checked": null
+    },
+    {
+      "person_name": "Adam Fisher",
+      "role": "partner",
+      "firm": "Bessemer Venture Partners",
+      "linkedin_url": "https://il.linkedin.com/in/adamrfisher",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [
+        "https://www.bvp.com/feed/"
+      ],
+      "keywords": "security, cybersecurity, enterprise, Israel",
+      "priority": 1,
+      "notes": "Bessemer Tel Aviv. Exits: Wix, Fiverr, Habana. Portfolio: Hibob, Cymulate",
+      "last_checked": null
+    },
+    {
+      "person_name": "Shardul Shah",
+      "role": "partner",
+      "firm": "Index Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/shardul-shah-3589062/",
+      "x_url": "",
+      "website_or_blog_url": "https://www.indexventures.com",
+      "rss_feeds": [
+        "https://www.indexventures.com/feed/"
+      ],
+      "keywords": "security, cybersecurity, AI, agentic, SOC",
+      "priority": 1,
+      "notes": "HIGH PRIORITY. Led 7AI $130M Series A (largest cyber A ever). Blog: 'Security's Agentic Era Starts Here'. Investments: Datadog, Wiz, Coalition. Values quantified outcomes (95-99% false positive reduction).",
+      "last_checked": null
+    },
+    {
+      "person_name": "Greg Reichow",
+      "role": "partner",
+      "firm": "Eclipse Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/gregreichow/",
+      "x_url": "",
+      "website_or_blog_url": "https://eclipse.vc",
+      "rss_feeds": [
+        "https://eclipse.vc/feed/"
+      ],
+      "keywords": "hardware, industrial, manufacturing",
+      "priority": 3,
+      "notes": "Eclipse partner. Ex-Tesla SVP Manufacturing. Board: Enovix, VulcanForms",
+      "last_checked": null
+    },
+    {
+      "person_name": "Arun Mathew",
+      "role": "partner",
+      "firm": "Accel",
+      "linkedin_url": "https://www.linkedin.com/in/arun-mathew-b7186412/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [
+        "https://www.accel.com/feed/"
+      ],
+      "keywords": "security, enterprise, infrastructure",
+      "priority": 2,
+      "notes": "Accel partner (growth). Investments: Corelight, 1Password, Webflow",
+      "last_checked": null
+    },
+    {
+      "person_name": "Timothy Chen",
+      "role": "partner",
+      "firm": "Essence VC",
+      "linkedin_url": "https://www.linkedin.com/in/timchen/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "AI, infrastructure, dev tools",
+      "priority": 2,
+      "notes": "Essence VC founder. Angel: Jasper, MotherDuck. Ex-Mesosphere",
+      "last_checked": null
+    },
+    {
+      "person_name": "Greg Sands",
+      "role": "partner",
+      "firm": "Costanoa Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/gregsands/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "enterprise, data, analytics, cloud",
+      "priority": 2,
+      "notes": "Costanoa founder. Early CrowdStrike investor. Ex-Sutter Hill, first Netscape hire",
+      "last_checked": null
+    },
+    {
+      "person_name": "Aydin Senkut",
+      "role": "partner",
+      "firm": "Felicis Ventures",
+      "linkedin_url": "https://www.linkedin.com/in/aydins/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "enterprise, generalist",
+      "priority": 2,
+      "notes": "Felicis founder. First Google PM. Investments: Shopify, Adyen, Notion",
+      "last_checked": null
+    },
+    {
+      "person_name": "Emanuel Timor",
+      "role": "partner",
+      "firm": "Vertex Ventures Israel",
+      "linkedin_url": "https://www.linkedin.com/in/emanuel-timor-79959/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "security, cybersecurity, enterprise, Israel",
+      "priority": 2,
+      "notes": "Vertex Israel GP. Board: Adaptive Shield, Cymulate, Codefresh",
+      "last_checked": null
+    },
+    {
+      "person_name": "Robin Vasan",
+      "role": "partner",
+      "firm": "Mango Capital",
+      "linkedin_url": "https://www.linkedin.com/in/robinvasan/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "enterprise, seed",
+      "priority": 2,
+      "notes": "Mango founder. Solo GP, seed stage. 20 years at Mayfield",
+      "last_checked": null
+    },
+    {
+      "person_name": "Steve Vassallo",
+      "role": "partner",
+      "firm": "Foundation Capital",
+      "linkedin_url": "https://www.linkedin.com/in/stevevassallo",
+      "x_url": "",
+      "website_or_blog_url": "https://foundationcapital.com",
+      "rss_feeds": [
+        "https://foundationcapital.com/feed/"
+      ],
+      "keywords": "enterprise, infrastructure",
+      "priority": 2,
+      "notes": "Foundation GP. Investments: Stripe, Sunrun, Cerebras, Solana",
+      "last_checked": null
+    },
+    {
+      "person_name": "Niko Bonatsos",
+      "role": "partner",
+      "firm": "General Catalyst",
+      "linkedin_url": "https://www.linkedin.com/in/bonatsos/",
+      "x_url": "",
+      "website_or_blog_url": "https://www.generalcatalyst.com",
+      "rss_feeds": [
+        "https://www.generalcatalyst.com/feed/"
+      ],
+      "keywords": "enterprise, consumer, seed",
+      "priority": 2,
+      "notes": "General Catalyst MD. Investments: Discord, Snap, Livongo",
+      "last_checked": null
+    },
+    {
+      "person_name": "Ali Partovi",
+      "role": "partner",
+      "firm": "Neo",
+      "linkedin_url": "https://www.linkedin.com/in/apartovi/",
+      "x_url": "",
+      "website_or_blog_url": "",
+      "rss_feeds": [],
+      "keywords": "AI, student founders, technical",
+      "priority": 2,
+      "notes": "Neo CEO, Code.org co-founder. Angel: Facebook, Airbnb, Dropbox, Uber",
+      "last_checked": null
+    },
+    {
+      "person_name": "Chris Farmer",
+      "role": "partner",
+      "firm": "SignalFire",
+      "linkedin_url": "https://www.linkedin.com/in/chriswfarmer/",
+      "x_url": "",
+      "website_or_blog_url": "https://www.signalfire.com",
+      "rss_feeds": [
+        "https://www.signalfire.com/feed/"
+      ],
+      "keywords": "AI, enterprise, data-driven",
+      "priority": 2,
+      "notes": "SignalFire founder/CEO. Seeds: Coinbase, Discord, Stripe, Venmo. ~$3B AUM",
+      "last_checked": null
+    }
+  ],
+  "signal_taxonomy": {
+    "hard_signals": [
+      "new_fund_raised",
+      "new_security_investment",
+      "new_partner_joins",
+      "actively_looking",
+      "public_ask_intros",
+      "office_hours_announced",
+      "new_thesis_statement"
+    ],
+    "soft_signals": [
+      "problem_post_soc_pain",
+      "problem_post_detection_gaps",
+      "critique_current_tools",
+      "security_trend_commentary",
+      "portfolio_adjacent_win"
+    ]
+  }
+}

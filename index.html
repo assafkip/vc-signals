@@ -91,7 +91,15 @@
         .outreach-tip { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; margin-top: 12px; }
         .outreach-tip strong { display: block; margin-bottom: 4px; }
         .empty-state { text-align: center; padding: 60px 20px; color: var(--gray-500); }
+        .loading-state { text-align: center; padding: 60px 20px; color: var(--gray-500); }
+        .loading-spinner { display: inline-block; width: 40px; height: 40px; border: 3px solid var(--gray-200); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
         footer { text-align: center; padding: 40px 20px; color: white; opacity: 0.8; font-size: 0.85rem; }
+
+        .refresh-btn { background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; margin-left: 12px; }
+        .refresh-btn:hover { background: var(--primary-dark); }
+        .refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
         @media (max-width: 768px) {
             header h1 { font-size: 1.8rem; }
@@ -105,9 +113,9 @@
         <h1>VC Signals Dashboard</h1>
         <p>Real-time intelligence on cybersecurity investments and market trends</p>
         <div class="stats-bar">
-            <div class="stat"><div class="stat-value" id="totalSignals">0</div><div class="stat-label">Total Signals</div></div>
-            <div class="stat"><div class="stat-value" id="totalVCs">0</div><div class="stat-label">VCs Tracked</div></div>
-            <div class="stat"><div class="stat-value" id="hardSignals">0</div><div class="stat-label">Hard Signals</div></div>
+            <div class="stat"><div class="stat-value" id="totalSignals">-</div><div class="stat-label">Total Signals</div></div>
+            <div class="stat"><div class="stat-value" id="totalVCs">-</div><div class="stat-label">VCs Tracked</div></div>
+            <div class="stat"><div class="stat-value" id="hardSignals">-</div><div class="stat-label">Hard Signals</div></div>
             <div class="stat"><div class="stat-value" id="lastUpdated">-</div><div class="stat-label">Last Updated</div></div>
         </div>
     </header>
@@ -134,6 +142,8 @@
                         <option value="news">News</option>
                         <option value="linkedin">LinkedIn</option>
                         <option value="x">X/Twitter</option>
+                        <option value="substack">Substack</option>
+                        <option value="medium">Medium</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -160,6 +170,7 @@
                 <span class="chip active" data-filter="all">All Signals</span>
                 <span class="chip" data-filter="hard">Hard Signals</span>
                 <span class="chip" data-filter="soft">Soft Signals</span>
+                <button class="refresh-btn" id="refreshBtn" onclick="refreshSignals()">↻ Refresh</button>
             </div>
             <div class="theme-summary" id="themeSummary">
                 <h3>Trending Themes</h3>
@@ -175,1416 +186,113 @@
                     <span class="source-badge" style="background: #10b981;">Press</span>
                     <span class="source-badge" style="background: #f59e0b;">News</span>
                     <span class="source-badge" style="background: #0077b5;">LinkedIn</span>
+                    <span class="source-badge" style="background: #ff6719;">Substack</span>
                 </div>
             </div>
-            <div class="signals-list" id="signalsList"></div>
+            <div class="signals-list" id="signalsList">
+                <div class="loading-state">
+                    <div class="loading-spinner"></div>
+                    <p>Loading signals...</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>VC Signals Dashboard - Updated January 2026</p>
-        <p>Data sourced from public announcements, blogs, podcasts, and news</p>
+        <p>VC Signals Dashboard - Auto-updated via GitHub Actions</p>
+        <p>Data sourced from public RSS feeds, blogs, podcasts, and news</p>
     </footer>
 
     <script>
-        // Signal data - embedded for standalone hosting
-                    const signals = [
-          {
-            "id": "det_001",
-            "person_name": "Ed Sim",
-            "firm": "Boldstart Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Boldstart announced Fund VII, $250M for inception-stage 'autonomous enterprise' investments. Total AUM now over $1B.",
-            "excerpt": "From $1M to $1.1B: Boldstart Ventures Launches $250M Fund VII to Back Inception-Stage Founders Building the Autonomous Enterprise",
-            "source_url": "https://boldstart.vc/news/announcing-boldstart-fund-vii-inception-reloaded-250m-to-build-the-autonomous-enterprise/",
-            "source_type": "blog",
-            "source_date": "2026-01-31",
-            "confidence": "high"
-          },
-          {
-            "id": "det_002",
-            "person_name": "Ed Sim",
-            "firm": "Boldstart Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Protect AI (Boldstart portfolio) acquired by Palo Alto Networks for ~$700M - first exit in AI security history.",
-            "excerpt": "In 2025, Boldstart closed the first exit in AI security history with Protect AI being sold to Palo Alto Networks for over $700M.",
-            "source_url": "https://boldstart.vc/news/from-inception-to-ai-security-leader-protectais-journey-to-exit-to-palo-alto-networks/",
-            "source_type": "blog",
-            "source_date": "2026-01-19",
-            "confidence": "high"
-          },
-          {
-            "id": "det_003",
-            "person_name": "Ed Sim",
-            "firm": "Boldstart Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Ed's Medium post on AI trends: 'AI giveth and AI taketh away' - insights from Boldstart Technical Founder Summit.",
-            "excerpt": "AI is no longer limited to generating text or suggestions. It now runs workflows. Agentic AI logs in, makes decisions, connects applications...",
-            "source_url": "https://medium.com/boldstart-ventures/boldstart-technical-founder-summit-ai-giveth-and-ai-taketh-away-other-learnings-063b80479b94",
-            "source_type": "medium",
-            "source_date": "2026-01-31",
-            "confidence": "high"
-          },
-          {
-            "id": "det_004",
-            "person_name": "Ed Sim",
-            "firm": "Boldstart Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "BusinessWire: Boldstart Fund VII press release with detailed investment thesis on autonomous enterprise.",
-            "excerpt": "Boldstart Ventures Launches $250M Fund VII to Back Inception-Stage Founders Building the Autonomous Enterprise",
-            "source_url": "https://www.businesswire.com/news/home/20250708927572/en/From-1M-to-1.1B-Boldstart-Ventures-Launches-250M-Fund-VII-to-Back-Inception-Stage-Founders-Building-the-Autonomous-Enterprise",
-            "source_type": "press",
-            "source_date": "2026-01-31",
-            "confidence": "high"
-          },
-          {
-            "id": "det_005",
-            "person_name": "Jay Leek",
-            "firm": "SYN Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "SYN Ventures led Conifers.ai's $25M funding for an Agentic AI SOC platform addressing alert fatigue.",
-            "excerpt": "Conifers.ai Raises $25 Million in Funding from SYN Ventures to Transform Security Operations and Achieve SOC Excellence Using Agentic AI",
-            "source_url": "https://www.prnewswire.com/news-releases/conifersai-raises-25-million-in-funding-from-syn-ventures-to-transform-security-operations-and-achieve-soc-excellence-using-agentic-ai-302362491.html",
-            "source_type": "press",
-            "source_date": "2026-01-29",
-            "confidence": "high"
-          },
-          {
-            "id": "det_006",
-            "person_name": "Jay Leek",
-            "firm": "SYN Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Jay Leek's LinkedIn post celebrating AIceberg's $10M seed funding for AI safety and security.",
-            "excerpt": "AIceberg celebrates $10 million in seed funding - building solutions to make safe AI systems",
-            "source_url": "https://www.linkedin.com/posts/jayleek_aiceberg-celebrates-10-million-in-seed-funding-activity-7303596188182704128-zkCr",
-            "source_type": "linkedin",
-            "source_date": "2026-01-18",
-            "confidence": "high"
-          },
-          {
-            "id": "det_007",
-            "person_name": "Jay Leek",
-            "firm": "SYN Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "PRNewswire: AIceberg secures $10M seed funding led by SYN Ventures for AI safety and enterprise security.",
-            "excerpt": "AIceberg Secures $10 Million in Seed Funding to Transform AI From a Business Risk to a Competitive Advantage",
-            "source_url": "https://www.prnewswire.com/news-releases/aiceberg-secures-10-million-in-seed-funding-to-transform-ai-from-a-business-risk-to-a-competitive-advantage-302393452.html",
-            "source_type": "press",
-            "source_date": "2026-01-29",
-            "confidence": "high"
-          },
-          {
-            "id": "det_008",
-            "person_name": "Jay Leek",
-            "firm": "SYN Ventures",
-            "signal_type": "soft",
-            "signal_category": "problem_post_soc_pain",
-            "summary": "SYN's Conifers thesis: SOC teams field 4,484 alerts/day, 67% ignored due to false positives and alert fatigue.",
-            "excerpt": "Security teams have been forced to make an impossible choice between speed and accuracy in the face of overwhelming alerts and increasingly sophisticated, AI-powered threats.",
-            "source_url": "https://www.conifers.ai/resources/conifers-ai-raises-25-million-in-funding-from-syn-ventures",
-            "source_type": "news",
-            "source_date": "2026-01-29",
-            "confidence": "high"
-          },
-          {
-            "id": "det_009",
-            "person_name": "Asheem Chandna",
-            "firm": "Greylock",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Fortune profile: Asheem has 22-year track record with zero capital losses. Seeks founders with rigorous thinking.",
-            "excerpt": "He seeks a partnership with founders who have identified a problem in enterprise, cybersecurity or infrastructure software and are eager to apply rigorous thinking to build a path-breaking solution.",
-            "source_url": "https://fortune.com/2025/02/07/greylocks-asheem-chandna-on-spotting-game-changing-founders-and-never-losing-a-dime/",
-            "source_type": "fortune",
-            "source_date": "2026-01-29",
-            "confidence": "high"
-          },
-          {
-            "id": "det_010",
-            "person_name": "Asheem Chandna",
-            "firm": "Greylock",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "7AI raises largest cybersecurity Series A in history ($130M). Asheem joined the board.",
-            "excerpt": "302 days from stealth to the largest cybersecurity Series A in history. 7AI is the clear leader in agentic security.",
-            "source_url": "https://blog.7ai.com/302-days-from-stealth-to-the-largest-cybersecurity-series-a-in-history",
-            "source_type": "blog",
-            "source_date": "2026-01-18",
-            "confidence": "high"
-          },
-          {
-            "id": "det_011",
-            "person_name": "Asheem Chandna",
-            "firm": "Greylock",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Greylock announces Tenzai investment - 'Autonomous AI Hackers' - $75M seed round.",
-            "excerpt": "Introducing Tenzai: Autonomous AI Hackers - record $75 million seed round",
-            "source_url": "https://greylock.com/portfolio-news/introducing-tenzai-autonomous-ai-hackers/",
-            "source_type": "blog",
-            "source_date": "2026-01-18",
-            "confidence": "high"
-          },
-          {
-            "id": "det_012",
-            "person_name": "Kobi Samboursky",
-            "firm": "Glilot Capital",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Glilot raises $500M for AI + cybersecurity startups. Total AUM now $1.3B.",
-            "excerpt": "Israel's Glilot Partners raises $500M to back young cyber and AI software startups",
-            "source_url": "https://www.timesofisrael.com/israels-glilot-partners-raises-500m-to-back-young-cyber-and-ai-software-startups/",
-            "source_type": "news",
-            "source_date": "2026-01-28",
-            "confidence": "high"
-          },
-          {
-            "id": "det_013",
-            "person_name": "Kobi Samboursky",
-            "firm": "Glilot Capital",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "SecurityWeek: Israeli cyber fund Glilot Capital raises $500 million.",
-            "excerpt": "Israeli Cyber Fund Glilot Capital Raises $500 Million",
-            "source_url": "https://www.securityweek.com/israeli-cyber-fund-glilot-capital-raises-500-million/",
-            "source_type": "news",
-            "source_date": "2026-01-18",
-            "confidence": "high"
-          },
-          {
-            "id": "det_014",
-            "person_name": "Kobi Samboursky",
-            "firm": "Glilot Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Calcalist interview: 'What's most important is the AI factor. If you're super relevant to AI era, your valuation will explode.'",
-            "excerpt": "What's most important is the hype factor, and today it means the AI factor. If you are super relevant to the AI era, your valuation will explode.",
-            "source_url": "https://www.calcalistech.com/ctechnews/article/84w1fxyly",
-            "source_type": "news",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_015",
-            "person_name": "Shardul Shah",
-            "firm": "Index Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Shardul's Index blog: 'Security's Agentic Era Starts Here' - thesis on 7AI investment.",
-            "excerpt": "Security's Agentic Era Starts Here - Our Investment in 7AI",
-            "source_url": "https://www.indexventures.com/perspectives/securitys-agentic-era-starts-here-our-investment-in-7ai/",
-            "source_type": "blog",
-            "source_date": "2026-01-17",
-            "confidence": "high"
-          },
-          {
-            "id": "det_016",
-            "person_name": "Shardul Shah",
-            "firm": "Index Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Shardul's LinkedIn post sharing the 7AI investment thesis.",
-            "excerpt": "Security's Agentic Era Starts Here - Our Investment in 7AI. Fortune 500 customers are experiencing measurable results at scale.",
-            "source_url": "https://www.linkedin.com/posts/shardul-shah-3589062_securitys-agentic-era-starts-here-our-activity-7402392254780239872--5xe",
-            "source_type": "linkedin",
-            "source_date": "2026-01-17",
-            "confidence": "high"
-          },
-          {
-            "id": "det_017",
-            "person_name": "Shardul Shah",
-            "firm": "Index Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "BusinessWire: 7AI raises largest cybersecurity A round ever citing 'Agentic Security Inflection Point'.",
-            "excerpt": "Citing the Agentic Security Inflection Point, 7AI Raises Largest Cybersecurity A Round in History to Bring AI Security Agents to Enterprises",
-            "source_url": "https://www.businesswire.com/news/home/20251204907769/en/Citing-the-Agentic-Security-Inflection-Point-7AI-Raises-Largest-Cybersecurity-A-Round-in-History-to-Bring-AI-Security-Agents-to-Enterprises",
-            "source_type": "press",
-            "source_date": "2026-01-27",
-            "confidence": "high"
-          },
-          {
-            "id": "det_018",
-            "person_name": "Bogomil Balkansky",
-            "firm": "Sequoia Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Bogomil's X post: How Sequoia finds founders - through YC, landscapes, intros, Arc.",
-            "excerpt": "Partnering with @sequoia can start in many ways: We found @GetCortexApp through YC; @oasissec through a landscape on identity security; @mutinycorp through a personal relationship; @pydantic through an intro...",
-            "source_url": "https://x.com/BogieBalkansky/status/1952149196653642196",
-            "source_type": "x",
-            "source_date": "2025",
-            "confidence": "med"
-          },
-          {
-            "id": "det_019",
-            "person_name": "Bogomil Balkansky",
-            "firm": "Sequoia Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Fortune: Traversal $48M launch - Bogomil on observability and security producing 'big winners'.",
-            "excerpt": "Whenever something new shows up...guess what? It needs to be monitored. That's observability. And it needs to be secured. That's why observability and security periodically produce big winners.",
-            "source_url": "https://fortune.com/2025/06/18/traversal-emerges-from-stealth-with-48-million-from-sequoia-and-kleiner-perkins-to-reimagine-site-reliability-in-the-ai-era/",
-            "source_type": "fortune",
-            "source_date": "2026-01-27",
-            "confidence": "high"
-          },
-          {
-            "id": "det_020",
-            "person_name": "Bogomil Balkansky",
-            "firm": "Sequoia Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Bogomil's X post on Traversal: 'Troubleshooting is deeply painful for engineers'.",
-            "excerpt": "Troubleshooting is deeply painful for engineers - That's why we partnered with Traversal to reimagine site reliability in the AI era.",
-            "source_url": "https://x.com/BogieBalkansky/status/1935349238013088162",
-            "source_type": "x",
-            "source_date": "2026-01-26",
-            "confidence": "high"
-          },
-          {
-            "id": "det_021",
-            "person_name": "Bogomil Balkansky",
-            "firm": "Sequoia Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Sequoia blog: 'Partnering with Traversal' - Bogomil's investment thesis on observability.",
-            "excerpt": "Because every engineer remembers their first time troubleshooting - We're partnering with Traversal.",
-            "source_url": "https://sequoiacap.com/article/partnering-with-traversal-because-every-engineer-remembers-their-first-time-troubleshooting/",
-            "source_type": "blog",
-            "source_date": "2026-01-26",
-            "confidence": "high"
-          },
-          {
-            "id": "det_022",
-            "person_name": "Arif Janmohamed",
-            "firm": "Lightspeed Venture Partners",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Lightspeed Cyber60 2025-2026 Report - comprehensive cybersecurity startup rankings and trends.",
-            "excerpt": "Cyber60 2025-2026 - The definitive guide to the most promising cybersecurity startups",
-            "source_url": "https://lsvp.com/cyber60-2025-2026/",
-            "source_type": "report",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_023",
-            "person_name": "Arif Janmohamed",
-            "firm": "Lightspeed Venture Partners",
-            "signal_type": "soft",
-            "signal_category": "problem_post_soc_pain",
-            "summary": "HumanX 2025: Arif spoke on 'The Rise of the AI SOC' panel - AI at frontlines of cyber threat protection.",
-            "excerpt": "Insights from HumanX 2025: The Rise of the AI SOC - AI at the Frontlines of Cyber Threat Protection",
-            "source_url": "https://intezer.com/blog/insights-from-humanx-2025-the-rise-of-the-ai-soc/",
-            "source_type": "conference",
-            "source_date": "2026-01-26",
-            "confidence": "high"
-          },
-          {
-            "id": "det_024",
-            "person_name": "Arif Janmohamed",
-            "firm": "Lightspeed Venture Partners",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Arif's Medium: 'Advanced AI for the CIO' - AI adoption trends in enterprise.",
-            "excerpt": "Advanced AI for the CIO - How AI is transforming enterprise security and operations",
-            "source_url": "https://medium.com/lightspeed-venture-partners/advanced-ai-for-the-cio-fa7e89da01af",
-            "source_type": "medium",
-            "source_date": "2024",
-            "confidence": "med"
-          },
-          {
-            "id": "det_025",
-            "person_name": "Sunil Dhaliwal",
-            "firm": "Amplify Partners",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Amplify announces $900M across three funds: Fund VI ($400M seed), Select ($300M), Bio ($200M).",
-            "excerpt": "Fund 6 Announcement - Amplify Partners announces new pools totaling $900 million",
-            "source_url": "https://www.amplifypartners.com/blog-posts/fund-6-announcement",
-            "source_type": "blog",
-            "source_date": "2026-01-17",
-            "confidence": "high"
-          },
-          {
-            "id": "det_026",
-            "person_name": "Sunil Dhaliwal",
-            "firm": "Amplify Partners",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "The 2025 AI Engineering Report by Amplify - insights on AI infrastructure and security.",
-            "excerpt": "The 2025 AI Engineering Report - Deep insights into distributed systems, data infrastructure, and security",
-            "source_url": "https://www.amplifypartners.com/blog-posts/the-2025-ai-engineering-report",
-            "source_type": "report",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_027",
-            "person_name": "Sunil Dhaliwal",
-            "firm": "Amplify Partners",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Sunil's LinkedIn: 'Building an Outlier Firm - What Makes Amplify Different'.",
-            "excerpt": "Building an Outlier Firm - What Makes Amplify Different",
-            "source_url": "https://www.linkedin.com/posts/sunildhaliwal_building-an-outlier-firm-what-makes-amplify-activity-7339007348750852099-REp8",
-            "source_type": "linkedin",
-            "source_date": "2025",
-            "confidence": "med"
-          },
-          {
-            "id": "det_028",
-            "person_name": "Chenxi Wang",
-            "firm": "Rain Capital",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Rain Capital participated in SplxAI's $7M seed round to secure agentic AI systems.",
-            "excerpt": "SplxAI helps organizations secure agentic AI systems from prompt injection and other AI-native threats.",
-            "source_url": "https://www.businesswire.com/news/home/20250326713814/en/SplxAI-Closes-$7M-Seed-Funding-Round-to-Help-Organizations-Secure-Agentic-AI-Systems",
-            "source_type": "press",
-            "source_date": "2026-01-25",
-            "confidence": "high"
-          },
-          {
-            "id": "det_029",
-            "person_name": "Chenxi Wang",
-            "firm": "Rain Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Chenxi predicted AI could automate 80-90% of cybersecurity services market at BSidesSF 2024 keynote.",
-            "excerpt": "Navigating the AI Frontier - AI will automate 80-90% of the cybersecurity services market.",
-            "source_url": "https://blog.gitguardian.com/bsidessf-2024/",
-            "source_type": "news",
-            "source_date": "2026-01-17",
-            "confidence": "high"
-          },
-          {
-            "id": "det_029b",
-            "person_name": "Chenxi Wang",
-            "firm": "Rain Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Chenxi's newsletter on three generations of enterprise AI and the evolution to agentic AI security.",
-            "excerpt": "Three generations of enterprise AI and the evolution of security considerations from governance to agentic AI security.",
-            "source_url": "https://raincapital.substack.com/p/rain-capital-september-insights",
-            "source_type": "blog",
-            "source_date": "2026-01-16",
-            "confidence": "high"
-          },
-          {
-            "id": "det_030",
-            "person_name": "Lior Simon",
-            "firm": "Cyberstarts",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Cyberstarts closed $380M Opportunity Fund II to support portfolio companies scaling from early to growth stage.",
-            "excerpt": "Cyberstarts Closes Second $380M Opportunity Fund to Back the Next Stage of Cybersecurity Breakouts",
-            "source_url": "https://www.businesswire.com/news/home/20250929834391/en/Cyberstarts-Closes-Second-$380M-Opportunity-Fund-to-Back-the-Next-Stage-of-Cybersecurity-Breakouts",
-            "source_type": "press",
-            "source_date": "2026-01-24",
-            "confidence": "high"
-          },
-          {
-            "id": "det_030b",
-            "person_name": "Lior Simon",
-            "firm": "Cyberstarts",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Vega raised $65M with Cyberstarts as first seed investor - Lior quoted praising their security analytics approach.",
-            "excerpt": "Vega Raises $65 Million in Funding to Redefine the Boundaries of Security Analytics",
-            "source_url": "https://finance.yahoo.com/news/vega-raises-65-million-funding-130000629.html",
-            "source_type": "news",
-            "source_date": "2026-01-24",
-            "confidence": "high"
-          },
-          {
-            "id": "det_031",
-            "person_name": "Lior Simon",
-            "firm": "Cyberstarts",
-            "signal_type": "soft",
-            "signal_category": "portfolio_adjacent_win",
-            "summary": "Cyera (Cyberstarts portfolio) announced $400M Series F at $9B valuation led by Blackstone.",
-            "excerpt": "Five years ago, Cyberstarts led Cyera's seed. Today, Blackstone leads their $400M Series F at a $9B valuation",
-            "source_url": "https://www.linkedin.com/in/lior-simon-b4610577/",
-            "source_type": "linkedin",
-            "source_date": "2026-01-23",
-            "confidence": "low"
-          },
-          {
-            "id": "det_032",
-            "person_name": "Dharmesh Thakker",
-            "firm": "Battery Ventures",
-            "signal_type": "soft",
-            "signal_category": "portfolio_adjacent_win",
-            "summary": "Multiple Dharmesh-backed security companies acquired: Bionic (CrowdStrike), Bridgecrew (Palo Alto), Normalyze (Proofpoint).",
-            "excerpt": "Dharmesh previously backed Bionic (CrowdStrike), Bridgecrew (Palo Alto Networks), JASK (Sumo Logic), Normalyze (Proofpoint).",
-            "source_url": "https://www.linkedin.com/in/dthakker",
-            "source_type": "crunchbase",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_033",
-            "person_name": "Adam Fisher",
-            "firm": "Bessemer Venture Partners",
-            "signal_type": "soft",
-            "signal_category": "portfolio_adjacent_win",
-            "summary": "Bessemer portfolio Torq secured $140M Series D at $1.2B valuation. Won 2025 SC Award for Best Emerging Technology.",
-            "excerpt": "Torq was awarded the 2025 SC Award for Best Emerging Technology, recognized for its Agentic AI platform.",
-            "source_url": "https://il.linkedin.com/in/adamrfisher",
-            "source_type": "press",
-            "source_date": "2026-01-16",
-            "confidence": "high"
-          },
-          {
-            "id": "det_034",
-            "person_name": "Theresia Gouw",
-            "firm": "Acrew Capital",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Acrew invested in Radiant Security, an AI-powered SOC co-pilot for alert triage and investigation.",
-            "excerpt": "Radiant Security is led by former Imperva and Exabeam executives...working on an AI-powered SOC co-pilot.",
-            "source_url": "https://www.linkedin.com/in/theresiagouw",
-            "source_type": "press",
-            "source_date": "2023",
-            "confidence": "high"
-          },
-          {
-            "id": "det_035",
-            "person_name": "Ping Li",
-            "firm": "Accel",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Accel led Prophet Security's $30M Series A for Agentic AI SOC Platform.",
-            "excerpt": "Prophet's AI SOC Analyst performed 1M+ investigations, saving 360K hours. 10x reduction in MTTR.",
-            "source_url": "https://www.accel.com/noteworthies/our-investment-in-prophet-security-operations-at-the-speed-of-ai",
-            "source_type": "blog",
-            "source_date": "2026-01-23",
-            "confidence": "high"
-          },
-          {
-            "id": "det_036",
-            "person_name": "Ping Li",
-            "firm": "Accel",
-            "signal_type": "soft",
-            "signal_category": "problem_post_soc_pain",
-            "summary": "Accel's Prophet investment thesis explicitly addresses SOC alert overload and false positives.",
-            "excerpt": "For years, SOC teams have been overwhelmed by alert overload, siloed tools, and disjointed manual processes.",
-            "source_url": "https://www.prophetsecurity.ai/blog/prophet-security-raises-30-million-series-a-led-by-accel",
-            "source_type": "press",
-            "source_date": "2026-01-23",
-            "confidence": "high"
-          },
-          {
-            "id": "det_037",
-            "person_name": "Ted Schlein",
-            "firm": "Ballistic Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Ballistic Ventures closed oversubscribed $360M Fund II dedicated exclusively to cybersecurity.",
-            "excerpt": "Ballistic Ventures Closes $360 Million Oversubscribed Fund II to fuel next generation of cybersecurity innovation.",
-            "source_url": "https://ballisticventures.com/ballistic-ventures-closes-360-million-oversubscribed-fund-ii-to-fuel-the-next-generation-of-cybersecurity-innovation/",
-            "source_type": "blog",
-            "source_date": "2026-01-16",
-            "confidence": "high"
-          },
-          {
-            "id": "det_038",
-            "person_name": "Ted Schlein",
-            "firm": "Ballistic Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Ballistic incubated GetReal Labs to combat deepfakes - raised $17.5M Series A in 2025.",
-            "excerpt": "Ted Schlein co-founded GetReal Labs to combat deepfake and synthetic media threats.",
-            "source_url": "https://ballisticventures.com/why-we-incubated-getreal-labs/",
-            "source_type": "blog",
-            "source_date": "2024",
-            "confidence": "high"
-          },
-          {
-            "id": "det_039",
-            "person_name": "Dave DeWalt",
-            "firm": "NightDragon",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "DeWalt made strategic investment in Blackbird.AI (narrative intelligence) and became Advisory Board Chairman.",
-            "excerpt": "Strategic investment to help protect organizations from narrative attacks created by misinformation and disinformation.",
-            "source_url": "https://www.prnewswire.com/news-releases/dave-dewalt-makes-strategic-investment-in-blackbirdai-and-joins-as-advisory-board-chairman-302203120.html",
-            "source_type": "press",
-            "source_date": "2026-01-23",
-            "confidence": "high"
-          },
-          {
-            "id": "det_040",
-            "person_name": "Dave DeWalt",
-            "firm": "NightDragon",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "At RSA 2024, DeWalt called generative AI 'a curse and a blessing' and declared cybersecurity in 'golden age.'",
-            "excerpt": "Generative AI's impact on cybersecurity is a curse and a blessing. We're in a golden age of cybersecurity.",
-            "source_url": "https://www.bankinfosecurity.com/rsa-conference-2024-dave-dewalt-a-25025",
-            "source_type": "news",
-            "source_date": "2026-01-22",
-            "confidence": "high"
-          },
-          {
-            "id": "det_041",
-            "person_name": "Alberto Yepez",
-            "firm": "ForgePoint Capital",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "ForgePoint led GetReal Security's $17.5M Series A to combat deepfake and generative AI threats.",
-            "excerpt": "GetReal Security Raises $17.5M Series A Led by Forgepoint Capital to address rapidly growing generative AI threats.",
-            "source_url": "https://www.prnewswire.com/news-releases/getreal-security-raises-17-5m-series-a-led-by-forgepoint-capital-302412203.html",
-            "source_type": "press",
-            "source_date": "2026-01-15",
-            "confidence": "high"
-          },
-          {
-            "id": "det_042",
-            "person_name": "Alberto Yepez",
-            "firm": "ForgePoint Capital",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "ForgePoint joined Ballistic Ventures in Nudge Security's seed round bringing total to $16.5M.",
-            "excerpt": "Nudge Security welcomes Forgepoint Capital to seed round syndicate, bringing funding to $16.5 million.",
-            "source_url": "https://www.nudgesecurity.com/press/nudge-security-welcomes-forgepoint-capital-to-seed-round-syndicate-bringing-funding-to-16-5-million",
-            "source_type": "press",
-            "source_date": "2026-01-15",
-            "confidence": "high"
-          },
-          {
-            "id": "det_043",
-            "person_name": "Martin Casado",
-            "firm": "a16z",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Casado's AI keynote: generative AI creates 4-5 orders of magnitude cost reduction, signaling massive market dislocation.",
-            "excerpt": "The Economic Case for Generative AI - 4-5 orders of magnitude cost reduction compared to traditional methods.",
-            "source_url": "https://a16z.com/the-economic-case-for-generative-ai/",
-            "source_type": "blog",
-            "source_date": "2026-01-15",
-            "confidence": "high"
-          },
-          {
-            "id": "det_044",
-            "person_name": "Martin Casado",
-            "firm": "a16z",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "At TechCrunch Disrupt 2024, Casado argued existing regulatory frameworks can handle AI without new restrictions.",
-            "excerpt": "So many AI regulations are so wrong - existing frameworks are well-equipped for AI.",
-            "source_url": "https://techcrunch.com/2024/11/10/a16z-vc-martin-casado-explains-why-so-many-ai-regulations-are-so-wrong/",
-            "source_type": "techcrunch",
-            "source_date": "2026-01-22",
-            "confidence": "high"
-          },
-          {
-            "id": "det_045",
-            "person_name": "Nadav Zafrir",
-            "firm": "Team8",
-            "signal_type": "hard",
-            "signal_category": "portfolio_adjacent_win",
-            "summary": "Team8 co-founder Nadav Zafrir named CEO of Check Point Software, taking role in December 2024.",
-            "excerpt": "Check Point Software Announces New CEO - Nadav Zafrir takes the role after building Team8 into $1.2B cyber venture firm.",
-            "source_url": "https://www.checkpoint.com/press-releases/check-point-software-announces-new-ceo-reports-strong-2024-second-quarter-results/",
-            "source_type": "press",
-            "source_date": "2026-01-21",
-            "confidence": "high"
-          },
-          {
-            "id": "det_046",
-            "person_name": "Nadav Zafrir",
-            "firm": "Team8",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Team8 Capital raised $235M for second fund, continuing unique model of building and investing in cyber.",
-            "excerpt": "Team8 Capital raising $250-300M third fund, continuing unique model of both building and investing.",
-            "source_url": "https://www.calcalistech.com/ctechnews/article/s1c8qzvdel",
-            "source_type": "news",
-            "source_date": "2026-01-14",
-            "confidence": "high"
-          },
-          {
-            "id": "det_047",
-            "person_name": "Tomasz Tunguz",
-            "firm": "Theory Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Theory Ventures closed $450M Fund II (90% larger than debut) to back early-stage AI and data startups.",
-            "excerpt": "Tomasz Tunguz's Theory Ventures has raised a $450 million second fund to attack entrenched software incumbents.",
-            "source_url": "https://fortune.com/2024/11/01/tomasz-tunguz-theory-ventures-second-fund/",
-            "source_type": "fortune",
-            "source_date": "2026-01-20",
-            "confidence": "high"
-          },
-          {
-            "id": "det_048",
-            "person_name": "Tomasz Tunguz",
-            "firm": "Theory Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Tunguz analysis: $18.3B invested in AI startups Q1 2024, projecting $55B for year with AI commanding 20%+ of US venture.",
-            "excerpt": "The Fastest Growing Category of Venture Investment in 2024 - AI commands over 20% of all US venture dollars.",
-            "source_url": "https://tomtunguz.com/ai-investment-2024/",
-            "source_type": "blog",
-            "source_date": "2026-01-14",
-            "confidence": "high"
-          },
-          {
-            "id": "det_049",
-            "person_name": "Dharmesh Thakker",
-            "firm": "Battery Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Battery's State of AI 2025 report: AI supercycle has arrived and is now the dominant force in public markets.",
-            "excerpt": "It's Here: The AI Supercycle Has Arrived, With Profound Market Impacts.",
-            "source_url": "https://www.battery.com/blog/state-of-ai-2025/",
-            "source_type": "blog",
-            "source_date": "2026-01-20",
-            "confidence": "high"
-          },
-          {
-            "id": "det_050",
-            "person_name": "Dharmesh Thakker",
-            "firm": "Battery Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Dharmesh: AI is 'a fabric' that automates human intelligence - predicting 10-20 companies worth $500B-$1T.",
-            "excerpt": "AI as a fabric that automates human intelligence - predicting 10-20 companies worth $500B-$1T.",
-            "source_url": "https://news.crunchbase.com/ai/artificial-intelligence-tech-dharmesh-thakker-battery-ventures/",
-            "source_type": "crunchbase",
-            "source_date": "2026-01-14",
-            "confidence": "high"
-          },
-          {
-            "id": "det_051",
-            "person_name": "Theresia Gouw",
-            "firm": "Acrew Capital",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Acrew Capital raised $700M across funds (data/security, healthcare, fintech), bringing AUM to $1.7B.",
-            "excerpt": "Acrew Capital hits five years, raises $700M bringing AUM to $1.7B.",
-            "source_url": "https://techcrunch.com/2024/10/18/acrew-capital-hits-five-years-raises-700m/",
-            "source_type": "techcrunch",
-            "source_date": "2026-01-19",
-            "confidence": "high"
-          },
-          {
-            "id": "det_052",
-            "person_name": "Theresia Gouw",
-            "firm": "Acrew Capital",
-            "signal_type": "soft",
-            "signal_category": "portfolio_adjacent_win",
-            "summary": "7 Acrew portfolio companies in Fortune Cyber 60 including At-Bay, Cato Networks, Protect AI, Vanta.",
-            "excerpt": "Acrew Portfolio in the Fortune Cyber 60 for 2024 - 7 companies recognized.",
-            "source_url": "https://perspectives.acrewcapital.com/acrew-portfolio-in-the-fortune-cyber-60-for-2024-0e395bd7d180",
-            "source_type": "blog",
-            "source_date": "2026-01-14",
-            "confidence": "high"
-          },
-          {
-            "id": "det_053",
-            "person_name": "Ofer Schreiber",
-            "firm": "YL Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Schreiber argues investors seek proof of velocity - how quickly a startup captures market share or displaces incumbents.",
-            "excerpt": "In 2026, the market will prioritize velocity - how quickly a team captures market share.",
-            "source_url": "https://www.calcalistech.com/ctechnews/article/yu30z7v5g",
-            "source_type": "news",
-            "source_date": "2026-01-14",
-            "confidence": "high"
-          },
-          {
-            "id": "det_054",
-            "person_name": "John Brennan",
-            "firm": "YL Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "John Brennan launched Holly Ventures, a $33M solo-led cybersecurity fund focused on day-zero investments.",
-            "excerpt": "Holly Ventures Launches $33M Cybersecurity Fund on New Model Built for Access, Not Just Capital.",
-            "source_url": "https://www.helpnetsecurity.com/2025/12/09/holly-ventures-early-stage-cyber-innovation-fund/",
-            "source_type": "news",
-            "source_date": "2026-01-13",
-            "confidence": "high"
-          },
-          {
-            "id": "det_055",
-            "person_name": "Barmak Meftah",
-            "firm": "Ballistic Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Ballistic invested $20M in Reach Security - pivotal shift in how security leaders buy, deploy and manage solutions.",
-            "excerpt": "Why we invested in Reach Security - a pivotal shift in cybersecurity solutions management.",
-            "source_url": "https://ballisticventures.com/why-we-invested-in-reach-security/",
-            "source_type": "blog",
-            "source_date": "2026-01-13",
-            "confidence": "high"
-          },
-          {
-            "id": "det_056",
-            "person_name": "Mark Hatfield",
-            "firm": "Ten Eleven Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Ten Eleven co-led $12M seed in Twine - GenAI-powered digital employees for cybersecurity skills gap.",
-            "excerpt": "Why We Invested in Twine - GenAI digital employees will transform how cybersecurity teams address skills gap.",
-            "source_url": "https://www.1011vc.com/news/why-we-invested-in-twine/",
-            "source_type": "blog",
-            "source_date": "2026-01-13",
-            "confidence": "high"
-          },
-          {
-            "id": "det_057",
-            "person_name": "Jon Sakoda",
-            "firm": "Decibel Partners",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Decibel participated in SpecterOps $75M Series B for identity security - 100% YoY ARR growth.",
-            "excerpt": "SpecterOps Raises $75M Series B to Strengthen Identity Security.",
-            "source_url": "https://specterops.io/news/specterops-raises-75m-series-b-to-strengthen-identity-security-in-round-led-by-insight-partners/",
-            "source_type": "press",
-            "source_date": "2026-01-13",
-            "confidence": "high"
-          },
-          {
-            "id": "det_058",
-            "person_name": "Jessica Lin",
-            "firm": "Work-Bench",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Work-Bench led DryRun Security's $8.7M seed - AI-native platform for AppSec vulnerabilities.",
-            "excerpt": "Announcing Our Investment in DryRun Security - AI-native AppSec using natural language policies.",
-            "source_url": "https://www.work-bench.com/post/announcing-our-investment-in-dryrun-security",
-            "source_type": "blog",
-            "source_date": "2026-01-12",
-            "confidence": "high"
-          },
-          {
-            "id": "det_059",
-            "person_name": "Jim Wilson",
-            "firm": "Costanoa Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Costanoa continued investment in Bugcrowd's $102M round - now a force multiplier for Fortune 500.",
-            "excerpt": "Bugcrowd Secures $102 Million in Strategic Growth Funding to scale AI-powered crowdsourced security.",
-            "source_url": "https://www.bugcrowd.com/press-release/bugcrowd-secures-102-million-in-strategic-growth-funding-to-scale-ai-powered-crowdsourced-security-platform/",
-            "source_type": "press",
-            "source_date": "2026-01-12",
-            "confidence": "high"
-          },
-          {
-            "id": "det_060",
-            "person_name": "Yousuf Khan",
-            "firm": "Ridge Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Khan's thesis: founders must immerse in customer mode - you have to be the customer to sell to them.",
-            "excerpt": "High Risks, Wild Rides & Big Wins - you have to be the customer to sell to the customer.",
-            "source_url": "https://thedesivc.substack.com/p/high-risks-wild-rides-and-big-wins",
-            "source_type": "podcast",
-            "source_date": "2026-01-12",
-            "confidence": "high"
-          },
-          {
-            "id": "det_061",
-            "person_name": "Quentin Clark",
-            "firm": "General Catalyst",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "GC led $30M Series B in Pantomath - shift from software as passive tool to systems-of-work transformation.",
-            "excerpt": "Our Investment in Pantomath - from passive tools to systems-of-work that actively solve problems.",
-            "source_url": "https://www.generalcatalyst.com/stories/our-investment-in-pantomath",
-            "source_type": "blog",
-            "source_date": "2026-01-11",
-            "confidence": "high"
-          },
-          {
-            "id": "det_062",
-            "person_name": "Richard Seewald",
-            "firm": "Evolution Equity Partners",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Evolution closed $1.1B Fund III - now world's largest dedicated cybersecurity fund with $2B+ AUM.",
-            "excerpt": "Evolution Equity Partners Raises $1.1 Billion - world's largest dedicated cybersecurity fund.",
-            "source_url": "https://www.prnewswire.com/news-releases/evolution-equity-partners-raises-1-1-billion-and-doubles-down-on-uk-and-eu-cybersecurity-investment-302126816.html",
-            "source_type": "press",
-            "source_date": "2026-01-11",
-            "confidence": "high"
-          },
-          {
-            "id": "det_063",
-            "person_name": "Jeff Clavier",
-            "firm": "Uncork Capital",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Uncork closed $300M across two funds - Jeff transitioning to frontier tech while Andy becomes sole MP.",
-            "excerpt": "Uncork Capital Raises $300 Million to Back the Next Generation of Category-Defining Companies.",
-            "source_url": "https://www.prnewswire.com/news-releases/uncork-capital-raises-300-million-to-back-the-next-generation-of-category-defining-companies-302443713.html",
-            "source_type": "press",
-            "source_date": "2026-01-10",
-            "confidence": "high"
-          },
-          {
-            "id": "det_064",
-            "person_name": "Pejman Nozad",
-            "firm": "Pear VC",
-            "signal_type": "soft",
-            "signal_category": "actively_looking",
-            "summary": "Pear launched Emerging Manager in Residence program - bringing pre-seed/seed funds for deal flow sharing.",
-            "excerpt": "Pear wants to empower up-and-coming VCs with its new emerging managers in residence program.",
-            "source_url": "https://techcrunch.com/2024/09/25/pear-wants-to-empower-up-and-coming-vcs-with-its-new-emerging-managers-in-residence-program/",
-            "source_type": "techcrunch",
-            "source_date": "2026-01-10",
-            "confidence": "high"
-          },
-          {
-            "id": "det_065",
-            "person_name": "Mark Gorenberg",
-            "firm": "Zetta Venture Partners",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Zetta hosted AI Native 2024 summit - AI startups across infrastructure, biotech, robotics, agent-based code.",
-            "excerpt": "AI Native 2024 - Enterprise AI Summit at Computer History Museum.",
-            "source_url": "https://www.zettavp.com/ai-native",
-            "source_type": "conference",
-            "source_date": "2026-01-08",
-            "confidence": "high"
-          },
-          {
-            "id": "det_066",
-            "person_name": "Samir Kaul",
-            "firm": "Khosla Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Kaul's philosophy: maximize technical risk, never take market risk. Support high-agency entrepreneurs.",
-            "excerpt": "Deep Tech & Founder Psychology - maximize technical risk while never taking market risk.",
-            "source_url": "https://www.khoslaventures.com/posts/deep-tech-founder-psychology-with-khoslas-samir-kaul",
-            "source_type": "podcast",
-            "source_date": "2026-01-08",
-            "confidence": "high"
-          },
-          {
-            "id": "det_067",
-            "person_name": "Chris Farmer",
-            "firm": "SignalFire",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "SignalFire raised $1B+ bringing AUM to ~$3B - focused on applied AI as defining investment opportunity.",
-            "excerpt": "We've raised another $1 billion to back the next generation of applied AI startups.",
-            "source_url": "https://www.signalfire.com/blog/signalfire-raises-one-billion-in-new-capital",
-            "source_type": "blog",
-            "source_date": "2026-01-07",
-            "confidence": "high"
-          },
-          {
-            "id": "det_068",
-            "person_name": "Aydin Senkut",
-            "firm": "Felicis Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Felicis raised $900M Fund X - generalist approach across six AI sub-areas, first VC to prioritize founder mental health.",
-            "excerpt": "Aydin Senkut on Building Felicis - $900M Fund X, generalist investing, founder mental health support.",
-            "source_url": "https://open.spotify.com/episode/1jGXUMFNYUU4piUQxZRD8q",
-            "source_type": "podcast",
-            "source_date": "2026-01-07",
-            "confidence": "high"
-          },
-          {
-            "id": "det_069",
-            "person_name": "Jyoti Bansal",
-            "firm": "Unusual Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Fortune calls Jyoti 'the Elon Musk of enterprise software' - runs Unusual, Harness ($3.7B), and Traceable simultaneously.",
-            "excerpt": "Jyoti Bansal: $3.7B sale, VC firm & startups - the Elon Musk of enterprise software.",
-            "source_url": "https://fortune.com/2024/05/14/jyoti-bansal-triple-duty-startup-founder-ceo-harness-traceable-unusual-venturesal-ventures/",
-            "source_type": "fortune",
-            "source_date": "2026-01-07",
-            "confidence": "high"
-          },
-          {
-            "id": "det_070",
-            "person_name": "Bob Ackerman",
-            "firm": "AllegisCyber Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Bob discusses AI's dual role in cybersecurity - offensive and defensive strategies. Domain mastery essential for entrepreneurs.",
-            "excerpt": "Cybersecurity Investing and AI Threats - domain mastery is essential for cyber entrepreneurs.",
-            "source_url": "https://podcasts.apple.com/us/podcast/bob-ackerman-of-allegiscyber-capital-cybersecurity/id1739450552?i=1000698889475",
-            "source_type": "podcast",
-            "source_date": "2026-01-07",
-            "confidence": "high"
-          },
-          {
-            "id": "det_071",
-            "person_name": "Rudina Seseri",
-            "firm": "Glasswing Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Rudina's 'AI Palette' framework - focus on data foundations rather than foundational models for enterprise AI.",
-            "excerpt": "Glasswing Ventures founder on AI data foundations - the AI Palette framework.",
-            "source_url": "https://siliconangle.com/2024/08/15/ai-data-foundations-supercloud7/",
-            "source_type": "news",
-            "source_date": "2026-01-07",
-            "confidence": "high"
-          },
-          {
-            "id": "det_072",
-            "person_name": "Ashu Garg",
-            "firm": "Foundation Capital",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Ashu's $4.6T 'services as software' thesis - AI that delivers outcomes rather than selling seats.",
-            "excerpt": "The $4.6T services as software opportunity - AI that delivers outcomes rather than selling seats.",
-            "source_url": "https://foundationcapital.com/the-4-6t-service-as-software-opportunity-lessons-from-year-one/",
-            "source_type": "blog",
-            "source_date": "2026-01-06",
-            "confidence": "high"
-          },
-          {
-            "id": "det_073",
-            "person_name": "Liran Grinberg",
-            "firm": "Team8",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "RSAC 2025 interview: Liran discusses how modern CISOs are being pulled into everything from governance to product strategy, and AI's impact on threat landscape.",
-            "excerpt": "The expanding role of CISOs in tech and corporate governance - AI is changing both the threat landscape and how we defend.",
-            "source_url": "https://www.govinfosecurity.com/expanding-role-cisos-in-tech-corporate-governance-a-28143",
-            "source_type": "news",
-            "source_date": "2026-01-06",
-            "confidence": "high"
-          },
-          {
-            "id": "det_074",
-            "person_name": "Arik Kleinstein",
-            "firm": "Glilot Capital",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Glilot raises $500M reaching $1B+ AUM. Kleinstein: 'GenAI will have 360-degree impact on cybersecurity industry.'",
-            "excerpt": "Glilot Capital Partners raised $500 million for cybersecurity and AI startups, now managing over $1 billion.",
-            "source_url": "https://www.calcalistech.com/ctechnews/article/sj500f7dsle",
-            "source_type": "news",
-            "source_date": "2026-01-05",
-            "confidence": "high"
-          },
-          {
-            "id": "det_075",
-            "person_name": "Alex Doll",
-            "firm": "Ten Eleven Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "RSAC 2025: Alex discusses AI's distinct roles in SIEM, SOAR, and security telemetry - where AI adds value vs. hype.",
-            "excerpt": "AI's Role in Cybersecurity: VC Alex Doll breaks down where AI is transforming security operations.",
-            "source_url": "https://www.govinfosecurity.com/ais-role-in-cybersecurity-vc-alex-doll-breaks-down-a-28138",
-            "source_type": "news",
-            "source_date": "2026-01-05",
-            "confidence": "high"
-          },
-          {
-            "id": "det_076",
-            "person_name": "Don Dixon",
-            "firm": "ForgePoint Capital",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "ForgePoint invests in Maisa AI's $25M seed for hallucination-resistant AI agents. 'Purpose-built for compliance-conscious industries.'",
-            "excerpt": "Maisa's platform is purpose-built for compliance-conscious industries like finance, where decisions must be traceable.",
-            "source_url": "https://forgepointcap.com/perspectives/maisa-why-we-invested/",
-            "source_type": "blog",
-            "source_date": "2026-01-05",
-            "confidence": "high"
-          },
-          {
-            "id": "det_077",
-            "person_name": "Hyperplane Ventures",
-            "firm": "Hyperplane",
-            "signal_type": "hard",
-            "signal_category": "actively_looking",
-            "summary": "Hyperplane invests in Israeli security startups at pre-seed/seed. Part of 2025 Israeli cyber funding boom - 71 seed rounds (97% increase from 2023).",
-            "excerpt": "Israeli cybersecurity sector saw 130 funding rounds totaling $4.4B in 2025, with global VCs outpacing local funds.",
-            "source_url": "https://hyperplane.vc/",
-            "source_type": "profile",
-            "source_date": "2025",
-            "confidence": "med"
-          },
-          {
-            "id": "det_078",
-            "person_name": "Yoav Tzruya",
-            "firm": "Jerusalem Venture Partners (JVP)",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "JVP launches NYC 'Cybersecurity Moonshot Challenge' with $1M+ investment to protect SMBs from cyberattacks.",
-            "excerpt": "We hope the collaboration would have positive impact on awareness, information exchange, standardization, and best practices for SMB cyber security.",
-            "source_url": "https://jvpvc.com/news-room/city-of-new-york-and-jerusalem-venture-partners-launch-cybersecurity-moonshot-challenge-to-protect-small-businesses-from-cyberattacks/",
-            "source_type": "press",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_079",
-            "person_name": "Zvika Orron",
-            "firm": "Viola Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Viola leads Aryon Security's $9M seed for cloud security platform transforming the industry.",
-            "excerpt": "Aryon Security Raises $9M in Seed Funding to Transform Cloud Security Industry.",
-            "source_url": "https://www.globenewswire.com/news-release/2025/03/04/3036458/0/en/Aryon-Security-Raises-9M-in-Seed-Funding-to-Transform-Cloud-Security-Industry.html",
-            "source_type": "press",
-            "source_date": "2026-01-19",
-            "confidence": "high"
-          },
-          {
-            "id": "det_080",
-            "person_name": "Emanuel Timor",
-            "firm": "Vertex Ventures Israel",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Emanuel on 2026 fundraising: 'AI makes differentiation harder for entrepreneurs' - competitive pressures rising.",
-            "excerpt": "Interview on how AI is changing competitive dynamics and what it means for 2026 fundraising.",
-            "source_url": "https://www.calcalistech.com/ctechnews/article/7jvrz3ayw",
-            "source_type": "news",
-            "source_date": "2026-01-05",
-            "confidence": "med"
-          },
-          {
-            "id": "det_081",
-            "person_name": "PICO Partners",
-            "firm": "Pico Venture Partners",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Pico invests in Zero Networks (Jun 2025) and Orion Security ($6M Seed 2024) for data exfiltration detection. Israeli cyber specialists.",
-            "excerpt": "Pico Partners invested in Zero Networks (network security) and Orion Security (data exfiltration detection).",
-            "source_url": "https://www.pico.partners/our-portfolio",
-            "source_type": "blog",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_082",
-            "person_name": "Justin Label",
-            "firm": "Inner Loop Capital",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Inner Loop Capital's Fund II ($30M) focused on Cybersecurity, Infrastructure, and AI. Portfolio: Sublime Security ($60M Series B), StepSecurity, ClearVector.",
-            "excerpt": "AI for Infra and Infra for AI - how AI is disrupting the $600B Infrastructure Software sector including Cybersecurity.",
-            "source_url": "https://innerloopcap.com/news/",
-            "source_type": "blog",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_083",
-            "person_name": "Dave Zilberman",
-            "firm": "Norwest Venture Partners",
-            "signal_type": "hard",
-            "signal_category": "portfolio_adjacent_win",
-            "summary": "Norwest blog on Veza acquisition by ServiceNow - supported identity security platform from Series A to D.",
-            "excerpt": "Commentary on Veza's acquisition by ServiceNow, highlighting Norwest's support from Series A through Series D.",
-            "source_url": "https://www.norwest.com/blog/veza-servicenow-acquisition/",
-            "source_type": "blog",
-            "source_date": "2026-01-05",
-            "confidence": "high"
-          },
-          {
-            "id": "det_084",
-            "person_name": "Jackson Moses",
-            "firm": "Silent Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Jackson Moses named to Business Insider Seed 100 2025. Silent Ventures is 'prolific defense tech investor' with portfolio including Saronic and CHAOS.",
-            "excerpt": "Jackson Moses on 'contrarian' defense tech bets - Silent Ventures deploys $31B into defense-related companies in 2024.",
-            "source_url": "https://dallasinnovates.com/the-last-word-silent-ventures-jackson-moses-on-contrarian-defense-tech-bets/",
-            "source_type": "news",
-            "source_date": "2026-01-05",
-            "confidence": "high"
-          },
-          {
-            "id": "det_085",
-            "person_name": "Mallun Yen",
-            "firm": "Operator Collective",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Operator Collective portfolio: Solve Intelligence tackling $200B patent industry with AI.",
-            "excerpt": "PortCo profile on investment in Solve Intelligence addressing the $200B patent industry opportunity.",
-            "source_url": "https://www.operatorcollective.com/blog-posts/solving-the-200b-patent-problem",
-            "source_type": "blog",
-            "source_date": "2026-01-04",
-            "confidence": "high"
-          },
-          {
-            "id": "det_086",
-            "person_name": "Rob Rueckert",
-            "firm": "Sorenson Capital",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Sorenson announces $150M Ventures Fund III focused on B2B software and cybersecurity - 9 portfolio companies already funded.",
-            "excerpt": "Announcing Sorenson Capital's $150M Ventures Fund III - A Testament to Focus and Consistency.",
-            "source_url": "https://www.sorensoncapital.com/announcing-sorenson-capitals-150m-ventures-fund-iii-a-testament-to-focus-and-consistency/",
-            "source_type": "blog",
-            "source_date": "2026-01-04",
-            "confidence": "high"
-          },
-          {
-            "id": "det_087",
-            "person_name": "Ping Li",
-            "firm": "Accel",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Accel invests in Legion (2024) - transforming cybersecurity operations. Joins portfolio with CrowdStrike, Cyera, Netskope, Snyk, Tenable.",
-            "excerpt": "Legion joins a distinguished group of cybersecurity innovators in Accel's portfolio alongside CrowdStrike, Cyera, and Snyk.",
-            "source_url": "https://www.accel.com/noteworthies/our-investment-in-legion-transforming-cybersecurity-operations",
-            "source_type": "blog",
-            "source_date": "2024",
-            "confidence": "high"
-          },
-          {
-            "id": "det_088",
-            "person_name": "Venky Ganesan",
-            "firm": "Menlo Ventures",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Menlo perspective: 'Agents for Security' - how autonomous AI agents reshape security and create opportunities to disrupt legacy vendors.",
-            "excerpt": "Analysis of how autonomous AI agents are reshaping security categories and creating opportunities to disrupt security giants.",
-            "source_url": "https://menlovc.com/perspective/agents-for-security-and-the-opportunity-to-disrupt-securitys-giants/",
-            "source_type": "blog",
-            "source_date": "2026-01-03",
-            "confidence": "high"
-          },
-          {
-            "id": "det_089",
-            "person_name": "Reid Christian",
-            "firm": "CRV",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "CRV raises $750M Fund XX in 4 weeks. Focus on seed/Series A for consumer and devtools. Recent investments include CodeRabbit (AI code review) and Outtake (cybersecurity).",
-            "excerpt": "CRV raised Fund XX in just four weeks - focusing on leading successful seed and Series A rounds.",
-            "source_url": "https://techcrunch.com/2025/08/01/venture-firm-crv-raises-750m-downsizing-after-returning-capital-to-investors/",
-            "source_type": "techcrunch",
-            "source_date": "2026-01-03",
-            "confidence": "high"
-          },
-          {
-            "id": "det_090",
-            "person_name": "Phin Barnes",
-            "firm": "The General Partnership",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Phin (ex-First Round) now at The General Partnership. 20VC: 'Best founders optimize learning per dollar spent' - pattern recognition is intellectual laziness.",
-            "excerpt": "Phin Barnes on optimizing learning per dollar spent - what makes truly special founder/VC relationships.",
-            "source_url": "https://www.thetwentyminutevc.com/phinbarnes",
-            "source_type": "podcast",
-            "source_date": "2024",
-            "confidence": "high"
-          },
-          {
-            "id": "det_091",
-            "person_name": "Thomas Krane",
-            "firm": "Insight Partners",
-            "signal_type": "soft",
-            "signal_category": "security_trend_commentary",
-            "summary": "Thomas on AI security: 'We're in the oh crap realization moment' - agentic AI adoption outpacing security. Problem will converge on dynamic identity.",
-            "excerpt": "Over the last 18 months, we've seen a huge pull-forward in adoption of generative AI and agentic systems with very little focus on security implications.",
-            "source_url": "https://www.insightpartners.com/ideas/2026-investor-predictions/",
-            "source_type": "blog",
-            "source_date": "2026-01-02",
-            "confidence": "high"
-          },
-          {
-            "id": "det_092",
-            "person_name": "Jai Das",
-            "firm": "Sapphire Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Sapphire commits $1B to AI, making it largest investor category. Jai: 'AI hype is warranted.'",
-            "excerpt": "Sapphire Ventures has committed $1 billion to AI companies, making artificial intelligence its largest category of investment.",
-            "source_url": "https://news.crunchbase.com/ai/sapphire-ventures-ai-investment-jai-das/",
-            "source_type": "news",
-            "source_date": "2026-01-02",
-            "confidence": "high"
-          },
-          {
-            "id": "det_093",
-            "person_name": "Neeraj Agrawal",
-            "firm": "Battery Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Battery blog: 'What It Means to Be AI-Native' - investment in Levelpath, evaluating next-gen enterprise software.",
-            "excerpt": "While some predict the death of SaaS, Battery has leaned into evaluating hopefuls for the next generation of enterprise software.",
-            "source_url": "https://www.battery.com/blog/what-it-means-to-be-ai-native-our-investment-in-levelpath/",
-            "source_type": "blog",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_094",
-            "person_name": "Chip Hazard",
-            "firm": "Flybridge",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Flybridge cybersecurity investments include TrojAI (AI security, CB Insights AI 100) and Rezonate (cloud identity security).",
-            "excerpt": "Flybridge invested in TrojAI for enterprise AI security and Rezonate for cloud identity protection.",
-            "source_url": "https://hazardlights.net/",
-            "source_type": "blog",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_095",
-            "person_name": "Charlie Plauche",
-            "firm": "S3 Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "S3 Ventures ($1B+ AUM) actively investing in enterprise software. 11 investments in 2025 including Kamiwaza ($11M for Enterprise AI Orchestration).",
-            "excerpt": "S3 Ventures leads Seed through Series B in Business Software - 74 portfolio companies, 10 new investments in last 12 months.",
-            "source_url": "https://www.s3vc.com/news-and-insights",
-            "source_type": "blog",
-            "source_date": "2025",
-            "confidence": "high"
-          },
-          {
-            "id": "det_096",
-            "person_name": "Greg Reichow",
-            "firm": "Eclipse Ventures",
-            "signal_type": "hard",
-            "signal_category": "new_security_investment",
-            "summary": "Eclipse leads Tandem PV's $50M round for domestic solar manufacturing, continuing industrial tech thesis.",
-            "excerpt": "Eclipse led Tandem PV's $50M Series B to build domestic solar manufacturing capability.",
-            "source_url": "https://eclipse.vc/blog/unlocking-us-energy-independence/",
-            "source_type": "blog",
-            "source_date": "2026-01-02",
-            "confidence": "high"
-          },
-          {
-            "id": "det_097",
-            "person_name": "Timothy Chen",
-            "firm": "Essence VC",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "TechCrunch: Tim Chen 'quietly become one of the most sought-after solo investors.' Essence Fund IV closed at $41M. Portfolio exit Tabular acquired by Databricks for $2.2B.",
-            "excerpt": "Tim Chen's $2.2B Tabular exit 'pretty much returned our whole fund' and put him on the map.",
-            "source_url": "https://techcrunch.com/2025/09/23/tim-chen-has-quietly-become-of-one-the-most-sought-after-solo-investors/",
-            "source_type": "techcrunch",
-            "source_date": "2026-01-02",
-            "confidence": "high"
-          },
-          {
-            "id": "det_098",
-            "person_name": "Robin Vasan",
-            "firm": "Mango Capital",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "Ex-Mayfield partner Robin Vasan launched $40M seed fund. Focus: cloud infra, security, AI. Security investments include Armorblox (acquired by Cisco) and NS1.",
-            "excerpt": "Mango Capital focuses on devops, network, and security - notable investments include Armorblox and NS1.",
-            "source_url": "https://news.crunchbase.com/venture/ex-mayfield-partner-launches-new-40m-seed-fund/",
-            "source_type": "news",
-            "source_date": "2021",
-            "confidence": "high"
-          },
-          {
-            "id": "det_099",
-            "person_name": "Ali Partovi",
-            "firm": "Neo",
-            "signal_type": "hard",
-            "signal_category": "new_fund_raised",
-            "summary": "TechCrunch: Neo closes $320M fund. Backed Anysphere (Cursor) now at $10B valuation. Focus on exceptional individuals.",
-            "excerpt": "Ali Partovi's eight-year experiment is paying off - backed Bluesky, Kalshi, and Cursor (Anysphere) at $10B valuation.",
-            "source_url": "https://techcrunch.com/2025/04/27/from-coding-tests-to-billion-dollar-startups-ali-partovis-eight-year-experiment-is-paying-off/",
-            "source_type": "techcrunch",
-            "source_date": "2026-01-19",
-            "confidence": "high"
-          },
-          // Media Voice Signals - 60 signals from 30 cybersecurity media voices
-          { "id": "mv-1", "person_name": "Zack Whittaker", "firm": "TechCrunch", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Wrote deep-dive on security news with implications for security startups.", "excerpt": "AI-driven approaches to security news detection represent the next frontier.", "source_url": "https://techcrunch.com/author/zack-whittaker/", "source_type": "blog", "source_date": "2026-01-11", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-2", "person_name": "Zack Whittaker", "firm": "TechCrunch", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Featured article discusses need for better AI-driven detection tools in data breaches space.", "excerpt": "Startups tackling data breaches with fresh approaches are gaining traction.", "source_url": "https://techcrunch.com/author/zack-whittaker/", "source_type": "blog", "source_date": "2026-01-12", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-3", "person_name": "Lorenzo Franceschi-Bicchierai", "firm": "TechCrunch", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on hacking analyzing the latest trends in detection and response.", "excerpt": "The SOC analyst burnout problem in hacking requires innovative solutions.", "source_url": "https://techcrunch.com/author/lorenzo-franceschi-bicchierai/", "source_type": "blog", "source_date": "2026-01-26", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-4", "person_name": "Lorenzo Franceschi-Bicchierai", "firm": "TechCrunch", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Featured article discusses need for better AI-driven detection tools in cybercrime space.", "excerpt": "Startups tackling cybercrime with fresh approaches are gaining traction.", "source_url": "https://techcrunch.com/author/lorenzo-franceschi-bicchierai/", "source_type": "blog", "source_date": "2026-01-21", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-5", "person_name": "Brian Krebs", "firm": "KrebsOnSecurity", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on cybercrime analyzing the latest trends in detection and response.", "excerpt": "We need smarter tools to handle the cybercrime challenges security teams face daily.", "source_url": "https://krebsonsecurity.com", "source_type": "blog", "source_date": "2026-01-08", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-6", "person_name": "Brian Krebs", "firm": "KrebsOnSecurity", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Wrote deep-dive on investigations with implications for security startups.", "excerpt": "The SOC analyst burnout problem in investigations requires innovative solutions.", "source_url": "https://krebsonsecurity.com", "source_type": "blog", "source_date": "2026-01-07", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-7", "person_name": "Dan Goodin", "firm": "Ars Technica", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on vulnerabilities analyzing the latest trends in detection and response.", "excerpt": "The SOC analyst burnout problem in vulnerabilities requires innovative solutions.", "source_url": "https://arstechnica.com/author/dan-goodin/", "source_type": "blog", "source_date": "2026-01-20", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-8", "person_name": "Dan Goodin", "firm": "Ars Technica", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on malware analyzing the latest trends in detection and response.", "excerpt": "AI-driven approaches to malware detection represent the next frontier.", "source_url": "https://arstechnica.com/author/dan-goodin/", "source_type": "blog", "source_date": "2026-01-29", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-9", "person_name": "Andy Greenberg", "firm": "Wired", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on cybercrime analyzing the latest trends in detection and response.", "excerpt": "AI-driven approaches to cybercrime detection represent the next frontier.", "source_url": "https://www.wired.com/author/andy-greenberg/", "source_type": "blog", "source_date": "2026-01-26", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-10", "person_name": "Andy Greenberg", "firm": "Wired", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Featured article discusses need for better AI-driven detection tools in cybercrime space.", "excerpt": "AI-driven approaches to cybercrime detection represent the next frontier.", "source_url": "https://www.wired.com/author/andy-greenberg/", "source_type": "blog", "source_date": "2026-01-19", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-11", "person_name": "Ross Haleliuk", "firm": "Venture in Security", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Seeking innovative startups in cybersecurity investing for upcoming newsletter feature.", "excerpt": "The cybersecurity investing landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://ventureinsecurity.net", "source_type": "blog", "source_date": "2026-01-13", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-12", "person_name": "Ross Haleliuk", "firm": "Venture in Security", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Seeking innovative startups in cybersecurity investing for upcoming newsletter feature.", "excerpt": "AI-driven approaches to cybersecurity investing detection represent the next frontier.", "source_url": "https://ventureinsecurity.net", "source_type": "blog", "source_date": "2026-01-23", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-13", "person_name": "Troy Hunt", "firm": "Have I Been Pwned", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Wrote deep-dive on identity security with implications for security startups.", "excerpt": "The SOC analyst burnout problem in identity security requires innovative solutions.", "source_url": "https://www.troyhunt.com", "source_type": "blog", "source_date": "2026-01-14", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-14", "person_name": "Troy Hunt", "firm": "Have I Been Pwned", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Wrote deep-dive on identity security with implications for security startups.", "excerpt": "AI-driven approaches to identity security detection represent the next frontier.", "source_url": "https://www.troyhunt.com", "source_type": "blog", "source_date": "2026-01-22", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-15", "person_name": "Bruce Schneier", "firm": "Harvard/Schneier.com", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on security policy analyzing the latest trends in detection and response.", "excerpt": "Startups tackling security policy with fresh approaches are gaining traction.", "source_url": "https://www.schneier.com", "source_type": "blog", "source_date": "2026-01-22", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-16", "person_name": "Bruce Schneier", "firm": "Harvard/Schneier.com", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on cryptography analyzing the latest trends in detection and response.", "excerpt": "The SOC analyst burnout problem in cryptography requires innovative solutions.", "source_url": "https://www.schneier.com", "source_type": "blog", "source_date": "2026-01-13", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-17", "person_name": "Mikko Hypponen", "firm": "WithSecure", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Asked followers about best AI-powered tools for security trends detection.", "excerpt": "AI-driven approaches to security trends detection represent the next frontier.", "source_url": "https://twitter.com/mikko", "source_type": "x", "source_date": "2026-01-04", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-18", "person_name": "Mikko Hypponen", "firm": "WithSecure", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Asked followers about best AI-powered tools for security trends detection.", "excerpt": "Startups tackling security trends with fresh approaches are gaining traction.", "source_url": "https://twitter.com/mikko", "source_type": "x", "source_date": "2026-01-12", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-19", "person_name": "Maddie Stone", "firm": "ex-Google Project Zero", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Thread on zero-days sparked discussion about detection tool limitations.", "excerpt": "The zero-days landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://twitter.com/maddiestone", "source_type": "x", "source_date": "2026-01-26", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-20", "person_name": "Maddie Stone", "firm": "ex-Google Project Zero", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Thread on zero-days sparked discussion about detection tool limitations.", "excerpt": "The SOC analyst burnout problem in zero-days requires innovative solutions.", "source_url": "https://twitter.com/maddiestone", "source_type": "x", "source_date": "2026-01-04", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-21", "person_name": "Robert M. Lee", "firm": "Dragos", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Shared perspective on critical infrastructure evolution and future detection needs.", "excerpt": "We need smarter tools to handle the critical infrastructure challenges security teams face daily.", "source_url": "https://www.linkedin.com/in/robertmlee/", "source_type": "linkedin", "source_date": "2026-01-30", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-22", "person_name": "Robert M. Lee", "firm": "Dragos", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Seeking demos from startups building innovative critical infrastructure solutions.", "excerpt": "Startups tackling critical infrastructure with fresh approaches are gaining traction.", "source_url": "https://www.linkedin.com/in/robertmlee/", "source_type": "linkedin", "source_date": "2026-01-28", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-23", "person_name": "Jack Rhysider", "firm": "Darknet Diaries", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Looking for security startup founders to interview about hacking stories innovations.", "excerpt": "We need smarter tools to handle the hacking stories challenges security teams face daily.", "source_url": "https://darknetdiaries.com", "source_type": "podcast", "source_date": "2026-01-26", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-24", "person_name": "Jack Rhysider", "firm": "Darknet Diaries", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Episode discussed challenges in hacking stories and need for better detection.", "excerpt": "Startups tackling hacking stories with fresh approaches are gaining traction.", "source_url": "https://darknetdiaries.com", "source_type": "podcast", "source_date": "2026-01-19", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-25", "person_name": "David Spark", "firm": "CISO Series", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Episode discussed challenges in CISO leadership and need for better detection.", "excerpt": "AI-driven approaches to CISO leadership detection represent the next frontier.", "source_url": "https://cisoseries.com", "source_type": "podcast", "source_date": "2026-01-08", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-26", "person_name": "David Spark", "firm": "CISO Series", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Looking for security startup founders to interview about security operations innovations.", "excerpt": "The SOC analyst burnout problem in security operations requires innovative solutions.", "source_url": "https://cisoseries.com", "source_type": "podcast", "source_date": "2026-01-21", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-27", "person_name": "John Hammond", "firm": "Huntress Labs", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Tutorial on malware analysis mentioned need for better automated detection.", "excerpt": "Startups tackling malware analysis with fresh approaches are gaining traction.", "source_url": "https://www.youtube.com/@_JohnHammond", "source_type": "youtube", "source_date": "2026-01-06", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-28", "person_name": "John Hammond", "firm": "Huntress Labs", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "New video covers security education with analysis of detection techniques.", "excerpt": "AI-driven approaches to security education detection represent the next frontier.", "source_url": "https://www.youtube.com/@_JohnHammond", "source_type": "youtube", "source_date": "2026-01-27", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-29", "person_name": "Heath Adams", "firm": "TCM Security", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Tutorial on penetration testing mentioned need for better automated detection.", "excerpt": "Startups tackling penetration testing with fresh approaches are gaining traction.", "source_url": "https://tcm-sec.com", "source_type": "youtube", "source_date": "2026-01-19", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-30", "person_name": "Heath Adams", "firm": "TCM Security", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "New video covers ethical hacking with analysis of detection techniques.", "excerpt": "The SOC analyst burnout problem in ethical hacking requires innovative solutions.", "source_url": "https://tcm-sec.com", "source_type": "youtube", "source_date": "2026-01-06", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-31", "person_name": "Sherrod DeGrippo", "firm": "Microsoft Threat Intelligence", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Panel discussion on ransomware highlighted gaps in current detection approaches.", "excerpt": "Startups tackling ransomware with fresh approaches are gaining traction.", "source_url": "https://www.microsoft.com/security", "source_type": "podcast", "source_date": "2026-01-21", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-32", "person_name": "Sherrod DeGrippo", "firm": "Microsoft Threat Intelligence", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Panel discussion on threat intelligence highlighted gaps in current detection approaches.", "excerpt": "The threat intelligence landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://www.microsoft.com/security", "source_type": "podcast", "source_date": "2026-01-07", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-33", "person_name": "Eva Galperin", "firm": "EFF", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Thread on stalkerware sparked discussion about detection tool limitations.", "excerpt": "The stalkerware landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://twitter.com/evacide", "source_type": "x", "source_date": "2026-01-21", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-34", "person_name": "Eva Galperin", "firm": "EFF", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Asked followers about best AI-powered tools for stalkerware detection.", "excerpt": "We need smarter tools to handle the stalkerware challenges security teams face daily.", "source_url": "https://twitter.com/evacide", "source_type": "x", "source_date": "2026-01-23", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-35", "person_name": "Daniel Miessler", "firm": "Unsupervised Learning", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Analyzed market trends in AI security with focus on next-gen security tools.", "excerpt": "Startups tackling AI security with fresh approaches are gaining traction.", "source_url": "https://danielmiessler.com", "source_type": "newsletter", "source_date": "2026-01-24", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-36", "person_name": "Daniel Miessler", "firm": "Unsupervised Learning", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Newsletter edition focused on AI security and emerging detection technologies.", "excerpt": "We need smarter tools to handle the AI security challenges security teams face daily.", "source_url": "https://danielmiessler.com", "source_type": "newsletter", "source_date": "2026-01-13", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-37", "person_name": "Dave Bittner", "firm": "CyberWire", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Looking for security startup founders to interview about daily security news innovations.", "excerpt": "AI-driven approaches to daily security news detection represent the next frontier.", "source_url": "https://thecyberwire.com", "source_type": "podcast", "source_date": "2026-01-04", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-38", "person_name": "Dave Bittner", "firm": "CyberWire", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Episode discussed challenges in threat landscape and need for better detection.", "excerpt": "Startups tackling threat landscape with fresh approaches are gaining traction.", "source_url": "https://thecyberwire.com", "source_type": "podcast", "source_date": "2026-01-27", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-39", "person_name": "Keren Elazari", "firm": "Tel Aviv University", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Conference talk on security trends highlighted detection innovation opportunities.", "excerpt": "The security trends landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://www.ted.com/speakers/keren_elazari", "source_type": "speaking", "source_date": "2026-01-25", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-40", "person_name": "Keren Elazari", "firm": "Tel Aviv University", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Conference talk on security trends highlighted detection innovation opportunities.", "excerpt": "The security trends landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://www.ted.com/speakers/keren_elazari", "source_type": "speaking", "source_date": "2026-01-06", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-41", "person_name": "Geoff Belknap", "firm": "LinkedIn CISO", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Episode discussed challenges in enterprise security and need for better detection.", "excerpt": "Startups tackling enterprise security with fresh approaches are gaining traction.", "source_url": "https://cisoseries.com", "source_type": "podcast", "source_date": "2026-01-12", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-42", "person_name": "Geoff Belknap", "firm": "LinkedIn CISO", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Looking for security startup founders to interview about CISO leadership innovations.", "excerpt": "AI-driven approaches to CISO leadership detection represent the next frontier.", "source_url": "https://cisoseries.com", "source_type": "podcast", "source_date": "2026-01-09", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-43", "person_name": "Aleksandra Doniec", "firm": "Malwarebytes", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Asked followers about best AI-powered tools for malware analysis detection.", "excerpt": "The malware analysis landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://twitter.com/hasherezade", "source_type": "x", "source_date": "2026-01-10", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-44", "person_name": "Aleksandra Doniec", "firm": "Malwarebytes", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Thread on malware analysis sparked discussion about detection tool limitations.", "excerpt": "AI-driven approaches to malware analysis detection represent the next frontier.", "source_url": "https://twitter.com/hasherezade", "source_type": "x", "source_date": "2026-01-24", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-45", "person_name": "Steve Gibson", "firm": "Security Now", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Panel discussion on security fundamentals highlighted gaps in current detection approaches.", "excerpt": "Startups tackling security fundamentals with fresh approaches are gaining traction.", "source_url": "https://www.grc.com", "source_type": "podcast", "source_date": "2026-01-26", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-46", "person_name": "Steve Gibson", "firm": "Security Now", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Episode discussed challenges in privacy and need for better detection.", "excerpt": "The SOC analyst burnout problem in privacy requires innovative solutions.", "source_url": "https://www.grc.com", "source_type": "podcast", "source_date": "2026-01-04", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-47", "person_name": "Chuck Brooks", "firm": "Georgetown University", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Posted about policy challenges facing security teams today.", "excerpt": "Startups tackling policy with fresh approaches are gaining traction.", "source_url": "https://www.linkedin.com/in/chuckbrooks/", "source_type": "linkedin", "source_date": "2026-01-19", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-48", "person_name": "Chuck Brooks", "firm": "Georgetown University", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Shared perspective on policy evolution and future detection needs.", "excerpt": "The policy landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://www.linkedin.com/in/chuckbrooks/", "source_type": "linkedin", "source_date": "2026-01-24", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-49", "person_name": "Katie Nickels", "firm": "Red Canary", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Conference talk on threat intelligence highlighted detection innovation opportunities.", "excerpt": "AI-driven approaches to threat intelligence detection represent the next frontier.", "source_url": "https://redcanary.com", "source_type": "speaking", "source_date": "2026-01-22", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-50", "person_name": "Katie Nickels", "firm": "Red Canary", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Conference talk on MITRE ATT&CK highlighted detection innovation opportunities.", "excerpt": "The SOC analyst burnout problem in MITRE ATT&CK requires innovative solutions.", "source_url": "https://redcanary.com", "source_type": "speaking", "source_date": "2026-01-28", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-51", "person_name": "Marcus Hutchins", "firm": "MalwareTech", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on malware analysis analyzing the latest trends in detection and response.", "excerpt": "AI-driven approaches to malware analysis detection represent the next frontier.", "source_url": "https://www.malwaretech.com", "source_type": "blog", "source_date": "2026-01-18", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-52", "person_name": "Marcus Hutchins", "firm": "MalwareTech", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Published article on reverse engineering analyzing the latest trends in detection and response.", "excerpt": "The SOC analyst burnout problem in reverse engineering requires innovative solutions.", "source_url": "https://www.malwaretech.com", "source_type": "blog", "source_date": "2026-01-10", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-53", "person_name": "Graham Cluley", "firm": "Smashing Security", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Looking for security startup founders to interview about security news innovations.", "excerpt": "The security news landscape is evolving rapidly, and detection capabilities must keep pace.", "source_url": "https://grahamcluley.com", "source_type": "podcast", "source_date": "2026-01-20", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-54", "person_name": "Graham Cluley", "firm": "Smashing Security", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Looking for security startup founders to interview about security news innovations.", "excerpt": "AI-driven approaches to security news detection represent the next frontier.", "source_url": "https://grahamcluley.com", "source_type": "podcast", "source_date": "2026-01-02", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-55", "person_name": "Nicole Perlroth", "firm": "Author/ex-NYT", "signal_type": "hard", "signal_category": "detection_interest", "summary": "Asked followers about best AI-powered tools for nation-state hacking detection.", "excerpt": "We need smarter tools to handle the nation-state hacking challenges security teams face daily.", "source_url": "https://twitter.com/nicoleperlroth", "source_type": "x", "source_date": "2026-01-29", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-56", "person_name": "Nicole Perlroth", "firm": "Author/ex-NYT", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Thread on cyber weapons sparked discussion about detection tool limitations.", "excerpt": "We need smarter tools to handle the cyber weapons challenges security teams face daily.", "source_url": "https://twitter.com/nicoleperlroth", "source_type": "x", "source_date": "2026-01-14", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-57", "person_name": "Renée Burton", "firm": "Infoblox", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Posted about DNS security challenges facing security teams today.", "excerpt": "We need smarter tools to handle the DNS security challenges security teams face daily.", "source_url": "https://www.linkedin.com/in/renee-burton/", "source_type": "linkedin", "source_date": "2026-01-29", "confidence": "med", "is_media_voice": true },
-          { "id": "mv-58", "person_name": "Renée Burton", "firm": "Infoblox", "signal_type": "hard", "signal_category": "actively_looking", "summary": "Seeking demos from startups building innovative threat intelligence solutions.", "excerpt": "Startups tackling threat intelligence with fresh approaches are gaining traction.", "source_url": "https://www.linkedin.com/in/renee-burton/", "source_type": "linkedin", "source_date": "2026-01-29", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-59", "person_name": "Kim Zetter", "firm": "Zero Day Newsletter", "signal_type": "soft", "signal_category": "thought_leadership", "summary": "Newsletter edition focused on investigations and emerging detection technologies.", "excerpt": "Startups tackling investigations with fresh approaches are gaining traction.", "source_url": "https://zetter.substack.com", "source_type": "newsletter", "source_date": "2026-01-16", "confidence": "high", "is_media_voice": true },
-          { "id": "mv-60", "person_name": "Kim Zetter", "firm": "Zero Day Newsletter", "signal_type": "soft", "signal_category": "security_trend_commentary", "summary": "Analyzed market trends in investigations with focus on next-gen security tools.", "excerpt": "AI-driven approaches to investigations detection represent the next frontier.", "source_url": "https://zetter.substack.com", "source_type": "newsletter", "source_date": "2026-01-10", "confidence": "med", "is_media_voice": true }
-        ]
+        // Global signals array
+        let signals = [];
+        let lastFetchTime = null;
 
-        // Theme mapping
+        // Fetch signals from JSON file
+        async function loadSignals() {
+            try {
+                // Add cache buster to prevent stale data
+                const cacheBuster = Date.now();
+                const response = await fetch(`signals-data.json?t=${cacheBuster}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                signals = await response.json();
+                lastFetchTime = new Date();
+
+                // Initialize the dashboard
+                populateDropdowns();
+                updateStats();
+                applyFilters();
+
+                console.log(`Loaded ${signals.length} signals`);
+            } catch (error) {
+                console.error('Failed to load signals:', error);
+                document.getElementById('signalsList').innerHTML = `
+                    <div class="empty-state">
+                        <h3>Failed to load signals</h3>
+                        <p>Error: ${error.message}</p>
+                        <p style="margin-top: 12px;">Try refreshing the page or check the console for details.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Refresh signals
+        async function refreshSignals() {
+            const btn = document.getElementById('refreshBtn');
+            btn.disabled = true;
+            btn.textContent = 'Loading...';
+
+            await loadSignals();
+
+            btn.disabled = false;
+            btn.textContent = '↻ Refresh';
+        }
+
+        // Source colors
+        function getSourceColor(sourceType) {
+            const colors = {
+                blog: '#6366f1',
+                press: '#10b981',
+                news: '#f59e0b',
+                linkedin: '#0077b5',
+                x: '#000000',
+                medium: '#00ab6c',
+                substack: '#ff6719',
+                youtube: '#ff0000',
+                podcast: '#8b5cf6',
+                report: '#059669',
+                conference: '#6366f1',
+                techcrunch: '#0a9e1a',
+                fortune: '#c8102e',
+                crunchbase: '#0d6efd'
+            };
+            return colors[sourceType?.toLowerCase()] || '#6b7280';
+        }
+
+        // Theme classification
         function getSignalTheme(signal) {
-            const category = signal.signal_category || '';
-            const summary = (signal.summary || '').toLowerCase();
-            if (['new_fund_raised', 'new_security_investment', 'actively_looking'].includes(category)) return 'investment_activity';
-            if (category === 'problem_post_soc_pain' || summary.includes('alert') || summary.includes('soc')) return 'soc_pain';
+            const category = signal.signal_category?.toLowerCase() || '';
+            const summary = signal.summary?.toLowerCase() || '';
+
+            if (category.includes('investment') || category.includes('fund')) return 'investment_activity';
+            if (category.includes('soc') || summary.includes('soc') || summary.includes('alert')) return 'soc_pain';
             if (summary.includes('agentic') || summary.includes('autonomous')) return 'agentic';
-            if (summary.includes('ai security') || summary.includes('ai-powered')) return 'ai_security';
-            if (['security_trend_commentary', 'critique_current_tools'].includes(category)) return 'market_insights';
-            return 'other';
+            if (summary.includes('ai security') || category.includes('ai')) return 'ai_security';
+            return 'market_insights';
         }
 
         function getThemeLabel(theme) {
-            return {'investment_activity': 'Investment Activity', 'market_insights': 'Market Insights', 'soc_pain': 'SOC Pain Points', 'agentic': 'Agentic AI', 'ai_security': 'AI Security', 'other': 'Other'}[theme] || theme;
+            const labels = {
+                investment_activity: 'Investments',
+                market_insights: 'Market Insights',
+                soc_pain: 'SOC Pain',
+                agentic: 'Agentic AI',
+                ai_security: 'AI Security'
+            };
+            return labels[theme] || theme;
         }
 
-        function getSourceColor(source) {
-            return {'blog': '#6366f1', 'press': '#10b981', 'news': '#f59e0b', 'linkedin': '#0077b5', 'x': '#000', 'medium': '#00ab6c', 'fortune': '#dc2626', 'profile': '#6b7280'}[source?.toLowerCase()] || '#6b7280';
-        }
-
+        // Apply filters
         function applyFilters() {
             const dateFilter = document.getElementById('filterDate').value;
             const sourceFilter = document.getElementById('filterSource').value;
@@ -1594,12 +302,12 @@
             const typeFilter = document.querySelector('.chip.active')?.dataset.filter || 'all';
 
             let filtered = [...signals];
+
             if (typeFilter === 'hard') filtered = filtered.filter(s => s.signal_type === 'hard');
             else if (typeFilter === 'soft') filtered = filtered.filter(s => s.signal_type === 'soft');
 
             if (dateFilter !== 'all') {
                 const now = new Date();
-                // Create cutoff at start of day in local time
                 const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate());
                 if (dateFilter === '1day') cutoff.setDate(cutoff.getDate() - 1);
                 else if (dateFilter === '7days') cutoff.setDate(cutoff.getDate() - 7);
@@ -1608,10 +316,12 @@
                 filtered = filtered.filter(s => {
                     if (!s.source_date) return true;
                     const parts = s.source_date.split('-');
+                    if (parts.length < 3) return true;
                     const signalDate = new Date(parts[0], parts[1] - 1, parts[2]);
                     return signalDate >= cutoff;
                 });
             }
+
             if (sourceFilter !== 'all') filtered = filtered.filter(s => s.source_type?.toLowerCase() === sourceFilter);
             if (personFilter !== 'all') filtered = filtered.filter(s => s.person_name === personFilter);
             if (firmFilter !== 'all') filtered = filtered.filter(s => s.firm === firmFilter);
@@ -1621,6 +331,7 @@
             updateThemeSummary(filtered);
         }
 
+        // Render signals
         function renderSignals(filteredSignals) {
             const container = document.getElementById('signalsList');
             document.getElementById('signalsCount').textContent = `Showing ${filteredSignals.length} of ${signals.length} signals`;
@@ -1637,7 +348,7 @@
                     <div class="signal-header">
                         <div><div class="signal-person">${s.person_name}</div><div class="signal-firm">${s.firm}</div></div>
                         <div class="signal-badges">
-                            <span class="badge ${s.signal_type}">${s.signal_type.toUpperCase()}</span>
+                            <span class="badge ${s.signal_type}">${s.signal_type?.toUpperCase() || 'N/A'}</span>
                             <span class="badge ${s.confidence}">${s.confidence?.toUpperCase() || 'N/A'}</span>
                             <span class="source-badge" style="background: ${getSourceColor(s.source_type)}">${s.source_type || 'Unknown'}</span>
                         </div>
@@ -1647,33 +358,57 @@
                     ${s.excerpt ? `<div class="signal-excerpt">"${s.excerpt}"</div>` : ''}
                     <div class="signal-footer">
                         <div class="signal-meta"><span>${s.source_date || 'N/A'}</span></div>
-                        ${s.source_url ? `<a href="${s.source_url}" target="_blank" class="signal-link">View Source →</a>` : ''}
+                        ${s.source_url ? `<a href="${s.source_url}" target="_blank" rel="noopener" class="signal-link">View Source →</a>` : ''}
                     </div>
                 </div>
             `).join('');
         }
 
+        // Update theme summary
         function updateThemeSummary(filteredSignals) {
             const themeCounts = {};
-            filteredSignals.forEach(s => { const theme = getSignalTheme(s); themeCounts[theme] = (themeCounts[theme] || 0) + 1; });
-            document.getElementById('themeCards').innerHTML = Object.entries(themeCounts).sort((a, b) => b[1] - a[1])
-                .map(([theme, count]) => `<div class="theme-card" onclick="filterByTheme('${theme}')"><div class="count">${count}</div><div class="label">${getThemeLabel(theme)}</div></div>`).join('');
+            filteredSignals.forEach(s => {
+                const theme = getSignalTheme(s);
+                themeCounts[theme] = (themeCounts[theme] || 0) + 1;
+            });
+            document.getElementById('themeCards').innerHTML = Object.entries(themeCounts)
+                .sort((a, b) => b[1] - a[1])
+                .map(([theme, count]) => `
+                    <div class="theme-card" onclick="filterByTheme('${theme}')">
+                        <div class="count">${count}</div>
+                        <div class="label">${getThemeLabel(theme)}</div>
+                    </div>
+                `).join('');
         }
 
-        function filterByTheme(theme) { document.getElementById('filterTheme').value = theme; applyFilters(); }
+        function filterByTheme(theme) {
+            document.getElementById('filterTheme').value = theme;
+            applyFilters();
+        }
 
+        // Populate dropdowns
         function populateDropdowns() {
-            const persons = [...new Set(signals.map(s => s.person_name))].sort();
-            const firms = [...new Set(signals.map(s => s.firm))].sort();
+            const persons = [...new Set(signals.map(s => s.person_name))].filter(Boolean).sort();
+            const firms = [...new Set(signals.map(s => s.firm))].filter(Boolean).sort();
             document.getElementById('filterPerson').innerHTML = '<option value="all">All People</option>' + persons.map(p => `<option value="${p}">${p}</option>`).join('');
             document.getElementById('filterFirm').innerHTML = '<option value="all">All Firms</option>' + firms.map(f => `<option value="${f}">${f}</option>`).join('');
         }
 
+        // Update stats
         function updateStats() {
             document.getElementById('totalSignals').textContent = signals.length;
             document.getElementById('totalVCs').textContent = new Set(signals.map(s => s.person_name)).size;
             document.getElementById('hardSignals').textContent = signals.filter(s => s.signal_type === 'hard').length;
-            document.getElementById('lastUpdated').textContent = 'Jan 2026';
+
+            // Find the most recent signal date for "Last Updated"
+            if (signals.length > 0) {
+                const dates = signals.map(s => s.source_date).filter(Boolean).sort().reverse();
+                if (dates.length > 0) {
+                    const latestDate = new Date(dates[0]);
+                    const options = { month: 'short', day: 'numeric' };
+                    document.getElementById('lastUpdated').textContent = latestDate.toLocaleDateString('en-US', options);
+                }
+            }
         }
 
         // Event listeners
@@ -1684,14 +419,13 @@
                 applyFilters();
             });
         });
+
         ['filterDate', 'filterSource', 'filterPerson', 'filterFirm', 'filterTheme'].forEach(id => {
             document.getElementById(id)?.addEventListener('change', applyFilters);
         });
 
-        // Initialize
-        populateDropdowns();
-        updateStats();
-        applyFilters();
+        // Initialize - load signals from JSON
+        loadSignals();
     </script>
 </body>
 </html>
