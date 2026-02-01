@@ -9,6 +9,12 @@
       "initial_scan_date": "2026-01-31",
       "last_scan_date": null,
       "note": "Never look at posts older than 14 days from today. After initial 2-week lookback, only check for new activity since last_scan_date."
+    },
+    "linkedin_scan": {
+      "last_run": "2026-02-01T14:00:00",
+      "profiles_scanned": 16,
+      "requires_user_trigger": true,
+      "trigger_phrase": "research linkedin now"
     }
   },
   "linkedin_profiles": [

@@ -6,12 +6,29 @@ This is the GitHub Pages-hosted dashboard for tracking VC and media voice signal
 
 ## Key Commands
 
-When the user says **"Scan social profiles for signals"**, follow these steps:
+### "Research LinkedIn now"
 
-1. Read `scripts/SOCIAL_SCAN_INSTRUCTIONS.md` for the full procedure
-2. Read `scripts/social_scan_manifest.json` for all 92 profiles to scan
-3. Use browser automation tools to scan LinkedIn and X/Twitter profiles
-4. Add detected signals to `signals-data.json`
+**Requires user presence** - LinkedIn scanning only runs when explicitly triggered.
+
+When the user says **"Research LinkedIn now"**:
+1. Read `scripts/social_scan_manifest.json` and report when LinkedIn was last scanned
+2. Ask user to confirm they're ready to watch the browser
+3. Scan Priority 1 LinkedIn profiles (using browser automation)
+4. Extract specific post URLs when creating signals (not profile URLs)
+5. Update `metadata.linkedin_scan.last_run` timestamp after completion
+6. Add detected signals to `signals-data.json`
+
+### "Run RSS monitor"
+
+**Safe to run anytime** - No account risk, uses public RSS feeds.
+
+When the user says **"Run RSS monitor"**:
+1. Run `python scripts/live_monitor.py`
+2. Report new signals found
+
+### "Scan social profiles for signals" (Legacy)
+
+Full scan of all profiles - use specific commands above instead.
 
 ## Lookback Rules (IMPORTANT)
 
