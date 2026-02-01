@@ -81,6 +81,17 @@
         .badge.high { background: #dcfce7; color: #166534; }
         .badge.med { background: #fef3c7; color: #92400e; }
 
+        /* Engagement status badges */
+        .badge.engagement-hot { background: #ef4444; color: white; animation: pulse-hot 1.5s infinite; }
+        .badge.engagement-warm { background: #f97316; color: white; }
+        .badge.engagement-cool { background: #fbbf24; color: #78350f; }
+        @keyframes pulse-hot { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+        .signal-card.hot { border-left-color: #ef4444; background: linear-gradient(90deg, #fef2f2 0%, white 10%); }
+        .signal-card.warm { border-left-color: #f97316; background: linear-gradient(90deg, #fff7ed 0%, white 10%); }
+
+        .engage-cta { color: var(--primary); font-weight: 600; }
+
         .signal-category { display: inline-block; background: #e0e7ff; color: #3730a3; padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; margin-bottom: 12px; }
         .signal-summary { font-size: 0.95rem; line-height: 1.6; color: var(--gray-700); margin-bottom: 12px; }
         .signal-excerpt { background: var(--gray-100); padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; color: var(--gray-500); font-style: italic; margin-bottom: 12px; }
@@ -94,6 +105,50 @@
         .loading-state { text-align: center; padding: 60px 20px; color: var(--gray-500); }
         .loading-spinner { display: inline-block; width: 40px; height: 40px; border: 3px solid var(--gray-200); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
         @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Narrative Summary Section */
+        .narrative-section { background: white; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .narrative-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+        .narrative-title { font-size: 1.3rem; font-weight: 600; color: var(--gray-900); }
+        .data-freshness { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--gray-500); }
+        .freshness-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); animation: pulse 2s infinite; }
+        .freshness-dot.stale { background: var(--warning); }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+        .timeframe-tabs { display: flex; gap: 8px; margin-bottom: 20px; border-bottom: 2px solid var(--gray-200); padding-bottom: 12px; }
+        .timeframe-tab { padding: 8px 20px; border-radius: 8px 8px 0 0; font-size: 0.9rem; cursor: pointer; border: none; background: transparent; color: var(--gray-500); font-weight: 500; transition: all 0.2s; }
+        .timeframe-tab:hover { color: var(--gray-700); background: var(--gray-100); }
+        .timeframe-tab.active { color: var(--primary); background: #e0e7ff; }
+        .timeframe-tab .count { font-size: 0.75rem; background: var(--gray-200); padding: 2px 6px; border-radius: 10px; margin-left: 6px; }
+        .timeframe-tab.active .count { background: var(--primary); color: white; }
+
+        .narrative-content { display: none; }
+        .narrative-content.active { display: block; }
+
+        .narrative-empty { text-align: center; padding: 40px; color: var(--gray-500); }
+
+        .narrative-overview { background: linear-gradient(135deg, #f0f4ff 0%, #fdf4ff 100%); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        .narrative-overview h4 { font-size: 1rem; color: var(--gray-700); margin-bottom: 12px; }
+        .narrative-overview p { font-size: 0.95rem; line-height: 1.7; color: var(--gray-700); }
+
+        .voice-groups { display: flex; flex-direction: column; gap: 16px; }
+        .voice-group { border: 1px solid var(--gray-200); border-radius: 12px; padding: 16px; }
+        .voice-group-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .voice-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1rem; }
+        .voice-info h5 { font-size: 0.95rem; font-weight: 600; color: var(--gray-900); }
+        .voice-info span { font-size: 0.8rem; color: var(--gray-500); }
+        .voice-quotes { display: flex; flex-direction: column; gap: 8px; }
+        .voice-quote { background: var(--gray-100); padding: 12px 16px; border-radius: 8px; font-size: 0.9rem; color: var(--gray-700); border-left: 3px solid var(--primary); }
+        .voice-quote.hard { border-left-color: var(--danger); }
+        .voice-quote.soft { border-left-color: var(--warning); }
+        .quote-meta { font-size: 0.75rem; color: var(--gray-500); margin-top: 6px; display: flex; gap: 12px; }
+
+        .key-themes { margin-bottom: 20px; }
+        .key-themes h4 { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .theme-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .theme-pill { padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; background: #e0e7ff; color: #3730a3; }
+        .theme-pill.hot { background: #fef2f2; color: var(--danger); }
+        .theme-pill .pill-count { font-size: 0.75rem; opacity: 0.7; margin-left: 4px; }
 
         footer { text-align: center; padding: 40px 20px; color: white; opacity: 0.8; font-size: 0.85rem; }
 
@@ -124,13 +179,13 @@
         <div class="filters-panel">
             <div class="filters-grid">
                 <div class="filter-group">
-                    <label>Time Range</label>
+                    <label>Engagement Window</label>
                     <select id="filterDate">
-                        <option value="all">All Time</option>
-                        <option value="1day">Past 1 Day</option>
-                        <option value="7days">Past 7 Days</option>
-                        <option value="14days">Past 14 Days</option>
-                        <option value="month">Past Month</option>
+                        <option value="6hours">🔴 Last 6 Hours (Engage Now)</option>
+                        <option value="24hours">🟠 Last 24 Hours</option>
+                        <option value="3days">🟡 Last 3 Days</option>
+                        <option value="7days" selected>Last 7 Days</option>
+                        <option value="30days">Last 30 Days (Trends)</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -178,6 +233,33 @@
             </div>
         </div>
 
+        <!-- Narrative Summary Section -->
+        <div class="narrative-section">
+            <div class="narrative-header">
+                <h2 class="narrative-title">Market Narrative</h2>
+                <div class="data-freshness">
+                    <span class="freshness-dot" id="freshnessDot"></span>
+                    <span id="dataFreshness">Loading...</span>
+                </div>
+            </div>
+
+            <div class="timeframe-tabs">
+                <button class="timeframe-tab active" data-timeframe="day">Past 24h<span class="count" id="dayCount">0</span></button>
+                <button class="timeframe-tab" data-timeframe="week">Past 7 Days<span class="count" id="weekCount">0</span></button>
+                <button class="timeframe-tab" data-timeframe="month">Past 30 Days<span class="count" id="monthCount">0</span></button>
+            </div>
+
+            <div class="narrative-content active" id="narrative-day">
+                <div class="narrative-empty">Loading...</div>
+            </div>
+            <div class="narrative-content" id="narrative-week">
+                <div class="narrative-empty">Loading...</div>
+            </div>
+            <div class="narrative-content" id="narrative-month">
+                <div class="narrative-empty">Loading...</div>
+            </div>
+        </div>
+
         <div class="signals-container">
             <div class="signals-header">
                 <span class="signals-count" id="signalsCount">Loading signals...</span>
@@ -222,6 +304,7 @@
                 populateDropdowns();
                 updateStats();
                 applyFilters();
+                generateNarratives();
 
                 console.log(`Loaded ${signals.length} signals`);
             } catch (error) {
@@ -246,6 +329,23 @@
 
             btn.disabled = false;
             btn.textContent = '↻ Refresh';
+        }
+
+        // Engagement status calculation
+        function getEngagementStatus(signal) {
+            const now = Date.now();
+            const signalTime = signal.source_timestamp ? new Date(signal.source_timestamp).getTime()
+                             : signal.source_date ? new Date(signal.source_date + 'T12:00:00Z').getTime()
+                             : 0;
+            if (signalTime === 0) return { status: 'unknown', label: '?', hoursAgo: null };
+
+            const hoursAgo = Math.floor((now - signalTime) / (1000 * 60 * 60));
+
+            if (hoursAgo < 6) return { status: 'hot', label: '🔴 HOT', hoursAgo, timeLabel: `${hoursAgo}h ago` };
+            if (hoursAgo < 24) return { status: 'warm', label: '🟠 WARM', hoursAgo, timeLabel: `${hoursAgo}h ago` };
+            if (hoursAgo < 72) return { status: 'cool', label: '🟡 COOL', hoursAgo, timeLabel: `${Math.floor(hoursAgo/24)}d ago` };
+            if (hoursAgo < 168) return { status: 'fading', label: '⚪', hoursAgo, timeLabel: `${Math.floor(hoursAgo/24)}d ago` };
+            return { status: 'archive', label: '', hoursAgo, timeLabel: `${Math.floor(hoursAgo/24)}d ago` };
         }
 
         // Source colors
@@ -306,19 +406,25 @@
             if (typeFilter === 'hard') filtered = filtered.filter(s => s.signal_type === 'hard');
             else if (typeFilter === 'soft') filtered = filtered.filter(s => s.signal_type === 'soft');
 
-            if (dateFilter !== 'all') {
-                const now = new Date();
-                const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-                if (dateFilter === '1day') cutoff.setDate(cutoff.getDate() - 1);
-                else if (dateFilter === '7days') cutoff.setDate(cutoff.getDate() - 7);
-                else if (dateFilter === '14days') cutoff.setDate(cutoff.getDate() - 14);
-                else if (dateFilter === 'month') cutoff.setDate(cutoff.getDate() - 30);
+            // Filter by engagement window (hours-based for precision)
+            const now = new Date();
+            let cutoffMs;
+
+            if (dateFilter === '6hours') cutoffMs = now.getTime() - (6 * 60 * 60 * 1000);
+            else if (dateFilter === '24hours') cutoffMs = now.getTime() - (24 * 60 * 60 * 1000);
+            else if (dateFilter === '3days') cutoffMs = now.getTime() - (3 * 24 * 60 * 60 * 1000);
+            else if (dateFilter === '7days') cutoffMs = now.getTime() - (7 * 24 * 60 * 60 * 1000);
+            else if (dateFilter === '30days') cutoffMs = now.getTime() - (30 * 24 * 60 * 60 * 1000);
+            else cutoffMs = 0; // No filter
+
+            if (cutoffMs > 0) {
                 filtered = filtered.filter(s => {
-                    if (!s.source_date) return true;
-                    const parts = s.source_date.split('-');
-                    if (parts.length < 3) return true;
-                    const signalDate = new Date(parts[0], parts[1] - 1, parts[2]);
-                    return signalDate >= cutoff;
+                    // Prefer precise timestamp, fall back to date
+                    const signalTime = s.source_timestamp ? new Date(s.source_timestamp).getTime()
+                                     : s.source_date ? new Date(s.source_date + 'T12:00:00Z').getTime()
+                                     : 0;
+                    if (signalTime === 0) return false; // Exclude signals with no date
+                    return signalTime >= cutoffMs;
                 });
             }
 
@@ -343,11 +449,14 @@
 
             filteredSignals.sort((a, b) => new Date(b.source_date || '2020-01-01') - new Date(a.source_date || '2020-01-01'));
 
-            container.innerHTML = filteredSignals.map(s => `
-                <div class="signal-card ${s.signal_type}">
+            container.innerHTML = filteredSignals.map(s => {
+                const engagement = getEngagementStatus(s);
+                return `
+                <div class="signal-card ${s.signal_type} ${engagement.status}">
                     <div class="signal-header">
                         <div><div class="signal-person">${s.person_name}</div><div class="signal-firm">${s.firm}</div></div>
                         <div class="signal-badges">
+                            ${engagement.label ? `<span class="badge engagement-${engagement.status}">${engagement.label}</span>` : ''}
                             <span class="badge ${s.signal_type}">${s.signal_type?.toUpperCase() || 'N/A'}</span>
                             <span class="badge ${s.confidence}">${s.confidence?.toUpperCase() || 'N/A'}</span>
                             <span class="source-badge" style="background: ${getSourceColor(s.source_type)}">${s.source_type || 'Unknown'}</span>
@@ -357,11 +466,14 @@
                     <div class="signal-summary">${s.summary}</div>
                     ${s.excerpt ? `<div class="signal-excerpt">"${s.excerpt}"</div>` : ''}
                     <div class="signal-footer">
-                        <div class="signal-meta"><span>${s.source_date || 'N/A'}</span></div>
-                        ${s.source_url ? `<a href="${s.source_url}" target="_blank" rel="noopener" class="signal-link">View Source →</a>` : ''}
+                        <div class="signal-meta">
+                            <span>${engagement.timeLabel || s.source_date || 'N/A'}</span>
+                            ${engagement.status === 'hot' || engagement.status === 'warm' ? '<span class="engage-cta">💬 Engage now!</span>' : ''}
+                        </div>
+                        ${s.source_url ? `<a href="${s.source_url}" target="_blank" rel="noopener" class="signal-link">View & Comment →</a>` : ''}
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
         }
 
         // Update theme summary
@@ -423,6 +535,250 @@
         ['filterDate', 'filterSource', 'filterPerson', 'filterFirm', 'filterTheme'].forEach(id => {
             document.getElementById(id)?.addEventListener('change', applyFilters);
         });
+
+        // Timeframe tab switching
+        document.querySelectorAll('.timeframe-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.timeframe-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.narrative-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(`narrative-${tab.dataset.timeframe}`).classList.add('active');
+            });
+        });
+
+        // Generate narrative summaries
+        function generateNarratives() {
+            const now = Date.now();
+
+            // Helper to get signal timestamp in ms
+            function getSignalTime(s) {
+                if (s.source_timestamp) return new Date(s.source_timestamp).getTime();
+                if (s.source_date) return new Date(s.source_date + 'T12:00:00Z').getTime();
+                return 0;
+            }
+
+            // Filter signals by timeframe (hours-based for precision)
+            const daySignals = signals.filter(s => {
+                const t = getSignalTime(s);
+                return t > 0 && (now - t) < (24 * 60 * 60 * 1000); // Past 24 hours
+            });
+            const weekSignals = signals.filter(s => {
+                const t = getSignalTime(s);
+                return t > 0 && (now - t) < (7 * 24 * 60 * 60 * 1000); // Past 7 days
+            });
+            const monthSignals = signals.filter(s => {
+                const t = getSignalTime(s);
+                return t > 0 && (now - t) < (30 * 24 * 60 * 60 * 1000); // Past 30 days
+            });
+
+            // Update counts
+            document.getElementById('dayCount').textContent = daySignals.length;
+            document.getElementById('weekCount').textContent = weekSignals.length;
+            document.getElementById('monthCount').textContent = monthSignals.length;
+
+            // Update data freshness indicator
+            updateDataFreshness();
+
+            // Generate each narrative
+            renderNarrativeContent('narrative-day', daySignals, 'in the past 24 hours');
+            renderNarrativeContent('narrative-week', weekSignals, 'in the past 7 days');
+            renderNarrativeContent('narrative-month', monthSignals, 'in the past 30 days');
+        }
+
+        function updateDataFreshness() {
+            const freshnessEl = document.getElementById('dataFreshness');
+            const dotEl = document.getElementById('freshnessDot');
+
+            if (signals.length === 0) {
+                freshnessEl.textContent = 'No data';
+                dotEl.classList.add('stale');
+                return;
+            }
+
+            // Find the most recent signal date
+            const dates = signals.map(s => s.source_date).filter(Boolean).sort().reverse();
+            if (dates.length === 0) {
+                freshnessEl.textContent = 'No dated signals';
+                dotEl.classList.add('stale');
+                return;
+            }
+
+            const latestDate = new Date(dates[0]);
+            const now = new Date();
+            const diffHours = Math.floor((now - latestDate) / (1000 * 60 * 60));
+            const diffDays = Math.floor(diffHours / 24);
+
+            let freshText;
+            if (diffHours < 1) {
+                freshText = 'Updated just now';
+                dotEl.classList.remove('stale');
+            } else if (diffHours < 24) {
+                freshText = `Updated ${diffHours}h ago`;
+                dotEl.classList.remove('stale');
+            } else if (diffDays === 1) {
+                freshText = 'Updated yesterday';
+                dotEl.classList.add('stale');
+            } else {
+                freshText = `Updated ${diffDays} days ago`;
+                dotEl.classList.add('stale');
+            }
+
+            const options = { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            freshnessEl.textContent = `${freshText} (${latestDate.toLocaleDateString('en-US', options)})`;
+        }
+
+        function renderNarrativeContent(containerId, signalsForPeriod, periodLabel) {
+            const container = document.getElementById(containerId);
+
+            if (signalsForPeriod.length === 0) {
+                container.innerHTML = `<div class="narrative-empty">No signals detected ${periodLabel}. Check back after the next scan.</div>`;
+                return;
+            }
+
+            // Group signals by person
+            const byPerson = {};
+            signalsForPeriod.forEach(s => {
+                const key = s.person_name || 'Unknown';
+                if (!byPerson[key]) byPerson[key] = { signals: [], firm: s.firm };
+                byPerson[key].signals.push(s);
+            });
+
+            // Extract key themes
+            const themes = extractThemes(signalsForPeriod);
+
+            // Generate overview summary
+            const overview = generateOverview(signalsForPeriod, periodLabel);
+
+            // Build HTML
+            let html = '';
+
+            // Overview
+            html += `<div class="narrative-overview">
+                <h4>Summary</h4>
+                <p>${overview}</p>
+            </div>`;
+
+            // Key themes
+            if (themes.length > 0) {
+                html += `<div class="key-themes">
+                    <h4>Key Themes</h4>
+                    <div class="theme-pills">
+                        ${themes.map(t => `<span class="theme-pill${t.hot ? ' hot' : ''}">${t.name}<span class="pill-count">(${t.count})</span></span>`).join('')}
+                    </div>
+                </div>`;
+            }
+
+            // Voices
+            html += '<div class="voice-groups">';
+            const sortedPeople = Object.entries(byPerson).sort((a, b) => b[1].signals.length - a[1].signals.length);
+
+            sortedPeople.slice(0, 8).forEach(([person, data]) => {
+                const initials = person.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+                html += `<div class="voice-group">
+                    <div class="voice-group-header">
+                        <div class="voice-avatar">${initials}</div>
+                        <div class="voice-info">
+                            <h5>${person}</h5>
+                            <span>${data.firm || 'Unknown'} • ${data.signals.length} signal${data.signals.length > 1 ? 's' : ''}</span>
+                        </div>
+                    </div>
+                    <div class="voice-quotes">
+                        ${data.signals.slice(0, 3).map(s => `
+                            <div class="voice-quote ${s.signal_type}">
+                                ${s.summary}
+                                <div class="quote-meta">
+                                    <span>${formatCategory(s.signal_category)}</span>
+                                    <span>${s.source_date || 'N/A'}</span>
+                                    <span>${s.source_type || 'Unknown'}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>`;
+            });
+
+            if (sortedPeople.length > 8) {
+                html += `<div class="narrative-empty" style="padding: 20px;">+ ${sortedPeople.length - 8} more voices with signals ${periodLabel}</div>`;
+            }
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function extractThemes(signalsForPeriod) {
+            const themeMap = {};
+
+            signalsForPeriod.forEach(s => {
+                const summary = (s.summary || '').toLowerCase();
+                const category = (s.signal_category || '').toLowerCase();
+
+                // Check for themes
+                const checks = [
+                    { name: 'Fund Announcements', keywords: ['fund', 'raised', 'closes'] },
+                    { name: 'Active Investing', keywords: ['investing', 'led the', 'portfolio'] },
+                    { name: 'AI & Agentic', keywords: ['agentic', 'ai security', 'autonomous', 'ai '] },
+                    { name: 'SOC & Detection', keywords: ['soc', 'detection', 'alert fatigue', 'false positive'] },
+                    { name: 'Threat Intel', keywords: ['threat', 'intel', 'attacker', 'breach'] },
+                    { name: 'Market Trends', keywords: ['trend', 'prediction', 'market', 'landscape'] },
+                    { name: 'Looking for Founders', keywords: ['looking for', 'seeking', 'pitch me', 'office hours'] }
+                ];
+
+                checks.forEach(check => {
+                    if (check.keywords.some(kw => summary.includes(kw) || category.includes(kw))) {
+                        themeMap[check.name] = (themeMap[check.name] || 0) + 1;
+                    }
+                });
+            });
+
+            const sorted = Object.entries(themeMap)
+                .map(([name, count]) => ({ name, count, hot: count >= 3 }))
+                .sort((a, b) => b.count - a.count);
+
+            return sorted.slice(0, 6);
+        }
+
+        function generateOverview(signalsForPeriod, periodLabel) {
+            const hardCount = signalsForPeriod.filter(s => s.signal_type === 'hard').length;
+            const softCount = signalsForPeriod.filter(s => s.signal_type === 'soft').length;
+            const uniquePeople = new Set(signalsForPeriod.map(s => s.person_name)).size;
+
+            // Find dominant themes
+            const summaries = signalsForPeriod.map(s => s.summary || '').join(' ').toLowerCase();
+            const topics = [];
+            if (summaries.includes('agentic') || summaries.includes('autonomous')) topics.push('agentic AI');
+            if (summaries.includes('soc') || summaries.includes('detection')) topics.push('SOC operations');
+            if (summaries.includes('fund') || summaries.includes('raised')) topics.push('new fund activity');
+            if (summaries.includes('threat') || summaries.includes('security')) topics.push('security trends');
+
+            let overview = `${uniquePeople} voices generated ${signalsForPeriod.length} signals ${periodLabel}`;
+
+            if (hardCount > 0) {
+                overview += ` including ${hardCount} actionable signal${hardCount > 1 ? 's' : ''}`;
+            }
+
+            if (topics.length > 0) {
+                overview += `. Key discussions around ${topics.slice(0, 3).join(', ')}`;
+            }
+
+            overview += '.';
+
+            // Add notable highlights
+            const fundSignals = signalsForPeriod.filter(s => (s.signal_category || '').includes('fund'));
+            const lookingSignals = signalsForPeriod.filter(s => (s.signal_category || '').includes('looking') || (s.summary || '').toLowerCase().includes('looking for'));
+
+            if (fundSignals.length > 0) {
+                overview += ` Notable: ${fundSignals[0].person_name} with fund-related activity.`;
+            } else if (lookingSignals.length > 0) {
+                overview += ` Notable: ${lookingSignals[0].person_name} actively seeking founders.`;
+            }
+
+            return overview;
+        }
+
+        function formatCategory(category) {
+            if (!category) return 'Unknown';
+            return category.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        }
 
         // Initialize - load signals from JSON
         loadSignals();

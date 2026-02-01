@@ -42,7 +42,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Paths
+# Lookback window - signals older than this are ignored
+# 30 days to support monthly trend analysis; engagement UI highlights recent signals
+LOOKBACK_DAYS = 30
+
+# Paths - relative to github-pages directory
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 DATA_DIR = PROJECT_ROOT / "data"
@@ -65,9 +69,10 @@ class Signal:
     excerpt: str
     source_url: str
     source_type: str
-    source_date: str
+    source_date: str  # YYYY-MM-DD for backward compatibility
     confidence: str
     suggested_outreach_window: str = "contextual"
+    source_timestamp: str = ""  # Full ISO timestamp when available (e.g., 2026-02-01T14:32:00Z)
 
 
 # Hard signal keywords - direct investment/fundraising activity
@@ -110,14 +115,55 @@ SOFT_SIGNAL_KEYWORDS = {
     "portfolio_adjacent_win": [
         "acquisition", "acquired", "exit", "ipo", "valuation",
         "unicorn", "portfolio", "congratulations"
+    ],
+    # Detection Engineering focus
+    "detection_engineering": [
+        "detection engineering", "detection-as-code", "detection rules",
+        "sigma rules", "yara", "detection content", "detection logic",
+        "threat hunting", "hunting queries", "kql", "splunk queries",
+        "elastic rules", "detection coverage", "mitre att&ck",
+        "attack techniques", "detection gaps", "security content",
+        "detection strategy", "purple team", "detection maturity"
+    ],
+    # Threat Intelligence focus
+    "threat_intelligence": [
+        "threat intel", "threat intelligence", "cti", "threat actor",
+        "apt", "threat report", "ioc", "indicators of compromise",
+        "threat feed", "intelligence sharing", "threat landscape",
+        "adversary", "campaign", "malware analysis", "threat briefing",
+        "intelligence requirements", "threat assessment", "ttps",
+        "threat hunting", "dark web", "threat trends"
     ]
 }
 
+# Priority keywords - signals containing these get higher confidence
+PRIORITY_KEYWORDS = [
+    # Detection Engineering - KTLYST core focus
+    "detection engineering", "detection-as-code", "detection content",
+    "threat detection", "alert fatigue", "soc analyst", "false positives",
+    "detection rules", "sigma", "yara", "mitre att&ck",
+    # Threat Intelligence
+    "threat intel", "threat intelligence", "threat hunting", "cti",
+    # AI/Agentic Security - KTLYST differentiator
+    "agentic", "ai security", "ai-powered", "autonomous security",
+    "llm security", "ai soc", "automated detection"
+]
+
 # Industry keywords to filter relevant content
 RELEVANCE_KEYWORDS = [
+    # Core security
     "security", "cybersecurity", "cyber", "infosec", "soc",
-    "detection", "threat", "ai", "agentic", "enterprise",
-    "startup", "venture", "investment", "fund", "seed", "series"
+    # Detection Engineering (KTLYST focus)
+    "detection", "detection engineering", "threat detection", "alert",
+    "sigma", "yara", "mitre", "att&ck", "detection rules",
+    # Threat Intelligence
+    "threat intel", "threat intelligence", "threat hunting", "cti",
+    "threat actor", "apt", "ioc", "malware",
+    # AI/Automation
+    "ai", "agentic", "autonomous", "llm", "machine learning",
+    # Investment
+    "startup", "venture", "investment", "fund", "seed", "series",
+    "enterprise", "raise", "funding"
 ]
 
 
@@ -132,6 +178,7 @@ class FeedMonitor:
         self.existing_signals = self._load_existing_signals()
         self.monitor_state = self._load_monitor_state()
         self.new_signals: List[Signal] = []
+        self.checked_persons: set = set()  # Track who was successfully checked
 
     def _load_watchlist(self) -> Dict:
         """Load VC watchlist data."""
@@ -171,6 +218,42 @@ class FeedMonitor:
         DATA_DIR.mkdir(parents=True, exist_ok=True)
         with open(MONITOR_STATE_PATH, "w") as f:
             json.dump(self.monitor_state, f, indent=2)
+
+    def _update_last_checked_timestamps(self):
+        """Update last_checked timestamps in source files for successfully checked persons."""
+        if self.dry_run:
+            logger.info("Dry run - not updating last_checked timestamps")
+            return
+
+        now = datetime.utcnow().isoformat()
+        vc_updated = 0
+        media_updated = 0
+
+        # Update VC watchlist
+        for vc in self.vc_watchlist.get("watchlist", []):
+            name = vc.get("person_name", "")
+            if name in self.checked_persons:
+                vc["last_checked"] = now
+                vc_updated += 1
+
+        # Update media voices
+        for voice in self.media_voices.get("voices", []):
+            name = voice.get("person_name", "")
+            if name in self.checked_persons:
+                # Add last_checked field if it doesn't exist
+                voice["last_checked"] = now
+                media_updated += 1
+
+        # Save updated files
+        if vc_updated > 0:
+            with open(VC_WATCHLIST_PATH, "w") as f:
+                json.dump(self.vc_watchlist, f, indent=2)
+            logger.info(f"Updated last_checked for {vc_updated} VCs")
+
+        if media_updated > 0:
+            with open(MEDIA_VOICES_PATH, "w") as f:
+                json.dump(self.media_voices, f, indent=2)
+            logger.info(f"Updated last_checked for {media_updated} media voices")
 
     def _generate_signal_id(self, url: str, person: str) -> str:
         """Generate unique signal ID from URL and person."""
@@ -212,13 +295,19 @@ class FeedMonitor:
         """Determine confidence level based on content analysis."""
         text_lower = text.lower()
 
-        # High confidence indicators
+        # High confidence indicators for investment signals
         high_indicators = [
             "announces", "raised", "million", "billion", "led",
             "closes", "invests", "portfolio"
         ]
 
+        # Boost confidence for KTLYST-relevant content (detection/threat intel)
+        priority_match = any(kw in text_lower for kw in PRIORITY_KEYWORDS)
+
         if signal_type == "hard" and any(ind in text_lower for ind in high_indicators):
+            return "high"
+        elif priority_match:
+            # Detection engineering / threat intel content gets high confidence
             return "high"
         elif signal_type == "soft":
             return "med"
@@ -354,7 +443,8 @@ class FeedMonitor:
             # Can't attribute to anyone, skip
             return None
 
-        # Parse date
+        # Parse date and timestamp
+        source_timestamp = ""
         try:
             if published:
                 # Try common date formats
@@ -362,15 +452,27 @@ class FeedMonitor:
                     try:
                         dt = datetime.strptime(published.replace("Z", "+0000"), fmt)
                         source_date = dt.strftime("%Y-%m-%d")
+                        # Capture full timestamp for engagement tracking
+                        source_timestamp = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
                         break
                     except ValueError:
                         continue
                 else:
                     source_date = datetime.utcnow().strftime("%Y-%m-%d")
+                    source_timestamp = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
             else:
                 source_date = datetime.utcnow().strftime("%Y-%m-%d")
+                source_timestamp = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
         except Exception:
             source_date = datetime.utcnow().strftime("%Y-%m-%d")
+            source_timestamp = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        # Enforce lookback window - skip signals older than LOOKBACK_DAYS
+        cutoff_date = (datetime.utcnow() - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
+        if source_date < cutoff_date:
+            if self.verbose:
+                logger.debug(f"Skipping old entry (dated {source_date}): {link}")
+            return None
 
         # Create signal
         signal = Signal(
@@ -385,7 +487,8 @@ class FeedMonitor:
             source_type=source_type,
             source_date=source_date,
             confidence=self._determine_confidence(full_text, signal_type),
-            suggested_outreach_window=self._determine_outreach_window(signal_type, signal_category)
+            suggested_outreach_window=self._determine_outreach_window(signal_type, signal_category),
+            source_timestamp=source_timestamp
         )
 
         return signal
@@ -394,6 +497,7 @@ class FeedMonitor:
                                         feeds: List[str], person: str, firm: str) -> List[Signal]:
         """Process all feeds for a single source (person/firm)."""
         signals = []
+        feeds_fetched = 0
 
         for feed_url in feeds:
             if self.verbose:
@@ -402,6 +506,8 @@ class FeedMonitor:
             feed = await self._fetch_feed(session, feed_url)
             if not feed or not feed.get("entries"):
                 continue
+
+            feeds_fetched += 1
 
             # Record check
             self.monitor_state["feeds_checked"][feed_url] = datetime.utcnow().isoformat()
@@ -413,6 +519,10 @@ class FeedMonitor:
                     signals.append(signal)
                     if self.verbose:
                         logger.info(f"  Found signal: {signal.signal_type}/{signal.signal_category} - {signal.summary[:50]}...")
+
+        # Mark this person as successfully checked if at least one feed was fetched
+        if feeds_fetched > 0 and person:
+            self.checked_persons.add(person)
 
         return signals
 
@@ -492,6 +602,9 @@ class FeedMonitor:
         # Update state
         self.monitor_state["signals_generated"] += len(self.new_signals)
         self._save_monitor_state()
+
+        # Update last_checked timestamps in source files
+        self._update_last_checked_timestamps()
 
 
 def main():

@@ -17,7 +17,12 @@
       "rss_feeds": [
         "https://techcrunch.com/author/zack-whittaker/feed/"
       ],
-      "topics": ["data breaches", "government surveillance", "hacking", "security news"],
+      "topics": [
+        "data breaches",
+        "government surveillance",
+        "hacking",
+        "security news"
+      ],
       "evidence_links": [
         "https://techcrunch.com/author/zack-whittaker/",
         "https://techcrunch.com/2025/12/26/these-are-the-cybersecurity-stories-we-were-jealous-of-in-2025/"
@@ -28,7 +33,8 @@
         "articles_per_month": 15,
         "newsletter": "This Week in Security"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Lorenzo Franceschi-Bicchierai",
@@ -40,7 +46,12 @@
       "rss_feeds": [
         "https://techcrunch.com/author/lorenzo-franceschi-bicchierai/feed/"
       ],
-      "topics": ["hacking", "surveillance", "privacy", "cybercrime"],
+      "topics": [
+        "hacking",
+        "surveillance",
+        "privacy",
+        "cybercrime"
+      ],
       "evidence_links": [
         "https://techcrunch.com/author/lorenzo-franceschi-bicchierai/"
       ],
@@ -50,7 +61,8 @@
         "articles_per_month": 10,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Brian Krebs",
@@ -62,7 +74,13 @@
       "rss_feeds": [
         "https://krebsonsecurity.com/feed/"
       ],
-      "topics": ["cybercrime", "data breaches", "dark web", "fraud", "investigations"],
+      "topics": [
+        "cybercrime",
+        "data breaches",
+        "dark web",
+        "fraud",
+        "investigations"
+      ],
       "evidence_links": [
         "https://krebsonsecurity.com"
       ],
@@ -72,7 +90,8 @@
         "articles_per_month": 8,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Dan Goodin",
@@ -84,7 +103,13 @@
       "rss_feeds": [
         "https://arstechnica.com/author/dan-goodin/feed/"
       ],
-      "topics": ["malware", "espionage", "botnets", "hardware hacking", "vulnerabilities"],
+      "topics": [
+        "malware",
+        "espionage",
+        "botnets",
+        "hardware hacking",
+        "vulnerabilities"
+      ],
       "evidence_links": [
         "https://arstechnica.com/author/dan-goodin/"
       ],
@@ -94,7 +119,8 @@
         "articles_per_month": 12,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Andy Greenberg",
@@ -106,7 +132,12 @@
       "rss_feeds": [
         "https://www.wired.com/author/andy-greenberg/feed/"
       ],
-      "topics": ["nation-state hacking", "cybercrime", "privacy", "encryption"],
+      "topics": [
+        "nation-state hacking",
+        "cybercrime",
+        "privacy",
+        "encryption"
+      ],
       "evidence_links": [
         "https://www.wired.com/author/andy-greenberg/"
       ],
@@ -128,7 +159,12 @@
       "rss_feeds": [
         "https://ventureinsecurity.net/feed"
       ],
-      "topics": ["cybersecurity investing", "startup building", "product security", "market analysis"],
+      "topics": [
+        "cybersecurity investing",
+        "startup building",
+        "product security",
+        "market analysis"
+      ],
       "evidence_links": [
         "https://ventureinsecurity.net/",
         "https://ventureinsecurity.net/p/going-into-2026-what-founders-and"
@@ -139,7 +175,8 @@
         "articles_per_month": 4,
         "newsletter": "Venture in Security (14K+ subscribers)"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Troy Hunt",
@@ -151,7 +188,12 @@
       "rss_feeds": [
         "https://feeds.feedburner.com/TroyHunt"
       ],
-      "topics": ["data breaches", "identity security", "web security", "password security"],
+      "topics": [
+        "data breaches",
+        "identity security",
+        "web security",
+        "password security"
+      ],
       "evidence_links": [
         "https://www.troyhunt.com",
         "https://haveibeenpwned.com"
@@ -162,7 +204,8 @@
         "articles_per_month": 3,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Bruce Schneier",
@@ -174,7 +217,12 @@
       "rss_feeds": [
         "https://www.schneier.com/feed/"
       ],
-      "topics": ["security policy", "cryptography", "privacy", "surveillance"],
+      "topics": [
+        "security policy",
+        "cryptography",
+        "privacy",
+        "surveillance"
+      ],
       "evidence_links": [
         "https://www.schneier.com"
       ],
@@ -184,7 +232,8 @@
         "articles_per_month": 8,
         "newsletter": "Crypto-Gram"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Mikko Hypponen",
@@ -194,7 +243,12 @@
       "x_url": "https://twitter.com/mikko",
       "site_or_newsletter_url": "https://mikko.com",
       "rss_feeds": [],
-      "topics": ["malware", "cybercrime", "nation-state attacks", "security trends"],
+      "topics": [
+        "malware",
+        "cybercrime",
+        "nation-state attacks",
+        "security trends"
+      ],
       "evidence_links": [
         "https://mikko.com"
       ],
@@ -214,7 +268,12 @@
       "x_url": "https://twitter.com/maddiestone",
       "site_or_newsletter_url": "",
       "rss_feeds": [],
-      "topics": ["zero-days", "vulnerability research", "exploit analysis", "Android security"],
+      "topics": [
+        "zero-days",
+        "vulnerability research",
+        "exploit analysis",
+        "Android security"
+      ],
       "evidence_links": [
         "https://twitter.com/maddiestone"
       ],
@@ -234,9 +293,14 @@
       "x_url": "https://twitter.com/robertmlee",
       "site_or_newsletter_url": "https://www.dragos.com",
       "rss_feeds": [
-        "https://www.dragos.com/feed/"
+        "https://www.dragos.com/blog/rss.xml"
       ],
-      "topics": ["ICS/OT security", "critical infrastructure", "threat intelligence", "incident response"],
+      "topics": [
+        "ICS/OT security",
+        "critical infrastructure",
+        "threat intelligence",
+        "incident response"
+      ],
       "evidence_links": [
         "https://www.dragos.com"
       ],
@@ -258,7 +322,12 @@
       "rss_feeds": [
         "https://feeds.megaphone.fm/darknetdiaries"
       ],
-      "topics": ["hacking stories", "cybercrime", "social engineering", "pen testing"],
+      "topics": [
+        "hacking stories",
+        "cybercrime",
+        "social engineering",
+        "pen testing"
+      ],
       "evidence_links": [
         "https://darknetdiaries.com"
       ],
@@ -268,7 +337,8 @@
         "podcast_episodes_per_month": 2,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "David Spark",
@@ -280,7 +350,12 @@
       "rss_feeds": [
         "https://cisoseries.com/feed/"
       ],
-      "topics": ["CISO leadership", "security operations", "vendor management", "compliance"],
+      "topics": [
+        "CISO leadership",
+        "security operations",
+        "vendor management",
+        "compliance"
+      ],
       "evidence_links": [
         "https://cisoseries.com"
       ],
@@ -302,7 +377,12 @@
       "rss_feeds": [
         "https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw"
       ],
-      "topics": ["malware analysis", "CTF", "security education", "threat hunting"],
+      "topics": [
+        "malware analysis",
+        "CTF",
+        "security education",
+        "threat hunting"
+      ],
       "evidence_links": [
         "https://www.youtube.com/@_JohnHammond"
       ],
@@ -312,7 +392,8 @@
         "youtube_videos_per_month": 8,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Heath Adams (TheCyberMentor)",
@@ -324,7 +405,12 @@
       "rss_feeds": [
         "https://www.youtube.com/feeds/videos.xml?channel_id=UC0ArlFuFYMpEewyRBzdLHiw"
       ],
-      "topics": ["penetration testing", "security training", "ethical hacking", "career advice"],
+      "topics": [
+        "penetration testing",
+        "security training",
+        "ethical hacking",
+        "career advice"
+      ],
       "evidence_links": [
         "https://tcm-sec.com"
       ],
@@ -334,7 +420,8 @@
         "youtube_videos_per_month": 4,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Sherrod DeGrippo",
@@ -344,7 +431,12 @@
       "x_url": "https://twitter.com/sheraborhodes",
       "site_or_newsletter_url": "",
       "rss_feeds": [],
-      "topics": ["threat intelligence", "threat research", "ransomware", "APT groups"],
+      "topics": [
+        "threat intelligence",
+        "threat research",
+        "ransomware",
+        "APT groups"
+      ],
       "evidence_links": [
         "https://www.microsoft.com/en-us/security/blog/author/sherrod-degrippo/"
       ],
@@ -366,7 +458,12 @@
       "rss_feeds": [
         "https://www.eff.org/rss/updates.xml"
       ],
-      "topics": ["stalkerware", "surveillance", "digital rights", "privacy"],
+      "topics": [
+        "stalkerware",
+        "surveillance",
+        "digital rights",
+        "privacy"
+      ],
       "evidence_links": [
         "https://www.eff.org/about/staff/eva-galperin"
       ],
@@ -376,7 +473,8 @@
         "articles_per_month": 2,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Daniel Miessler",
@@ -388,7 +486,12 @@
       "rss_feeds": [
         "https://danielmiessler.com/feed/"
       ],
-      "topics": ["AI security", "security philosophy", "career advice", "technology trends"],
+      "topics": [
+        "AI security",
+        "security philosophy",
+        "career advice",
+        "technology trends"
+      ],
       "evidence_links": [
         "https://danielmiessler.com"
       ],
@@ -398,7 +501,8 @@
         "articles_per_month": 6,
         "newsletter": "Unsupervised Learning (100K+ subscribers)"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Dave Bittner",
@@ -410,7 +514,12 @@
       "rss_feeds": [
         "https://thecyberwire.com/feeds/rss.xml"
       ],
-      "topics": ["daily security news", "threat landscape", "policy", "interviews"],
+      "topics": [
+        "daily security news",
+        "threat landscape",
+        "policy",
+        "interviews"
+      ],
       "evidence_links": [
         "https://thecyberwire.com"
       ],
@@ -430,7 +539,12 @@
       "x_url": "https://twitter.com/k3r3n3",
       "site_or_newsletter_url": "https://www.integralis.com",
       "rss_feeds": [],
-      "topics": ["hackers", "security trends", "cyber policy", "women in security"],
+      "topics": [
+        "hackers",
+        "security trends",
+        "cyber policy",
+        "women in security"
+      ],
       "evidence_links": [
         "https://www.ted.com/speakers/keren_elazari"
       ],
@@ -450,7 +564,12 @@
       "x_url": "https://twitter.com/geoffbelknap",
       "site_or_newsletter_url": "",
       "rss_feeds": [],
-      "topics": ["CISO leadership", "security operations", "enterprise security", "career"],
+      "topics": [
+        "CISO leadership",
+        "security operations",
+        "enterprise security",
+        "career"
+      ],
       "evidence_links": [
         "https://cisoseries.com"
       ],
@@ -472,7 +591,11 @@
       "rss_feeds": [
         "https://hasherezade.net/feed/"
       ],
-      "topics": ["malware analysis", "reverse engineering", "Windows internals"],
+      "topics": [
+        "malware analysis",
+        "reverse engineering",
+        "Windows internals"
+      ],
       "evidence_links": [
         "https://twitter.com/hasherezade"
       ],
@@ -494,7 +617,12 @@
       "rss_feeds": [
         "https://feeds.twit.tv/sn.xml"
       ],
-      "topics": ["security fundamentals", "privacy", "encryption", "protocols"],
+      "topics": [
+        "security fundamentals",
+        "privacy",
+        "encryption",
+        "protocols"
+      ],
       "evidence_links": [
         "https://www.grc.com/securitynow.htm"
       ],
@@ -504,7 +632,8 @@
         "podcast_episodes_per_month": 4,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Chuck Brooks",
@@ -514,7 +643,12 @@
       "x_url": "https://twitter.com/ChuckDBrooks",
       "site_or_newsletter_url": "",
       "rss_feeds": [],
-      "topics": ["government cybersecurity", "policy", "emerging tech", "risk management"],
+      "topics": [
+        "government cybersecurity",
+        "policy",
+        "emerging tech",
+        "risk management"
+      ],
       "evidence_links": [
         "https://www.linkedin.com/in/chuckbrooks/"
       ],
@@ -534,9 +668,14 @@
       "x_url": "https://twitter.com/likethecoins",
       "site_or_newsletter_url": "",
       "rss_feeds": [
-        "https://redcanary.com/feed/"
+        "https://redcanary.com/blog/feed/"
       ],
-      "topics": ["threat intelligence", "MITRE ATT&CK", "detection", "threat hunting"],
+      "topics": [
+        "threat intelligence",
+        "MITRE ATT&CK",
+        "detection",
+        "threat hunting"
+      ],
       "evidence_links": [
         "https://redcanary.com"
       ],
@@ -558,7 +697,12 @@
       "rss_feeds": [
         "https://www.malwaretech.com/feed"
       ],
-      "topics": ["malware analysis", "WannaCry", "botnets", "reverse engineering"],
+      "topics": [
+        "malware analysis",
+        "WannaCry",
+        "botnets",
+        "reverse engineering"
+      ],
       "evidence_links": [
         "https://www.malwaretech.com"
       ],
@@ -568,7 +712,8 @@
         "articles_per_month": 1,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Graham Cluley",
@@ -581,7 +726,12 @@
         "https://grahamcluley.com/feed/",
         "https://www.smashingsecurity.com/rss"
       ],
-      "topics": ["security news", "privacy", "cybercrime", "humor"],
+      "topics": [
+        "security news",
+        "privacy",
+        "cybercrime",
+        "humor"
+      ],
       "evidence_links": [
         "https://grahamcluley.com",
         "https://www.smashingsecurity.com"
@@ -592,7 +742,8 @@
         "podcast_episodes_per_month": 4,
         "newsletter": "GCHQ Newsletter"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Nicole Perlroth",
@@ -602,7 +753,12 @@
       "x_url": "https://twitter.com/nicoleperlroth",
       "site_or_newsletter_url": "",
       "rss_feeds": [],
-      "topics": ["nation-state hacking", "cyber weapons", "zero-day market", "policy"],
+      "topics": [
+        "nation-state hacking",
+        "cyber weapons",
+        "zero-day market",
+        "policy"
+      ],
       "evidence_links": [
         "https://www.amazon.com/This-They-Tell-World-Ends/dp/1635576059"
       ],
@@ -615,7 +771,7 @@
       "confidence": "high"
     },
     {
-      "person_name": "Renée Burton",
+      "person_name": "Ren\u00e9e Burton",
       "outlet_or_primary_affiliation": "Infoblox",
       "role": "practitioner",
       "linkedin_url": "https://www.linkedin.com/in/renee-burton/",
@@ -624,7 +780,12 @@
       "rss_feeds": [
         "https://blogs.infoblox.com/feed/"
       ],
-      "topics": ["DNS security", "threat intelligence", "malware", "botnets"],
+      "topics": [
+        "DNS security",
+        "threat intelligence",
+        "malware",
+        "botnets"
+      ],
       "evidence_links": [
         "https://www.infoblox.com"
       ],
@@ -634,7 +795,8 @@
         "articles_per_month": 2,
         "newsletter": null
       },
-      "confidence": "high"
+      "confidence": "high",
+      "last_checked": "2026-02-01T22:06:41.537084"
     },
     {
       "person_name": "Kim Zetter",
@@ -646,7 +808,12 @@
       "rss_feeds": [
         "https://zetter.substack.com/feed"
       ],
-      "topics": ["cyber weapons", "Stuxnet", "election security", "investigations"],
+      "topics": [
+        "cyber weapons",
+        "Stuxnet",
+        "election security",
+        "investigations"
+      ],
       "evidence_links": [
         "https://zetter.substack.com"
       ],

@@ -38,13 +38,13 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          git diff --quiet signals-data.json || echo "changes=true" >> $GITHUB_OUTPUT
+          git diff --quiet signals-data.json data/vc_watchlist.json data/cyber_media_voices.json || echo "changes=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push if changed
         if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config user.name 'Signal Monitor Bot'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add signals-data.json data/monitor_state.json
+          git add signals-data.json data/monitor_state.json data/vc_watchlist.json data/cyber_media_voices.json
           git commit -m "Update signals $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
