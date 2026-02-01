@@ -447,10 +447,25 @@ class FeedMonitor:
         source_timestamp = ""
         try:
             if published:
+                # Common timezone abbreviations to UTC offset mapping
+                tz_map = {
+                    "PST": "-0800", "PDT": "-0700",
+                    "MST": "-0700", "MDT": "-0600",
+                    "CST": "-0600", "CDT": "-0500",
+                    "EST": "-0500", "EDT": "-0400",
+                    "GMT": "+0000", "UTC": "+0000",
+                    "Z": "+0000"
+                }
+                normalized = published
+                for tz_abbr, tz_offset in tz_map.items():
+                    if tz_abbr in normalized:
+                        normalized = normalized.replace(tz_abbr, tz_offset)
+                        break
+
                 # Try common date formats
                 for fmt in ["%a, %d %b %Y %H:%M:%S %z", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d"]:
                     try:
-                        dt = datetime.strptime(published.replace("Z", "+0000"), fmt)
+                        dt = datetime.strptime(normalized, fmt)
                         source_date = dt.strftime("%Y-%m-%d")
                         # Capture full timestamp for engagement tracking
                         source_timestamp = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
