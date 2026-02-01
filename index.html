@@ -213,11 +213,13 @@
                     <label>Theme</label>
                     <select id="filterTheme">
                         <option value="all">All Themes</option>
+                        <option value="detection_engineering">Detection Engineering</option>
+                        <option value="threat_intelligence">Threat Intelligence</option>
                         <option value="investment_activity">Investment Activity</option>
-                        <option value="market_insights">Market Insights</option>
                         <option value="soc_pain">SOC Pain Points</option>
                         <option value="agentic">Agentic AI</option>
                         <option value="ai_security">AI Security</option>
+                        <option value="market_insights">Market Insights</option>
                     </select>
                 </div>
             </div>
@@ -373,16 +375,35 @@
         function getSignalTheme(signal) {
             const category = signal.signal_category?.toLowerCase() || '';
             const summary = signal.summary?.toLowerCase() || '';
+            const excerpt = signal.excerpt?.toLowerCase() || '';
+            const text = summary + ' ' + excerpt + ' ' + category;
+
+            // Detection Engineering (HIGH PRIORITY)
+            if (text.includes('detection engineering') || text.includes('detection-as-code') ||
+                text.includes('detection rules') || text.includes('sigma rules') || text.includes('sigma rule') ||
+                text.includes('yara') || text.includes('detection content') || text.includes('detection logic') ||
+                text.includes('threat hunting') || text.includes('hunting queries') || text.includes('kql') ||
+                text.includes('splunk') || text.includes('detection coverage') || text.includes('detection gaps') ||
+                text.includes('purple team') || category.includes('detection')) return 'detection_engineering';
+
+            // Threat Intelligence (HIGH PRIORITY)
+            if (text.includes('threat intel') || text.includes('threat intelligence') || text.includes(' cti ') ||
+                text.includes('threat actor') || text.includes(' apt ') || text.includes('threat report') ||
+                text.includes(' ioc') || text.includes('indicators of compromise') || text.includes('threat feed') ||
+                text.includes('malware analysis') || text.includes(' ttps') || text.includes('threat landscape') ||
+                text.includes('adversary') || text.includes('campaign') || category.includes('threat')) return 'threat_intelligence';
 
             if (category.includes('investment') || category.includes('fund')) return 'investment_activity';
-            if (category.includes('soc') || summary.includes('soc') || summary.includes('alert')) return 'soc_pain';
-            if (summary.includes('agentic') || summary.includes('autonomous')) return 'agentic';
-            if (summary.includes('ai security') || category.includes('ai')) return 'ai_security';
+            if (category.includes('soc') || text.includes('soc ') || text.includes('alert fatigue')) return 'soc_pain';
+            if (text.includes('agentic') || text.includes('autonomous')) return 'agentic';
+            if (text.includes('ai security') || text.includes('llm security')) return 'ai_security';
             return 'market_insights';
         }
 
         function getThemeLabel(theme) {
             const labels = {
+                detection_engineering: 'Detection Engineering',
+                threat_intelligence: 'Threat Intelligence',
                 investment_activity: 'Investments',
                 market_insights: 'Market Insights',
                 soc_pain: 'SOC Pain',
@@ -711,20 +732,22 @@
             signalsForPeriod.forEach(s => {
                 const summary = (s.summary || '').toLowerCase();
                 const category = (s.signal_category || '').toLowerCase();
+                const excerpt = (s.excerpt || '').toLowerCase();
+                const text = summary + ' ' + excerpt + ' ' + category;
 
-                // Check for themes
+                // Check for themes (Detection Engineering and Threat Intel are HIGH PRIORITY)
                 const checks = [
+                    { name: 'Detection Engineering', keywords: ['detection engineering', 'detection-as-code', 'detection rules', 'sigma', 'yara', 'threat hunting', 'kql', 'splunk', 'detection coverage', 'purple team'], priority: true },
+                    { name: 'Threat Intelligence', keywords: ['threat intel', 'threat actor', 'apt', 'ioc', 'malware analysis', 'ttps', 'threat landscape', 'adversary', 'campaign'], priority: true },
                     { name: 'Fund Announcements', keywords: ['fund', 'raised', 'closes'] },
                     { name: 'Active Investing', keywords: ['investing', 'led the', 'portfolio'] },
-                    { name: 'AI & Agentic', keywords: ['agentic', 'ai security', 'autonomous', 'ai '] },
-                    { name: 'SOC & Detection', keywords: ['soc', 'detection', 'alert fatigue', 'false positive'] },
-                    { name: 'Threat Intel', keywords: ['threat', 'intel', 'attacker', 'breach'] },
-                    { name: 'Market Trends', keywords: ['trend', 'prediction', 'market', 'landscape'] },
+                    { name: 'AI & Agentic', keywords: ['agentic', 'ai security', 'autonomous', 'llm security'] },
+                    { name: 'SOC Pain', keywords: ['soc', 'alert fatigue', 'false positive'] },
                     { name: 'Looking for Founders', keywords: ['looking for', 'seeking', 'pitch me', 'office hours'] }
                 ];
 
                 checks.forEach(check => {
-                    if (check.keywords.some(kw => summary.includes(kw) || category.includes(kw))) {
+                    if (check.keywords.some(kw => text.includes(kw))) {
                         themeMap[check.name] = (themeMap[check.name] || 0) + 1;
                     }
                 });
