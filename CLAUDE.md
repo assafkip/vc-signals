@@ -61,6 +61,8 @@ Full scan of all profiles - use specific commands above instead.
 - `new_thesis_statement` - Investment thesis shared
 
 ### Soft Signals (Context)
+- `detection_engineering` - Detection-as-code, sigma rules, yara, threat hunting, MITRE ATT&CK ⭐ HIGH PRIORITY
+- `threat_intelligence` - Threat intel, threat actors, APT, IOC, malware analysis, TTPs ⭐ HIGH PRIORITY
 - `problem_post_soc_pain` - SOC/alert fatigue discussion
 - `security_trend_commentary` - Market/trend observations
 - `portfolio_adjacent_win` - Portfolio company success

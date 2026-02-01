@@ -371,30 +371,35 @@
             return colors[sourceType?.toLowerCase()] || '#6b7280';
         }
 
-        // Theme classification
+        // Theme classification - uses signal_category first, then keyword fallback
         function getSignalTheme(signal) {
             const category = signal.signal_category?.toLowerCase() || '';
             const summary = signal.summary?.toLowerCase() || '';
             const excerpt = signal.excerpt?.toLowerCase() || '';
-            const text = summary + ' ' + excerpt + ' ' + category;
+            const text = summary + ' ' + excerpt;
 
-            // Detection Engineering (HIGH PRIORITY)
+            // First check actual signal_category from the data
+            if (category === 'detection_engineering' || category.includes('detection_engineering')) return 'detection_engineering';
+            if (category === 'threat_intelligence' || category.includes('threat_intelligence')) return 'threat_intelligence';
+            if (category.includes('fund') || category.includes('investment')) return 'investment_activity';
+            if (category.includes('soc_pain') || category.includes('problem_post_soc')) return 'soc_pain';
+            if (category.includes('portfolio')) return 'investment_activity';
+            if (category.includes('looking') || category.includes('thesis')) return 'investment_activity';
+
+            // Keyword fallback for detection engineering (HIGH PRIORITY)
             if (text.includes('detection engineering') || text.includes('detection-as-code') ||
                 text.includes('detection rules') || text.includes('sigma rules') || text.includes('sigma rule') ||
-                text.includes('yara') || text.includes('detection content') || text.includes('detection logic') ||
-                text.includes('threat hunting') || text.includes('hunting queries') || text.includes('kql') ||
-                text.includes('splunk') || text.includes('detection coverage') || text.includes('detection gaps') ||
-                text.includes('purple team') || category.includes('detection')) return 'detection_engineering';
+                text.includes('yara') || text.includes('threat hunting') || text.includes('kql') ||
+                text.includes('splunk') || text.includes('detection coverage') || text.includes('purple team') ||
+                text.includes('mitre att&ck')) return 'detection_engineering';
 
-            // Threat Intelligence (HIGH PRIORITY)
-            if (text.includes('threat intel') || text.includes('threat intelligence') || text.includes(' cti ') ||
-                text.includes('threat actor') || text.includes(' apt ') || text.includes('threat report') ||
-                text.includes(' ioc') || text.includes('indicators of compromise') || text.includes('threat feed') ||
-                text.includes('malware analysis') || text.includes(' ttps') || text.includes('threat landscape') ||
-                text.includes('adversary') || text.includes('campaign') || category.includes('threat')) return 'threat_intelligence';
+            // Keyword fallback for threat intelligence (HIGH PRIORITY)
+            if (text.includes('threat intel') || text.includes('threat intelligence') ||
+                text.includes('threat actor') || text.includes('malware analysis') ||
+                text.includes('threat landscape') || text.includes('adversary') ||
+                text.includes('ioc') || text.includes('ttps')) return 'threat_intelligence';
 
-            if (category.includes('investment') || category.includes('fund')) return 'investment_activity';
-            if (category.includes('soc') || text.includes('soc ') || text.includes('alert fatigue')) return 'soc_pain';
+            if (text.includes('soc ') || text.includes('alert fatigue')) return 'soc_pain';
             if (text.includes('agentic') || text.includes('autonomous')) return 'agentic';
             if (text.includes('ai security') || text.includes('llm security')) return 'ai_security';
             return 'market_insights';
