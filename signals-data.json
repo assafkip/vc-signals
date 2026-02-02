@@ -15,6 +15,21 @@
     "source_timestamp": "2026-02-02T12:05:34Z"
   },
   {
+    "id": "rss_7dd6a7948b51",
+    "person_name": "Zack Whittaker",
+    "firm": "TechCrunch",
+    "signal_type": "soft",
+    "signal_category": "problem_post_soc_pain",
+    "summary": "Notepad++ says Chinese government hackers hijacked its software updates for months",
+    "excerpt": "The developer of the popular text editor Notepad++ said hackers associated with the Chinese government hijacked its software update mechanism to deliver tainted software to users for months.",
+    "source_url": "https://techcrunch.com/2026/02/02/notepad-says-chinese-government-hackers-hijacked-its-software-updates-for-months/",
+    "source_type": "news",
+    "source_date": "2026-02-02",
+    "confidence": "med",
+    "suggested_outreach_window": "contextual",
+    "source_timestamp": "2026-02-02T18:09:34Z"
+  },
+  {
     "id": "linkedin_scan_ed_sim_agentic_building_20260201",
     "person_name": "Ed Sim",
     "firm": "Boldstart Ventures",
