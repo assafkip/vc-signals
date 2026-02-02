@@ -1,5 +1,20 @@
 [
   {
+    "id": "rss_2144b1c66efe",
+    "person_name": "Bruce Schneier",
+    "firm": "Harvard Kennedy School / IBM Security",
+    "signal_type": "soft",
+    "signal_category": "threat_intelligence",
+    "summary": "AI Coding Assistants Secretly Copying All Code to China",
+    "excerpt": "There&#8217;s a new report about two AI coding assistants, used by 1.5 million developers, that are surreptitiously sending a copy of everything they ingest to China. Maybe avoid using them.",
+    "source_url": "https://www.schneier.com/blog/archives/2026/02/ai-coding-assistants-secretly-copying-all-code-to-china.html",
+    "source_type": "blog",
+    "source_date": "2026-02-02",
+    "confidence": "med",
+    "suggested_outreach_window": "contextual",
+    "source_timestamp": "2026-02-02T12:05:34Z"
+  },
+  {
     "id": "linkedin_scan_ed_sim_agentic_building_20260201",
     "person_name": "Ed Sim",
     "firm": "Boldstart Ventures",
