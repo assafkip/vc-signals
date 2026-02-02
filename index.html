@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signal Dashboard - Cybersecurity Intelligence</title>
-    <meta name="description" content="Real-time intelligence on cybersecurity VC investments and security research.">
+    <title>VC Signals Dashboard - Cybersecurity Investment Intelligence</title>
+    <meta name="description" content="Real-time intelligence on cybersecurity VC investments, fund raises, and market trends.">
 
     <style>
         :root {
@@ -35,10 +35,10 @@
         header h1 { font-size: 2.5rem; margin-bottom: 10px; }
         header p { font-size: 1.1rem; opacity: 0.9; }
 
-        .stats-bar { display: flex; justify-content: center; gap: 40px; margin-top: 20px; flex-wrap: wrap; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .stats-bar { display: flex; justify-content: center; gap: 40px; margin-top: 20px; flex-wrap: wrap; }
         .stat { text-align: center; }
-        .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary); }
-        .stat-label { font-size: 0.85rem; color: var(--gray-500); }
+        .stat-value { font-size: 2rem; font-weight: 700; }
+        .stat-label { font-size: 0.85rem; opacity: 0.8; }
 
         .filters-panel { background: white; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
 
@@ -56,9 +56,9 @@
         .filter-group select option:disabled { color: var(--gray-500); }
 
         .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-        .chip, .sec-chip { padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; border: 2px solid var(--gray-200); background: white; }
-        .chip:hover, .sec-chip:hover { border-color: var(--primary); }
-        .chip.active, .sec-chip.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .chip { padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; border: 2px solid var(--gray-200); background: white; }
+        .chip:hover { border-color: var(--primary); }
+        .chip.active { background: var(--primary); color: white; border-color: var(--primary); }
 
         .theme-summary { background: var(--gray-100); border-radius: 12px; padding: 20px; margin-top: 16px; display: none; }
         .theme-summary.visible { display: block; }
@@ -114,32 +114,8 @@
 
         footer { text-align: center; padding: 40px 20px; color: white; opacity: 0.8; font-size: 0.85rem; }
 
-        /* Tab navigation */
-        .tab-nav { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
-        .tab-btn { padding: 12px 24px; border: 2px solid rgba(255,255,255,0.3); border-radius: 30px; background: rgba(255,255,255,0.1); color: white; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.2s; }
-        .tab-btn:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); }
-        .tab-btn.active { background: white; color: var(--primary-dark); border-color: white; }
-
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-
-        /* Security signal specific styles */
-        .signal-card.critical { border-left-color: #dc2626; }
-        .signal-card.high { border-left-color: #ea580c; }
-        .signal-card.medium { border-left-color: #f59e0b; }
-        .signal-card.low { border-left-color: #16a34a; }
-        .signal-card.informational { border-left-color: #6b7280; }
-
-        .badge.critical { background: #fef2f2; color: #dc2626; }
-        .badge.high-sev { background: #fff7ed; color: #ea580c; }
-        .badge.medium-sev { background: #fffbeb; color: #d97706; }
-        .badge.low-sev { background: #f0fdf4; color: #16a34a; }
-        .badge.info-sev { background: #f3f4f6; color: #6b7280; }
-
-        .cve-tag { display: inline-block; background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 0.75rem; margin-right: 4px; margin-bottom: 4px; }
-        .threat-actor-tag { display: inline-block; background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-right: 4px; margin-bottom: 4px; }
-        .malware-tag { display: inline-block; background: #ede9fe; color: #5b21b6; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-right: 4px; margin-bottom: 4px; }
-        .signal-tags { margin-top: 8px; margin-bottom: 12px; }
+        .nav-link { display: inline-block; margin-top: 16px; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .nav-link:hover { color: white; text-decoration: underline; }
 
         @media (max-width: 768px) {
             header h1 { font-size: 1.8rem; }
@@ -150,23 +126,18 @@
 </head>
 <body>
     <header>
-        <h1>Signal Dashboard</h1>
-        <p>Real-time intelligence on cybersecurity investments and security research</p>
-        <div class="tab-nav">
-            <button class="tab-btn active" onclick="switchTab('vc')">VC Signals</button>
-            <button class="tab-btn" onclick="switchTab('security')">Security Signals</button>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- VC Signals Tab -->
-        <div id="vcTab" class="tab-content active">
-        <div class="stats-bar" style="margin-bottom: 24px;">
+        <h1>VC Signals Dashboard</h1>
+        <p>Real-time intelligence on cybersecurity investments and market trends</p>
+        <div class="stats-bar">
             <div class="stat"><div class="stat-value" id="totalSignals">-</div><div class="stat-label">Total Signals</div></div>
             <div class="stat"><div class="stat-value" id="hardSignals">-</div><div class="stat-label">Hard Signals</div></div>
             <div class="stat"><div class="stat-value" id="softSignals">-</div><div class="stat-label">Soft Signals</div></div>
             <div class="stat"><div class="stat-value" id="sourcesCount">-</div><div class="stat-label">Sources</div></div>
         </div>
+        <a href="security.html" class="nav-link">Security Signals Dashboard &rarr;</a>
+    </header>
+
+    <div class="container">
         <div class="filters-panel">
             <!-- Search Bar -->
             <div class="search-container">
@@ -271,140 +242,15 @@
                 </div>
             </div>
         </div>
-        </div><!-- End VC Signals Tab -->
-
-        <!-- Security Signals Tab -->
-        <div id="securityTab" class="tab-content">
-        <div class="stats-bar" style="margin-bottom: 24px;">
-            <div class="stat"><div class="stat-value" id="secTotalSignals">-</div><div class="stat-label">Total Signals</div></div>
-            <div class="stat"><div class="stat-value" id="secCriticalSignals">-</div><div class="stat-label">Critical</div></div>
-            <div class="stat"><div class="stat-value" id="secHighSignals">-</div><div class="stat-label">High</div></div>
-            <div class="stat"><div class="stat-value" id="secSourcesCount">-</div><div class="stat-label">Sources</div></div>
-        </div>
-        <div class="filters-panel">
-            <!-- Security Search Bar -->
-            <div class="search-container">
-                <input type="text" class="search-input" id="secSearchInput" placeholder="Search security signals by CVE, threat actor, malware, keyword...">
-                <button class="search-clear" id="secSearchClear" onclick="clearSecuritySearch()">x</button>
-                <div class="search-results" id="secSearchResults"></div>
-            </div>
-
-            <div class="filters-grid">
-                <div class="filter-group">
-                    <label>Date Range</label>
-                    <select id="secFilterDate">
-                        <option value="all">All Time</option>
-                        <option value="1day">Past 1 Day</option>
-                        <option value="7days" selected>Past 7 Days</option>
-                        <option value="14days">Past 14 Days</option>
-                        <option value="month">Past Month</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Source Type</label>
-                    <select id="secFilterSourceType">
-                        <option value="all">All Sources</option>
-                        <option value="government">Government</option>
-                        <option value="vendor_research">Vendor Research</option>
-                        <option value="independent_research">Independent Research</option>
-                        <option value="vulnerability_db">Vulnerability DB</option>
-                        <option value="threat_tracking">Threat Tracking</option>
-                        <option value="news">News</option>
-                        <option value="community">Community</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Severity</label>
-                    <select id="secFilterSeverity">
-                        <option value="all">All Severities</option>
-                        <option value="critical">Critical</option>
-                        <option value="high">High</option>
-                        <option value="medium">Medium</option>
-                        <option value="low">Low</option>
-                        <option value="informational">Informational</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Category</label>
-                    <select id="secFilterCategory">
-                        <option value="all">All Categories</option>
-                        <option value="cve">CVE / Vulnerability</option>
-                        <option value="malware">Malware</option>
-                        <option value="apt">APT / Threat Actor</option>
-                        <option value="advisory">Advisory</option>
-                        <option value="research">Research</option>
-                        <option value="news">News</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Source</label>
-                    <select id="secFilterSource"><option value="all">All Sources</option></select>
-                </div>
-            </div>
-
-            <div class="filter-chips">
-                <span class="sec-chip active" data-filter="all">All Severities</span>
-                <span class="sec-chip" data-filter="critical" style="background: #fef2f2; color: #dc2626; border-color: #fecaca;">Critical</span>
-                <span class="sec-chip" data-filter="high" style="background: #fff7ed; color: #ea580c; border-color: #fed7aa;">High</span>
-                <span class="sec-chip" data-filter="medium" style="background: #fffbeb; color: #d97706; border-color: #fde68a;">Medium</span>
-            </div>
-
-            <div class="view-toggles">
-                <button class="refresh-btn" onclick="loadSecuritySignals()">Refresh</button>
-            </div>
-        </div>
-
-        <!-- Source Legend for Security -->
-        <div class="source-legend">
-            <span class="source-badge" style="background: #0369a1;">Government</span>
-            <span class="source-badge" style="background: #7c3aed;">Vendor Research</span>
-            <span class="source-badge" style="background: #059669;">Independent</span>
-            <span class="source-badge" style="background: #dc2626;">Vulnerability DB</span>
-            <span class="source-badge" style="background: #ea580c;">Threat Tracking</span>
-            <span class="source-badge" style="background: #6b7280;">News</span>
-        </div>
-
-        <div class="signals-container">
-            <div class="signals-header">
-                <span class="signals-count" id="secSignalsCount">Loading signals...</span>
-            </div>
-            <div class="signals-list" id="secSignalsList">
-                <div class="loading-state">
-                    <div class="loading-spinner"></div>
-                    <p>Loading security signals...</p>
-                </div>
-            </div>
-        </div>
-        </div><!-- End Security Signals Tab -->
     </div>
 
     <footer>
-        <p>Signal Dashboard - VC + Security Intelligence</p>
-        <p>Run <code>python3 scripts/live_monitor.py</code> for VC signals | <code>python3 scripts/security_monitor.py</code> for security signals</p>
+        <p>VC Signals Dashboard - Data from signals-data.json</p>
+        <p>Run <code>python3 scripts/live_monitor.py</code> to refresh signals</p>
     </footer>
 
     <script>
         let signals = [];
-        let securitySignals = [];
-        let currentTab = 'vc';
-
-        // Tab switching
-        function switchTab(tab) {
-            currentTab = tab;
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-            if (tab === 'vc') {
-                document.querySelector('.tab-btn:nth-child(1)').classList.add('active');
-                document.getElementById('vcTab').classList.add('active');
-            } else {
-                document.querySelector('.tab-btn:nth-child(2)').classList.add('active');
-                document.getElementById('securityTab').classList.add('active');
-                if (securitySignals.length === 0) {
-                    loadSecuritySignals();
-                }
-            }
-        }
 
         // Load signals from JSON
         async function loadSignals() {
@@ -759,227 +605,6 @@
             applyFilters();
         }
 
-        // ========== SECURITY SIGNALS ==========
-
-        // Load security signals from JSON
-        async function loadSecuritySignals() {
-            try {
-                const cacheBuster = Date.now();
-                const response = await fetch(`security-signals-data.json?t=${cacheBuster}`);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                securitySignals = await response.json();
-
-                updateSecurityStats();
-                populateSecurityDropdowns();
-                applySecurityFilters();
-
-                console.log(`Loaded ${securitySignals.length} security signals`);
-            } catch (error) {
-                console.error('Failed to load security signals:', error);
-                document.getElementById('secSignalsList').innerHTML = `
-                    <div class="empty-state">
-                        <h3>Failed to load security signals</h3>
-                        <p>Error: ${error.message}</p>
-                        <p>Run: python3 scripts/security_monitor.py</p>
-                    </div>
-                `;
-            }
-        }
-
-        // Update security stats
-        function updateSecurityStats() {
-            document.getElementById('secTotalSignals').textContent = securitySignals.length;
-            document.getElementById('secCriticalSignals').textContent = securitySignals.filter(s => s.severity === 'critical').length;
-            document.getElementById('secHighSignals').textContent = securitySignals.filter(s => s.severity === 'high').length;
-            document.getElementById('secSourcesCount').textContent = new Set(securitySignals.map(s => s.source_name)).size;
-        }
-
-        // Populate security dropdowns
-        function populateSecurityDropdowns() {
-            const sourceCounts = {};
-            securitySignals.forEach(s => {
-                if (s.source_name) sourceCounts[s.source_name] = (sourceCounts[s.source_name] || 0) + 1;
-            });
-            const sortedSources = Object.entries(sourceCounts).sort((a, b) => b[1] - a[1]);
-
-            const sourceSelect = document.getElementById('secFilterSource');
-            sourceSelect.innerHTML = '';
-            const allOpt = document.createElement('option');
-            allOpt.value = 'all';
-            allOpt.textContent = `All Sources (${securitySignals.length})`;
-            sourceSelect.appendChild(allOpt);
-            sortedSources.forEach(([name, count]) => {
-                const opt = document.createElement('option');
-                opt.value = name;
-                opt.textContent = `${name} (${count})`;
-                sourceSelect.appendChild(opt);
-            });
-        }
-
-        // Get severity color
-        function getSeverityColor(severity) {
-            const colors = {
-                critical: '#dc2626',
-                high: '#ea580c',
-                medium: '#f59e0b',
-                low: '#16a34a',
-                informational: '#6b7280'
-            };
-            return colors[severity] || '#6b7280';
-        }
-
-        // Get source type color
-        function getSourceTypeColor(sourceType) {
-            const colors = {
-                government: '#0369a1',
-                vendor_research: '#7c3aed',
-                independent_research: '#059669',
-                vulnerability_db: '#dc2626',
-                threat_tracking: '#ea580c',
-                news: '#6b7280',
-                community: '#2563eb'
-            };
-            return colors[sourceType] || '#6b7280';
-        }
-
-        // Apply security filters
-        function applySecurityFilters() {
-            const searchQuery = document.getElementById('secSearchInput').value.trim().toLowerCase();
-            const dateFilter = document.getElementById('secFilterDate').value;
-            const sourceTypeFilter = document.getElementById('secFilterSourceType').value;
-            const severityFilter = document.getElementById('secFilterSeverity').value;
-            const categoryFilter = document.getElementById('secFilterCategory').value;
-            const sourceFilter = document.getElementById('secFilterSource').value;
-            const chipFilter = document.querySelector('.sec-chip.active')?.dataset.filter || 'all';
-
-            let filtered = [...securitySignals];
-            const totalBefore = filtered.length;
-
-            // Search filter with word boundary
-            if (searchQuery) {
-                const searchTerms = searchQuery.split(/\s+/).filter(t => t.length > 0);
-                filtered = filtered.filter(s => {
-                    const searchableText = [
-                        s.title || '',
-                        s.summary || '',
-                        s.source_name || '',
-                        s.category || '',
-                        (s.cve_ids || []).join(' '),
-                        (s.threat_actors || []).join(' '),
-                        (s.malware_families || []).join(' ')
-                    ].join(' ').toLowerCase();
-
-                    return searchTerms.every(term => {
-                        const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                        const regex = new RegExp(`\\b${escapedTerm}`, 'i');
-                        return regex.test(searchableText);
-                    });
-                });
-
-                document.getElementById('secSearchResults').style.display = 'block';
-                document.getElementById('secSearchResults').textContent = `Found ${filtered.length} of ${totalBefore} signals matching "${searchQuery}"`;
-                document.getElementById('secSearchClear').style.display = 'block';
-            } else {
-                document.getElementById('secSearchResults').style.display = 'none';
-                document.getElementById('secSearchClear').style.display = 'none';
-            }
-
-            // Chip filter (severity quick filter)
-            if (chipFilter !== 'all') {
-                filtered = filtered.filter(s => s.severity === chipFilter);
-            }
-
-            // Date filter
-            if (dateFilter !== 'all') {
-                const now = new Date();
-                const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-                if (dateFilter === '1day') cutoff.setDate(cutoff.getDate() - 1);
-                else if (dateFilter === '7days') cutoff.setDate(cutoff.getDate() - 7);
-                else if (dateFilter === '14days') cutoff.setDate(cutoff.getDate() - 14);
-                else if (dateFilter === 'month') cutoff.setDate(cutoff.getDate() - 30);
-
-                filtered = filtered.filter(s => {
-                    if (!s.published_date) return true;
-                    const signalDate = new Date(s.published_date);
-                    return signalDate >= cutoff;
-                });
-            }
-
-            // Source type filter
-            if (sourceTypeFilter !== 'all') {
-                filtered = filtered.filter(s => s.source_type === sourceTypeFilter);
-            }
-
-            // Severity filter
-            if (severityFilter !== 'all') {
-                filtered = filtered.filter(s => s.severity === severityFilter);
-            }
-
-            // Category filter
-            if (categoryFilter !== 'all') {
-                filtered = filtered.filter(s => s.category === categoryFilter);
-            }
-
-            // Source filter
-            if (sourceFilter !== 'all') {
-                filtered = filtered.filter(s => s.source_name === sourceFilter);
-            }
-
-            renderSecuritySignals(filtered);
-        }
-
-        function clearSecuritySearch() {
-            document.getElementById('secSearchInput').value = '';
-            applySecurityFilters();
-        }
-
-        // Render security signals
-        function renderSecuritySignals(filteredSignals) {
-            const container = document.getElementById('secSignalsList');
-            document.getElementById('secSignalsCount').textContent = `Showing ${filteredSignals.length} of ${securitySignals.length} signals`;
-
-            if (filteredSignals.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <h3>No security signals match your filters</h3>
-                        <p>Try adjusting your filter criteria or use the Refresh button</p>
-                    </div>
-                `;
-                return;
-            }
-
-            // Sort by date descending
-            filteredSignals.sort((a, b) => new Date(b.published_date || '2020-01-01') - new Date(a.published_date || '2020-01-01'));
-
-            container.innerHTML = filteredSignals.map(s => {
-                const cveTagsHtml = (s.cve_ids || []).map(cve => `<span class="cve-tag">${escapeHtml(cve)}</span>`).join('');
-                const threatActorTagsHtml = (s.threat_actors || []).map(ta => `<span class="threat-actor-tag">${escapeHtml(ta)}</span>`).join('');
-                const malwareTagsHtml = (s.malware_families || []).map(mf => `<span class="malware-tag">${escapeHtml(mf)}</span>`).join('');
-                const hasTags = cveTagsHtml || threatActorTagsHtml || malwareTagsHtml;
-
-                return `
-                <div class="signal-card ${s.severity || 'informational'}">
-                    <div class="signal-header">
-                        <div>
-                            <div class="signal-person">${escapeHtml(s.title || 'Untitled')}</div>
-                            <div class="signal-firm">${escapeHtml(s.source_name || 'Unknown')}</div>
-                        </div>
-                        <div class="signal-badges">
-                            <span class="badge ${s.severity === 'critical' ? 'critical' : s.severity === 'high' ? 'high-sev' : s.severity === 'medium' ? 'medium-sev' : s.severity === 'low' ? 'low-sev' : 'info-sev'}">${(s.severity || 'info').toUpperCase()}</span>
-                            <span class="source-badge" style="background: ${getSourceTypeColor(s.source_type)}">${(s.source_type || 'unknown').replace(/_/g, ' ')}</span>
-                        </div>
-                    </div>
-                    <div class="signal-category">${escapeHtml((s.category || 'unknown').replace(/_/g, ' '))}</div>
-                    ${hasTags ? `<div class="signal-tags">${cveTagsHtml}${threatActorTagsHtml}${malwareTagsHtml}</div>` : ''}
-                    <div class="signal-summary">${escapeHtml(s.summary || '')}</div>
-                    <div class="signal-footer">
-                        <div class="signal-meta">${s.published_date ? new Date(s.published_date).toLocaleDateString() : 'N/A'}</div>
-                        ${s.url ? `<a href="${s.url}" target="_blank" rel="noopener" class="signal-link">View Source</a>` : ''}
-                    </div>
-                </div>
-            `}).join('');
-        }
-
         // Render signals
         function renderSignals(filteredSignals) {
             const container = document.getElementById('signalsList');
@@ -1055,32 +680,6 @@
 
         // Theme summary toggle
         document.getElementById('showThemeSummary').addEventListener('change', applyFilters);
-
-        // Security signal event listeners
-        document.querySelectorAll('.sec-chip').forEach(chip => {
-            chip.addEventListener('click', () => {
-                document.querySelectorAll('.sec-chip').forEach(c => c.classList.remove('active'));
-                chip.classList.add('active');
-                applySecurityFilters();
-            });
-        });
-
-        ['secFilterDate', 'secFilterSourceType', 'secFilterSeverity', 'secFilterCategory', 'secFilterSource'].forEach(id => {
-            document.getElementById(id)?.addEventListener('change', applySecurityFilters);
-        });
-
-        // Security search input with debounce
-        let secSearchTimeout;
-        document.getElementById('secSearchInput').addEventListener('input', () => {
-            clearTimeout(secSearchTimeout);
-            secSearchTimeout = setTimeout(applySecurityFilters, 300);
-        });
-        document.getElementById('secSearchInput').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                clearTimeout(secSearchTimeout);
-                applySecurityFilters();
-            }
-        });
 
         // Initialize
         loadSignals();
