@@ -1,0 +1,495 @@
+#!/usr/bin/env python3
+"""
+Security Research Signal Monitor
+
+Monitors RSS feeds from security research sources, government advisories,
+and vulnerability databases to aggregate security intelligence signals.
+
+Features:
+- Parallel RSS feed fetching with asyncio
+- Categorization by threat type (CVE, malware, APT, advisory)
+- Severity detection based on keywords
+- Deduplication of existing signals
+- GitHub Pages compatible output
+
+Usage:
+    python scripts/security_monitor.py [--dry-run] [--verbose]
+"""
+
+import asyncio
+import json
+import hashlib
+import re
+import sys
+import argparse
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+from dataclasses import dataclass, asdict
+import logging
+
+try:
+    import feedparser
+    import aiohttp
+except ImportError:
+    print("Required packages not installed. Run: pip install feedparser aiohttp")
+    sys.exit(1)
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Lookback window - signals older than this are ignored
+LOOKBACK_DAYS = 30
+
+# Paths
+SCRIPT_DIR = Path(__file__).parent
+PROJECT_ROOT = SCRIPT_DIR.parent
+DATA_DIR = PROJECT_ROOT / "data"
+
+SECURITY_SOURCES_PATH = DATA_DIR / "security_sources.json"
+SIGNALS_OUTPUT_PATH = PROJECT_ROOT / "security-signals-data.json"
+MONITOR_STATE_PATH = DATA_DIR / "security_monitor_state.json"
+
+
+@dataclass
+class SecuritySignal:
+    """Represents a detected security signal from RSS feeds."""
+    id: str
+    source_name: str
+    source_type: str
+    signal_category: str  # cve, malware, apt, advisory, research, news
+    severity: str  # critical, high, medium, low, informational
+    title: str
+    summary: str
+    source_url: str
+    source_date: str
+    tags: List[str]
+    cve_ids: List[str]  # Any CVE IDs mentioned
+    threat_actors: List[str]  # Any threat actor names mentioned
+    malware_families: List[str]  # Any malware families mentioned
+
+
+# CVE pattern
+CVE_PATTERN = re.compile(r'CVE-\d{4}-\d{4,}', re.IGNORECASE)
+
+# Known threat actors (partial list for detection)
+KNOWN_THREAT_ACTORS = [
+    'apt28', 'apt29', 'apt41', 'lazarus', 'cozy bear', 'fancy bear',
+    'wizard spider', 'evil corp', 'fin7', 'fin11', 'sandworm',
+    'turla', 'carbanak', 'cobalt group', 'ta505', 'emotet',
+    'conti', 'lockbit', 'blackcat', 'alphv', 'cl0p', 'revil',
+    'darkside', 'blackmatter', 'hive', 'royal', 'play',
+    'kimsuky', 'mustang panda', 'hafnium', 'nobelium', 'lapsus',
+    'scattered spider', 'volt typhoon', 'charcoal typhoon'
+]
+
+# Known malware families (partial list)
+KNOWN_MALWARE = [
+    'emotet', 'trickbot', 'qakbot', 'qbot', 'cobalt strike', 'beacon',
+    'mimikatz', 'metasploit', 'sliver', 'brute ratel', 'havoc',
+    'asyncrat', 'remcos', 'njrat', 'agent tesla', 'formbook',
+    'redline', 'raccoon', 'vidar', 'lumma', 'stealc',
+    'icedid', 'bumblebee', 'pikabot', 'darkgate', 'smokeloader',
+    'systembc', 'solarmarker', 'gootloader', 'socgholish',
+    'blackcat', 'lockbit', 'akira', 'play', 'royal', 'rhysida'
+]
+
+# Severity keywords
+CRITICAL_KEYWORDS = [
+    'critical', 'zero-day', '0-day', 'zero day', 'actively exploited',
+    'in the wild', 'rce', 'remote code execution', 'pre-auth',
+    'unauthenticated', 'wormable', 'cvss 9', 'cvss 10',
+    'emergency', 'patch now', 'exploitation'
+]
+
+HIGH_KEYWORDS = [
+    'high severity', 'privilege escalation', 'authentication bypass',
+    'sql injection', 'command injection', 'arbitrary code',
+    'ransomware', 'apt', 'nation-state', 'cvss 7', 'cvss 8'
+]
+
+MEDIUM_KEYWORDS = [
+    'medium severity', 'information disclosure', 'denial of service',
+    'dos', 'xss', 'cross-site', 'cvss 4', 'cvss 5', 'cvss 6'
+]
+
+
+class SecurityMonitor:
+    """Monitors security RSS feeds and detects signals."""
+
+    def __init__(self, dry_run: bool = False, verbose: bool = False):
+        self.dry_run = dry_run
+        self.verbose = verbose
+        self.security_sources = self._load_security_sources()
+        self.existing_signals = self._load_existing_signals()
+        self.monitor_state = self._load_monitor_state()
+        self.new_signals: List[SecuritySignal] = []
+
+    def _load_security_sources(self) -> Dict:
+        """Load security sources configuration."""
+        if SECURITY_SOURCES_PATH.exists():
+            with open(SECURITY_SOURCES_PATH) as f:
+                return json.load(f)
+        return {"sources": []}
+
+    def _load_existing_signals(self) -> List[Dict]:
+        """Load existing signals from output file."""
+        if SIGNALS_OUTPUT_PATH.exists():
+            with open(SIGNALS_OUTPUT_PATH) as f:
+                return json.load(f)
+        return []
+
+    def _load_monitor_state(self) -> Dict:
+        """Load monitor state."""
+        if MONITOR_STATE_PATH.exists():
+            with open(MONITOR_STATE_PATH) as f:
+                return json.load(f)
+        return {
+            "last_run": None,
+            "feeds_checked": {},
+            "signals_generated": 0
+        }
+
+    def _save_monitor_state(self):
+        """Save monitor state."""
+        self.monitor_state["last_run"] = datetime.utcnow().isoformat()
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
+        with open(MONITOR_STATE_PATH, "w") as f:
+            json.dump(self.monitor_state, f, indent=2)
+
+    def _generate_signal_id(self, url: str, source: str) -> str:
+        """Generate unique signal ID from URL and source."""
+        content = f"{url}:{source}"
+        return f"sec_{hashlib.md5(content.encode()).hexdigest()[:12]}"
+
+    def _is_duplicate(self, url: str) -> bool:
+        """Check if signal already exists."""
+        for signal in self.existing_signals:
+            if signal.get("source_url") == url:
+                return True
+        return False
+
+    def _extract_cves(self, text: str) -> List[str]:
+        """Extract CVE IDs from text."""
+        return list(set(CVE_PATTERN.findall(text.upper())))
+
+    def _extract_threat_actors(self, text: str) -> List[str]:
+        """Extract known threat actor names from text."""
+        text_lower = text.lower()
+        found = []
+        for actor in KNOWN_THREAT_ACTORS:
+            if actor in text_lower:
+                found.append(actor.title())
+        return list(set(found))
+
+    def _extract_malware(self, text: str) -> List[str]:
+        """Extract known malware family names from text."""
+        text_lower = text.lower()
+        found = []
+        for malware in KNOWN_MALWARE:
+            if malware in text_lower:
+                found.append(malware.title())
+        return list(set(found))
+
+    def _determine_severity(self, text: str, cves: List[str]) -> str:
+        """Determine signal severity based on content analysis."""
+        text_lower = text.lower()
+
+        # Check for critical indicators
+        if any(kw in text_lower for kw in CRITICAL_KEYWORDS):
+            return "critical"
+
+        # Check for high severity indicators
+        if any(kw in text_lower for kw in HIGH_KEYWORDS):
+            return "high"
+
+        # CVEs typically indicate at least medium severity
+        if cves:
+            return "high"
+
+        # Check for medium severity indicators
+        if any(kw in text_lower for kw in MEDIUM_KEYWORDS):
+            return "medium"
+
+        return "informational"
+
+    def _determine_category(self, text: str, source_category: str, cves: List[str],
+                           threat_actors: List[str], malware: List[str]) -> str:
+        """Determine signal category."""
+        text_lower = text.lower()
+
+        # Check source category first
+        if 'advisory' in source_category or 'government' in source_category:
+            return 'advisory'
+
+        if 'cve' in source_category or 'vulnerability' in source_category:
+            return 'cve'
+
+        # Content-based detection
+        if cves:
+            return 'cve'
+
+        if threat_actors or 'apt' in text_lower or 'threat actor' in text_lower:
+            return 'apt'
+
+        if malware or 'malware' in text_lower or 'ransomware' in text_lower:
+            return 'malware'
+
+        if 'research' in source_category or 'analysis' in text_lower:
+            return 'research'
+
+        return 'news'
+
+    def _extract_tags(self, text: str, source_topics: List[str]) -> List[str]:
+        """Extract relevant tags from content."""
+        tags = []
+        text_lower = text.lower()
+
+        # Add source topics
+        tags.extend(source_topics[:3])
+
+        # Content-based tags
+        tag_keywords = {
+            'ransomware': ['ransomware', 'ransom', 'encryption'],
+            'phishing': ['phishing', 'spear-phishing', 'credential theft'],
+            'zero-day': ['zero-day', '0-day', 'zero day'],
+            'patch': ['patch', 'update', 'fix', 'remediation'],
+            'exploit': ['exploit', 'poc', 'proof of concept'],
+            'ics': ['ics', 'scada', 'ot ', 'industrial control'],
+            'cloud': ['cloud', 'aws', 'azure', 'gcp'],
+            'supply-chain': ['supply chain', 'supply-chain', 'solarwinds'],
+            'credentials': ['credential', 'password', 'authentication']
+        }
+
+        for tag, keywords in tag_keywords.items():
+            if any(kw in text_lower for kw in keywords):
+                tags.append(tag)
+
+        return list(set(tags))[:5]
+
+    def _extract_summary(self, text: str, max_length: int = 300) -> str:
+        """Extract a clean summary from text."""
+        # Remove HTML tags
+        clean = re.sub(r'<[^>]+>', '', text)
+        # Remove extra whitespace
+        clean = ' '.join(clean.split())
+        # Truncate
+        if len(clean) > max_length:
+            clean = clean[:max_length].rsplit(' ', 1)[0] + "..."
+        return clean
+
+    async def _fetch_feed(self, session: aiohttp.ClientSession, url: str) -> Optional[Dict]:
+        """Fetch and parse a single RSS feed."""
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+        try:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=30), headers=headers) as response:
+                if response.status == 200:
+                    content = await response.text()
+                    feed = feedparser.parse(content)
+                    return feed
+                else:
+                    if self.verbose:
+                        logger.warning(f"Failed to fetch {url}: HTTP {response.status}")
+        except Exception as e:
+            if self.verbose:
+                logger.warning(f"Error fetching {url}: {e}")
+        return None
+
+    def _process_feed_entry(self, entry: Dict, source: Dict) -> Optional[SecuritySignal]:
+        """Process a single feed entry and create a signal if relevant."""
+        title = entry.get("title", "")
+        summary = entry.get("summary", entry.get("description", ""))
+        link = entry.get("link", "")
+        published = entry.get("published", entry.get("updated", ""))
+
+        # Skip if no link or already exists
+        if not link or self._is_duplicate(link):
+            return None
+
+        # Combine text for analysis
+        full_text = f"{title} {summary}"
+
+        # Extract entities
+        cves = self._extract_cves(full_text)
+        threat_actors = self._extract_threat_actors(full_text)
+        malware = self._extract_malware(full_text)
+
+        # Determine category and severity
+        category = self._determine_category(
+            full_text, source.get("category", ""),
+            cves, threat_actors, malware
+        )
+        severity = self._determine_severity(full_text, cves)
+
+        # Extract tags
+        tags = self._extract_tags(full_text, source.get("topics", []))
+
+        # Parse date
+        try:
+            if published:
+                # Common timezone abbreviations
+                tz_map = {
+                    "PST": "-0800", "PDT": "-0700",
+                    "MST": "-0700", "MDT": "-0600",
+                    "CST": "-0600", "CDT": "-0500",
+                    "EST": "-0500", "EDT": "-0400",
+                    "GMT": "+0000", "UTC": "+0000"
+                }
+                normalized = published
+                for tz_abbr, tz_offset in tz_map.items():
+                    if tz_abbr in normalized:
+                        normalized = normalized.replace(tz_abbr, tz_offset)
+                        break
+
+                for fmt in ["%a, %d %b %Y %H:%M:%S %z", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d"]:
+                    try:
+                        dt = datetime.strptime(normalized, fmt)
+                        source_date = dt.strftime("%Y-%m-%d")
+                        break
+                    except ValueError:
+                        continue
+                else:
+                    source_date = datetime.utcnow().strftime("%Y-%m-%d")
+            else:
+                source_date = datetime.utcnow().strftime("%Y-%m-%d")
+        except Exception:
+            source_date = datetime.utcnow().strftime("%Y-%m-%d")
+
+        # Enforce lookback window
+        cutoff_date = (datetime.utcnow() - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
+        if source_date < cutoff_date:
+            return None
+
+        # Create signal
+        signal = SecuritySignal(
+            id=self._generate_signal_id(link, source.get("source_name", "")),
+            source_name=source.get("source_name", "Unknown"),
+            source_type=source.get("source_type", "unknown"),
+            signal_category=category,
+            severity=severity,
+            title=title,
+            summary=self._extract_summary(summary),
+            source_url=link,
+            source_date=source_date,
+            tags=tags,
+            cve_ids=cves,
+            threat_actors=threat_actors,
+            malware_families=malware
+        )
+
+        return signal
+
+    async def _process_feeds_for_source(self, session: aiohttp.ClientSession,
+                                        source: Dict) -> List[SecuritySignal]:
+        """Process all feeds for a single source."""
+        signals = []
+        feeds = source.get("rss_feeds", [])
+
+        for feed_url in feeds:
+            if self.verbose:
+                logger.info(f"Fetching: {feed_url}")
+
+            feed = await self._fetch_feed(session, feed_url)
+            if not feed or not feed.get("entries"):
+                continue
+
+            # Record check
+            self.monitor_state["feeds_checked"][feed_url] = datetime.utcnow().isoformat()
+
+            # Process entries (last 20)
+            for entry in feed.entries[:20]:
+                signal = self._process_feed_entry(entry, source)
+                if signal:
+                    signals.append(signal)
+                    if self.verbose:
+                        logger.info(f"  Found signal: {signal.severity}/{signal.signal_category} - {signal.title[:50]}...")
+
+        return signals
+
+    async def run_monitor(self) -> List[SecuritySignal]:
+        """Run the monitoring process."""
+        logger.info("Starting security signal monitor...")
+        all_signals = []
+        feed_tasks = []
+
+        async with aiohttp.ClientSession() as session:
+            # Process all security sources
+            for source in self.security_sources.get("sources", []):
+                if source.get("rss_feeds"):
+                    task = self._process_feeds_for_source(session, source)
+                    feed_tasks.append(task)
+
+            # Run all feed processing concurrently
+            if feed_tasks:
+                results = await asyncio.gather(*feed_tasks, return_exceptions=True)
+                for result in results:
+                    if isinstance(result, list):
+                        all_signals.extend(result)
+                    elif isinstance(result, Exception):
+                        logger.warning(f"Feed processing error: {result}")
+
+        self.new_signals = all_signals
+        logger.info(f"Found {len(all_signals)} new signals")
+
+        return all_signals
+
+    def save_signals(self):
+        """Save new signals to the output file."""
+        if self.dry_run:
+            logger.info("Dry run - not saving signals")
+            for signal in self.new_signals:
+                print(json.dumps(asdict(signal), indent=2))
+            return
+
+        # Merge with existing signals
+        merged = self.existing_signals.copy()
+        existing_ids = {s.get("id") for s in merged}
+
+        for signal in self.new_signals:
+            signal_dict = asdict(signal)
+            if signal.id not in existing_ids:
+                merged.append(signal_dict)
+                existing_ids.add(signal.id)
+
+        # Sort by date (newest first)
+        merged.sort(key=lambda x: x.get("source_date", ""), reverse=True)
+
+        # Save
+        SIGNALS_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(SIGNALS_OUTPUT_PATH, "w") as f:
+            json.dump(merged, f, indent=2)
+
+        logger.info(f"Saved {len(merged)} total signals to {SIGNALS_OUTPUT_PATH}")
+
+        # Update state
+        self.monitor_state["signals_generated"] += len(self.new_signals)
+        self._save_monitor_state()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Security Research Signal Monitor")
+    parser.add_argument("--dry-run", action="store_true", help="Don't save signals, just print them")
+    parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
+    args = parser.parse_args()
+
+    monitor = SecurityMonitor(dry_run=args.dry_run, verbose=args.verbose)
+
+    # Run async monitor
+    asyncio.run(monitor.run_monitor())
+
+    # Save results
+    monitor.save_signals()
+
+    print(f"\nMonitor complete:")
+    print(f"  - New signals found: {len(monitor.new_signals)}")
+    print(f"  - Output file: {SIGNALS_OUTPUT_PATH}")
+
+
+if __name__ == "__main__":
+    main()

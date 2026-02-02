@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "created": "2026-02-02",
+    "last_updated": "2026-02-02",
+    "description": "Security research RSS feeds for CVEs, malware, threat actor TTPs, and government advisories",
+    "schema_version": "1.0"
+  },
+  "sources": [
+    {
+      "source_name": "CISA Alerts & Advisories",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+      ],
+      "topics": ["CVE", "vulnerabilities", "advisories", "critical infrastructure"],
+      "priority": 1,
+      "notes": "CISA - All Alerts & Advisories"
+    },
+    {
+      "source_name": "CISA News",
+      "source_type": "government",
+      "category": "government_news",
+      "rss_feeds": [
+        "https://www.cisa.gov/news.xml"
+      ],
+      "topics": ["government", "cybersecurity policy", "announcements"],
+      "priority": 2,
+      "notes": "CISA News feed"
+    },
+    {
+      "source_name": "CISA Blog",
+      "source_type": "government",
+      "category": "government_blog",
+      "rss_feeds": [
+        "https://www.cisa.gov/cisa/blog.xml"
+      ],
+      "topics": ["government", "best practices", "guidance"],
+      "priority": 2,
+      "notes": "CISA Blog"
+    },
+    {
+      "source_name": "CISA ICS Advisories",
+      "source_type": "government",
+      "category": "ics_advisory",
+      "rss_feeds": [
+        "https://us-cert.cisa.gov/ics/advisories/advisories.xml"
+      ],
+      "topics": ["ICS", "SCADA", "OT security", "critical infrastructure"],
+      "priority": 1,
+      "notes": "Industrial Control Systems advisories"
+    },
+    {
+      "source_name": "NCSC UK",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml"
+      ],
+      "topics": ["UK government", "threat reports", "guidance"],
+      "priority": 1,
+      "notes": "UK National Cyber Security Centre"
+    },
+    {
+      "source_name": "BSI Germany",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.bsi.bund.de/SiteGlobals/Functions/RSSFeed/RSSNewsfeed/RSSNewsfeed.xml"
+      ],
+      "topics": ["Germany", "government", "advisories"],
+      "priority": 2,
+      "notes": "German Federal Office for Information Security"
+    },
+    {
+      "source_name": "NVD Vulnerabilities",
+      "source_type": "vulnerability_db",
+      "category": "cve_database",
+      "rss_feeds": [
+        "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"
+      ],
+      "topics": ["CVE", "vulnerabilities", "CVSS", "NVD"],
+      "priority": 1,
+      "notes": "National Vulnerability Database"
+    },
+    {
+      "source_name": "Unit 42 (Palo Alto)",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://unit42.paloaltonetworks.com/feed/"
+      ],
+      "topics": ["threat research", "malware", "APT", "campaigns"],
+      "priority": 1,
+      "notes": "Palo Alto Networks Unit 42 threat research"
+    },
+    {
+      "source_name": "Cisco Talos",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "http://feeds.feedburner.com/feedburner/Talos"
+      ],
+      "topics": ["threat intelligence", "malware", "vulnerabilities"],
+      "priority": 1,
+      "notes": "Cisco Talos Intelligence"
+    },
+    {
+      "source_name": "CrowdStrike Blog",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://www.crowdstrike.com/blog/feed"
+      ],
+      "topics": ["threat actors", "malware", "incident response"],
+      "priority": 1,
+      "notes": "CrowdStrike threat research and blog"
+    },
+    {
+      "source_name": "Mandiant (Google)",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/feed"
+      ],
+      "topics": ["APT", "threat actors", "nation-state", "malware"],
+      "priority": 1,
+      "notes": "Mandiant / Google Threat Intelligence"
+    },
+    {
+      "source_name": "Microsoft Security Blog",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://www.microsoft.com/en-us/security/blog/feed/"
+      ],
+      "topics": ["Microsoft", "Windows", "threat research", "vulnerabilities"],
+      "priority": 1,
+      "notes": "Microsoft Security Blog"
+    },
+    {
+      "source_name": "Microsoft MSRC",
+      "source_type": "vendor_research",
+      "category": "vulnerability_disclosure",
+      "rss_feeds": [
+        "https://msrc.microsoft.com/blog/feed"
+      ],
+      "topics": ["Microsoft", "patches", "vulnerabilities", "Patch Tuesday"],
+      "priority": 1,
+      "notes": "Microsoft Security Response Center"
+    },
+    {
+      "source_name": "Kaspersky Securelist",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://securelist.com/feed/"
+      ],
+      "topics": ["malware", "APT", "threat research", "campaigns"],
+      "priority": 1,
+      "notes": "Kaspersky threat research"
+    },
+    {
+      "source_name": "Trend Micro",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "http://feeds.trendmicro.com/Anti-MalwareBlog/",
+        "http://feeds.trendmicro.com/TrendMicroSimplySecurity"
+      ],
+      "topics": ["malware", "ransomware", "threat research"],
+      "priority": 2,
+      "notes": "Trend Micro security blogs"
+    },
+    {
+      "source_name": "Malwarebytes Labs",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://blog.malwarebytes.com/feed/"
+      ],
+      "topics": ["malware", "ransomware", "consumer threats"],
+      "priority": 2,
+      "notes": "Malwarebytes threat research"
+    },
+    {
+      "source_name": "The DFIR Report",
+      "source_type": "independent_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://thedfirreport.com/feed/"
+      ],
+      "topics": ["incident response", "TTPs", "intrusion analysis", "ransomware"],
+      "priority": 1,
+      "notes": "Detailed intrusion analysis reports"
+    },
+    {
+      "source_name": "Qualys Security Blog",
+      "source_type": "vendor_research",
+      "category": "vulnerability_research",
+      "rss_feeds": [
+        "https://blog.qualys.com/feed"
+      ],
+      "topics": ["vulnerabilities", "patch management", "compliance"],
+      "priority": 2,
+      "notes": "Qualys vulnerability research"
+    },
+    {
+      "source_name": "SentinelOne",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://www.sentinelone.com/feed/"
+      ],
+      "topics": ["malware", "threat research", "EDR"],
+      "priority": 2,
+      "notes": "SentinelOne threat research"
+    },
+    {
+      "source_name": "SANS ISC",
+      "source_type": "independent_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://isc.sans.edu/rssfeed.xml",
+        "https://isc.sans.edu/rssfeed_full.xml"
+      ],
+      "topics": ["threat intel", "malware", "handlers diary"],
+      "priority": 1,
+      "notes": "SANS Internet Storm Center Handler's Diary"
+    },
+    {
+      "source_name": "The Hacker News",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "http://thehackernews.com/feeds/posts/default"
+      ],
+      "topics": ["security news", "breaches", "vulnerabilities"],
+      "priority": 2,
+      "notes": "Popular security news site"
+    },
+    {
+      "source_name": "Krebs on Security",
+      "source_type": "independent_research",
+      "category": "investigative",
+      "rss_feeds": [
+        "http://krebsonsecurity.com/feed/"
+      ],
+      "topics": ["cybercrime", "breaches", "investigations"],
+      "priority": 1,
+      "notes": "Brian Krebs investigative security journalism"
+    },
+    {
+      "source_name": "SecurityWeek",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "http://feeds.feedburner.com/Securityweek"
+      ],
+      "topics": ["security news", "enterprise security", "vulnerabilities"],
+      "priority": 2,
+      "notes": "Enterprise security news"
+    },
+    {
+      "source_name": "CyberScoop",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.cyberscoop.com/feed"
+      ],
+      "topics": ["government", "policy", "national security"],
+      "priority": 2,
+      "notes": "Cybersecurity policy and news"
+    },
+    {
+      "source_name": "Schneier on Security",
+      "source_type": "independent_research",
+      "category": "security_commentary",
+      "rss_feeds": [
+        "https://www.schneier.com/feed/"
+      ],
+      "topics": ["security commentary", "cryptography", "policy"],
+      "priority": 1,
+      "notes": "Bruce Schneier's security blog"
+    },
+    {
+      "source_name": "Reddit r/cybersecurity",
+      "source_type": "community",
+      "category": "community_discussion",
+      "rss_feeds": [
+        "https://www.reddit.com/r/cybersecurity/.rss"
+      ],
+      "topics": ["community", "discussions", "news"],
+      "priority": 3,
+      "notes": "Reddit cybersecurity community"
+    },
+    {
+      "source_name": "Ransomware Live",
+      "source_type": "threat_tracking",
+      "category": "ransomware_tracking",
+      "rss_feeds": [
+        "https://ransomware.live/rss.xml"
+      ],
+      "topics": ["ransomware", "threat actors", "victims"],
+      "priority": 1,
+      "notes": "Ransomware group activity tracking"
+    }
+  ]
+}

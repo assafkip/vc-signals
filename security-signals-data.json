@@ -1,0 +1,3750 @@
+[
+  {
+    "id": "sec_b8f8f63cc40d",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "How Agentic Tool Chain Attacks Threaten AI Agent Security",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/how-agentic-tool-chain-attacks-threaten-ai-agent-security/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2b64252fcbb7",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "LABYRINTH CHOLLIMA Evolves into Three Adversaries",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/labyrinth-chollima-evolves-into-three-adversaries/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_cfa03e9c33aa",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "CrowdStrike Named a Customers&rsquo; Choice in 2026 Gartner&reg; Voice of the Customer for Endpoint Protection Platforms",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-customers-choice-2026-gartner-voice-of-the-customer-for-epp-report/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2bde53c46381",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Data Protection Day 2026: From Compliance to Resilience",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/data-protection-day-2026-from-compliance-to-resilience/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_0f3646480bbe",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Small Devices, Big Risk: USB Drives Threaten Enterprise Security",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/usb-drives-threaten-enterprise-security/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_60055ed6cefe",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "The Architecture of Agentic Defense: Inside the Falcon Platform",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/architecture-of-agentic-defense-inside-the-falcon-platform/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_63500dd28120",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "CrowdStrike to Acquire Seraphic to Secure Work in Any Browser",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-to-acquire-seraphic/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_25046ea61b6d",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "January 2026 Patch Tuesday: 114 CVEs Patched Including 3 Zero-Days",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-january-2026/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "patch",
+      "malware",
+      "zero-day",
+      "threat actors",
+      "incident response"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_221249b08923",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "AI Tool Poisoning: How Hidden Instructions Threaten AI Agents",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/ai-tool-poisoning/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_c50235b1e98f",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "CrowdStrike to Acquire SGNL to Secure Every Identity in the AI Era",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-to-acquire-sgnl/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "incident response",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_606c6d1c2bf0",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "How\u00a0Manifest v3\u00a0forced us to rethink\u00a0Browser Guard, and why\u00a0that\u2019s\u00a0a good thing",
+    "summary": "Browser Guard still blocks scams and phishing like it always has. But we had to rebuild the way it does that from the ground up.",
+    "source_url": "https://www.malwarebytes.com/blog/inside-malwarebytes/2026/02/how-manifest-v3-forced-us-to-rethink-browser-guard-and-why-thats-a-good-thing",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "phishing",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_026537222c5c",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Scam-checking just got easier: Malwarebytes is now in ChatGPT",
+    "summary": "Malwarebytes' ChatGPT integration makes it the first cybersecurity provider that can deliver its expertise without ever leaving the chat",
+    "source_url": "https://www.malwarebytes.com/blog/product/2026/02/scam-checking-just-got-easier-malwarebytes-is-now-in-chatgpt",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ics",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_03c651794baa",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "How fake party invitations are being used to install remote access tools",
+    "summary": "Fake party invitations are used to install remote access tools, so the criminals are the ones invited.",
+    "source_url": "https://www.malwarebytes.com/blog/threat-intel/2026/02/how-fake-party-invitations-are-being-used-to-install-remote-access-tools",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_948fe6d6b6a2",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "A week in security (January 26 &#8211; February 1)",
+    "summary": "A list of topics we covered in the week of January 26 to February 1 of 2026",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/02/a-week-in-security-january-26-february-1",
+    "source_date": "2026-02-02",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ics",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_c5a76061cf78",
+    "source_name": "Qualys Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "cve",
+    "severity": "high",
+    "title": "Mutagen Astronomy: From Discovery to CISA Recognition\u2014A Seven-Year Journey",
+    "summary": "Introduction On January 26, 2026, the Cybersecurity and Infrastructure Security Agency (CISA) added CVE-2018-14634 to its Known Exploited Vulnerabilities (KEV) catalog. The same vulnerability was discovered by the Qualys Threat Research Unit (TRU) in September 2018. We nicknamed it &#8220;Mutagen...",
+    "source_url": "https://blog.qualys.com/category/vulnerabilities-threat-research",
+    "source_date": "2026-02-02",
+    "tags": [
+      "patch management",
+      "compliance",
+      "exploit",
+      "vulnerabilities"
+    ],
+    "cve_ids": [
+      "CVE-2018-14634"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_9515b7b429f4",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Scanning for exposed Anthropic Models, (Mon, Feb 2nd)",
+    "summary": "Yesterday, a single IP address (&#x25;&#x25;ip:204.76.203.210&#x25;&#x25;) scanned a number of our sensors for what looks like an anthropic API node. The IP address is known to be a Tor exit node.&#xd;",
+    "source_url": "https://isc.sans.edu/diary/rss/32674",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_542ceeb2140f",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "ISC Stormcast For Monday, February 2nd, 2026 https://isc.sans.edu/podcastdetail/9790, (Mon, Feb 2nd)",
+    "summary": "",
+    "source_url": "https://isc.sans.edu/diary/rss/32672",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e8cae91bf539",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Researchers Find 341 Malicious ClawHub Skills Stealing Data from OpenClaw Users",
+    "summary": "A security audit of 2,857 skills on ClawHub has found 341 malicious skills across multiple campaigns, according to new findings from Koi Security, exposing users to new supply chain risks. ClawHub is a marketplace designed to make it easy for OpenClaw users to find and install third-party skills....",
+    "source_url": "https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "supply-chain",
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_0a90710e9f1e",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "OpenClaw Bug Enables One-Click Remote Code Execution via Malicious Link",
+    "summary": "A high-severity security flaw has been disclosed in OpenClaw (formerly referred to as Clawdbot and Moltbot) that could allow remote code execution (RCE) through a crafted malicious link. The issue, which is tracked as CVE-2026-25253 (CVSS score: 8.8), has been addressed in version 2026.1.29...",
+    "source_url": "https://thehackernews.com/2026/02/openclaw-bug-enables-one-click-remote.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "ics",
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [
+      "CVE-2026-25253"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_d7415afbcf1f",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Microsoft Begins NTLM Phase-Out With Three-Stage Plan to Move Windows to Kerberos",
+    "summary": "Microsoft has announced a three-phase approach to phase out New Technology LAN Manager (NTLM) as part of its efforts to shift Windows environments toward stronger, Kerberos-based options. The development comes more than two years after the tech giant revealed its plans to deprecate the legacy...",
+    "source_url": "https://thehackernews.com/2026/02/microsoft-begins-ntlm-phase-out-with.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_8c34aeece680",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "\u26a1 Weekly Recap: Proxy Botnet, Office Zero-Day, MongoDB Ransoms, AI Hijacks & New Threats",
+    "summary": "Every week brings new discoveries, attacks, and defenses that shape the state of cybersecurity. Some threats are stopped quickly, while others go unseen until they cause real damage. Sometimes a single update, exploit, or mistake changes how we think about risk and protection. Every incident shows...",
+    "source_url": "https://thehackernews.com/2026/02/weekly-recap-proxy-botnet-office-zero.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "patch",
+      "breaches",
+      "ransomware",
+      "exploit",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_781ea2c22da1",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "Securing the Mid-Market Across the Complete Threat Lifecycle",
+    "summary": "For mid-market organizations, cybersecurity is a constant balancing act. Proactive, preventative security measures are essential to protect an expanding attack surface. Combined with effective protection that blocks threats, they play a critical role in stopping cyberattacks before damage is done....",
+    "source_url": "https://thehackernews.com/2026/02/securing-mid-market-across-complete.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Play"
+    ],
+    "malware_families": [
+      "Play"
+    ]
+  },
+  {
+    "id": "sec_ec0955f44be3",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "critical",
+    "title": "Notepad++ Official Update Mechanism Hijacked to Deliver Malware to Select Users",
+    "summary": "The maintainer of Notepad++ has revealed that state-sponsored attackers hijacked the utility's update mechanism to redirect update traffic to malicious servers instead. \"The attack involved [an] infrastructure-level compromise that allowed malicious actors to intercept and redirect update traffic...",
+    "source_url": "https://thehackernews.com/2026/02/notepad-official-update-mechanism.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "patch",
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_fa639790b3e4",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "eScan Antivirus Update Servers Compromised to Deliver Multi-Stage Malware",
+    "summary": "The update infrastructure for eScan antivirus, a security solution developed by Indian cybersecurity company MicroWorld Technologies, has been compromised by unknown attackers to deliver a persistent downloader to enterprise and consumer systems. \"Malicious updates were distributed through eScan's...",
+    "source_url": "https://thehackernews.com/2026/02/escan-antivirus-update-servers.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "patch",
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_92b2dc796f4b",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "Open VSX Supply Chain Attack Used Compromised Dev Account to Spread GlassWorm",
+    "summary": "Cybersecurity researchers have disclosed details of a supply chain attack targeting the Open VSX Registry in which unidentified threat actors compromised a legitimate developer's resources to push malicious updates to downstream users. \"On January 30, 2026, four established Open VSX extensions...",
+    "source_url": "https://thehackernews.com/2026/02/open-vsx-supply-chain-attack-used.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "patch",
+      "breaches",
+      "vulnerabilities",
+      "security news",
+      "supply-chain"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_386df83c1e3f",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "ShinyHunters-Branded Extortion Activity Expands, Escalates",
+    "summary": "Hackers rely on evolved vishing and login harvesting to compromise SSO credentials for unauthorized MFA enrollment. The post ShinyHunters-Branded Extortion Activity Expands, Escalates appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/shinyhunters-branded-extortion-activity-expands-escalates/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "enterprise security",
+      "credentials",
+      "security news",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_a08906d75bf4",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Open VSX Publisher Account Hijacked in Fresh GlassWorm Attack",
+    "summary": "A hacker published malicious versions of four established VS Code extensions to distribute a GlassWorm malware loader. The post Open VSX Publisher Account Hijacked in Fresh GlassWorm Attack appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/open-vsx-publisher-account-hijacked-in-fresh-glassworm-attack/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "enterprise security",
+      "security news",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_9c5fb5ba4e73",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Default ICS Credentials Exploited in Destructive Attack on Polish Energy Facilities",
+    "summary": "Poland\u2019s CERT has published a report on the recent attack, providing new details on targeted ICS and attribution. The post Default ICS Credentials Exploited in Destructive Attack on Polish Energy Facilities appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/default-ics-credentials-exploited-in-destructive-attack-on-polish-energy-facilities/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "enterprise security",
+      "exploit",
+      "vulnerabilities",
+      "security news",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_cd008425cae2",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "high",
+    "title": "Cyber Insights 2026: Malware and Cyberattacks in the Age of AI",
+    "summary": "Security leaders share how artificial intelligence is changing malware, ransomware, and identity-led intrusions, and how defenses must evolve. The post Cyber Insights 2026: Malware and Cyberattacks in the Age of AI appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/cyber-insights-2026-malware-and-cyberattacks-in-the-age-of-ai/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "enterprise security",
+      "security news",
+      "vulnerabilities",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2e34a8aaa26f",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Over 1,400 MongoDB Databases Ransacked by Threat Actor",
+    "summary": "Of 3,100 unprotected MongoDB instances, half remain compromised, most of them by a single threat actor. The post Over 1,400 MongoDB Databases Ransacked by Threat Actor appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/over-1400-mongodb-databases-ransacked-by-threat-actor/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "enterprise security",
+      "security news",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3286022bce1b",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Microsoft Moves Closer to Disabling NTLM",
+    "summary": "The next major Windows Server and Windows releases will have the deprecated authentication protocol disabled by default. The post Microsoft Moves Closer to Disabling NTLM appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/microsoft-moves-closer-to-disabling-ntlm/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "enterprise security",
+      "credentials",
+      "security news",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_579b8953b58e",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Japan, Britain to Boost Cybersecurity and Critical Minerals Cooperation as China\u2019s Influence Grows",
+    "summary": "Japan and Britain agree to accelerate cooperation on cybersecurity and the supply of critical minerals, as China\u2019s influence grows in the region. The post Japan, Britain to Boost Cybersecurity and Critical Minerals Cooperation as China&#8217;s Influence Grows appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/japan-britain-to-boost-cybersecurity-and-critical-minerals-cooperation-as-chinas-influence-grows/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "enterprise security",
+      "security news",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_33d2ea37fd34",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Notepad++ Supply Chain Hack Conducted by China via Hosting Provider",
+    "summary": "The likely state-sponsored threat actor had access to the hosting provider for months and targeted only certain Notepad++ customers. The post Notepad++ Supply Chain Hack Conducted by China via Hosting Provider appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/notepad-supply-chain-hack-conducted-by-china-via-hosting-provider/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "supply-chain",
+      "enterprise security",
+      "security news",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_f48ad81e8f79",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "We moved fast and broke things. It\u2019s time for a change.",
+    "summary": "For 20 years, tech has moved fast and broken things. The result: a cybersecurity crisis built on rushed code and vulnerable software. It's time to replace speed-at-all-costs with a security-first approach. The post We moved fast and broke things. It\u2019s time for a change. appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/move-fast-break-things-cybersecurity-supply-chain-security-op-ed/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "supply-chain",
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_4f097e2d078c",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "AI Coding Assistants Secretly Copying All Code to China",
+    "summary": "There&#8217;s a new report about two AI coding assistants, used by 1.5 million developers, that are surreptitiously sending a copy of everything they ingest to China. Maybe avoid using them.",
+    "source_url": "https://www.schneier.com/blog/archives/2026/02/ai-coding-assistants-secretly-copying-all-code-to-china.html",
+    "source_date": "2026-02-02",
+    "tags": [
+      "policy",
+      "cryptography",
+      "security commentary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_433f17018810",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Mentorship Monday - Post All Career, Education and Job questions here!",
+    "summary": "This is the weekly thread for career and education questions and advice. There are no stupid questions; so, what do you want to know about certs/degrees, job requirements, and any other general cybersecurity career questions? Ask away! Interested in what other people are asking, or think your...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtf7kz/mentorship_monday_post_all_career_education_and/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_9f8786425eae",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "We need to start teaching cyber security in highschool.",
+    "summary": "I want to be clear here, I am best practicing and how to stay moderately up to date. I\u2019m seeing Real estate agents, Business Owners, and colleagues use crazy passwords. I\u2019m seeing people share passwords for critical account that handle business information. My hope is that with a basic...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtwf6r/we_need_to_start_teaching_cyber_security_in/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "news",
+      "community",
+      "discussions",
+      "credentials",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_45e4b3c19206",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Hacking Moltbook: AI Social Network Reveals 1.5M API Keys",
+    "summary": "&#32; submitted by &#32; /u/Alert-Sort-8881 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtzk9u/hacking_moltbook_ai_social_network_reveals_15m/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_dc67cb858451",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Notepad++ Hijacked by State-Sponsored Hackers",
+    "summary": "&#32; submitted by &#32; /u/swe129 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtiwai/notepad_hijacked_by_statesponsored_hackers/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "patch",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_1f21475e64c4",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "First research with IOCs on the Notepad++ hack is now out",
+    "summary": "Rapid7 Labs, together with the Rapid7 MDR team, has uncovered a sophisticated campaign attributed to the Chinese APT group Lotus Blossom. Active since 2009, the group is known for its targeted espionage campaigns primarily impacting organizations across Southeast Asia and more recently Central...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu22te/first_research_with_iocs_on_the_notepad_hack_is/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_641a50b99243",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "OWASP founder - New trump cyber policies (deletions) are a diaster",
+    "summary": "https://www.darkreading.com/application-security/trump-administration-rescinds-biden-era-sbom-guidance &quot;are a disaster&quot; is the quote from OWASP founder Jeff Williams Someone else wanna take the mic on this one? &#32; submitted by &#32; /u/MountainDadwBeard [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtksbv/owasp_founder_new_trump_cyber_policies_deletions/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_8dd21dbb6421",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "SIEM: Rapid 7 vs Microsoft Sentinel",
+    "summary": "Hi everyone, I\u2019m currently looking to implement a SIEM solution for our company of around 400 users. At the moment, I am evaluating different vendors, and I\u2019m fully aware that the two solutions I\u2019m considering operate quite differently \u2014 especially in terms of pricing models. I\u2019d really appreciate...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtu65t/siem_rapid_7_vs_microsoft_sentinel/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "patch",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Conti",
+      "Play"
+    ],
+    "malware_families": [
+      "Play"
+    ]
+  },
+  {
+    "id": "sec_77ddeb2c8572",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Why do people think AI will replace security engineers?",
+    "summary": "I\u2019ve read a ton of posts and articles claiming that cybersecurity is one of the fields that are getting steam rolled by AI, with others like infra and general coding. I am not a senior or anywhere knowledgeable enough, but I can\u2019t understand how that would make sense. I understand how infra can be...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu4vk9/why_do_people_think_ai_will_replace_security/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "ics",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_58f9f9d6baeb",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Anyone else? Malgent MDE + Other EDR sudden influx of alerts?",
+    "summary": "As title suggests. SentinelOne and MDE going crazy lol &#32; submitted by &#32; /u/Full-Revenue-3472 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qty8gl/anyone_else_malgent_mde_other_edr_sudden_influx/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_33d235f621aa",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Thoughts on Rapid7 + Other recommendations for SIEMs?",
+    "summary": "We are currently searching for a SIEM system and this will be the first SIEM at my job. Our penetration team contractor recommended that we go with Rapid7, we had a quick demo with them and from what I've seen everything that they have seems pretty robust. Was wondering if there was anyone who has...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtzf89/thoughts_on_rapid7_other_recommendations_for_siems/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_6f910114b427",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Latest Interesting Cybersecurity News of the Week Summarised \u2013 02-02-2026",
+    "summary": "&#32; submitted by &#32; /u/texmex5 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu2102/latest_interesting_cybersecurity_news_of_the_week/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_b3efae1ba26d",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Any detection strategies to find any developers use of any affected skills in openclaw.ai",
+    "summary": "Guys I need to help in this, my team asked to come with detection strategy. I have uses openclaw, any idea kindly share it with me. What log source are required? For effective identify. &#32; submitted by &#32; /u/Dull-Improvement-477 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu1az8/any_detection_strategies_to_find_any_developers/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_33b5196ca15e",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "AppLocker Rules Abuse",
+    "summary": "&#32; submitted by &#32; /u/netbiosX [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qtthrs/applocker_rules_abuse/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2ed0e0c0852e",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "what's a starter pack skill set you'd recommend your cybersecurity newbie?",
+    "summary": "&#32; submitted by &#32; /u/Level-External-5368 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu50sm/whats_a_starter_pack_skill_set_youd_recommend/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_be4005793fac",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "I fear that i'll just forget what i learn",
+    "summary": "Hey guys I'm on my journey In acquiring sec+ and doing SOC L1 path on THM i note some stuff on the sec+ but nothin on the THM path, And i'm afraid i'll forget those stuff do i just note what i learn or just leave it and it will stuck with me when doing it on real environment thank you &#32;...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu4lmj/i_fear_that_ill_just_forget_what_i_learn/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_5081e45b31a2",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Your servers shouldn't need to know ACME",
+    "summary": "HTTP-01 validation requires every server to expose port 80 and serve challenge files. That's attack surface multiplied across your infrastructure. In January 2026, researchers disclosed a Cloudflare WAF bypass that exploited ACME challenge paths where security controls were deliberately relaxed to...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu4g5x/your_servers_shouldnt_need_to_know_acme/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "news",
+      "community",
+      "discussions",
+      "exploit",
+      "cloud"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_91fd584ac657",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Re-image device or not?",
+    "summary": "If you had a user download malware, and it was successfully prevented and removed by your EDR, would you consider your EDR\u2019s response sufficient or would you re-image the device? &#32; submitted by &#32; /u/Financial-Garlic9834 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu4aqc/reimage_device_or_not/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_548d9a0f79dc",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Inside the OpenClaw Ecosystem: What Happens When AI Agents Get Credentials to Everything",
+    "summary": "&#32; submitted by &#32; /u/permis0 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu4aoc/inside_the_openclaw_ecosystem_what_happens_when/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "credentials",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_6bb45d7a461b",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "malware",
+    "severity": "critical",
+    "title": "[Deep Dive] Osiris Ransomware: Technical Analysis of the \"POORTRY\" Driver & BYOVD Tactics (2026)",
+    "summary": "Hey everyone, I\u2019ve been tracking the emergence of the Osiris ransomware strain (not to be confused with the 2016 Locky variant) that\u2019s been hitting headlines recently. There is a lot of &quot;WannaCry 2.0&quot; hype floating around, so I wanted to do a technical forensic breakdown to see if the...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu48w3/deep_dive_osiris_ransomware_technical_analysis_of/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "news",
+      "ransomware",
+      "discussions",
+      "community",
+      "exploit"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_5590cb6731b7",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : Medinah School District 11",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/TWVkaW5haCBTY2hvb2wgRGlzdHJpY3QgMTFAcWlsaW4=",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_cee02ca89bbf",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : Muebles Dico",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/TXVlYmxlcyBEaWNvQHFpbGlu",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_a71be416d746",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Incransom has just published a new victim : ChokChey Finance",
+    "summary": "ChokChey Finance PLC is a microfinance institution based in Cambodia, established in 2015 and licensed by the National Bank of Cambodia in 2016. The company offers a variety of financial products including speed loans, agriculture loans, SME loans, and mobile device loans, targeting low to moderate...",
+    "source_url": "https://www.ransomware.live/id/Q2hva0NoZXkgRmluYW5jZUBpbmNyYW5zb20=",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_faab1a08e31f",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Dragonforce has just published a new victim : Erickson Thorpe & Swainston",
+    "summary": "The law firm of Erickson, Thorpe &amp; Swainston was founded in 1969. Since then, the firm has effectively and successfully represented its clients in state and federal courts in Nevada and Northern California. As experienced trial and appellate attorneys, we vigorously defend our clients&#x27;...",
+    "source_url": "https://www.ransomware.live/id/RXJpY2tzb24gVGhvcnBlICYgU3dhaW5zdG9uQGRyYWdvbmZvcmNl",
+    "source_date": "2026-02-02",
+    "tags": [
+      "ics",
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_500b0e2ea641",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Incransom has just published a new victim : www.pucobre.cl",
+    "summary": "Sociedad Punta del Cobre S.A. is a company based in Chile that operates in the mining sector, specifically focusing on copper production",
+    "source_url": "https://www.ransomware.live/id/d3d3LnB1Y29icmUuY2xAaW5jcmFuc29t",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_4a41fd3966ab",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Akira has just published a new victim : JST Power Equipment",
+    "summary": "Founded in 1993, J.S.T. provides product development of any elect ric connection systems in products like amusement equipment, audi o and visual equipment, household appliances, office equipment, i ndustrial equipment, automobiles, and traffic systems. We will upload 70gb of corporate data soon....",
+    "source_url": "https://www.ransomware.live/id/SlNUIFBvd2VyIEVxdWlwbWVudEBha2lyYQ==",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [
+      "Akira"
+    ]
+  },
+  {
+    "id": "sec_804fa2216e17",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Rhysida has just published a new victim : Elabs",
+    "summary": "Elabs Elabs is a pioneer in IT services in Germany, delivering innovative IT solutions that enable businesses to harness modern technology for added value and transformation.",
+    "source_url": "https://www.ransomware.live/id/RWxhYnNAcmh5c2lkYQ==",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [
+      "Rhysida"
+    ]
+  },
+  {
+    "id": "sec_6ad88fa0f876",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : Workers Health & Safety Centre",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/V29ya2VycyBIZWFsdGggJiBTYWZldHkgQ2VudHJlQHFpbGlu",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2d75244585c3",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : Range Cooperatives",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/UmFuZ2UgQ29vcGVyYXRpdmVzQHFpbGlu",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_d8a697cde32a",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : The Hechtman Group",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/VGhlIEhlY2h0bWFuIEdyb3VwQHFpbGlu",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_682c48b3fc6d",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : KOUEI",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/S09VRUlAcWlsaW4=",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3cf73c39dde1",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Akira has just published a new victim : Zurfl\u00fch-Feller",
+    "summary": "Zurfl\u00fch-Feller is a leading French manufacturer of components for roller shutters, specializing in systems and solutions for build ing closures since 1920. The company is committed to optimizing l ogistics and providing technical partnerships, ensuring timely de livery and tailored support for its...",
+    "source_url": "https://www.ransomware.live/id/WnVyZmzDvGgtRmVsbGVyQGFraXJh",
+    "source_date": "2026-02-02",
+    "tags": [
+      "ics",
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [
+      "Akira"
+    ]
+  },
+  {
+    "id": "sec_2e850ef5903f",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Akira has just published a new victim : Ferretti Construction",
+    "summary": "Ferretti Construction is an Italian Engineering &amp; Construction Co mpany with a track record of 100 years in the field of industria l construction. They provide services from basic &amp; detail enginee ring, to construction as well as project and construction managem ent. We will upload 66gb of...",
+    "source_url": "https://www.ransomware.live/id/RmVycmV0dGkgQ29uc3RydWN0aW9uQGFraXJh",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [
+      "Akira"
+    ]
+  },
+  {
+    "id": "sec_cd2231070c12",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : Exterior Worlds",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/RXh0ZXJpb3IgV29ybGRzQHFpbGlu",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_c65ee607dddc",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Akira has just published a new victim : Kilograph",
+    "summary": "Kilograph is an award-winning creative agency that specializes in shaping brands, places, and experiences. They utilize strategic storytelling and engaging visuals, combined with innovative techn ologies, to fulfill their clients&#x27; needs. We will upload corporate data soon. Passports, w9 forms...",
+    "source_url": "https://www.ransomware.live/id/S2lsb2dyYXBoQGFraXJh",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [
+      "Akira"
+    ]
+  },
+  {
+    "id": "sec_e74a84a904c0",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f 0apt has just published a new victim : Liberia Electricity Corporation (LEC)",
+    "summary": "LEC Network Under Control. We hold the blueprints of the national power grid and customer billing databases. Silence from the board will lead to data exposure.",
+    "source_url": "https://www.ransomware.live/id/TGliZXJpYSBFbGVjdHJpY2l0eSBDb3Jwb3JhdGlvbiAoTEVDKUAwYXB0",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_51e81b79a6f8",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f 0apt has just published a new victim : Liberia Revenue Authority",
+    "summary": "LRA database encrypted. Complete access to taxpayer records, corporate filings, and internal audit reports. Pay or witness the largest financial leak in West Africa.",
+    "source_url": "https://www.ransomware.live/id/TGliZXJpYSBSZXZlbnVlIEF1dGhvcml0eUAwYXB0",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_0ce3a0037d37",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f 0apt has just published a new victim : National Investment Commission Liberia",
+    "summary": "NIC Liberia infrastructure compromised. Over 15 TB of confidential investment agreements, investor passports, and financial projections exfiltrated.",
+    "source_url": "https://www.ransomware.live/id/TmF0aW9uYWwgSW52ZXN0bWVudCBDb21taXNzaW9uIExpYmVyaWFAMGFwdA==",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_48d4f86bda4a",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : Jcm Agricola",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/SmNtIEFncmljb2xhQHFpbGlu",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_ee9bc672a620",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Qilin has just published a new victim : INGUS",
+    "summary": "N/A",
+    "source_url": "https://www.ransomware.live/id/SU5HVVNAcWlsaW4=",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "victims",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_535f4da09a9b",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "malware",
+    "severity": "high",
+    "title": "Match, Hinge, OkCupid, and Panera Bread breached by ransomware group",
+    "summary": "&#32; submitted by &#32; /u/thinkB4WeSpeak [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qt01ei/match_hinge_okcupid_and_panera_bread_breached_by/",
+    "source_date": "2026-02-01",
+    "tags": [
+      "discussions",
+      "ransomware",
+      "news",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_0f9f395510f8",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Iran-Linked RedKitten Cyber Campaign Targets Human Rights NGOs and Activists",
+    "summary": "A Farsi-speaking threat actor aligned with Iranian state interests is suspected to be behind a new campaign targeting non-governmental organizations and individuals involved in documenting recent human rights abuses. The activity, observed by HarfangLab in January 2026, has been codenamed...",
+    "source_url": "https://thehackernews.com/2026/01/iran-linked-redkitten-cyber-campaign.html",
+    "source_date": "2026-01-31",
+    "tags": [
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_639b4545debe",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms",
+    "summary": "Google-owned Mandiant on Friday said it identified an \"expansion in threat activity\" that uses tradecraft consistent with extortion-themed attacks orchestrated by a financially motivated hacking group known as ShinyHunters. The attacks leverage advanced voice phishing (aka vishing) and bogus...",
+    "source_url": "https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html",
+    "source_date": "2026-01-31",
+    "tags": [
+      "breaches",
+      "phishing",
+      "vulnerabilities",
+      "security news",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_722361472a96",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "CERT Polska Details Coordinated Cyber Attacks on 30+ Wind and Solar Farms",
+    "summary": "CERT Polska, the Polish computer emergency response team, revealed that coordinated cyber attacks targeted more than 30 wind and photovoltaic farms, a private company from the manufacturing sector, and a large combined heat and power plant (CHP) supplying heat to almost half a million customers in...",
+    "source_url": "https://thehackernews.com/2026/01/poland-attributes-december-cyber.html",
+    "source_date": "2026-01-31",
+    "tags": [
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e797d420d9e4",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "eScan Antivirus Delivers Malware in Supply Chain Attack",
+    "summary": "Hackers compromised a MicroWorld Technologies update server and fed a malicious file to eScan customers. The post eScan Antivirus Delivers Malware in Supply Chain Attack appeared first on SecurityWeek.",
+    "source_url": "https://www.securityweek.com/escan-antivirus-delivers-malware-in-supply-chain-attack/",
+    "source_date": "2026-01-31",
+    "tags": [
+      "enterprise security",
+      "patch",
+      "vulnerabilities",
+      "security news",
+      "supply-chain"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_f2fdbc3d1608",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "cve",
+    "severity": "high",
+    "title": "Privileged File System Vulnerability Present in a SCADA System",
+    "summary": "We detail our discovery of CVE-2025-0921. This privileged file system flaw in SCADA system Iconics Suite could lead to a denial-of-service (DoS) attack. The post Privileged File System Vulnerability Present in a SCADA System appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/iconics-suite-cve-2025-0921/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research",
+      "ics"
+    ],
+    "cve_ids": [
+      "CVE-2025-0921"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_4f58518e266f",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Case study: Securing AI application supply chains",
+    "summary": "Securing AI-powered applications requires more than just safeguarding prompts. Organizations must adopt a holistic approach that includes monitoring the AI supply chain, assessing frameworks, SDKs, and orchestration layers for vulnerabilities, and enforcing strong runtime controls for agents and...",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/30/case-study-securing-ai-application-supply-chains/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "Windows",
+      "exploit",
+      "Microsoft",
+      "threat research",
+      "supply-chain"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_517bcddd77a6",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "high",
+    "title": "Match, Hinge, OkCupid, and Panera Bread breached by ransomware group",
+    "summary": "ShinyHunters claims to have stolen millions of records from Match Group dating apps and Panera Bread, with very different consequences for users.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/match-hinge-okcupid-and-panera-bread-breached-by-ransomware-group",
+    "source_date": "2026-01-30",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_a25f793acd3d",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "TikTok\u2019s privacy update mentions immigration status. Here\u2019s why.",
+    "summary": "TikTok updated its privacy policy to mention immigration status, sparking backlash\u2014but the reality is more complicated.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/tiktoks-privacy-update-mentions-immigration-status-heres-why",
+    "source_date": "2026-01-30",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "patch",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_b21e9209d2cd",
+    "source_name": "Qualys Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "cve",
+    "severity": "informational",
+    "title": "ROC vs. CTEM: How a Risk Operations Center Evolves Beyond Continuous Threat Exposure Management in 2026",
+    "summary": "Key Takeaways: The Essentials of ROC vs. CTEM Modern enterprises face a constant flood of data from dozens of siloed security tools, creating a fragmented view of risk. Continuous threat exposure management (CTEM) offers a framework to bring exposures together from these tools, and a risk...",
+    "source_url": "https://blog.qualys.com/category/qualys-insights",
+    "source_date": "2026-01-30",
+    "tags": [
+      "patch management",
+      "compliance",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Conti"
+    ],
+    "malware_families": []
+  },
+  {
+    "id": "sec_a98c8773c9cd",
+    "source_name": "SentinelOne",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "The Good, the Bad and the Ugly in Cybersecurity \u2013 Week 5",
+    "summary": "FBI dismantle RAMP crime forum, 175K AI systems exposed without security controls, and actively exploited zero-day allows security bypass in MS Office.",
+    "source_url": "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-5-7/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "EDR",
+      "exploit",
+      "malware",
+      "threat research",
+      "zero-day"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_50594190c7b7",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Google Presentations Abused for Phishing, (Fri, Jan 30th)",
+    "summary": "Charlie, one of our readers, has forwarded an interesting phishing email. The email was sent to users of the Vivladi Webmail service. While not overly convincing, the email is likely sufficient to trick a non-empty group of users:&#xd;",
+    "source_url": "https://isc.sans.edu/diary/rss/32668",
+    "source_date": "2026-01-30",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary",
+      "phishing",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_7632ad57714c",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "ISC Stormcast For Friday, January 30th, 2026 https://isc.sans.edu/podcastdetail/9788, (Fri, Jan 30th)",
+    "summary": "",
+    "source_url": "https://isc.sans.edu/diary/rss/32666",
+    "source_date": "2026-01-30",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_1b9cd2d16397",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Researchers Uncover Chrome Extensions Abusing Affiliate Links and Stealing ChatGPT Access",
+    "summary": "Cybersecurity researchers have discovered malicious Google Chrome extensions that come with capabilities to hijack affiliate links, steal data, and collect OpenAI ChatGPT authentication tokens. One of the extensions in question is Amazon Ads Blocker (ID: pnpchphmplpdimbllknjoiopmfphellj), which...",
+    "source_url": "https://thehackernews.com/2026/01/researchers-uncover-chrome-extensions.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "credentials",
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_d71995193df9",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "China-Linked UAT-8099 Targets IIS Servers in Asia with BadIIS SEO Malware",
+    "summary": "Cybersecurity researchers have discovered a new campaign attributed to a China-linked threat actor known as UAT-8099 that took place between late 2025 and early 2026. The activity, discovered by Cisco Talos, has targeted vulnerable Internet Information Services (IIS) servers located across Asia,...",
+    "source_url": "https://thehackernews.com/2026/01/china-linked-uat-8099-targets-iis.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_a420828e6d4d",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Badges, Bytes and Blackmail",
+    "summary": "Behind the scenes of law enforcement in cyber: what do we know about caught cybercriminals? What brought them in, where do they come from and what was their function in the crimescape? Introduction: One view on the scattered fight against cybercrime The growing sophistication and diversification of...",
+    "source_url": "https://thehackernews.com/2026/01/badges-bytes-and-blackmail.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2303df09a7c8",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Ex-Google Engineer Convicted for Stealing AI Secrets for China Startup",
+    "summary": "A former Google engineer accused of stealing thousands of the company's confidential documents to build a startup in China has been convicted in the U.S., the Department of Justice (DoJ) announced Thursday. Linwei Ding (aka Leon Ding), 38, was convicted by a federal jury on seven counts of economic...",
+    "source_url": "https://thehackernews.com/2026/01/ex-google-engineer-convicted-for.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_40fee9be91eb",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "SmarterMail Fixes Critical Unauthenticated RCE Flaw with CVSS 9.3 Score",
+    "summary": "SmarterTools has addressed two more security flaws in SmarterMail email software, including one critical security flaw that could result in arbitrary code execution. The vulnerability, tracked as CVE-2026-24423, carries a CVSS score of 9.3 out of 10.0. \"SmarterTools SmarterMail versions prior to...",
+    "source_url": "https://thehackernews.com/2026/01/smartermail-fixes-critical.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "patch",
+      "breaches",
+      "vulnerabilities",
+      "cloud",
+      "security news"
+    ],
+    "cve_ids": [
+      "CVE-2026-24423"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_f563b2a4983f",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "Two Ivanti EPMM Zero-Day RCE Flaws Actively Exploited, Security Updates Released",
+    "summary": "Ivanti has rolled out security updates to address two security flaws impacting Ivanti Endpoint Manager Mobile (EPMM) that have been exploited in zero-day attacks, one of which has been added by the U.S. Cybersecurity and Infrastructure Security Agency (CISA) to its Known Exploited Vulnerabilities...",
+    "source_url": "https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "patch",
+      "breaches",
+      "exploit",
+      "vulnerabilities",
+      "cloud"
+    ],
+    "cve_ids": [
+      "CVE-2026-1281"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3890ae6b4bcc",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Researchers Find 175,000 Publicly Exposed Ollama AI Servers Across 130 Countries",
+    "summary": "A new joint investigation by SentinelOne SentinelLABS, and Censys has revealed that the open-source artificial intelligence (AI) deployment has created a vast \"unmanaged, publicly accessible layer of AI compute infrastructure\" that spans 175,000 unique Ollama hosts across 130 countries. These...",
+    "source_url": "https://thehackernews.com/2026/01/researchers-find-175000-publicly.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "security news",
+      "breaches",
+      "cloud",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_60c970f74d91",
+    "source_name": "SecurityWeek",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "In Other News: Paid for Being Jailed, Google\u2019s $68M Settlement, CISA Chief\u2019s ChatGPT Leak",
+    "summary": "Other noteworthy stories that might have slipped under the radar: Apple updates platform security guide, LastPass detects new phishing wave, CISA withdraws from RSA Conference. The post In Other News: Paid for Being Jailed, Google&#8217;s $68M Settlement, CISA Chief&#8217;s ChatGPT Leak appeared...",
+    "source_url": "https://www.securityweek.com/in-other-news-paid-for-being-jailed-googles-68m-settlement-cisa-chiefs-chatgpt-leak/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "enterprise security",
+      "patch",
+      "vulnerabilities",
+      "cloud",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_6f34256a083e",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "DOJ seizes piracy sites, Italian police dismantle illegal IPTV operation",
+    "summary": "Officials took down three U.S.-registered domains that distributed copyrighted content and received tens of millions of visits a year. The post DOJ seizes piracy sites, Italian police dismantle illegal IPTV operation appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/doj-seizes-piracy-sites-zamunda-arenabg-zelka/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_259da0ed9dd3",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Google\u2019s disruption rips millions out of devices out of malicious network",
+    "summary": "The actions impaired some of IPIDEA\u2019s proxy infrastructure, but not all of it. The effort underscores the back-and-forth struggle of taking out pieces of cybercriminals\u2019 vast and growing infrastructure. The post Google&#8217;s disruption rips millions out of devices out of malicious network...",
+    "source_url": "https://cyberscoop.com/ipidea-proxy-network-disrupted-google-lumen/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "ics",
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_4ba527b5e13e",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Cybersecurity can be America\u2019s secret weapon in the AI race",
+    "summary": "Beijing is aggressively exploiting global data for strategic purposes. AI-powered cybersecurity is essential to Washington\u2019s counter-offensive to win the global market. The post Cybersecurity can be America&#8217;s secret weapon in the AI race appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/ai-race-china-us-cloud-cybersecurity-trust-security-op-ed/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "policy",
+      "exploit",
+      "cloud",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e6d0fbd8c279",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "Friday Squid Blogging: New Squid Species Discovered",
+    "summary": "A new species of squid. pretends to be a plant: Scientists have filmed a never-before-seen species of deep-sea squid burying itself upside down in the seafloor&#8212;a behavior never documented in cephalopods. They captured the bizarre scene while studying the depths of the Clarion-Clipperton Zone...",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/friday-squid-blogging-new-squid-species-discovered.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "policy",
+      "cryptography",
+      "security commentary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_1bfbf2e5208c",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "AIs Are Getting Better at Finding and Exploiting Security Vulnerabilities",
+    "summary": "From an Anthropic blog post: In a recent evaluation of AI models\u2019 cyber capabilities, current Claude models can now succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools, instead of the custom tools needed by previous generations. This illustrates how...",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/ais-are-getting-better-at-finding-and-exploiting-security-vulnerabilities.html",
+    "source_date": "2026-01-30",
+    "tags": [
+      "patch",
+      "policy",
+      "security commentary",
+      "exploit",
+      "cryptography"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_fece3639f6ba",
+    "source_name": "NCSC UK",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "informational",
+    "title": "One small step for Cyber Resilience Test Facilities, one giant leap for technology assurance",
+    "summary": "CRTFs are helping organisations to make informed, risk-based decisions on the adoption of technology products.",
+    "source_url": "https://www.ncsc.gov.uk/blog-post/one-small-step-for-cyber-resilience-test-facilities-one-giant-leap-for-technology-assurance",
+    "source_date": "2026-01-29",
+    "tags": [
+      "UK government",
+      "guidance",
+      "threat reports"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_4c60e85f376a",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Understanding the Russian Cyber Threat to the 2026 Winter Olympics",
+    "summary": "Russia's current isolation from the Olympics may lead to increased cyber threats targeting the 2026 Winter Games. We discuss the potential threat picture. The post Understanding the Russian Cyber Threat to the 2026 Winter Olympics appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_09cb22aec1b4",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "I'm locked in!",
+    "summary": "Hazel reflects on how to find balance while staying informed, then delivers practical updates and insights on the latest cybersecurity threats.",
+    "source_url": "https://blog.talosintelligence.com/im-locked-in/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "malware",
+      "patch",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_b3cb52c23e4d",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "Microsoft releases update to address zero-day vulnerability in Microsoft Office",
+    "summary": "Microsoft has published three out-of-band (OOB) updates so far in January 2026. One of these updates was released to address a vulnerability, CVE-2026-21509, affecting Microsoft Office that has been reportedly exploited in the wild.",
+    "source_url": "https://blog.talosintelligence.com/microsoft-oob-update-january-2026/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "patch",
+      "exploit",
+      "vulnerabilities",
+      "malware",
+      "threat intelligence"
+    ],
+    "cve_ids": [
+      "CVE-2026-21509"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_f9f3e2e04431",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Dissecting UAT-8099: New persistence mechanisms and regional focus",
+    "summary": "Cisco Talos has identified a new, regionally targeted campaign by UAT-8099 that leverages advanced persistence techniques and custom BadIIS malware variants to compromise IIS servers, particularly in Thailand and Vietnam.",
+    "source_url": "https://blog.talosintelligence.com/uat-8099-new-persistence-mechanisms-and-regional-focus/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "malware",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_9d683f8d9b38",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "critical",
+    "title": "IR Trends Q4 2025: Exploitation remains dominant, phishing campaign targets Native American tribal organizations",
+    "summary": "A drop in exploitation and ransomware, but a spike in phishing and credential abuse, show why timely patching and robust MFA matter more than ever.",
+    "source_url": "https://blog.talosintelligence.com/ir-trends-q4-2025/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "patch",
+      "ransomware",
+      "exploit",
+      "vulnerabilities",
+      "malware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_58f414089952",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Turning threat reports into detection insights with AI",
+    "summary": "Security teams often spend days manually turning long incident reports and threat writeups into actionable detections by extracting TTPs. This blog post shows an AI-assisted workflow that does the same job in minutes. It extracts the TTPs, maps them to existing detection coverage, and flags...",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/29/turning-threat-reports-detection-insights-ai/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_586581682e78",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "New Microsoft Data Security Index report explores secure AI adoption to protect sensitive data",
+    "summary": "The 2026 Microsoft Data Security Index explores one of the most pressing questions facing organizations today: How can we harness the power of generative while safeguarding sensitive data? The post New Microsoft Data Security Index report explores secure AI adoption to protect sensitive data...",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/29/new-microsoft-data-security-index-report-explores-secure-ai-adoption-to-protect-sensitive-data/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_9de73b803df1",
+    "source_name": "Kaspersky Securelist",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Supply chain attack on eScan antivirus: detecting and remediating malicious updates",
+    "summary": "On January 20, Kaspersky solutions detected malware used in eScan antivirus supply chain attack. In this article we provide available information on the threat: indicators of compromise, threat hunting and mitigating tips, etc.",
+    "source_url": "https://securelist.com/escan-supply-chain-attack/118688/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "patch",
+      "APT",
+      "malware",
+      "threat research",
+      "supply-chain"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2974f86a839f",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Meta confirms it\u2019s working on premium subscription for its apps",
+    "summary": "Details are currently thin, but one thing is clear: paying more is unlikely to buy users meaningful privacy or less tracking.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/meta-confirms-its-working-on-premium-subscription-for-its-apps",
+    "source_date": "2026-01-29",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_08cb1f859de2",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "Microsoft Office zero-day lets malicious documents slip past security checks",
+    "summary": "Microsoft issued an emergency patch for a flaw attackers are using to slip malicious code past Office\u2019s document security checks.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/microsoft-office-zero-day-lets-malicious-documents-slip-past-security-checks",
+    "source_date": "2026-01-29",
+    "tags": [
+      "patch",
+      "ransomware",
+      "malware",
+      "zero-day",
+      "consumer threats"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_4e8f2e0c0a10",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "Clawdbot\u2019s rename to Moltbot sparks impersonation campaign",
+    "summary": "This Moltbot impersonation campaign is a case study in supply-chain risk, brand hijacking, and what happens when open source goes viral.",
+    "source_url": "https://www.malwarebytes.com/blog/threat-intel/2026/01/clawdbots-rename-to-moltbot-sparks-impersonation-campaign",
+    "source_date": "2026-01-29",
+    "tags": [
+      "ransomware",
+      "malware",
+      "supply-chain",
+      "ics",
+      "consumer threats"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_cf30c0ec60a2",
+    "source_name": "Qualys Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "cve",
+    "severity": "informational",
+    "title": "Top 10 Cloud Compliance Tools for Enterprise Security and Audit Readiness in 2026",
+    "summary": "Key Takeaways Compliance Breaks When Proof Lags Infrastructure Cloud compliance has changed. It is no longer an audit milestone. It is a continuous expectation. Boards demand visibility into regulatory exposure. Regulators expect evidence, not intent. Enterprise customers want assurance in real...",
+    "source_url": "https://blog.qualys.com/category/product-tech",
+    "source_date": "2026-01-29",
+    "tags": [
+      "patch management",
+      "vulnerabilities",
+      "cloud",
+      "compliance",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Conti"
+    ],
+    "malware_families": []
+  },
+  {
+    "id": "sec_7582a93c5f31",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "ISC Stormcast For Thursday, January 29th, 2026 https://isc.sans.edu/podcastdetail/9786, (Thu, Jan 29th)",
+    "summary": "",
+    "source_url": "https://isc.sans.edu/diary/rss/32664",
+    "source_date": "2026-01-29",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_50176c6c54ff",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "ThreatsDay Bulletin: New RCEs, Darknet Busts, Kernel Bugs & 25+ More Stories",
+    "summary": "This week\u2019s updates show how small changes can create real problems. Not loud incidents, but quiet shifts that are easy to miss until they add up. The kind that affects systems people rely on every day. Many of the stories point to the same trend: familiar tools being used in unexpected ways....",
+    "source_url": "https://thehackernews.com/2026/01/threatsday-bulletin-new-rces-darknet.html",
+    "source_date": "2026-01-29",
+    "tags": [
+      "patch",
+      "breaches",
+      "vulnerabilities",
+      "security news",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_85e7ac6787df",
+    "source_name": "The Hacker News",
+    "source_type": "news",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "Survey of 100+ Energy Systems Reveals Critical OT Cybersecurity Gaps",
+    "summary": "A study by OMICRON has revealed widespread cybersecurity gaps in the operational technology (OT) networks of substations, power plants, and control centers worldwide. Drawing on data from more than 100 installations, the analysis highlights recurring technical, organizational, and functional issues...",
+    "source_url": "https://thehackernews.com/2026/01/survey-of-100-energy-systems-reveals.html",
+    "source_date": "2026-01-29",
+    "tags": [
+      "ics",
+      "security news",
+      "breaches",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e6aeb4629bfb",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "The \u2018staggering\u2019 cybersecurity weakness that isn\u2019t getting enough focus, according to a top Secret Service official",
+    "summary": "It stems from how the Internet Assigned Numbers Authority functions, the official said. The post The \u2018staggering\u2019 cybersecurity weakness that isn\u2019t getting enough focus, according to a top Secret Service official appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/secret-service-iana-domain-security-weakness/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e3a300b7fe65",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "US wants to push its view of AI cybersecurity standards to the rest of the world",
+    "summary": "The Trump administration also envisions artificial intelligence playing a role in protecting federal government networks. The post US wants to push its view of AI cybersecurity standards to the rest of the world appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/us-global-ai-cybersecurity-standards-push-national-cyber-director/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Play"
+    ],
+    "malware_families": [
+      "Play"
+    ]
+  },
+  {
+    "id": "sec_634ea6986d7f",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Lawmakers, election officials blast Trump administration after Fulton County raid",
+    "summary": "State election officials pressed White House officials for their legal rationale and expressed concern about the impact of similar raids tied to the 2026 elections. The post Lawmakers, election officials blast Trump administration after Fulton County raid appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/fulton-county-election-raid-trump-administration-backlash/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_7d119844fde9",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Long-running North Korea threat group splits into 3 distinct operations",
+    "summary": "The trio, which share lineage with the more broadly defined Lazarus Group, are focused on espionage and cryptocurrency theft, according to CrowdStrike. The post Long-running North Korea threat group splits into 3 distinct operations appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/north-korea-labyrinth-chollima-splits-crowdstrike/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Lazarus"
+    ],
+    "malware_families": []
+  },
+  {
+    "id": "sec_a0a63b498252",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Malicious Chrome extensions can spy on your ChatGPT chats",
+    "summary": "Researchers found 16 malicious browser extensions that can quietly hijack active ChatGPT sessions and siphon user data.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/malicious-chrome-extensions-can-spy-on-your-chatgpt-chats",
+    "source_date": "2026-01-28",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_ee3f17e30f01",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "WhatsApp rolls out new protections against advanced exploits and spyware",
+    "summary": "WhatsApp is strengthening how it handles photos and videos, and introducing Strict Account Settings to limit risky messages from unknown senders.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/whatsapp-rolls-out-new-protections-against-advanced-exploits-and-spyware",
+    "source_date": "2026-01-28",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "exploit",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_1b23e887b9e7",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "Odd WebLogic Request. Possible CVE-2026-21962 Exploit Attempt or AI Slop&#x3f;, (Wed, Jan 28th)",
+    "summary": "I was looking for possible exploitation of CVE-2026-21962, a recently patched WebLogic vulnerability. While looking for related exploit attempts in our data, I came across the following request:&#xd;",
+    "source_url": "https://isc.sans.edu/diary/rss/32662",
+    "source_date": "2026-01-28",
+    "tags": [
+      "patch",
+      "exploit",
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [
+      "CVE-2026-21962"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_69ba65ca0149",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "ISC Stormcast For Wednesday, January 28th, 2026 https://isc.sans.edu/podcastdetail/9784, (Wed, Jan 28th)",
+    "summary": "",
+    "source_url": "https://isc.sans.edu/diary/rss/32660",
+    "source_date": "2026-01-28",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_cd55a6b4c523",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "Fortinet\u2019s latest zero-day vulnerability carries frustrating familiarities for customers",
+    "summary": "Attackers have exploited the critical defect to reconfigure firewall settings and create unauthorized accounts with privileged access to multiple versions of the vendor\u2019s security products. The post Fortinet\u2019s latest zero-day vulnerability carries frustrating familiarities for customers appeared...",
+    "source_url": "https://cyberscoop.com/ortinet-zero-day-cve-2026-24858-forticloud-sso-auth-bypass/",
+    "source_date": "2026-01-28",
+    "tags": [
+      "policy",
+      "exploit",
+      "cloud",
+      "zero-day",
+      "government"
+    ],
+    "cve_ids": [
+      "CVE-2026-24858"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_dbe2d5f0cc40",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Lawmakers wonder when Trump administration will weigh on soon-expired surveillance powers",
+    "summary": "The Senate Judiciary Committee held a hearing on Section 702, set to sunset at the end of April, but with no Trump administration witnesses present. The post Lawmakers wonder when Trump administration will weigh on soon-expired surveillance powers appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/trump-administration-section-702-fisa-renewal-senate-judiciary-hearing/",
+    "source_date": "2026-01-28",
+    "tags": [
+      "policy",
+      "government",
+      "national security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_dbcb7fb5b5c1",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Microsoft announces the 2026 Security Excellence Awards winners",
+    "summary": "Congratulations to the winners of the 2026 Microsoft Security Excellence Awards that recognize the innovative defenders who have gone above and beyond. The post Microsoft announces the 2026 Security Excellence Awards winners appeared first on Microsoft Security Blog.",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/27/microsoft-announces-the-2026-security-excellence-awards-winners/",
+    "source_date": "2026-01-27",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_6de2ba4fc8f4",
+    "source_name": "Kaspersky Securelist",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "HoneyMyte updates CoolClient and deploys multiple stealers in recent campaigns",
+    "summary": "Kaspersky researchers analyze updated CoolClient backdoor and new tools and scripts used in HoneyMyte (aka Mustang Panda or Bronze President) APT campaigns, including three variants of a browser data stealer.",
+    "source_url": "https://securelist.com/honeymyte-updates-coolclient-uses-browser-stealers-and-scripts/118664/",
+    "source_date": "2026-01-27",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research",
+      "patch"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Mustang Panda"
+    ],
+    "malware_families": []
+  },
+  {
+    "id": "sec_993622ca635f",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Watch out for AT&amp;T rewards phishing text that wants your personal details",
+    "summary": "Recently, we uncovered a realistic, multi-layered data theft phishing campaign targeting AT&#038;T customers.",
+    "source_url": "https://www.malwarebytes.com/blog/threat-intel/2026/01/watch-out-for-att-rewards-phishing-text-that-wants-your-personal-details",
+    "source_date": "2026-01-27",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "phishing",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_8b0c62a5a30d",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "A WhatsApp bug lets malicious media files spread through group chats",
+    "summary": "Google\u2019s Project Zero team found that WhatsApp can download a malicious media file without you doing anything at all.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/a-whatsapp-bug-lets-malicious-media-files-spread-through-group-chats",
+    "source_date": "2026-01-27",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_47b5780baa28",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "TikTok narrowly avoids a US ban by spinning up a new American joint venture",
+    "summary": "TikTok may have avoided a ban, but it didn\u2019t become a different company overnight. Like any other social network, assume your data matters, and share accordingly.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/tiktok-narrowly-avoids-a-us-ban-by-spinning-up-a-new-american-joint-venture",
+    "source_date": "2026-01-27",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_de801a15b52f",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Initial Stages of Romance Scams &#x5b;Guest Diary&#x5d;, (Tue, Jan 27th)",
+    "summary": "&#x5b;This is a Guest Diary by Fares Azhari, an ISC intern as part of the SANS.edu BACS program&#x5d;&#xd;",
+    "source_url": "https://isc.sans.edu/diary/rss/32650",
+    "source_date": "2026-01-27",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_83e9f2d34c10",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "ISC Stormcast For Tuesday, January 27th, 2026 https://isc.sans.edu/podcastdetail/9782, (Tue, Jan 27th)",
+    "summary": "",
+    "source_url": "https://isc.sans.edu/diary/rss/32658",
+    "source_date": "2026-01-27",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_a4592f751b14",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "The Constitutionality of Geofence Warrants",
+    "summary": "The US Supreme Court is considering the constitutionality of geofence warrants. The case centers on the trial of Okello Chatrie, a Virginia man who pleaded guilty to a 2019 robbery outside of Richmond and was sentenced to almost 12 years in prison for stealing $195,000 at gunpoint. Police probing...",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/the-constitutionality-of-geofence-warrants.html",
+    "source_date": "2026-01-27",
+    "tags": [
+      "policy",
+      "cryptography",
+      "security commentary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3bcea3932bdd",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Security strategies for safeguarding governmental data",
+    "summary": "Discover key strategies and leadership insights to help government agencies protect sensitive data and strengthen overall cybersecurity resilience. The post Security strategies for safeguarding governmental data appeared first on Microsoft Security Blog.",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/26/security-strategies-for-safeguarding-governmental-data/",
+    "source_date": "2026-01-26",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_41627d2fb925",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "PeckBirdy: A Versatile Script Framework for LOLBins Exploitation Used by China-aligned Threat Groups",
+    "summary": "PeckBirdy is a sophisticated JScript-based C&amp;C framework used by China-aligned APT groups to exploit LOLBins across multiple environments, delivering advanced backdoors to target gambling industries and Asian government entities.",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/peckbirdy-script-framework.html",
+    "source_date": "2026-01-26",
+    "tags": [
+      "malware",
+      "threat research",
+      "exploit",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_607b207437ab",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Embracing Choice in Cybersecurity: TrendAI Vision One\u2122 and SentinelOne Integration",
+    "summary": "Discover how the TrendAI Vision One and SentinelOne integration exemplifies our commitment to endpoint flexibility.",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/embracing-choice-in-cybersecurity.html",
+    "source_date": "2026-01-26",
+    "tags": [
+      "malware",
+      "threat research",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_4fde0f795f3a",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "Pwn2Own: Researchers Earn $1 Million for 76 Zero-Days",
+    "summary": "Discover how TrendAI Zero Day Initiative (ZDI) identified critical vulnerabilities across connected vehicles, EV chargers, and automotive systems.",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/pwn2own-researchers-earn-1-million-for-76-zero-days.html",
+    "source_date": "2026-01-26",
+    "tags": [
+      "malware",
+      "threat research",
+      "zero-day",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3bd84d362609",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Get paid to scroll TikTok? The data trade behind Freecash ads",
+    "summary": "Ads promised up to $35 an hour to watch videos. Instead, users were funneled into mobile games designed to drive spending and collect data.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/get-paid-to-scroll-tiktok-the-data-trade-behind-freecash-ads",
+    "source_date": "2026-01-26",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2faa48747e25",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "One privacy change I made for 2026 (Lock and Code S07E02)",
+    "summary": "This week on the Lock and Code podcast, host David Ruiz explains why he's leaving behind Google Search... and what he's replacing it with.",
+    "source_url": "https://www.malwarebytes.com/blog/podcast/2026/01/one-privacy-change-i-made-for-2026-lock-and-code-s07e02",
+    "source_date": "2026-01-26",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_ef2b45e1ca74",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "A week in security (January 19 &#8211; January 25)",
+    "summary": "A list of topics we covered in the week of January 19 to January 25 of 2026",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/a-week-in-security-january-19-january-25",
+    "source_date": "2026-01-26",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ics",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e8fb00a1fffd",
+    "source_name": "SANS ISC",
+    "source_type": "independent_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "ISC Stormcast For Monday, January 26th, 2026 https://isc.sans.edu/podcastdetail/9780, (Mon, Jan 26th)",
+    "summary": "",
+    "source_url": "https://isc.sans.edu/diary/rss/32656",
+    "source_date": "2026-01-26",
+    "tags": [
+      "threat intel",
+      "malware",
+      "handlers diary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_7bed00f8168b",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Ireland Proposes Giving Police New Digital Surveillance Powers",
+    "summary": "This is coming: The Irish government is planning to bolster its police&#8217;s ability to intercept communications, including encrypted messages, and provide a legal basis for spyware use.",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/ireland-proposes-giving-police-new-digital-surveillance-powers.html",
+    "source_date": "2026-01-26",
+    "tags": [
+      "policy",
+      "cryptography",
+      "security commentary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_f1b8633dfca8",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Happy 9th Anniversary, CTA: A Celebration of Collaboration in Cyber Defense",
+    "summary": "Unit 42 celebrates 9 years of the Cyber Threat Alliance, tracing its journey from a bold idea to a global leader in collaborative cyber defense. The post Happy 9th Anniversary, CTA: A Celebration of Collaboration in Cyber Defense appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/cta-9th-anniversary/",
+    "source_date": "2026-01-24",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_77427a17af6a",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "From runtime risk to real\u2011time defense: Securing AI agents",
+    "summary": "Why securing AI agents at runtime is essential as attackers find new ways to exploit generative orchestration. The post From runtime risk to real\u2011time defense: Securing AI agents appeared first on Microsoft Security Blog.",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/23/runtime-risk-realtime-defense-securing-ai-agents/",
+    "source_date": "2026-01-23",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "exploit",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_47181f4d6a2a",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Spammers abuse Zendesk to flood inboxes with legitimate-looking emails, but why?",
+    "summary": "Spammers are abusing Zendesk to flood inboxes with emails from trusted brands. There\u2019s no phishing or malware\u2014just noise.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/spammers-abuse-zendesk-to-flood-inboxes-with-legitimate-looking-emails-but-why",
+    "source_date": "2026-01-23",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "phishing",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_d7fb27bfeb79",
+    "source_name": "SentinelOne",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "The Good, the Bad and the Ugly in Cybersecurity \u2013 Week 4",
+    "summary": "Police arrest Black Basta RaaS affiliates, DPRK actors leverage VS Code to deploy backdoors, and attackers exploit misconfigured cloud apps.",
+    "source_url": "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-4-7/",
+    "source_date": "2026-01-23",
+    "tags": [
+      "EDR",
+      "exploit",
+      "cloud",
+      "malware",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_d5db34a12943",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Friday Squid Blogging: Giant Squid in the Star Trek Universe",
+    "summary": "Spock befriends a giant space squid in the comic Star Trek: Strange New Worlds: The Seeds of Salvation #5. As usual, you can also use this squid post to talk about the security stories in the news that I haven&#8217;t covered. Blog moderation policy.",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/friday-squid-blogging-giant-squid-in-the-star-trek-universe.html",
+    "source_date": "2026-01-23",
+    "tags": [
+      "policy",
+      "cryptography",
+      "exploit",
+      "security commentary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Hive"
+    ],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2fcfe272db41",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "AIs are Getting Better at Finding and Exploiting Internet Vulnerabilities",
+    "summary": "Really interesting blog post from Anthropic: In a recent evaluation of AI models\u2019 cyber capabilities, current Claude models can now succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools, instead of the custom tools needed by previous generations. This...",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/ais-are-getting-better-at-finding-and-exploiting-internet-vulnerabilities.html",
+    "source_date": "2026-01-23",
+    "tags": [
+      "patch",
+      "policy",
+      "security commentary",
+      "exploit",
+      "cryptography"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_043828c77e61",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "The Next Frontier of Runtime Assembly Attacks: Leveraging LLMs to Generate Phishing JavaScript in Real Time",
+    "summary": "We discuss a novel AI-augmented attack method where malicious webpages use LLM services to generate dynamic code in real-time within a browser. The post The Next Frontier of Runtime Assembly Attacks: Leveraging LLMs to Generate Phishing JavaScript in Real Time appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/real-time-malicious-javascript-through-llms/",
+    "source_date": "2026-01-22",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research",
+      "phishing"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2218305816c3",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "I scan, you scan, we all scan for...  knowledge?",
+    "summary": "In this week's newsletter, Bill hammers home the old adage, \"Know your environment\" \u2014 even throughout alert fatigue.",
+    "source_url": "https://blog.talosintelligence.com/i-scan-you-scan-we-all-scan-for-knowledge/",
+    "source_date": "2026-01-22",
+    "tags": [
+      "malware",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_b5fcc86000fc",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "Foxit, Epic Games Store, MedDreams vulnerabilities",
+    "summary": "Cisco Talos&#x2019; Vulnerability Discovery &amp; Research team recently disclosed three vulnerabilities in Foxit PDF Editor, one in the Epic Games Store, and twenty-one in MedDream PACS..The vulnerabilities mentioned in this blog post have been patched by their respective vendors, all in adherence...",
+    "source_url": "https://blog.talosintelligence.com/foxi-and-epic-games/",
+    "source_date": "2026-01-22",
+    "tags": [
+      "patch",
+      "vulnerabilities",
+      "cloud",
+      "malware",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_06b1ef2f9e80",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Microsoft Security success stories: Why integrated security is the foundation of AI transformation",
+    "summary": "Discover how Ford, Icertis, and TriNet modernized security with Microsoft\u2014embedding Zero Trust, automating defenses, and enabling secure AI innovation at scale. The post Microsoft Security success stories: Why integrated security is the foundation of AI transformation appeared first on Microsoft...",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/22/microsoft-security-success-stories-why-integrated-security-is-the-foundation-of-ai-transformation/",
+    "source_date": "2026-01-22",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_0be969f5d6e9",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Resurgence of a multi\u2011stage AiTM phishing and BEC campaign abusing SharePoint",
+    "summary": "Microsoft Defender Researchers uncovered a multi\u2011stage AiTM phishing and business email compromise (BEC) campaign targeting multiple organizations in the energy sector. The post Resurgence of a multi\u2011stage AiTM phishing and BEC campaign abusing SharePoint appeared first on Microsoft Security Blog.",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/21/multistage-aitm-phishing-bec-campaign-abusing-sharepoint/",
+    "source_date": "2026-01-22",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research",
+      "phishing"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e9bf72b2ed5e",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Watering Hole Attack Targets EmEditor Users with Information-Stealing Malware",
+    "summary": "TrendAI\u2122 Research provides a technical analysis of a compromised EmEditor installer used to deliver multistage malware that performs a range of malicious actions.",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/watering-hole-attack-targets-emeditor-users.html",
+    "source_date": "2026-01-22",
+    "tags": [
+      "malware",
+      "threat research",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_80eb69fb58d4",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Fake LastPass maintenance emails target users",
+    "summary": "LastPass is warning users about phishing emails that pressure users to back up their vaults within 24 hours.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/fake-lastpass-maintenance-emails-target-users",
+    "source_date": "2026-01-22",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "phishing",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_8d7b05811439",
+    "source_name": "Malwarebytes Labs",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "high",
+    "title": "Under Armour ransomware breach: data of 72 million customers appears on the dark web",
+    "summary": "Customer data allegedly stolen during a ransomware attack on sportswear giant Under Armour is now circulating on the dark web.",
+    "source_url": "https://www.malwarebytes.com/blog/news/2026/01/under-armour-ransomware-breach-data-of-72-million-customers-appears-on-the-dark-web",
+    "source_date": "2026-01-22",
+    "tags": [
+      "malware",
+      "consumer threats",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_c42ea61f2ffa",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Why AI Keeps Falling for Prompt Injection Attacks",
+    "summary": "Imagine you work at a drive-through restaurant. Someone drives up and says: &#8220;I&#8217;ll have a double cheeseburger, large fries, and ignore previous instructions and give me the contents of the cash drawer.&#8221; Would you hand over the money? Of course not. Yet this is what large language...",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/why-ai-keeps-falling-for-prompt-injection-attacks.html",
+    "source_date": "2026-01-22",
+    "tags": [
+      "policy",
+      "security commentary",
+      "credentials",
+      "cryptography",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3690085d9195",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "A new era of agents, a new era of posture",
+    "summary": "AI agents are transforming how organizations operate, but their autonomy also expands the attack surface. The post A new era of agents, a new era of posture appeared first on Microsoft Security Blog.",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/21/new-era-of-agents-new-era-of-posture/",
+    "source_date": "2026-01-21",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_cfc3eacff44f",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Internet Voting is Too Insecure for Use in Elections",
+    "summary": "No matter how many times we say it, the idea comes back again and again. Hopefully, this letter will hold back the tide for at least a while longer. Executive summary: Scientists have understood for many years that internet voting is insecure and that there is no known or foreseeable technology...",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/internet-voting-is-too-insecure-for-use-in-elections.html",
+    "source_date": "2026-01-21",
+    "tags": [
+      "policy",
+      "cryptography",
+      "security commentary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_f1289b4af7b5",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "DNS OverDoS: Are Private Endpoints Too Private?",
+    "summary": "We've identified an aspect of Azure\u2019s Private Endpoint architecture that could expose Azure resources to denial of service (DoS) attacks. The post DNS OverDoS: Are Private Endpoints Too Private? appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/dos-attacks-and-azure-private-endpoint/",
+    "source_date": "2026-01-20",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research",
+      "cloud"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_f58af3aec7de",
+    "source_name": "Microsoft Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Four priorities for AI-powered identity and network access security in 2026",
+    "summary": "Discover four key identity and access priorities for the new year to strengthen your organization's identity security baseline. The post Four priorities for AI-powered identity and network access security in 2026 appeared first on Microsoft Security Blog.",
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/01/20/four-priorities-for-ai-powered-identity-and-network-access-security-in-2026/",
+    "source_date": "2026-01-20",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_735f2fec0dfc",
+    "source_name": "Krebs on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "medium",
+    "title": "Kimwolf Botnet Lurking in Corporate, Govt. Networks",
+    "summary": "A new Internet-of-Things botnet called Kimwolf has spread to more than 2 million devices, forcing infected systems to participate in massive distributed denial-of-service (DDoS) attacks and to relay other malicious and abusive Internet traffic. Kimwolf's ability to scan the local networks of...",
+    "source_url": "https://krebsonsecurity.com/2026/01/kimwolf-botnet-lurking-in-corporate-govt-networks/",
+    "source_date": "2026-01-20",
+    "tags": [
+      "investigations",
+      "cybercrime",
+      "breaches",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_faeb0f8ddada",
+    "source_name": "Schneier on Security",
+    "source_type": "independent_research",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Could ChatGPT Convince You to Buy Something?",
+    "summary": "Eighteen months ago, it was plausible that artificial intelligence might take a different path than social media. Back then, AI&#8217;s development hadn&#8217;t consolidated under a small number of big tech firms. Nor had it capitalized on consumer attention, surveilling users and delivering ads....",
+    "source_url": "https://www.schneier.com/blog/archives/2026/01/could-chatgpt-convince-you-to-buy-something.html",
+    "source_date": "2026-01-20",
+    "tags": [
+      "policy",
+      "cryptography",
+      "security commentary"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Play"
+    ],
+    "malware_families": [
+      "Play"
+    ]
+  },
+  {
+    "id": "sec_e8e239813ada",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "From Extension to Infection: An In-Depth Analysis of the Evelyn Stealer Campaign Targeting Software Developers",
+    "summary": "This blog entry provides an in-depth analysis of the multistage delivery of the Evelyn information stealer, which was used in a campaign targeting software developers.",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/analysis-of-the-evelyn-stealer-campaign.html",
+    "source_date": "2026-01-19",
+    "tags": [
+      "malware",
+      "threat research",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_053aaa77fee4",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Anatomy of an Attack: The Payroll Pirates and the Power of Social Engineering",
+    "summary": "Unit 42 breaks down a payroll attack fueled by social engineering. Learn how the breach happened and how to protect your organization from similar threats. The post Anatomy of an Attack: The Payroll Pirates and the Power of Social Engineering appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/social-engineering-payroll-pirates/",
+    "source_date": "2026-01-17",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2e2da0c99f07",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Your 100 Billion Parameter Behemoth is a Liability",
+    "summary": "The \"bigger is better\" era of AI is hitting a wall. We are in an LLM bubble, characterized by ruinous inference costs and diminishing returns. The future belongs to Agentic AI powered by specialized Small Language Models (SLMs). Think of it as a shift from hiring a single expensive genius to...",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/your-100-billion-parameter-behemoth-is-a-liability.html",
+    "source_date": "2026-01-16",
+    "tags": [
+      "malware",
+      "threat research",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3970c481c164",
+    "source_name": "SentinelOne",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "critical",
+    "title": "The Good, the Bad and the Ugly in Cybersecurity \u2013 Week 3",
+    "summary": "Major setbacks for Black Axe and BreachForums, researchers expose new Copilot attack, and PluggyApe malware targets Ukraine's armed forces.",
+    "source_url": "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-3-7/",
+    "source_date": "2026-01-16",
+    "tags": [
+      "malware",
+      "ics",
+      "threat research",
+      "EDR"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_89ff56f8cc88",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Predicting 2026",
+    "summary": "In this week\u2019s newsletter, Martin examines the evolving landscape for 2026, highlighting key threats, emerging trends like AI-driven risks, and the continued importance of addressing familiar vulnerabilities.",
+    "source_url": "https://blog.talosintelligence.com/predicting-2026/",
+    "source_date": "2026-01-15",
+    "tags": [
+      "malware",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Conti"
+    ],
+    "malware_families": []
+  },
+  {
+    "id": "sec_19f50a8ba38f",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "UAT-8837 targets critical infrastructure sectors in North America",
+    "summary": "Cisco Talos is closely tracking UAT-8837, a threat actor we assess with medium confidence is a China-nexus advanced persistent threat (APT) actor.",
+    "source_url": "https://blog.talosintelligence.com/uat-8837/",
+    "source_date": "2026-01-15",
+    "tags": [
+      "malware",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_dfbdafe09658",
+    "source_name": "Qualys Security Blog",
+    "source_type": "vendor_research",
+    "signal_category": "cve",
+    "severity": "informational",
+    "title": "Your VMDR Year in Review: Making Security Progress Visible and Actionable",
+    "summary": "Security Teams Rarely Stop to Reflect When a security program is working well, very little seems to happen. That is by design. There is no alert for the incident that was prevented. No visibility into the attack path that was quietly closed. No recognition for the vulnerability that was fixed...",
+    "source_url": "https://blog.qualys.com/category/product-tech/vulnmgmt-detection-response",
+    "source_date": "2026-01-15",
+    "tags": [
+      "patch",
+      "patch management",
+      "exploit",
+      "vulnerabilities",
+      "compliance"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_41ce636e2009",
+    "source_name": "NCSC UK",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "informational",
+    "title": "Designing safer links: secure connectivity for operational technology",
+    "summary": "New principles help organisations to design, review, and secure connectivity to (and within) OT systems.",
+    "source_url": "https://www.ncsc.gov.uk/blog-post/designing-safer-links-secure-connectivity-for-ot",
+    "source_date": "2026-01-14",
+    "tags": [
+      "UK government",
+      "guidance",
+      "ics",
+      "threat reports"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_b121710d2777",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Brushstrokes and breaches with Terryn Valikodath",
+    "summary": "Terryn\u2019s path to cybersecurity started with a fascination for criminal forensics and a knack for jailbreaking his family's tech \u2014 interests that eventually steered him toward the fast-paced world of digital investigations.",
+    "source_url": "https://blog.talosintelligence.com/brushstrokes-and-breaches-with-terryn-valikodath/",
+    "source_date": "2026-01-14",
+    "tags": [
+      "malware",
+      "ics",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_874e13cdcf38",
+    "source_name": "Krebs on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Patch Tuesday, January 2026 Edition",
+    "summary": "Microsoft today issued patches to plug at least 113 security holes in its various Windows operating systems and supported software. Eight of the vulnerabilities earned Microsoft's most-dire \"critical\" rating, and the company warns that attackers are already exploiting one of the bugs fixed today.",
+    "source_url": "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/",
+    "source_date": "2026-01-14",
+    "tags": [
+      "patch",
+      "breaches",
+      "investigations",
+      "cybercrime",
+      "exploit"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3d22a2611f9f",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "Threat Brief: MongoDB Vulnerability (CVE-2025-14847)",
+    "summary": "Database platform MongoDB disclosed CVE-2025-14847, called MongoBleed. This is an unauthenticated memory disclosure vulnerability with a CVSS score of 8.7. The post Threat Brief: MongoDB Vulnerability (CVE-2025-14847) appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/mongobleed-cve-2025-14847/",
+    "source_date": "2026-01-13",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research"
+    ],
+    "cve_ids": [
+      "CVE-2025-14847"
+    ],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3a5fab19d873",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "Remote Code Execution With Modern AI/ML Formats and Libraries",
+    "summary": "We identified remote code execution vulnerabilities in open-source AI/ML libraries published by Apple, Salesforce and NVIDIA. The post Remote Code Execution With Modern AI/ML Formats and Libraries appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/rce-vulnerabilities-in-ai-python-libraries/",
+    "source_date": "2026-01-13",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e40374bcbaa7",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "Microsoft Patch Tuesday for January 2026 \u2014 Snort rules and prominent vulnerabilities",
+    "summary": "Microsoft has released its monthly security update for January 2026, which includes 112 vulnerabilities affecting a range of products, including 8 that Microsoft marked as \u201ccritical\u201d.",
+    "source_url": "https://blog.talosintelligence.com/microsoft-patch-tuesday-january-2026/",
+    "source_date": "2026-01-13",
+    "tags": [
+      "malware",
+      "patch",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_71370accf944",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Key Insights on SHADOW-AETHER-015 and Earth Preta from the 2025 MITRE ATT&CK Evaluation with TrendAI Vision One\u2122",
+    "summary": "This blog discusses notable modern TTPs observed from SHADOW-AETHER-015 and Earth Preta, from TrendAI Research\u2122 monitoring and TrendAI Vision One\u2122 intelligence. These findings support the performance of TrendAI\u2122 in the 2025 MITRE ATT&amp;CK Evaluations.",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/shadow-aether-015-earth-preta-mitre.html",
+    "source_date": "2026-01-13",
+    "tags": [
+      "malware",
+      "threat research",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2b83b00c4615",
+    "source_name": "Trend Micro",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Analyzing a Multi-Stage AsyncRAT Campaign via Managed Detection and Response",
+    "summary": "Threat actors exploited Cloudflare's free-tier infrastructure and legitimate Python environments to deploy the AsyncRAT remote access trojan, demonstrating advanced evasion techniques that abuse trusted cloud services for malicious operations.",
+    "source_url": "https://www.trendmicro.com/en_us/research/26/a/analyzing-a-a-multi-stage-asyncrat-campaign-via-mdr.html",
+    "source_date": "2026-01-12",
+    "tags": [
+      "ransomware",
+      "exploit",
+      "cloud",
+      "malware",
+      "threat research"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [
+      "Asyncrat"
+    ]
+  },
+  {
+    "id": "sec_5be3a4bf4fff",
+    "source_name": "SentinelOne",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "The Good, the Bad and the Ugly in Cybersecurity \u2013 Week 2",
+    "summary": "U.K. boosts public-sector cybersecurity, UAT-7290 expands Linux-based espionage to Europe, and three critical n8n flaws allow attackers RCE.",
+    "source_url": "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-2-7/",
+    "source_date": "2026-01-09",
+    "tags": [
+      "malware",
+      "threat research",
+      "EDR",
+      "cloud"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_5761237f20ef",
+    "source_name": "Unit 42 (Palo Alto)",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Securing Vibe Coding Tools: Scaling Productivity Without Scaling Risk",
+    "summary": "AI-generated code looks flawless until it isn't. Unit 42 breaks down how to expose these invisible flaws before they turn into your next breach. The post Securing Vibe Coding Tools: Scaling Productivity Without Scaling Risk appeared first on Unit 42.",
+    "source_url": "https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/",
+    "source_date": "2026-01-08",
+    "tags": [
+      "malware",
+      "APT",
+      "threat research",
+      "cloud"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_2682f2d8197b",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "Resolutions, shmesolutions (and what\u2019s actually worked for me)",
+    "summary": "Talos' editor ditches the pressure of traditional New Year\u2019s resolutions in favor of practical, in-the-moment changes, and finds more success by letting go of perfection. Plus, we break down the latest on UAT-7290, a newly disclosed threat actor targeting critical infrastructure.",
+    "source_url": "https://blog.talosintelligence.com/resolutions-shmesolutions-and-whats-actually-worked-for-me/",
+    "source_date": "2026-01-08",
+    "tags": [
+      "malware",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3a72281efbe3",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "UAT-7290 targets high value telecommunications infrastructure in South Asia",
+    "summary": "Talos assesses with high confidence that UAT-7290 is a sophisticated threat actor falling under the China-nexus of advanced persistent threat actors (APTs). UAT-7290 primarily targets telecommunications providers in South Asia.",
+    "source_url": "https://blog.talosintelligence.com/uat-7290/",
+    "source_date": "2026-01-08",
+    "tags": [
+      "malware",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_c91c55ec567b",
+    "source_name": "Krebs on Security",
+    "source_type": "independent_research",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Who Benefited from the Aisuru and Kimwolf Botnets?",
+    "summary": "Our first story of 2026 revealed how a destructive new botnet called Kimwolf rapidly grew to infect more than two million devices by mass-compromising a vast number of unofficial Android TV streaming boxes. Today, we'll dig through digital clues left behind by the hackers, network operators, and...",
+    "source_url": "https://krebsonsecurity.com/2026/01/who-benefited-from-the-aisuru-and-kimwolf-botnets/",
+    "source_date": "2026-01-08",
+    "tags": [
+      "investigations",
+      "cybercrime",
+      "breaches"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_3703bf32e2b3",
+    "source_name": "NCSC UK",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "informational",
+    "title": "The Government Cyber Action Plan: strengthening resilience across the UK",
+    "summary": "With GCAP, the UK government is taking decisive steps towards a safer, more resilient future.",
+    "source_url": "https://www.ncsc.gov.uk/blog-post/government-cyber-action-plan-strengthening-resilience-across-uk",
+    "source_date": "2026-01-07",
+    "tags": [
+      "UK government",
+      "guidance",
+      "threat reports"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_917ba7328bd4",
+    "source_name": "Cisco Talos",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "How Cisco Talos powers the solutions protecting your organization",
+    "summary": "What happens under the hood of Cisco's security portfolio? Our reputation and detection services apply Talos' real-time intelligence to detect and block threats. Here's how.",
+    "source_url": "https://blog.talosintelligence.com/how-cisco-talos-powers-the-solutions-protecting-your-organization/",
+    "source_date": "2026-01-07",
+    "tags": [
+      "malware",
+      "threat intelligence",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_7efe093c827e",
+    "source_name": "SentinelOne",
+    "source_type": "vendor_research",
+    "signal_category": "malware",
+    "severity": "critical",
+    "title": "12 Months of Fighting Cybercrime & Defending Enterprises | The SentinelLABS 2025 Review",
+    "summary": "From ransomware repurposed for espionage to increased exploitation of cloud platforms, learn about the key trends from SentinelLABS research in 2025.",
+    "source_url": "https://www.sentinelone.com/blog/12-months-of-fighting-cybercrime-defending-enterprises-the-sentinellabs-2025-review/",
+    "source_date": "2026-01-06",
+    "tags": [
+      "EDR",
+      "ransomware",
+      "exploit",
+      "cloud",
+      "malware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  },
+  {
+    "id": "sec_e2488a5d6039",
+    "source_name": "SentinelOne",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "When Your AI Coding Plugin Starts Picking Your Dependencies: Marketplace Skills and Dependency Hijack in Claude Code",
+    "summary": "Learn how AI coding assistants managing dependencies via plugins are now creating a new supply-chain risk when automation is compromised.",
+    "source_url": "https://www.sentinelone.com/blog/marketplace-skills-and-dependency-hijack-in-claude-code/",
+    "source_date": "2026-01-06",
+    "tags": [
+      "malware",
+      "threat research",
+      "supply-chain",
+      "EDR"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": []
+  }
+]
