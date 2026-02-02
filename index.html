@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VC Signals Dashboard - Cybersecurity Investment Intelligence</title>
-    <meta name="description" content="Real-time intelligence on cybersecurity VC investments, fund raises, and market trends from 65+ investors.">
+    <meta name="description" content="Real-time intelligence on cybersecurity VC investments, fund raises, and market trends.">
 
     <style>
         :root {
@@ -41,32 +41,44 @@
         .stat-label { font-size: 0.85rem; opacity: 0.8; }
 
         .filters-panel { background: white; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+        /* Search bar */
+        .search-container { margin-bottom: 16px; position: relative; }
+        .search-input { width: 100%; padding: 12px 40px 12px 16px; border: 2px solid var(--gray-200); border-radius: 10px; font-size: 1rem; }
+        .search-input:focus { outline: none; border-color: var(--primary); }
+        .search-clear { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.2rem; color: var(--gray-500); display: none; }
+        .search-results { font-size: 0.8rem; color: var(--gray-500); margin-top: 6px; display: none; }
+
         .filters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 16px; }
         .filter-group label { display: block; font-size: 0.75rem; color: var(--gray-500); margin-bottom: 6px; text-transform: uppercase; }
         .filter-group select { width: 100%; padding: 10px 12px; border: 2px solid var(--gray-200); border-radius: 8px; font-size: 0.9rem; background: white; cursor: pointer; }
         .filter-group select:focus { outline: none; border-color: var(--primary); }
+        .filter-group select option:disabled { color: var(--gray-500); }
 
-        .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
         .chip { padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; border: 2px solid var(--gray-200); background: white; }
         .chip:hover { border-color: var(--primary); }
         .chip.active { background: var(--primary); color: white; border-color: var(--primary); }
 
-        .theme-summary { background: var(--gray-100); border-radius: 12px; padding: 20px; margin-top: 16px; }
+        .theme-summary { background: var(--gray-100); border-radius: 12px; padding: 20px; margin-top: 16px; display: none; }
+        .theme-summary.visible { display: block; }
         .theme-summary h3 { font-size: 1rem; margin-bottom: 16px; color: var(--gray-700); }
-        .theme-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+        .theme-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
         .theme-card { background: white; padding: 16px; border-radius: 10px; text-align: center; cursor: pointer; transition: transform 0.2s; }
         .theme-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .theme-card .count { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
-        .theme-card .label { font-size: 0.8rem; color: var(--gray-500); }
+        .theme-card .label { font-size: 0.75rem; color: var(--gray-500); }
+
+        /* Source legend */
+        .source-legend { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; font-size: 0.7rem; }
+        .source-badge { padding: 3px 8px; border-radius: 4px; color: white; }
 
         .signals-container { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         .signals-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
         .signals-count { font-size: 0.9rem; color: var(--gray-500); }
-        .source-legend { display: flex; flex-wrap: wrap; gap: 8px; }
-        .source-badge { padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; color: white; }
         .signals-list { display: flex; flex-direction: column; gap: 16px; }
 
-        .signal-card { border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; border-left: 4px solid var(--primary); transition: transform 0.2s; }
+        .signal-card { border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; border-left: 4px solid var(--warning); transition: transform 0.2s; }
         .signal-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateX(4px); }
         .signal-card.hard { border-left-color: var(--danger); }
         .signal-card.soft { border-left-color: var(--warning); }
@@ -74,87 +86,33 @@
         .signal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
         .signal-person { font-size: 1.1rem; font-weight: 600; }
         .signal-firm { color: var(--gray-500); font-size: 0.9rem; }
-        .signal-badges { display: flex; gap: 8px; flex-wrap: wrap; }
-        .badge { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 500; }
+        .signal-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+        .badge { padding: 3px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: 500; }
         .badge.hard { background: #fef2f2; color: var(--danger); }
         .badge.soft { background: #fffbeb; color: var(--warning); }
         .badge.high { background: #dcfce7; color: #166534; }
         .badge.med { background: #fef3c7; color: #92400e; }
 
-        /* Engagement status badges */
-        .badge.engagement-hot { background: #ef4444; color: white; animation: pulse-hot 1.5s infinite; }
-        .badge.engagement-warm { background: #f97316; color: white; }
-        .badge.engagement-cool { background: #fbbf24; color: #78350f; }
-        @keyframes pulse-hot { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-
-        .signal-card.hot { border-left-color: #ef4444; background: linear-gradient(90deg, #fef2f2 0%, white 10%); }
-        .signal-card.warm { border-left-color: #f97316; background: linear-gradient(90deg, #fff7ed 0%, white 10%); }
-
-        .engage-cta { color: var(--primary); font-weight: 600; }
-
         .signal-category { display: inline-block; background: #e0e7ff; color: #3730a3; padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; margin-bottom: 12px; }
         .signal-summary { font-size: 0.95rem; line-height: 1.6; color: var(--gray-700); margin-bottom: 12px; }
         .signal-excerpt { background: var(--gray-100); padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; color: var(--gray-500); font-style: italic; margin-bottom: 12px; }
         .signal-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-        .signal-meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--gray-500); }
+        .signal-meta { font-size: 0.8rem; color: var(--gray-500); }
         .signal-link { color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
         .signal-link:hover { text-decoration: underline; }
-        .outreach-tip { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; margin-top: 12px; }
-        .outreach-tip strong { display: block; margin-bottom: 4px; }
+
         .empty-state { text-align: center; padding: 60px 20px; color: var(--gray-500); }
         .loading-state { text-align: center; padding: 60px 20px; color: var(--gray-500); }
         .loading-spinner { display: inline-block; width: 40px; height: 40px; border: 3px solid var(--gray-200); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* Narrative Summary Section */
-        .narrative-section { background: white; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        .narrative-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
-        .narrative-title { font-size: 1.3rem; font-weight: 600; color: var(--gray-900); }
-        .data-freshness { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--gray-500); }
-        .freshness-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); animation: pulse 2s infinite; }
-        .freshness-dot.stale { background: var(--warning); }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .view-toggles { display: flex; gap: 16px; align-items: center; font-size: 0.85rem; }
+        .view-toggles label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
 
-        .timeframe-tabs { display: flex; gap: 8px; margin-bottom: 20px; border-bottom: 2px solid var(--gray-200); padding-bottom: 12px; }
-        .timeframe-tab { padding: 8px 20px; border-radius: 8px 8px 0 0; font-size: 0.9rem; cursor: pointer; border: none; background: transparent; color: var(--gray-500); font-weight: 500; transition: all 0.2s; }
-        .timeframe-tab:hover { color: var(--gray-700); background: var(--gray-100); }
-        .timeframe-tab.active { color: var(--primary); background: #e0e7ff; }
-        .timeframe-tab .count { font-size: 0.75rem; background: var(--gray-200); padding: 2px 6px; border-radius: 10px; margin-left: 6px; }
-        .timeframe-tab.active .count { background: var(--primary); color: white; }
-
-        .narrative-content { display: none; }
-        .narrative-content.active { display: block; }
-
-        .narrative-empty { text-align: center; padding: 40px; color: var(--gray-500); }
-
-        .narrative-overview { background: linear-gradient(135deg, #f0f4ff 0%, #fdf4ff 100%); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-        .narrative-overview h4 { font-size: 1rem; color: var(--gray-700); margin-bottom: 12px; }
-        .narrative-overview p { font-size: 0.95rem; line-height: 1.7; color: var(--gray-700); }
-
-        .voice-groups { display: flex; flex-direction: column; gap: 16px; }
-        .voice-group { border: 1px solid var(--gray-200); border-radius: 12px; padding: 16px; }
-        .voice-group-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-        .voice-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1rem; }
-        .voice-info h5 { font-size: 0.95rem; font-weight: 600; color: var(--gray-900); }
-        .voice-info span { font-size: 0.8rem; color: var(--gray-500); }
-        .voice-quotes { display: flex; flex-direction: column; gap: 8px; }
-        .voice-quote { background: var(--gray-100); padding: 12px 16px; border-radius: 8px; font-size: 0.9rem; color: var(--gray-700); border-left: 3px solid var(--primary); }
-        .voice-quote.hard { border-left-color: var(--danger); }
-        .voice-quote.soft { border-left-color: var(--warning); }
-        .quote-meta { font-size: 0.75rem; color: var(--gray-500); margin-top: 6px; display: flex; gap: 12px; }
-
-        .key-themes { margin-bottom: 20px; }
-        .key-themes h4 { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .theme-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-        .theme-pill { padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; background: #e0e7ff; color: #3730a3; }
-        .theme-pill.hot { background: #fef2f2; color: var(--danger); }
-        .theme-pill .pill-count { font-size: 0.75rem; opacity: 0.7; margin-left: 4px; }
+        .refresh-btn { background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; }
+        .refresh-btn:hover { background: var(--primary-dark); }
 
         footer { text-align: center; padding: 40px 20px; color: white; opacity: 0.8; font-size: 0.85rem; }
-
-        .refresh-btn { background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; margin-left: 12px; }
-        .refresh-btn:hover { background: var(--primary-dark); }
-        .refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
         @media (max-width: 768px) {
             header h1 { font-size: 1.8rem; }
@@ -169,23 +127,30 @@
         <p>Real-time intelligence on cybersecurity investments and market trends</p>
         <div class="stats-bar">
             <div class="stat"><div class="stat-value" id="totalSignals">-</div><div class="stat-label">Total Signals</div></div>
-            <div class="stat"><div class="stat-value" id="totalVCs">-</div><div class="stat-label">VCs Tracked</div></div>
             <div class="stat"><div class="stat-value" id="hardSignals">-</div><div class="stat-label">Hard Signals</div></div>
-            <div class="stat"><div class="stat-value" id="lastUpdated">-</div><div class="stat-label">Last Updated</div></div>
+            <div class="stat"><div class="stat-value" id="softSignals">-</div><div class="stat-label">Soft Signals</div></div>
+            <div class="stat"><div class="stat-value" id="sourcesCount">-</div><div class="stat-label">Sources</div></div>
         </div>
     </header>
 
     <div class="container">
         <div class="filters-panel">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search signals by keyword (title, excerpt, person, firm...)">
+                <button class="search-clear" id="searchClear" onclick="clearSearch()">x</button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
             <div class="filters-grid">
                 <div class="filter-group">
-                    <label>Engagement Window</label>
+                    <label>Date Range</label>
                     <select id="filterDate">
-                        <option value="6hours">🔴 Last 6 Hours (Engage Now)</option>
-                        <option value="24hours">🟠 Last 24 Hours</option>
-                        <option value="3days">🟡 Last 3 Days</option>
-                        <option value="7days" selected>Last 7 Days</option>
-                        <option value="30days">Last 30 Days (Trends)</option>
+                        <option value="all">All Time</option>
+                        <option value="1day">Past 1 Day</option>
+                        <option value="7days" selected>Past 7 Days</option>
+                        <option value="14days">Past 14 Days</option>
+                        <option value="month">Past Month</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -193,12 +158,18 @@
                     <select id="filterSource">
                         <option value="all">All Sources</option>
                         <option value="blog">Blog</option>
-                        <option value="press">Press Release</option>
-                        <option value="news">News</option>
+                        <option value="conference">Conference</option>
+                        <option value="crunchbase">Crunchbase</option>
+                        <option value="hackernews">Hacker News</option>
                         <option value="linkedin">LinkedIn</option>
-                        <option value="x">X/Twitter</option>
-                        <option value="substack">Substack</option>
                         <option value="medium">Medium</option>
+                        <option value="news">News</option>
+                        <option value="podcast">Podcast</option>
+                        <option value="press">Press Release</option>
+                        <option value="producthunt">ProductHunt</option>
+                        <option value="substack">Substack</option>
+                        <option value="x">X / Twitter</option>
+                        <option value="youtube">YouTube</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -213,65 +184,52 @@
                     <label>Theme</label>
                     <select id="filterTheme">
                         <option value="all">All Themes</option>
-                        <option value="detection_engineering">Detection Engineering</option>
-                        <option value="threat_intelligence">Threat Intelligence</option>
+                        <option value="threat_detection">Threat Detection</option>
                         <option value="investment_activity">Investment Activity</option>
-                        <option value="soc_pain">SOC Pain Points</option>
-                        <option value="agentic">Agentic AI</option>
-                        <option value="ai_security">AI Security</option>
                         <option value="market_insights">Market Insights</option>
+                        <option value="soc_pain">SOC Pain Points</option>
+                        <option value="relationship">Relationship Signals</option>
+                        <option value="ai_security">AI Security Trends</option>
+                        <option value="agentic">Agentic AI</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
             </div>
+
             <div class="filter-chips">
                 <span class="chip active" data-filter="all">All Signals</span>
-                <span class="chip" data-filter="hard">Hard Signals</span>
-                <span class="chip" data-filter="soft">Soft Signals</span>
-                <button class="refresh-btn" id="refreshBtn" onclick="refreshSignals()">↻ Refresh</button>
+                <span class="chip" data-filter="hard" style="background: #fef2f2; color: var(--danger); border-color: #fecaca;">Hard Signals</span>
+                <span class="chip" data-filter="soft" style="background: #fffbeb; color: var(--warning); border-color: #fde68a;">Soft Signals</span>
             </div>
+
+            <div class="view-toggles">
+                <label><input type="checkbox" id="showThemeSummary"> Show Theme Summary</label>
+                <button class="refresh-btn" onclick="loadSignals()">Refresh</button>
+            </div>
+
             <div class="theme-summary" id="themeSummary">
-                <h3>Trending Themes</h3>
+                <h3>Trending Themes (Selected Time Range)</h3>
                 <div class="theme-cards" id="themeCards"></div>
             </div>
         </div>
 
-        <!-- Narrative Summary Section -->
-        <div class="narrative-section">
-            <div class="narrative-header">
-                <h2 class="narrative-title">Market Narrative</h2>
-                <div class="data-freshness">
-                    <span class="freshness-dot" id="freshnessDot"></span>
-                    <span id="dataFreshness">Loading...</span>
-                </div>
-            </div>
-
-            <div class="timeframe-tabs">
-                <button class="timeframe-tab active" data-timeframe="day">Past 24h<span class="count" id="dayCount">0</span></button>
-                <button class="timeframe-tab" data-timeframe="week">Past 7 Days<span class="count" id="weekCount">0</span></button>
-                <button class="timeframe-tab" data-timeframe="month">Past 30 Days<span class="count" id="monthCount">0</span></button>
-            </div>
-
-            <div class="narrative-content active" id="narrative-day">
-                <div class="narrative-empty">Loading...</div>
-            </div>
-            <div class="narrative-content" id="narrative-week">
-                <div class="narrative-empty">Loading...</div>
-            </div>
-            <div class="narrative-content" id="narrative-month">
-                <div class="narrative-empty">Loading...</div>
-            </div>
+        <!-- Source Legend -->
+        <div class="source-legend">
+            <span class="source-badge" style="background: #0077b5;">LinkedIn</span>
+            <span class="source-badge" style="background: #1da1f2;">X/Twitter</span>
+            <span class="source-badge" style="background: #ff6b35;">Crunchbase</span>
+            <span class="source-badge" style="background: #00d4aa;">TechCrunch</span>
+            <span class="source-badge" style="background: #00ab6c;">Medium</span>
+            <span class="source-badge" style="background: #da552f;">ProductHunt</span>
+            <span class="source-badge" style="background: #ff6600;">Hacker News</span>
+            <span class="source-badge" style="background: #ff6719;">Substack</span>
+            <span class="source-badge" style="background: #6b7280;">Press</span>
+            <span class="source-badge" style="background: #7c3aed;">Blog</span>
         </div>
 
         <div class="signals-container">
             <div class="signals-header">
                 <span class="signals-count" id="signalsCount">Loading signals...</span>
-                <div class="source-legend">
-                    <span class="source-badge" style="background: #6366f1;">Blog</span>
-                    <span class="source-badge" style="background: #10b981;">Press</span>
-                    <span class="source-badge" style="background: #f59e0b;">News</span>
-                    <span class="source-badge" style="background: #0077b5;">LinkedIn</span>
-                    <span class="source-badge" style="background: #ff6719;">Substack</span>
-                </div>
             </div>
             <div class="signals-list" id="signalsList">
                 <div class="loading-state">
@@ -283,30 +241,24 @@
     </div>
 
     <footer>
-        <p>VC Signals Dashboard - Auto-updated via GitHub Actions</p>
-        <p>Data sourced from public RSS feeds, blogs, podcasts, and news</p>
+        <p>VC Signals Dashboard - Data from signals-data.json</p>
+        <p>Run <code>python3 scripts/live_monitor.py</code> to refresh signals</p>
     </footer>
 
     <script>
-        // Global signals array
         let signals = [];
-        let lastFetchTime = null;
 
-        // Fetch signals from JSON file
+        // Load signals from JSON
         async function loadSignals() {
             try {
-                // Add cache buster to prevent stale data
                 const cacheBuster = Date.now();
                 const response = await fetch(`signals-data.json?t=${cacheBuster}`);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 signals = await response.json();
-                lastFetchTime = new Date();
 
-                // Initialize the dashboard
-                populateDropdowns();
                 updateStats();
+                populateDropdowns();
                 applyFilters();
-                generateNarratives();
 
                 console.log(`Loaded ${signals.length} signals`);
             } catch (error) {
@@ -315,111 +267,171 @@
                     <div class="empty-state">
                         <h3>Failed to load signals</h3>
                         <p>Error: ${error.message}</p>
-                        <p style="margin-top: 12px;">Try refreshing the page or check the console for details.</p>
                     </div>
                 `;
             }
         }
 
-        // Refresh signals
-        async function refreshSignals() {
-            const btn = document.getElementById('refreshBtn');
-            btn.disabled = true;
-            btn.textContent = 'Loading...';
-
-            await loadSignals();
-
-            btn.disabled = false;
-            btn.textContent = '↻ Refresh';
+        // Update stats
+        function updateStats() {
+            document.getElementById('totalSignals').textContent = signals.length;
+            document.getElementById('hardSignals').textContent = signals.filter(s => s.signal_type === 'hard').length;
+            document.getElementById('softSignals').textContent = signals.filter(s => s.signal_type === 'soft').length;
+            document.getElementById('sourcesCount').textContent = new Set(signals.map(s => s.source_type)).size;
         }
 
-        // Engagement status calculation
-        function getEngagementStatus(signal) {
-            const now = Date.now();
-            const signalTime = signal.source_timestamp ? new Date(signal.source_timestamp).getTime()
-                             : signal.source_date ? new Date(signal.source_date + 'T12:00:00Z').getTime()
-                             : 0;
-            if (signalTime === 0) return { status: 'unknown', label: '?', hoursAgo: null };
+        // Populate dropdowns with counts
+        function populateDropdowns() {
+            // Person dropdown
+            const personCounts = {};
+            signals.forEach(s => {
+                if (s.person_name) personCounts[s.person_name] = (personCounts[s.person_name] || 0) + 1;
+            });
+            const sortedPersons = Object.entries(personCounts).sort((a, b) => b[1] - a[1]);
 
-            const hoursAgo = Math.floor((now - signalTime) / (1000 * 60 * 60));
+            const personSelect = document.getElementById('filterPerson');
+            personSelect.innerHTML = '';
+            const allPersonOpt = document.createElement('option');
+            allPersonOpt.value = 'all';
+            allPersonOpt.textContent = `All People (${signals.length})`;
+            personSelect.appendChild(allPersonOpt);
+            sortedPersons.forEach(([name, count]) => {
+                const opt = document.createElement('option');
+                opt.value = name;
+                opt.textContent = `${name} (${count})`;
+                personSelect.appendChild(opt);
+            });
 
-            if (hoursAgo < 6) return { status: 'hot', label: '🔴 HOT', hoursAgo, timeLabel: `${hoursAgo}h ago` };
-            if (hoursAgo < 24) return { status: 'warm', label: '🟠 WARM', hoursAgo, timeLabel: `${hoursAgo}h ago` };
-            if (hoursAgo < 72) return { status: 'cool', label: '🟡 COOL', hoursAgo, timeLabel: `${Math.floor(hoursAgo/24)}d ago` };
-            if (hoursAgo < 168) return { status: 'fading', label: '⚪', hoursAgo, timeLabel: `${Math.floor(hoursAgo/24)}d ago` };
-            return { status: 'archive', label: '', hoursAgo, timeLabel: `${Math.floor(hoursAgo/24)}d ago` };
+            // Firm dropdown
+            const firmCounts = {};
+            signals.forEach(s => {
+                if (s.firm) firmCounts[s.firm] = (firmCounts[s.firm] || 0) + 1;
+            });
+            const sortedFirms = Object.entries(firmCounts).sort((a, b) => b[1] - a[1]);
+
+            const firmSelect = document.getElementById('filterFirm');
+            firmSelect.innerHTML = '';
+            const allFirmOpt = document.createElement('option');
+            allFirmOpt.value = 'all';
+            allFirmOpt.textContent = `All Firms (${signals.length})`;
+            firmSelect.appendChild(allFirmOpt);
+            sortedFirms.forEach(([firm, count]) => {
+                const opt = document.createElement('option');
+                opt.value = firm;
+                opt.textContent = `${firm} (${count})`;
+                firmSelect.appendChild(opt);
+            });
+        }
+
+        // Theme classification - matches internal tool
+        function getSignalTheme(signal) {
+            const category = signal.signal_category || '';
+            const summary = (signal.summary || '').toLowerCase();
+            const excerpt = (signal.excerpt || '').toLowerCase();
+            const content = summary + ' ' + excerpt;
+
+            // Threat Detection
+            if (['detection_engineering', 'threat_intelligence', 'problem_post_detection_gaps'].includes(category)) {
+                return 'threat_detection';
+            }
+            if (content.includes('threat intel') || content.includes('threat hunting') ||
+                content.includes('sigma rule') || content.includes('yara rule') ||
+                content.includes('mitre att&ck') || content.includes('mitre attack') ||
+                content.includes('malware analysis') || content.includes('detection rules') ||
+                content.includes('detection-as-code') || content.includes('detection engineering') ||
+                content.includes('threat actor') || content.includes('threat detection') ||
+                content.includes('detection coverage') || content.includes('indicator of compromise') ||
+                content.includes('ransomware') || content.includes('apt ') || content.includes('cve-')) {
+                return 'threat_detection';
+            }
+
+            // Investment activity
+            if (['new_fund_raised', 'new_security_investment', 'actively_looking', 'new_thesis_statement'].includes(category)) {
+                return 'investment_activity';
+            }
+            if (content.includes('raised') || content.includes('funding round') ||
+                content.includes('series a') || content.includes('series b') || content.includes('seed round') ||
+                content.includes('investment') || content.includes('venture capital')) {
+                return 'investment_activity';
+            }
+
+            // SOC Pain points
+            if (category === 'problem_post_soc_pain') {
+                return 'soc_pain';
+            }
+            if (content.includes('alert fatigue') || content.includes('false positive') ||
+                content.includes('security operations') || content.includes('soc analyst') ||
+                content.includes('incident response') || content.includes('triage')) {
+                return 'soc_pain';
+            }
+
+            // Agentic AI
+            if (content.includes('agentic') || content.includes('autonomous security') ||
+                content.includes('ai agent') || content.includes('security automation')) {
+                return 'agentic';
+            }
+
+            // AI Security
+            if (content.includes('ai security') || content.includes('ai-powered') ||
+                content.includes('llm security') || content.includes('ai safety') ||
+                content.includes('machine learning') || content.includes('generative ai')) {
+                return 'ai_security';
+            }
+
+            // Market insights
+            if (['security_trend_commentary', 'critique_current_tools'].includes(category)) {
+                return 'market_insights';
+            }
+
+            // Relationship signals
+            if (['portfolio_adjacent_win', 'public_ask_intros'].includes(category)) {
+                return 'relationship';
+            }
+            if (content.includes('acquisition') || content.includes('acquired') ||
+                content.includes('ipo') || content.includes('exit')) {
+                return 'relationship';
+            }
+
+            return 'other';
+        }
+
+        function getThemeLabel(theme) {
+            const labels = {
+                'threat_detection': 'Threat Detection',
+                'investment_activity': 'Investment Activity',
+                'market_insights': 'Market Insights',
+                'soc_pain': 'SOC Pain Points',
+                'relationship': 'Relationship Signals',
+                'ai_security': 'AI Security Trends',
+                'agentic': 'Agentic AI',
+                'other': 'Other'
+            };
+            return labels[theme] || theme;
         }
 
         // Source colors
         function getSourceColor(sourceType) {
             const colors = {
-                blog: '#6366f1',
-                press: '#10b981',
-                news: '#f59e0b',
                 linkedin: '#0077b5',
-                x: '#000000',
+                x: '#1da1f2',
+                crunchbase: '#ff6b35',
+                news: '#00d4aa',
                 medium: '#00ab6c',
+                producthunt: '#da552f',
+                hackernews: '#ff6600',
                 substack: '#ff6719',
-                youtube: '#ff0000',
+                press: '#6b7280',
+                blog: '#7c3aed',
                 podcast: '#8b5cf6',
-                report: '#059669',
                 conference: '#6366f1',
-                techcrunch: '#0a9e1a',
-                fortune: '#c8102e',
-                crunchbase: '#0d6efd'
+                youtube: '#ff0000'
             };
             return colors[sourceType?.toLowerCase()] || '#6b7280';
         }
 
-        // Theme classification - uses signal_category first, then keyword fallback
-        function getSignalTheme(signal) {
-            const category = signal.signal_category?.toLowerCase() || '';
-            const summary = signal.summary?.toLowerCase() || '';
-            const excerpt = signal.excerpt?.toLowerCase() || '';
-            const text = summary + ' ' + excerpt;
-
-            // First check actual signal_category from the data
-            if (category === 'detection_engineering' || category.includes('detection_engineering')) return 'detection_engineering';
-            if (category === 'threat_intelligence' || category.includes('threat_intelligence')) return 'threat_intelligence';
-            if (category.includes('fund') || category.includes('investment')) return 'investment_activity';
-            if (category.includes('soc_pain') || category.includes('problem_post_soc')) return 'soc_pain';
-            if (category.includes('portfolio')) return 'investment_activity';
-            if (category.includes('looking') || category.includes('thesis')) return 'investment_activity';
-
-            // Keyword fallback for detection engineering (HIGH PRIORITY)
-            if (text.includes('detection engineering') || text.includes('detection-as-code') ||
-                text.includes('detection rules') || text.includes('sigma rules') || text.includes('sigma rule') ||
-                text.includes('yara') || text.includes('threat hunting') || text.includes('kql') ||
-                text.includes('splunk') || text.includes('detection coverage') || text.includes('purple team') ||
-                text.includes('mitre att&ck')) return 'detection_engineering';
-
-            // Keyword fallback for threat intelligence (HIGH PRIORITY)
-            if (text.includes('threat intel') || text.includes('threat intelligence') ||
-                text.includes('threat actor') || text.includes('malware analysis') ||
-                text.includes('threat landscape') || text.includes('adversary') ||
-                text.includes('ioc') || text.includes('ttps')) return 'threat_intelligence';
-
-            if (text.includes('soc ') || text.includes('alert fatigue')) return 'soc_pain';
-            if (text.includes('agentic') || text.includes('autonomous')) return 'agentic';
-            if (text.includes('ai security') || text.includes('llm security')) return 'ai_security';
-            return 'market_insights';
-        }
-
-        function getThemeLabel(theme) {
-            const labels = {
-                detection_engineering: 'Detection Engineering',
-                threat_intelligence: 'Threat Intelligence',
-                investment_activity: 'Investments',
-                market_insights: 'Market Insights',
-                soc_pain: 'SOC Pain',
-                agentic: 'Agentic AI',
-                ai_security: 'AI Security'
-            };
-            return labels[theme] || theme;
-        }
-
         // Apply filters
         function applyFilters() {
+            const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
             const dateFilter = document.getElementById('filterDate').value;
             const sourceFilter = document.getElementById('filterSource').value;
             const personFilter = document.getElementById('filterPerson').value;
@@ -428,39 +440,165 @@
             const typeFilter = document.querySelector('.chip.active')?.dataset.filter || 'all';
 
             let filtered = [...signals];
+            const totalBefore = filtered.length;
 
+            // Search filter with word boundary
+            if (searchQuery) {
+                const searchTerms = searchQuery.split(/\s+/).filter(t => t.length > 0);
+                filtered = filtered.filter(s => {
+                    const searchableText = [
+                        s.summary || '',
+                        s.excerpt || '',
+                        s.person_name || '',
+                        s.firm || '',
+                        s.signal_category || '',
+                        s.source_type || ''
+                    ].join(' ').toLowerCase();
+
+                    return searchTerms.every(term => {
+                        const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                        const regex = new RegExp(`\\b${escapedTerm}`, 'i');
+                        return regex.test(searchableText);
+                    });
+                });
+
+                document.getElementById('searchResults').style.display = 'block';
+                document.getElementById('searchResults').textContent = `Found ${filtered.length} of ${totalBefore} signals matching "${searchQuery}"`;
+                document.getElementById('searchClear').style.display = 'block';
+            } else {
+                document.getElementById('searchResults').style.display = 'none';
+                document.getElementById('searchClear').style.display = 'none';
+            }
+
+            // Type filter
             if (typeFilter === 'hard') filtered = filtered.filter(s => s.signal_type === 'hard');
             else if (typeFilter === 'soft') filtered = filtered.filter(s => s.signal_type === 'soft');
 
-            // Filter by engagement window (hours-based for precision)
-            const now = new Date();
-            let cutoffMs;
+            // Date filter
+            if (dateFilter !== 'all') {
+                const now = new Date();
+                const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                if (dateFilter === '1day') cutoff.setDate(cutoff.getDate() - 1);
+                else if (dateFilter === '7days') cutoff.setDate(cutoff.getDate() - 7);
+                else if (dateFilter === '14days') cutoff.setDate(cutoff.getDate() - 14);
+                else if (dateFilter === 'month') cutoff.setDate(cutoff.getDate() - 30);
 
-            if (dateFilter === '6hours') cutoffMs = now.getTime() - (6 * 60 * 60 * 1000);
-            else if (dateFilter === '24hours') cutoffMs = now.getTime() - (24 * 60 * 60 * 1000);
-            else if (dateFilter === '3days') cutoffMs = now.getTime() - (3 * 24 * 60 * 60 * 1000);
-            else if (dateFilter === '7days') cutoffMs = now.getTime() - (7 * 24 * 60 * 60 * 1000);
-            else if (dateFilter === '30days') cutoffMs = now.getTime() - (30 * 24 * 60 * 60 * 1000);
-            else cutoffMs = 0; // No filter
-
-            if (cutoffMs > 0) {
                 filtered = filtered.filter(s => {
-                    // Prefer precise timestamp, fall back to date
-                    const signalTime = s.source_timestamp ? new Date(s.source_timestamp).getTime()
-                                     : s.source_date ? new Date(s.source_date + 'T12:00:00Z').getTime()
-                                     : 0;
-                    if (signalTime === 0) return false; // Exclude signals with no date
-                    return signalTime >= cutoffMs;
+                    if (!s.source_date) return true;
+                    const parts = s.source_date.split('-');
+                    const signalDate = new Date(parts[0], parts[1] - 1, parts[2]);
+                    return signalDate >= cutoff;
                 });
             }
 
-            if (sourceFilter !== 'all') filtered = filtered.filter(s => s.source_type?.toLowerCase() === sourceFilter);
-            if (personFilter !== 'all') filtered = filtered.filter(s => s.person_name === personFilter);
-            if (firmFilter !== 'all') filtered = filtered.filter(s => s.firm === firmFilter);
-            if (themeFilter !== 'all') filtered = filtered.filter(s => getSignalTheme(s) === themeFilter);
+            // Source filter
+            if (sourceFilter !== 'all') {
+                filtered = filtered.filter(s => s.source_type?.toLowerCase() === sourceFilter.toLowerCase());
+            }
+
+            // Person filter
+            if (personFilter !== 'all') {
+                filtered = filtered.filter(s => s.person_name === personFilter);
+            }
+
+            // Firm filter
+            if (firmFilter !== 'all') {
+                filtered = filtered.filter(s => s.firm === firmFilter);
+            }
+
+            // Update theme dropdown with counts BEFORE applying theme filter
+            updateThemeDropdownCounts(filtered);
+
+            // Theme filter
+            if (themeFilter !== 'all') {
+                filtered = filtered.filter(s => getSignalTheme(s) === themeFilter);
+            }
 
             renderSignals(filtered);
             updateThemeSummary(filtered);
+        }
+
+        // Update theme dropdown with counts
+        function updateThemeDropdownCounts(filteredSignals) {
+            const themeSelect = document.getElementById('filterTheme');
+            const currentValue = themeSelect.value;
+
+            const themeCounts = {};
+            filteredSignals.forEach(s => {
+                const theme = getSignalTheme(s);
+                themeCounts[theme] = (themeCounts[theme] || 0) + 1;
+            });
+
+            const themeLabels = {
+                'all': 'All Themes',
+                'threat_detection': 'Threat Detection',
+                'investment_activity': 'Investment Activity',
+                'market_insights': 'Market Insights',
+                'soc_pain': 'SOC Pain Points',
+                'relationship': 'Relationship Signals',
+                'ai_security': 'AI Security Trends',
+                'agentic': 'Agentic AI',
+                'other': 'Other'
+            };
+
+            themeSelect.innerHTML = '';
+
+            const allOpt = document.createElement('option');
+            allOpt.value = 'all';
+            allOpt.textContent = `All Themes (${filteredSignals.length})`;
+            themeSelect.appendChild(allOpt);
+
+            Object.keys(themeLabels).forEach(theme => {
+                if (theme === 'all') return;
+                const count = themeCounts[theme] || 0;
+                const opt = document.createElement('option');
+                opt.value = theme;
+                opt.textContent = `${themeLabels[theme]} (${count})`;
+                if (count === 0) {
+                    opt.disabled = true;
+                    opt.style.color = '#9ca3af';
+                }
+                themeSelect.appendChild(opt);
+            });
+
+            themeSelect.value = currentValue;
+        }
+
+        // Update theme summary
+        function updateThemeSummary(filteredSignals) {
+            const showSummary = document.getElementById('showThemeSummary').checked;
+            const summaryDiv = document.getElementById('themeSummary');
+
+            if (!showSummary) {
+                summaryDiv.classList.remove('visible');
+                return;
+            }
+            summaryDiv.classList.add('visible');
+
+            const themeCounts = {};
+            filteredSignals.forEach(s => {
+                const theme = getSignalTheme(s);
+                themeCounts[theme] = (themeCounts[theme] || 0) + 1;
+            });
+
+            const sortedThemes = Object.entries(themeCounts).sort((a, b) => b[1] - a[1]);
+
+            document.getElementById('themeCards').innerHTML = sortedThemes.map(([theme, count]) => `
+                <div class="theme-card" onclick="filterByTheme('${theme}')">
+                    <div class="count">${count}</div>
+                    <div class="label">${getThemeLabel(theme)}</div>
+                </div>
+            `).join('');
+        }
+
+        function filterByTheme(theme) {
+            document.getElementById('filterTheme').value = theme;
+            applyFilters();
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            applyFilters();
         }
 
         // Render signals
@@ -469,84 +607,45 @@
             document.getElementById('signalsCount').textContent = `Showing ${filteredSignals.length} of ${signals.length} signals`;
 
             if (filteredSignals.length === 0) {
-                container.innerHTML = '<div class="empty-state"><h3>No signals match your filters</h3><p>Try adjusting your filter criteria</p></div>';
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No signals match your filters</h3>
+                        <p>Try adjusting your filter criteria or use the Refresh button</p>
+                    </div>
+                `;
                 return;
             }
 
+            // Sort by date descending
             filteredSignals.sort((a, b) => new Date(b.source_date || '2020-01-01') - new Date(a.source_date || '2020-01-01'));
 
-            container.innerHTML = filteredSignals.map(s => {
-                const engagement = getEngagementStatus(s);
-                return `
-                <div class="signal-card ${s.signal_type} ${engagement.status}">
+            container.innerHTML = filteredSignals.map(s => `
+                <div class="signal-card ${s.signal_type}">
                     <div class="signal-header">
-                        <div><div class="signal-person">${s.person_name}</div><div class="signal-firm">${s.firm}</div></div>
+                        <div>
+                            <div class="signal-person">${escapeHtml(s.person_name || 'Unknown')}</div>
+                            <div class="signal-firm">${escapeHtml(s.firm || 'Unknown')}</div>
+                        </div>
                         <div class="signal-badges">
-                            ${engagement.label ? `<span class="badge engagement-${engagement.status}">${engagement.label}</span>` : ''}
-                            <span class="badge ${s.signal_type}">${s.signal_type?.toUpperCase() || 'N/A'}</span>
-                            <span class="badge ${s.confidence}">${s.confidence?.toUpperCase() || 'N/A'}</span>
-                            <span class="source-badge" style="background: ${getSourceColor(s.source_type)}">${s.source_type || 'Unknown'}</span>
+                            <span class="badge ${s.signal_type}">${(s.signal_type || 'unknown').toUpperCase()}</span>
+                            <span class="badge ${s.confidence}">${(s.confidence || 'med').toUpperCase()}</span>
+                            <span class="source-badge" style="background: ${getSourceColor(s.source_type)}">${s.source_type || 'unknown'}</span>
                         </div>
                     </div>
-                    <div class="signal-category">${s.signal_category?.replace(/_/g, ' ') || 'Unknown'}</div>
-                    <div class="signal-summary">${s.summary}</div>
-                    ${s.excerpt ? `<div class="signal-excerpt">"${s.excerpt}"</div>` : ''}
+                    <div class="signal-category">${escapeHtml((s.signal_category || 'unknown').replace(/_/g, ' '))}</div>
+                    <div class="signal-summary">${escapeHtml(s.summary || '')}</div>
+                    ${s.excerpt ? `<div class="signal-excerpt">"${escapeHtml(s.excerpt)}"</div>` : ''}
                     <div class="signal-footer">
-                        <div class="signal-meta">
-                            <span>${engagement.timeLabel || s.source_date || 'N/A'}</span>
-                            ${engagement.status === 'hot' || engagement.status === 'warm' ? '<span class="engage-cta">💬 Engage now!</span>' : ''}
-                        </div>
-                        ${s.source_url ? `<a href="${s.source_url}" target="_blank" rel="noopener" class="signal-link">View & Comment →</a>` : ''}
+                        <div class="signal-meta">${s.source_date || 'N/A'}</div>
+                        ${s.source_url ? `<a href="${s.source_url}" target="_blank" rel="noopener" class="signal-link">View Source</a>` : ''}
                     </div>
                 </div>
-            `}).join('');
+            `).join('');
         }
 
-        // Update theme summary
-        function updateThemeSummary(filteredSignals) {
-            const themeCounts = {};
-            filteredSignals.forEach(s => {
-                const theme = getSignalTheme(s);
-                themeCounts[theme] = (themeCounts[theme] || 0) + 1;
-            });
-            document.getElementById('themeCards').innerHTML = Object.entries(themeCounts)
-                .sort((a, b) => b[1] - a[1])
-                .map(([theme, count]) => `
-                    <div class="theme-card" onclick="filterByTheme('${theme}')">
-                        <div class="count">${count}</div>
-                        <div class="label">${getThemeLabel(theme)}</div>
-                    </div>
-                `).join('');
-        }
-
-        function filterByTheme(theme) {
-            document.getElementById('filterTheme').value = theme;
-            applyFilters();
-        }
-
-        // Populate dropdowns
-        function populateDropdowns() {
-            const persons = [...new Set(signals.map(s => s.person_name))].filter(Boolean).sort();
-            const firms = [...new Set(signals.map(s => s.firm))].filter(Boolean).sort();
-            document.getElementById('filterPerson').innerHTML = '<option value="all">All People</option>' + persons.map(p => `<option value="${p}">${p}</option>`).join('');
-            document.getElementById('filterFirm').innerHTML = '<option value="all">All Firms</option>' + firms.map(f => `<option value="${f}">${f}</option>`).join('');
-        }
-
-        // Update stats
-        function updateStats() {
-            document.getElementById('totalSignals').textContent = signals.length;
-            document.getElementById('totalVCs').textContent = new Set(signals.map(s => s.person_name)).size;
-            document.getElementById('hardSignals').textContent = signals.filter(s => s.signal_type === 'hard').length;
-
-            // Find the most recent signal date for "Last Updated"
-            if (signals.length > 0) {
-                const dates = signals.map(s => s.source_date).filter(Boolean).sort().reverse();
-                if (dates.length > 0) {
-                    const latestDate = new Date(dates[0]);
-                    const options = { month: 'short', day: 'numeric' };
-                    document.getElementById('lastUpdated').textContent = latestDate.toLocaleDateString('en-US', options);
-                }
-            }
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
 
         // Event listeners
@@ -562,253 +661,23 @@
             document.getElementById(id)?.addEventListener('change', applyFilters);
         });
 
-        // Timeframe tab switching
-        document.querySelectorAll('.timeframe-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.timeframe-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.narrative-content').forEach(c => c.classList.remove('active'));
-                tab.classList.add('active');
-                document.getElementById(`narrative-${tab.dataset.timeframe}`).classList.add('active');
-            });
+        // Search input with debounce
+        let searchTimeout;
+        document.getElementById('searchInput').addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(applyFilters, 300);
+        });
+        document.getElementById('searchInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                clearTimeout(searchTimeout);
+                applyFilters();
+            }
         });
 
-        // Generate narrative summaries
-        function generateNarratives() {
-            const now = Date.now();
+        // Theme summary toggle
+        document.getElementById('showThemeSummary').addEventListener('change', applyFilters);
 
-            // Helper to get signal timestamp in ms
-            function getSignalTime(s) {
-                if (s.source_timestamp) return new Date(s.source_timestamp).getTime();
-                if (s.source_date) return new Date(s.source_date + 'T12:00:00Z').getTime();
-                return 0;
-            }
-
-            // Filter signals by timeframe (hours-based for precision)
-            const daySignals = signals.filter(s => {
-                const t = getSignalTime(s);
-                return t > 0 && (now - t) < (24 * 60 * 60 * 1000); // Past 24 hours
-            });
-            const weekSignals = signals.filter(s => {
-                const t = getSignalTime(s);
-                return t > 0 && (now - t) < (7 * 24 * 60 * 60 * 1000); // Past 7 days
-            });
-            const monthSignals = signals.filter(s => {
-                const t = getSignalTime(s);
-                return t > 0 && (now - t) < (30 * 24 * 60 * 60 * 1000); // Past 30 days
-            });
-
-            // Update counts
-            document.getElementById('dayCount').textContent = daySignals.length;
-            document.getElementById('weekCount').textContent = weekSignals.length;
-            document.getElementById('monthCount').textContent = monthSignals.length;
-
-            // Update data freshness indicator
-            updateDataFreshness();
-
-            // Generate each narrative
-            renderNarrativeContent('narrative-day', daySignals, 'in the past 24 hours');
-            renderNarrativeContent('narrative-week', weekSignals, 'in the past 7 days');
-            renderNarrativeContent('narrative-month', monthSignals, 'in the past 30 days');
-        }
-
-        function updateDataFreshness() {
-            const freshnessEl = document.getElementById('dataFreshness');
-            const dotEl = document.getElementById('freshnessDot');
-
-            if (signals.length === 0) {
-                freshnessEl.textContent = 'No data';
-                dotEl.classList.add('stale');
-                return;
-            }
-
-            // Find the most recent signal date
-            const dates = signals.map(s => s.source_date).filter(Boolean).sort().reverse();
-            if (dates.length === 0) {
-                freshnessEl.textContent = 'No dated signals';
-                dotEl.classList.add('stale');
-                return;
-            }
-
-            const latestDate = new Date(dates[0]);
-            const now = new Date();
-            const diffHours = Math.floor((now - latestDate) / (1000 * 60 * 60));
-            const diffDays = Math.floor(diffHours / 24);
-
-            let freshText;
-            if (diffHours < 1) {
-                freshText = 'Updated just now';
-                dotEl.classList.remove('stale');
-            } else if (diffHours < 24) {
-                freshText = `Updated ${diffHours}h ago`;
-                dotEl.classList.remove('stale');
-            } else if (diffDays === 1) {
-                freshText = 'Updated yesterday';
-                dotEl.classList.add('stale');
-            } else {
-                freshText = `Updated ${diffDays} days ago`;
-                dotEl.classList.add('stale');
-            }
-
-            const options = { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-            freshnessEl.textContent = `${freshText} (${latestDate.toLocaleDateString('en-US', options)})`;
-        }
-
-        function renderNarrativeContent(containerId, signalsForPeriod, periodLabel) {
-            const container = document.getElementById(containerId);
-
-            if (signalsForPeriod.length === 0) {
-                container.innerHTML = `<div class="narrative-empty">No signals detected ${periodLabel}. Check back after the next scan.</div>`;
-                return;
-            }
-
-            // Group signals by person
-            const byPerson = {};
-            signalsForPeriod.forEach(s => {
-                const key = s.person_name || 'Unknown';
-                if (!byPerson[key]) byPerson[key] = { signals: [], firm: s.firm };
-                byPerson[key].signals.push(s);
-            });
-
-            // Extract key themes
-            const themes = extractThemes(signalsForPeriod);
-
-            // Generate overview summary
-            const overview = generateOverview(signalsForPeriod, periodLabel);
-
-            // Build HTML
-            let html = '';
-
-            // Overview
-            html += `<div class="narrative-overview">
-                <h4>Summary</h4>
-                <p>${overview}</p>
-            </div>`;
-
-            // Key themes
-            if (themes.length > 0) {
-                html += `<div class="key-themes">
-                    <h4>Key Themes</h4>
-                    <div class="theme-pills">
-                        ${themes.map(t => `<span class="theme-pill${t.hot ? ' hot' : ''}">${t.name}<span class="pill-count">(${t.count})</span></span>`).join('')}
-                    </div>
-                </div>`;
-            }
-
-            // Voices
-            html += '<div class="voice-groups">';
-            const sortedPeople = Object.entries(byPerson).sort((a, b) => b[1].signals.length - a[1].signals.length);
-
-            sortedPeople.slice(0, 8).forEach(([person, data]) => {
-                const initials = person.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
-                html += `<div class="voice-group">
-                    <div class="voice-group-header">
-                        <div class="voice-avatar">${initials}</div>
-                        <div class="voice-info">
-                            <h5>${person}</h5>
-                            <span>${data.firm || 'Unknown'} • ${data.signals.length} signal${data.signals.length > 1 ? 's' : ''}</span>
-                        </div>
-                    </div>
-                    <div class="voice-quotes">
-                        ${data.signals.slice(0, 3).map(s => `
-                            <div class="voice-quote ${s.signal_type}">
-                                ${s.summary}
-                                <div class="quote-meta">
-                                    <span>${formatCategory(s.signal_category)}</span>
-                                    <span>${s.source_date || 'N/A'}</span>
-                                    <span>${s.source_type || 'Unknown'}</span>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>`;
-            });
-
-            if (sortedPeople.length > 8) {
-                html += `<div class="narrative-empty" style="padding: 20px;">+ ${sortedPeople.length - 8} more voices with signals ${periodLabel}</div>`;
-            }
-
-            html += '</div>';
-            container.innerHTML = html;
-        }
-
-        function extractThemes(signalsForPeriod) {
-            const themeMap = {};
-
-            signalsForPeriod.forEach(s => {
-                const summary = (s.summary || '').toLowerCase();
-                const category = (s.signal_category || '').toLowerCase();
-                const excerpt = (s.excerpt || '').toLowerCase();
-                const text = summary + ' ' + excerpt + ' ' + category;
-
-                // Check for themes (Detection Engineering and Threat Intel are HIGH PRIORITY)
-                const checks = [
-                    { name: 'Detection Engineering', keywords: ['detection engineering', 'detection-as-code', 'detection rules', 'sigma', 'yara', 'threat hunting', 'kql', 'splunk', 'detection coverage', 'purple team'], priority: true },
-                    { name: 'Threat Intelligence', keywords: ['threat intel', 'threat actor', 'apt', 'ioc', 'malware analysis', 'ttps', 'threat landscape', 'adversary', 'campaign'], priority: true },
-                    { name: 'Fund Announcements', keywords: ['fund', 'raised', 'closes'] },
-                    { name: 'Active Investing', keywords: ['investing', 'led the', 'portfolio'] },
-                    { name: 'AI & Agentic', keywords: ['agentic', 'ai security', 'autonomous', 'llm security'] },
-                    { name: 'SOC Pain', keywords: ['soc', 'alert fatigue', 'false positive'] },
-                    { name: 'Looking for Founders', keywords: ['looking for', 'seeking', 'pitch me', 'office hours'] }
-                ];
-
-                checks.forEach(check => {
-                    if (check.keywords.some(kw => text.includes(kw))) {
-                        themeMap[check.name] = (themeMap[check.name] || 0) + 1;
-                    }
-                });
-            });
-
-            const sorted = Object.entries(themeMap)
-                .map(([name, count]) => ({ name, count, hot: count >= 3 }))
-                .sort((a, b) => b.count - a.count);
-
-            return sorted.slice(0, 6);
-        }
-
-        function generateOverview(signalsForPeriod, periodLabel) {
-            const hardCount = signalsForPeriod.filter(s => s.signal_type === 'hard').length;
-            const softCount = signalsForPeriod.filter(s => s.signal_type === 'soft').length;
-            const uniquePeople = new Set(signalsForPeriod.map(s => s.person_name)).size;
-
-            // Find dominant themes
-            const summaries = signalsForPeriod.map(s => s.summary || '').join(' ').toLowerCase();
-            const topics = [];
-            if (summaries.includes('agentic') || summaries.includes('autonomous')) topics.push('agentic AI');
-            if (summaries.includes('soc') || summaries.includes('detection')) topics.push('SOC operations');
-            if (summaries.includes('fund') || summaries.includes('raised')) topics.push('new fund activity');
-            if (summaries.includes('threat') || summaries.includes('security')) topics.push('security trends');
-
-            let overview = `${uniquePeople} voices generated ${signalsForPeriod.length} signals ${periodLabel}`;
-
-            if (hardCount > 0) {
-                overview += ` including ${hardCount} actionable signal${hardCount > 1 ? 's' : ''}`;
-            }
-
-            if (topics.length > 0) {
-                overview += `. Key discussions around ${topics.slice(0, 3).join(', ')}`;
-            }
-
-            overview += '.';
-
-            // Add notable highlights
-            const fundSignals = signalsForPeriod.filter(s => (s.signal_category || '').includes('fund'));
-            const lookingSignals = signalsForPeriod.filter(s => (s.signal_category || '').includes('looking') || (s.summary || '').toLowerCase().includes('looking for'));
-
-            if (fundSignals.length > 0) {
-                overview += ` Notable: ${fundSignals[0].person_name} with fund-related activity.`;
-            } else if (lookingSignals.length > 0) {
-                overview += ` Notable: ${lookingSignals[0].person_name} actively seeking founders.`;
-            }
-
-            return overview;
-        }
-
-        function formatCategory(category) {
-            if (!category) return 'Unknown';
-            return category.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        }
-
-        // Initialize - load signals from JSON
+        // Initialize
         loadSignals();
     </script>
 </body>

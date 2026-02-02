@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "created": "2026-02-01",
+    "last_updated": "2026-02-01",
+    "description": "Industry publications, press releases, conferences, and platform feeds for VC signal monitoring",
+    "schema_version": "1.0"
+  },
+  "sources": [
+    {
+      "source_name": "Crunchbase Funding Rounds",
+      "source_type": "crunchbase",
+      "category": "funding_news",
+      "rss_feeds": [
+        "https://news.crunchbase.com/feed/"
+      ],
+      "topics": ["funding rounds", "startup news", "acquisitions", "IPOs"],
+      "priority": 1,
+      "notes": "Primary source for funding news and startup activity"
+    },
+    {
+      "source_name": "TechCrunch Security",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://techcrunch.com/category/security/feed/"
+      ],
+      "topics": ["security news", "breaches", "startups", "funding"],
+      "priority": 1,
+      "notes": "TechCrunch security section - covers funding and security news"
+    },
+    {
+      "source_name": "TechCrunch Startups",
+      "source_type": "news",
+      "category": "startup_news",
+      "rss_feeds": [
+        "https://techcrunch.com/category/startups/feed/"
+      ],
+      "topics": ["startups", "funding", "launches"],
+      "priority": 2,
+      "notes": "TechCrunch startups section"
+    },
+    {
+      "source_name": "Dark Reading",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.darkreading.com/rss.xml"
+      ],
+      "topics": ["security news", "vulnerabilities", "threat intel", "enterprise security"],
+      "priority": 1,
+      "notes": "Enterprise security news"
+    },
+    {
+      "source_name": "SecurityWeek",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://feeds.feedburner.com/securityweek"
+      ],
+      "topics": ["security news", "vulnerabilities", "malware", "data breaches"],
+      "priority": 1,
+      "notes": "Security industry news and analysis"
+    },
+    {
+      "source_name": "The Record by Recorded Future",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://therecord.media/feed"
+      ],
+      "topics": ["cybercrime", "nation-state", "threat intel", "policy"],
+      "priority": 1,
+      "notes": "High-quality security journalism"
+    },
+    {
+      "source_name": "BleepingComputer",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.bleepingcomputer.com/feed/"
+      ],
+      "topics": ["malware", "ransomware", "vulnerabilities", "tech news"],
+      "priority": 2,
+      "notes": "Security and tech news"
+    },
+    {
+      "source_name": "The Hacker News",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://feeds.feedburner.com/TheHackersNews"
+      ],
+      "topics": ["security news", "vulnerabilities", "hacking", "tools"],
+      "priority": 2,
+      "notes": "Popular security news site"
+    },
+    {
+      "source_name": "ProductHunt",
+      "source_type": "producthunt",
+      "category": "product_launches",
+      "rss_feeds": [
+        "https://www.producthunt.com/feed",
+        "https://www.producthunt.com/topics/security/feed",
+        "https://www.producthunt.com/topics/artificial-intelligence/feed"
+      ],
+      "topics": ["product launches", "developer tools", "security tools", "AI tools"],
+      "priority": 2,
+      "notes": "New product launches - general feed plus security and AI topics"
+    },
+    {
+      "source_name": "Security Newsletters",
+      "source_type": "substack",
+      "category": "security_newsletter",
+      "rss_feeds": [
+        "https://www.zetter-zeroday.com/feed/",
+        "https://raincapital.substack.com/feed",
+        "https://ventureinsecurity.net/feed",
+        "https://danielmiessler.com/feed",
+        "https://tldr.tech/infosec/rss",
+        "https://returnonsecurity.com/feed",
+        "https://risky.biz/feeds/risky-business-news/",
+        "https://tldrsec.com/feed.xml"
+      ],
+      "topics": ["security analysis", "VC insights", "threat intel", "security trends"],
+      "priority": 1,
+      "notes": "Key security newsletters: Zero Day (Kim Zetter), Rain Capital, Venture in Security (Ross Haleliuk), Unsupervised Learning (Daniel Miessler), TLDR InfoSec, Return on Security, Risky Business News, tl;dr sec"
+    },
+    {
+      "source_name": "PR Newswire Cybersecurity",
+      "source_type": "press",
+      "category": "press_releases",
+      "rss_feeds": [
+        "https://www.prnewswire.com/rss/information-technology-latest-news/information-technology-latest-news-list.rss"
+      ],
+      "topics": ["press releases", "funding announcements", "partnerships", "product launches"],
+      "priority": 1,
+      "notes": "Official press releases - IT/Security sector"
+    },
+    {
+      "source_name": "Business Wire Technology",
+      "source_type": "press",
+      "category": "press_releases",
+      "rss_feeds": [
+        "https://feed.businesswire.com/rss/home/?rss=G1QFDERJXkJeEFpRWQ=="
+      ],
+      "topics": ["press releases", "funding", "acquisitions", "earnings"],
+      "priority": 1,
+      "notes": "Business Wire technology press releases"
+    },
+    {
+      "source_name": "GlobeNewswire Technology",
+      "source_type": "press",
+      "category": "press_releases",
+      "rss_feeds": [
+        "https://www.globenewswire.com/RssFeed/subjectcode/35-Technology/feedTitle/GlobeNewswire%20-%20Technology"
+      ],
+      "topics": ["press releases", "funding", "tech announcements"],
+      "priority": 2,
+      "notes": "GlobeNewswire technology feed"
+    },
+    {
+      "source_name": "Risky Business Podcast",
+      "source_type": "podcast",
+      "category": "security_podcast",
+      "rss_feeds": [
+        "https://risky.biz/feeds/risky-business/"
+      ],
+      "topics": ["security news", "interviews", "analysis", "policy"],
+      "priority": 1,
+      "notes": "Top security podcast - weekly news and interviews"
+    },
+    {
+      "source_name": "Hacking Humans Podcast",
+      "source_type": "podcast",
+      "category": "security_podcast",
+      "rss_feeds": [
+        "https://feeds.simplecast.com/oR_eCpmP"
+      ],
+      "topics": ["social engineering", "phishing", "scams", "human factors"],
+      "priority": 2,
+      "notes": "CyberWire podcast on social engineering"
+    },
+    {
+      "source_name": "Malicious Life Podcast",
+      "source_type": "podcast",
+      "category": "security_podcast",
+      "rss_feeds": [
+        "https://feeds.simplecast.com/zDPh_6k_"
+      ],
+      "topics": ["cybercrime history", "hacking stories", "malware"],
+      "priority": 2,
+      "notes": "Historical cybersecurity stories"
+    },
+    {
+      "source_name": "Click Here Podcast",
+      "source_type": "podcast",
+      "category": "security_podcast",
+      "rss_feeds": [
+        "https://feeds.simplecast.com/hhd8Udfl"
+      ],
+      "topics": ["cybercrime", "investigations", "nation-state", "policy"],
+      "priority": 2,
+      "notes": "Recorded Future's investigative security podcast"
+    },
+    {
+      "source_name": "Security Conferences",
+      "source_type": "conference",
+      "category": "conference",
+      "rss_feeds": [
+        "https://www.helpnetsecurity.com/feed/",
+        "https://krebsonsecurity.com/feed/"
+      ],
+      "topics": ["conference news", "security trends", "industry insights", "security research"],
+      "priority": 2,
+      "notes": "Security news and conference coverage (RSA/Black Hat feeds blocked by Cloudflare)"
+    },
+    {
+      "source_name": "DISABLED - Black Hat Blog",
+      "source_type": "conference",
+      "category": "conference",
+      "rss_feeds": [
+        "https://www.blackhat.com/rss/blog.xml"
+      ],
+      "topics": ["conference news", "research", "briefings", "tools"],
+      "priority": 2,
+      "notes": "Black Hat conference news and research"
+    },
+    {
+      "source_name": "X - SecurityWeek",
+      "source_type": "x",
+      "category": "x_twitter",
+      "rss_feeds": [
+        "https://rsshub.app/twitter/user/SecurityWeek"
+      ],
+      "topics": ["security news", "breaking news"],
+      "priority": 1,
+      "notes": "SecurityWeek Twitter via RSSHub - may have rate limits"
+    },
+    {
+      "source_name": "X - Threat Intel",
+      "source_type": "x",
+      "category": "x_twitter",
+      "rss_feeds": [
+        "https://rsshub.app/twitter/user/threatlocker"
+      ],
+      "topics": ["threat intel", "security news"],
+      "priority": 2,
+      "notes": "ThreatLocker Twitter via RSSHub"
+    },
+    {
+      "source_name": "X - VCs and Security",
+      "source_type": "x",
+      "category": "x_twitter",
+      "rss_feeds": [
+        "https://rsshub.app/twitter/user/CybsecurityVCs"
+      ],
+      "topics": ["VC news", "funding", "security startups"],
+      "priority": 1,
+      "notes": "Cybersecurity VCs Twitter - funding news"
+    },
+    {
+      "source_name": "X - CISA",
+      "source_type": "x",
+      "category": "x_twitter",
+      "rss_feeds": [
+        "https://rsshub.app/twitter/user/CISAgov"
+      ],
+      "topics": ["government", "vulnerabilities", "alerts", "advisories"],
+      "priority": 1,
+      "notes": "Official CISA alerts and advisories"
+    },
+    {
+      "source_name": "X - vx-underground",
+      "source_type": "x",
+      "category": "x_twitter",
+      "rss_feeds": [
+        "https://rsshub.app/twitter/user/vaborhounds"
+      ],
+      "topics": ["malware", "threat intel", "threat actors", "ransomware"],
+      "priority": 1,
+      "notes": "Malware research and threat intel"
+    },
+    {
+      "source_name": "X - Rapid7",
+      "source_type": "x",
+      "category": "x_twitter",
+      "rss_feeds": [
+        "https://rsshub.app/twitter/user/rapid7"
+      ],
+      "topics": ["vulnerabilities", "security research", "detection"],
+      "priority": 2,
+      "notes": "Rapid7 security research and product news"
+    },
+    {
+      "source_name": "X - Recorded Future",
+      "source_type": "x",
+      "category": "x_twitter",
+      "rss_feeds": [
+        "https://rsshub.app/twitter/user/RecordedFuture"
+      ],
+      "topics": ["threat intel", "threat actors", "analysis"],
+      "priority": 1,
+      "notes": "Recorded Future threat intelligence"
+    },
+    {
+      "source_name": "Medium - Security",
+      "source_type": "medium",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://medium.com/feed/tag/cybersecurity",
+        "https://medium.com/feed/tag/infosec"
+      ],
+      "topics": ["security articles", "tutorials", "analysis"],
+      "priority": 2,
+      "notes": "Medium security tag feeds"
+    },
+    {
+      "source_name": "Hacker News",
+      "source_type": "news",
+      "category": "tech_news",
+      "rss_feeds": [
+        "https://news.ycombinator.com/rss"
+      ],
+      "topics": ["tech news", "startups", "security", "AI", "programming", "VC discussions"],
+      "priority": 1,
+      "notes": "Y Combinator's Hacker News - tech community discussions, startup news, security topics"
+    }
+  ]
+}

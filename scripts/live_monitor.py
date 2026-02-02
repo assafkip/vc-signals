@@ -53,8 +53,13 @@ DATA_DIR = PROJECT_ROOT / "data"
 
 VC_WATCHLIST_PATH = DATA_DIR / "vc_watchlist.json"
 MEDIA_VOICES_PATH = DATA_DIR / "cyber_media_voices.json"
+INDUSTRY_SOURCES_PATH = DATA_DIR / "industry_sources.json"
 SIGNALS_OUTPUT_PATH = PROJECT_ROOT / "signals-data.json"
 MONITOR_STATE_PATH = DATA_DIR / "monitor_state.json"
+
+# Outreach tracker - located in output directory (parent of github-pages)
+OUTPUT_DIR = PROJECT_ROOT.parent / "output"
+OUTREACH_TRACKER_PATH = OUTPUT_DIR / "outreach-tracker.json"
 
 
 @dataclass
@@ -73,6 +78,13 @@ class Signal:
     confidence: str
     suggested_outreach_window: str = "contextual"
     source_timestamp: str = ""  # Full ISO timestamp when available (e.g., 2026-02-01T14:32:00Z)
+    # Pipeline contact matching
+    matched_contacts: List[Dict] = None  # Contacts from outreach tracker that match this signal
+    has_pipeline_match: bool = False  # Quick flag for UI filtering
+
+    def __post_init__(self):
+        if self.matched_contacts is None:
+            self.matched_contacts = []
 
 
 # Hard signal keywords - direct investment/fundraising activity
@@ -175,6 +187,8 @@ class FeedMonitor:
         self.verbose = verbose
         self.vc_watchlist = self._load_watchlist()
         self.media_voices = self._load_media_voices()
+        self.industry_sources = self._load_industry_sources()
+        self.outreach_tracker = self._load_outreach_tracker()
         self.existing_signals = self._load_existing_signals()
         self.monitor_state = self._load_monitor_state()
         self.new_signals: List[Signal] = []
@@ -193,6 +207,46 @@ class FeedMonitor:
             with open(MEDIA_VOICES_PATH) as f:
                 return json.load(f)
         return {"voices": []}
+
+    def _load_industry_sources(self) -> Dict:
+        """Load industry sources data (publications, press releases, conferences, etc.)."""
+        if INDUSTRY_SOURCES_PATH.exists():
+            with open(INDUSTRY_SOURCES_PATH) as f:
+                return json.load(f)
+        return {"sources": []}
+
+    def _load_outreach_tracker(self) -> Dict:
+        """Load outreach tracker data for pipeline contact matching."""
+        if OUTREACH_TRACKER_PATH.exists():
+            with open(OUTREACH_TRACKER_PATH) as f:
+                return json.load(f)
+        return {"contacts": [], "super_connectors": []}
+
+    def _enrich_signal_with_contacts(self, signal: Signal) -> Signal:
+        """Tag signal with matched pipeline contacts from outreach tracker."""
+        matches = []
+        content = (signal.summary + " " + signal.excerpt + " " + signal.person_name + " " + signal.firm).lower()
+
+        for contact in self.outreach_tracker.get("contacts", []):
+            name = contact.get("person_name", "").lower()
+            firm = contact.get("firm", "").lower()
+
+            # Check for name or firm match
+            if (name and len(name) > 2 and name in content) or (firm and len(firm) > 2 and firm in content):
+                match_type = "name" if name in content else "firm"
+                matches.append({
+                    "contact_id": contact.get("id", ""),
+                    "name": contact.get("person_name", ""),
+                    "firm": contact.get("firm", ""),
+                    "status": contact.get("status", "not_started"),
+                    "tier": contact.get("tier", ""),
+                    "match_type": match_type
+                })
+
+        signal.matched_contacts = matches
+        signal.has_pipeline_match = len(matches) > 0
+
+        return signal
 
     def _load_existing_signals(self) -> List[Dict]:
         """Load existing signals from output file."""
@@ -375,27 +429,47 @@ class FeedMonitor:
         """Detect source type from URL."""
         url_lower = url.lower()
 
-        if "substack.com" in url_lower:
+        # Substack and newsletter sources
+        if "substack.com" in url_lower or any(nl in url_lower for nl in [
+            "ventureinsecurity.net", "zetter-zeroday.com", "returnonsecurity.com",
+            "tldrsec.com", "tldr.tech/infosec"
+        ]):
             return "substack"
         elif "medium.com" in url_lower:
             return "medium"
         elif "linkedin.com" in url_lower:
             return "linkedin"
-        elif "twitter.com" in url_lower or "x.com" in url_lower:
+        elif "twitter.com" in url_lower or "x.com" in url_lower or "nitter" in url_lower or "rsshub.app/twitter" in url_lower:
             return "x"
         elif "youtube.com" in url_lower:
             return "youtube"
-        elif any(news in url_lower for news in ["techcrunch", "wired", "arstechnica"]):
+        elif "crunchbase.com" in url_lower:
+            return "crunchbase"
+        elif "producthunt.com" in url_lower:
+            return "producthunt"
+        elif "news.ycombinator.com" in url_lower or "ycombinator.com" in url_lower:
+            return "hackernews"
+        elif "angellist.com" in url_lower or "wellfound.com" in url_lower:
+            return "angellist"
+        elif any(news in url_lower for news in ["techcrunch", "wired", "arstechnica", "darkreading", "securityweek", "therecord", "bleepingcomputer", "thehackernews"]):
             return "news"
         elif any(pr in url_lower for pr in ["prnewswire", "businesswire", "globenewswire"]):
             return "press"
+        elif any(pod in url_lower for pod in ["megaphone.fm", "libsyn.com", "anchor.fm", "podcasts.apple", "feeds.simplecast", "feeds.twit.tv", "risky.biz"]):
+            return "podcast"
+        elif any(conf in url_lower for conf in ["rsaconference", "blackhat", "defcon", "bsides"]):
+            return "conference"
         else:
             return "blog"
 
     async def _fetch_feed(self, session: aiohttp.ClientSession, url: str) -> Optional[Dict]:
         """Fetch and parse a single RSS feed."""
+        # Use browser-like user-agent to avoid blocks from sites like Crunchbase
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
         try:
-            async with session.get(url, timeout=aiohttp.ClientTimeout(total=30)) as response:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=30), headers=headers) as response:
                 if response.status == 200:
                     content = await response.text()
                     feed = feedparser.parse(content)
@@ -428,16 +502,27 @@ class FeedMonitor:
 
         # Detect signal type
         signal_type, signal_category = self._detect_signal_type(full_text)
+
+        # For industry sources (with hints), allow general market signals even without specific category
+        is_industry_source = person_hint is not None
+        if not signal_type and is_industry_source:
+            # Default to soft/market signal for industry sources
+            signal_type = "soft"
+            signal_category = "security_trend_commentary"
+
         if not signal_type:
             return None
 
         # Match to person
         person, firm, source_type = self._match_to_person(full_text, link)
 
-        # Use hints if no match found
+        # Use hints if no match found (industry sources always use hints)
         if not person and person_hint:
             person = person_hint
             firm = firm_hint or ""
+            # For industry sources, use the configured source_type instead of URL detection
+            if firm_hint and firm_hint in ['crunchbase', 'conference', 'hackernews', 'substack', 'producthunt', 'podcast', 'press', 'news']:
+                source_type = firm_hint
 
         if not person:
             # Can't attribute to anyone, skip
@@ -506,6 +591,9 @@ class FeedMonitor:
             source_timestamp=source_timestamp
         )
 
+        # Enrich with pipeline contact matches
+        signal = self._enrich_signal_with_contacts(signal)
+
         return signal
 
     async def _process_feeds_for_source(self, session: aiohttp.ClientSession,
@@ -569,6 +657,17 @@ class FeedMonitor:
                         session, feeds,
                         voice.get("person_name", ""),
                         voice.get("outlet_or_primary_affiliation", "")
+                    )
+                    feed_tasks.append(task)
+
+            # Process industry sources (publications, press releases, conferences, X feeds)
+            for source in self.industry_sources.get("sources", []):
+                feeds = source.get("rss_feeds", [])
+                if feeds:
+                    task = self._process_feeds_for_source(
+                        session, feeds,
+                        source.get("source_name", ""),  # Use source name as person_name
+                        source.get("source_type", "")   # Use source type as firm
                     )
                     feed_tasks.append(task)
 
