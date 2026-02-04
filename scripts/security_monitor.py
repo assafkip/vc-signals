@@ -35,6 +35,13 @@ except ImportError:
     print("Required packages not installed. Run: pip install feedparser aiohttp")
     sys.exit(1)
 
+# Import environment tagger
+try:
+    from env_tagger import tag_with_keywords, tag_with_llm
+    ENV_TAGGER_AVAILABLE = True
+except ImportError:
+    ENV_TAGGER_AVAILABLE = False
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -71,6 +78,7 @@ class SecuritySignal:
     cve_ids: List[str]  # Any CVE IDs mentioned
     threat_actors: List[str]  # Any threat actor names mentioned
     malware_families: List[str]  # Any malware families mentioned
+    env_tags: List[str] = None  # Environment/infrastructure tags for filtering
 
 
 # CVE pattern
@@ -366,6 +374,11 @@ class SecurityMonitor:
         if source_date < cutoff_date:
             return None
 
+        # Generate environment tags for filtering (using LLM for better accuracy)
+        env_tags = []
+        if ENV_TAGGER_AVAILABLE:
+            env_tags = tag_with_llm(title, summary)
+
         # Create signal
         signal = SecuritySignal(
             id=self._generate_signal_id(link, source.get("source_name", "")),
@@ -380,7 +393,8 @@ class SecurityMonitor:
             tags=tags,
             cve_ids=cves,
             threat_actors=threat_actors,
-            malware_families=malware
+            malware_families=malware,
+            env_tags=env_tags
         )
 
         return signal
@@ -412,6 +426,199 @@ class SecurityMonitor:
 
         return signals
 
+    async def _fetch_cisa_ics_advisories(self, session: aiohttp.ClientSession) -> List[SecuritySignal]:
+        """Fetch CISA ICS-CERT advisories from GitHub CSAF repository."""
+        signals = []
+
+        # Get list of recent 2026 advisories
+        url = "https://api.github.com/repos/cisagov/CSAF/contents/csaf_files/OT/white/2026"
+
+        if self.verbose:
+            logger.info(f"Fetching CISA ICS advisories from GitHub")
+
+        headers = {
+            "User-Agent": "SecurityMonitor/1.0",
+            "Accept": "application/vnd.github.v3+json"
+        }
+
+        try:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=30), headers=headers) as response:
+                if response.status != 200:
+                    logger.warning(f"Failed to fetch CISA ICS list: HTTP {response.status}")
+                    return signals
+
+                files = await response.json()
+                json_files = [f for f in files if f['name'].endswith('.json') and not f['name'].endswith('.sha512')]
+
+                # Fetch last 10 advisories
+                for file_info in json_files[-10:]:
+                    try:
+                        async with session.get(file_info['download_url'], timeout=aiohttp.ClientTimeout(total=15), headers=headers) as adv_response:
+                            if adv_response.status != 200:
+                                continue
+
+                            # GitHub raw returns text/plain, so read as text and parse
+                            text_content = await adv_response.text()
+                            adv_data = json.loads(text_content)
+                            doc = adv_data.get('document', {})
+                            tracking = doc.get('tracking', {})
+
+                            adv_id = tracking.get('id', file_info['name'].replace('.json', ''))
+                            title = doc.get('title', 'Unknown')
+                            release_date = tracking.get('current_release_date', '')[:10]
+
+                            # Skip if we already have this
+                            signal_id = f"cisa_ics_{adv_id}".lower().replace('-', '_')
+                            if self._is_duplicate(adv_id):
+                                continue
+
+                            # Extract CVEs
+                            vulns = adv_data.get('vulnerabilities', [])
+                            cves = [v.get('cve') for v in vulns if v.get('cve')]
+
+                            summary = f"CISA ICS Advisory for {title}. "
+                            if cves:
+                                summary += f"CVEs: {', '.join(cves[:3])}"
+
+                            # Generate environment tags (using LLM for better accuracy)
+                            ics_env_tags = ["on_prem"]  # ICS systems are typically on-prem
+                            if ENV_TAGGER_AVAILABLE:
+                                ics_env_tags = tag_with_llm(title, summary)
+                                if "on_prem" not in ics_env_tags:
+                                    ics_env_tags.append("on_prem")  # ICS typically on-prem
+
+                            signal = SecuritySignal(
+                                id=signal_id,
+                                source_name="CISA ICS-CERT",
+                                source_type="government",
+                                signal_category="advisory",
+                                severity="high",  # ICS advisories are typically high severity
+                                title=f"{adv_id}: {title}",
+                                summary=summary[:400],
+                                source_url=f"https://www.cisa.gov/news-events/ics-advisories/{adv_id.lower()}",
+                                source_date=release_date,
+                                tags=["CISA", "ICS", "SCADA", "OT"],
+                                cve_ids=cves,
+                                threat_actors=[],
+                                malware_families=[],
+                                env_tags=ics_env_tags
+                            )
+                            signals.append(signal)
+
+                            if self.verbose:
+                                logger.info(f"  Found ICS advisory: {adv_id} - {title[:40]}...")
+
+                    except Exception as e:
+                        if self.verbose:
+                            logger.warning(f"Error fetching advisory {file_info['name']}: {e}")
+                        continue
+
+                logger.info(f"CISA ICS-CERT: Found {len(signals)} recent advisories")
+
+        except Exception as e:
+            logger.warning(f"Error fetching CISA ICS advisories: {e}")
+
+        return signals
+
+    async def _fetch_cisa_kev(self, session: aiohttp.ClientSession) -> List[SecuritySignal]:
+        """Fetch and process CISA Known Exploited Vulnerabilities catalog."""
+        signals = []
+        url = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+
+        if self.verbose:
+            logger.info(f"Fetching CISA KEV: {url}")
+
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+        }
+
+        try:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=30), headers=headers) as response:
+                if response.status != 200:
+                    logger.warning(f"Failed to fetch CISA KEV: HTTP {response.status}")
+                    return signals
+
+                data = await response.json()
+                vulnerabilities = data.get("vulnerabilities", [])
+
+                # Only process recent entries (last 14 days)
+                cutoff = datetime.utcnow() - timedelta(days=14)
+
+                for vuln in vulnerabilities:
+                    date_added = vuln.get("dateAdded", "")
+                    if not date_added:
+                        continue
+
+                    try:
+                        added_date = datetime.strptime(date_added, "%Y-%m-%d")
+                        if added_date < cutoff:
+                            continue
+                    except:
+                        continue
+
+                    cve_id = vuln.get("cveID", "")
+                    signal_id = f"cisa_kev_{cve_id}".lower().replace("-", "_")
+
+                    # Skip duplicates
+                    if self._is_duplicate(cve_id):
+                        continue
+
+                    # Build signal
+                    title = f"{cve_id}: {vuln.get('vulnerabilityName', 'Unknown')}"
+                    vendor = vuln.get("vendorProject", "")
+                    product = vuln.get("product", "")
+                    description = vuln.get("shortDescription", "")
+                    due_date = vuln.get("dueDate", "")
+                    ransomware = vuln.get("knownRansomwareCampaignUse", "Unknown")
+
+                    summary = f"{description} (Vendor: {vendor}, Product: {product})"
+                    if due_date:
+                        summary += f" | Due: {due_date}"
+                    if ransomware and ransomware != "Unknown":
+                        summary += f" | Ransomware: {ransomware}"
+
+                    # Determine severity - all KEV entries are critical by definition
+                    severity = "critical"
+
+                    # Generate environment tags (using LLM for better accuracy)
+                    kev_env_tags = ["zero_day"]  # KEV entries are actively exploited
+                    if ransomware == "Known":
+                        kev_env_tags.append("ransomware")
+                    if ENV_TAGGER_AVAILABLE:
+                        kev_env_tags = tag_with_llm(title, summary)
+                        if "zero_day" not in kev_env_tags:
+                            kev_env_tags.append("zero_day")  # KEV = actively exploited
+                        if ransomware == "Known" and "ransomware" not in kev_env_tags:
+                            kev_env_tags.append("ransomware")
+
+                    signal = SecuritySignal(
+                        id=signal_id,
+                        source_name="CISA KEV",
+                        source_type="government",
+                        signal_category="cve",
+                        severity=severity,
+                        title=title,
+                        summary=summary[:500],
+                        source_url=f"https://nvd.nist.gov/vuln/detail/{cve_id}",
+                        source_date=date_added,
+                        tags=["CISA", "KEV", "actively-exploited", vendor.lower()[:20] if vendor else ""],
+                        cve_ids=[cve_id],
+                        threat_actors=[],
+                        malware_families=["ransomware"] if ransomware == "Known" else [],
+                        env_tags=kev_env_tags
+                    )
+                    signals.append(signal)
+
+                    if self.verbose:
+                        logger.info(f"  Found KEV signal: {cve_id} - {vuln.get('vulnerabilityName', '')[:40]}...")
+
+                logger.info(f"CISA KEV: Found {len(signals)} recent actively exploited vulnerabilities")
+
+        except Exception as e:
+            logger.warning(f"Error fetching CISA KEV: {e}")
+
+        return signals
+
     async def run_monitor(self) -> List[SecuritySignal]:
         """Run the monitoring process."""
         logger.info("Starting security signal monitor...")
@@ -419,6 +626,14 @@ class SecurityMonitor:
         feed_tasks = []
 
         async with aiohttp.ClientSession() as session:
+            # Fetch CISA KEV (Known Exploited Vulnerabilities)
+            kev_signals = await self._fetch_cisa_kev(session)
+            all_signals.extend(kev_signals)
+
+            # Fetch CISA ICS-CERT advisories from GitHub
+            ics_signals = await self._fetch_cisa_ics_advisories(session)
+            all_signals.extend(ics_signals)
+
             # Process all security sources
             for source in self.security_sources.get("sources", []):
                 if source.get("rss_feeds"):

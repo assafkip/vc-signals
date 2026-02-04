@@ -1,5 +1,27 @@
 [
   {
+    "id": "sec_232d65d9c983",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Between Two Nerds:  The internal logic of Russian power grid attacks",
+    "summary": "In this edition of Between Two Nerds Tom Uren and The Grugq discuss the recent Russian attack on Polish electricity infrastructure. This episode is also available on Youtube.",
+    "source_url": "https://risky.biz/BTN152/",
+    "source_date": "2026-02-03",
+    "tags": [
+      "security news",
+      "threat intel",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
+  },
+  {
     "id": "sec_b8f8f63cc40d",
     "source_name": "CrowdStrike Blog",
     "source_type": "vendor_research",
@@ -16,7 +38,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2b64252fcbb7",
@@ -35,7 +58,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_cfa03e9c33aa",
@@ -54,7 +78,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "crowdstrike"
+    ]
   },
   {
     "id": "sec_2bde53c46381",
@@ -73,7 +100,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_0f3646480bbe",
@@ -92,7 +120,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_60055ed6cefe",
@@ -111,7 +140,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "crowdstrike"
+    ]
   },
   {
     "id": "sec_63500dd28120",
@@ -130,7 +162,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "crowdstrike"
+    ]
   },
   {
     "id": "sec_25046ea61b6d",
@@ -151,7 +186,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_221249b08923",
@@ -170,7 +208,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_c50235b1e98f",
@@ -189,7 +228,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "crowdstrike"
+    ]
   },
   {
     "id": "sec_606c6d1c2bf0",
@@ -209,7 +251,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_026537222c5c",
@@ -229,7 +274,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_03c651794baa",
@@ -248,7 +294,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_948fe6d6b6a2",
@@ -268,7 +315,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_c5a76061cf78",
@@ -290,7 +338,8 @@
       "CVE-2018-14634"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_9515b7b429f4",
@@ -309,7 +358,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_542ceeb2140f",
@@ -328,7 +378,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_e8cae91bf539",
@@ -348,7 +401,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
   },
   {
     "id": "sec_0a90710e9f1e",
@@ -370,7 +426,8 @@
       "CVE-2026-25253"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_d7415afbcf1f",
@@ -389,7 +446,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "windows"
+    ]
   },
   {
     "id": "sec_8c34aeece680",
@@ -410,7 +470,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_781ea2c22da1",
@@ -433,7 +496,8 @@
     ],
     "malware_families": [
       "Play"
-    ]
+    ],
+    "env_tags": []
   },
   {
     "id": "sec_ec0955f44be3",
@@ -453,7 +517,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_fa639790b3e4",
@@ -473,7 +540,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_92b2dc796f4b",
@@ -494,7 +562,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt",
+      "supply_chain"
+    ]
   },
   {
     "id": "sec_386df83c1e3f",
@@ -514,7 +586,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
   },
   {
     "id": "sec_a08906d75bf4",
@@ -533,7 +608,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_9c5fb5ba4e73",
@@ -554,7 +630,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_cd008425cae2",
@@ -574,7 +651,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
   },
   {
     "id": "sec_2e34a8aaa26f",
@@ -593,7 +673,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_3286022bce1b",
@@ -613,7 +696,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "windows"
+    ]
   },
   {
     "id": "sec_579b8953b58e",
@@ -632,7 +718,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_33d2ea37fd34",
@@ -652,7 +739,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt",
+      "supply_chain"
+    ]
   },
   {
     "id": "sec_f48ad81e8f79",
@@ -672,7 +763,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_4f097e2d078c",
@@ -691,7 +783,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_433f17018810",
@@ -710,7 +803,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_9f8786425eae",
@@ -731,7 +825,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
   },
   {
     "id": "sec_45e4b3c19206",
@@ -750,7 +847,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_dc67cb858451",
@@ -770,7 +868,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_1f21475e64c4",
@@ -789,7 +890,12 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt",
+      "azure",
+      "azure_ad"
+    ]
   },
   {
     "id": "sec_641a50b99243",
@@ -808,7 +914,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
   },
   {
     "id": "sec_8dd21dbb6421",
@@ -833,6 +942,9 @@
     ],
     "malware_families": [
       "Play"
+    ],
+    "env_tags": [
+      "azure"
     ]
   },
   {
@@ -853,7 +965,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_58f9f9d6baeb",
@@ -872,7 +985,12 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "microsoft_defender",
+      "azure",
+      "sentinelone"
+    ]
   },
   {
     "id": "sec_33d235f621aa",
@@ -891,7 +1009,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_6f910114b427",
@@ -910,7 +1029,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_b3efae1ba26d",
@@ -929,7 +1049,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_33b5196ca15e",
@@ -948,7 +1069,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2ed0e0c0852e",
@@ -967,7 +1089,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_be4005793fac",
@@ -986,7 +1109,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_5081e45b31a2",
@@ -1007,7 +1131,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_91fd584ac657",
@@ -1026,7 +1151,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_548d9a0f79dc",
@@ -1046,7 +1172,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_6bb45d7a461b",
@@ -1067,7 +1194,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
   },
   {
     "id": "sec_5590cb6731b7",
@@ -1086,7 +1216,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_cee02ca89bbf",
@@ -1105,7 +1236,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_a71be416d746",
@@ -1124,7 +1256,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_faab1a08e31f",
@@ -1144,7 +1277,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_500b0e2ea641",
@@ -1163,7 +1297,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_4a41fd3966ab",
@@ -1184,6 +1319,9 @@
     "threat_actors": [],
     "malware_families": [
       "Akira"
+    ],
+    "env_tags": [
+      "ransomware"
     ]
   },
   {
@@ -1205,6 +1343,9 @@
     "threat_actors": [],
     "malware_families": [
       "Rhysida"
+    ],
+    "env_tags": [
+      "ransomware"
     ]
   },
   {
@@ -1224,7 +1365,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2d75244585c3",
@@ -1243,7 +1385,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_d8a697cde32a",
@@ -1262,7 +1405,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_682c48b3fc6d",
@@ -1281,7 +1425,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_3cf73c39dde1",
@@ -1303,6 +1448,9 @@
     "threat_actors": [],
     "malware_families": [
       "Akira"
+    ],
+    "env_tags": [
+      "ransomware"
     ]
   },
   {
@@ -1324,6 +1472,9 @@
     "threat_actors": [],
     "malware_families": [
       "Akira"
+    ],
+    "env_tags": [
+      "ransomware"
     ]
   },
   {
@@ -1343,7 +1494,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_c65ee607dddc",
@@ -1364,6 +1516,9 @@
     "threat_actors": [],
     "malware_families": [
       "Akira"
+    ],
+    "env_tags": [
+      "ransomware"
     ]
   },
   {
@@ -1383,7 +1538,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_51e81b79a6f8",
@@ -1402,7 +1560,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "apt"
+    ]
   },
   {
     "id": "sec_0ce3a0037d37",
@@ -1421,7 +1583,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_48d4f86bda4a",
@@ -1440,7 +1605,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_ee9bc672a620",
@@ -1459,7 +1625,977 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_37865f8d9262",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Just had the worst interview of my life, extremely discouraged",
+    "summary": "Had a coding assessment and behavioral combo as part of interviewing for a validation engineer job. Coding assessment went terribly since I haven't done any serious programming in years. Behavioral went awful as a result of being discouraged even though I should have had most of the answers in the...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu67wa/just_had_the_worst_interview_of_my_life_extremely/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "ics",
+      "community",
+      "news",
+      "discussions"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_9d148ddae9e6",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Cyber defence/offence",
+    "summary": "Hello everyone, my goal for future jobs is to get into the air force with a cyber like job... but i'm not to sure where to start (currently I just want to know how I can learn the basics without falling of coarse) &#32; submitted by &#32; /u/Infamous-Ocelot-5247 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu6qdu/cyber_defenceoffence/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "ics",
+      "community",
+      "news",
+      "discussions"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_13af398a692c",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Claude Code Remote Code Execution",
+    "summary": "&#32; submitted by &#32; /u/SkyFallRobin [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu6av1/claude_code_remote_code_execution/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "community",
+      "news",
+      "discussions",
+      "exploit"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_ba30fa5f08ac",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Malicious MoltBot skills used to push password-stealing malware",
+    "summary": "More than 230 malicious packages for the personal AI assistant OpenClaw (formerly known as Moltbot and ClawdBot) have been published in less than a week on the tool's official registry and on GitHub. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/malicious-moltbot-skills-used-to-push-password-stealing-malware/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "security news",
+      "credentials",
+      "ics",
+      "malware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
+  },
+  {
+    "id": "sec_8eecebf0a017",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Mozilla announces switch to disable all Firefox AI features",
+    "summary": "In response to user feedback on AI integration, Mozilla announced today that the next Firefox release will let users disable AI features entirely or manage them individually. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/software/mozilla-will-let-you-turn-off-all-firefox-ai-features/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_9a45a34c0c7b",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Microsoft: January update shutdown bug affects more Windows PCs",
+    "summary": "Microsoft has confirmed that a known issue preventing some Windows 11 devices from shutting down also affects Windows 10 systems with Virtual Secure Mode (VSM) enabled. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-january-update-shutdown-bug-affects-more-windows-pcs/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news",
+      "patch"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "windows"
+    ]
+  },
+  {
+    "id": "sec_8b34fa91db29",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "CTM360 Report Warns of Global Surge in Fake High-Yield Investment Scams",
+    "summary": "Fake high-yield investment platforms are surging worldwide, promising \"guaranteed\" returns that mask classic Ponzi schemes.CTM360 explains how HYIP scams scale through social media, recycled templates, and referral abuse. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/ctm360-report-warns-of-global-surge-in-fake-high-yield-investment-scams/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_6c77cb7d3634",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Notepad++ update feature hijacked by Chinese state hackers for months",
+    "summary": "Chinese state-sponsored threat actors were likely behind the hijacking of Notepad++ update traffic last year that lasted for almost half a year, the developer states in an official announcement today. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-update-feature-hijacked-by-chinese-state-hackers-for-months/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news",
+      "patch"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_a1a44131ad31",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Panera Bread breach impacts 5.1 million accounts, not 14 million customers",
+    "summary": "The data breach notification service Have I Been Pwned says that a data breach at the U.S. food chain Panera Bread affected 5.1 million accounts, not 14 million customers as previously reported. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/panera-bread-data-breach-impacts-51-million-accounts-not-14-million-customers/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_757cd8a5bffd",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Microsoft fixes bug causing password sign-in option to disappear",
+    "summary": "Microsoft has fixed a known issue that was causing the password sign-in option to disappear from the lock screen options after installing Windows 11 updates released since August 2025. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-password-sign-in-option-to-disappear/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "patch",
+      "vulnerabilities",
+      "security news",
+      "credentials",
+      "malware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "windows"
+    ]
+  },
+  {
+    "id": "sec_3d695c1de130",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "NationStates confirms data breach, shuts down game site",
+    "summary": "NationStates, a multiplayer browser-based game, has confirmed a data breach after taking its website offline earlier this week to investigate a security incident. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/nationstates-confirms-data-breach-shuts-down-game-site/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Play"
+    ],
+    "malware_families": [
+      "Play"
+    ],
+    "env_tags": []
+  },
+  {
+    "id": "sec_60333c877b62",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "ShinyHunters Expands Scope of SaaS Extortion Attacks",
+    "summary": "Following its attacks on Salesforce instances last year, members of the cybercrime group have broadened their targeting and gotten more aggressive with extortion tactics.",
+    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/shinyhunters-expands-scope-saas-extortion-attacks",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "ics",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
+  },
+  {
+    "id": "sec_888fca7ff270",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#481830: Libheif uncompressed codec lacks bounds check leading to application crash",
+    "summary": "Overview An out-of-bounds memory access vulnerability exists in the uncompressed decoder component of libheif. A maliciously crafted HEIF image can trigger a denial-of-service condition by causing the libheif library to crash or exhibit other unexpected behavior due to an out-of-bounds memory...",
+    "source_url": "https://kb.cert.org/vuls/id/481830",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "exploit",
+      "vulnerabilities",
+      "ics"
+    ],
+    "cve_ids": [
+      "CVE-2025-65586"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_233988e8bf8c",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "informational",
+    "title": "VU#102648: Code injection vulnerability in binary-parser library",
+    "summary": "Overview The binary-parser library for Node.js contains a code injection vulnerability that may allow arbitrary JavaScript code execution if untrusted input is used to construct parser definitions. Versions prior to 2.3.0 are affected. The issue has been resolved by the developer in a public...",
+    "source_url": "https://kb.cert.org/vuls/id/102648",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "vulnerabilities",
+      "ics",
+      "patch"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_d8923c667b4d",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#458022: Open5GS WebUI uses a hard-coded secrets including JSON Web Token signing key",
+    "summary": "Overview The Open5GS WebUI component contains default hardcoded secrets used for security-sensitive operations, including JSON Web Token (JWT) signing. If these defaults are not changed, an attacker can forge valid authentication tokens and gain administrative access to the WebUI. This can result...",
+    "source_url": "https://kb.cert.org/vuls/id/458022",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "exploit",
+      "credentials",
+      "vulnerabilities"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_d34ea6c8fb3f",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#271649: Stack-based buffer overflow in libtasn1 versions v4.20.0 and earlier",
+    "summary": "Overview A stack-based buffer overflow vulnerability exists in GNU libtasn1, a low-level ASN.1 parsing library. The issue is caused by unsafe string concatenation in the asn1_expand_octet_string function located in decoding.c. Under worst-case conditions, this results in a one-byte stack overflow...",
+    "source_url": "https://kb.cert.org/vuls/id/271649",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "exploit",
+      "vulnerabilities",
+      "patch"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_a1feb71d5b73",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#818729: Safetica contains a kernel driver vulnerability",
+    "summary": "Overview Kernel driver ProcessMonitorDriver.sys in Safetica's endpoint client x64, versions 10.5.75.0 and 11.11.4.0, allows for an unprivileged user to abuse an IOCTL path and terminate protected system processes. Description Safetica is a Data Loss Prevention (DLP) and Insider Risk Management...",
+    "source_url": "https://kb.cert.org/vuls/id/818729",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "patch",
+      "advisories",
+      "CVE"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_45ff93e0c310",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#244846: Server-Side Template Injection (SSTI) vulnerability exist in Genshi",
+    "summary": "Overview A Server-Side Template Injection (SSTI) vulnerability exists in the Genshi template engine due to unsafe evaluation of template expressions. Genshi processes template expressions using Python\u2019s 'eval()\u2019 and \u2018exec()\u2019 functions while allowing fallback access to Python built-in objects. If an...",
+    "source_url": "https://kb.cert.org/vuls/id/244846",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "vulnerabilities",
+      "ics",
+      "patch"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_38b8374c0162",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#924114: dr_flac contains an integer overflow vulnerability that allows for DoS when provided a crafted file",
+    "summary": "Overview dr_flac, an open-source FLAC audio decoder, part of the dr_libs audio decoder toolset, contains an integer overflow vulnerability allowing for denial of service (DoS) when provided a specific crafted file. An attacker can exploit this vulnerability through providing a tool that uses...",
+    "source_url": "https://kb.cert.org/vuls/id/924114",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "exploit",
+      "vulnerabilities",
+      "patch"
+    ],
+    "cve_ids": [
+      "CVE-2025-14369"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_92d6aed3cbc0",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#383552: thelibrarian does not secure its interface, allowing for access to internal system data",
+    "summary": "Overview Multiple vulnerabilities were discovered in The Librarian, an AI-powered personal assistant tool provided by the company TheLibrarian.io. The Librarian can be used to manage personal email, calendar, documents, and other information through external services, such as Gmail and Google...",
+    "source_url": "https://kb.cert.org/vuls/id/383552",
+    "source_date": "2026-02-02",
+    "tags": [
+      "cloud",
+      "advisories",
+      "CVE",
+      "exploit",
+      "credentials"
+    ],
+    "cve_ids": [
+      "CVE-2026-0614",
+      "CVE-2026-0616",
+      "CVE-2026-0612",
+      "CVE-2026-0613",
+      "CVE-2026-0615"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_5592c98bd74d",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#650657: Livewire Filemanager contains an insecure .php component that allows for unauthenticated RCE in Laravel Products",
+    "summary": "Overview A vulnerability, tracked as CVE-2025-14894, has been discovered within Livewire Filemanager, a tool designed for usage within Laravel applications. The Livewire Filemanager tool allows for users to upload various files, including PHP files, and host them within the Laravel application....",
+    "source_url": "https://kb.cert.org/vuls/id/650657",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "ics",
+      "advisories",
+      "CVE"
+    ],
+    "cve_ids": [
+      "CVE-2025-14894"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_80f4d8257dff",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#472136: Information Leak and DoS Vulnerabilities in Redmi Buds 3 Pro through 6 Pro",
+    "summary": "Overview Redmi Buds, a series of Bluetooth earbuds produced and sold by Xiaomi, contain an Information Leak vulnerability and a Denial of Service (DoS) vulnerability in versions 3 Pro through 6 Pro. An attacker within Bluetooth radio range can send specially crafted RFCOMM protocol interactions to...",
+    "source_url": "https://kb.cert.org/vuls/id/472136",
+    "source_date": "2026-02-02",
+    "tags": [
+      "cloud",
+      "advisories",
+      "CVE",
+      "exploit",
+      "credentials"
+    ],
+    "cve_ids": [
+      "CVE-2014-0160",
+      "CVE-2025-13834",
+      "CVE-2025-13328"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_ff33f845bfcc",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#361400: BeeS Software Solutions BeeS Examination Tool (BET) portal contains SQL injection vulnerability",
+    "summary": "Overview The BeeS Examination Tool (BET) portal from BeeS Software Solutions contains an SQL injection vulnerability in its website login functionality. More than 100 universities use the BET portal for test administration and other academic tasks. The vulnerability enables arbitrary SQL commands...",
+    "source_url": "https://kb.cert.org/vuls/id/361400",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "exploit",
+      "vulnerabilities",
+      "credentials"
+    ],
+    "cve_ids": [
+      "CVE-2025-14598"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_a67af99278fe",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#295169: TOTOLINK EX200 firmware-upload error handling can activate an unauthenticated root telnet service",
+    "summary": "Overview A flaw in the firmware-upload error-handling logic of the TOTOLINK EX200 extender can cause the device to unintentionally start an unauthenticated root-level telnet service. This condition may allow a remote authenticated attacker to gain full system access. Description In the End-of-Life...",
+    "source_url": "https://kb.cert.org/vuls/id/295169",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "exploit",
+      "credentials",
+      "vulnerabilities"
+    ],
+    "cve_ids": [
+      "CVE-2025-65606"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_6d8558e50ca4",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#420440: Vulnerable Python version used in Forcepoint One DLP Client",
+    "summary": "Overview A vulnerability in the Forcepoint One DLP Client allows bypass of the vendor-implemented Python restrictions designed to prevent arbitrary code execution. By reconstructing the ctypes FFI environment and applying a version-header patch to the ctypes.pyd module, an attacker can restore...",
+    "source_url": "https://kb.cert.org/vuls/id/420440",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "exploit",
+      "vulnerabilities",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_126865c1695e",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#382314: Vulnerability in UEFI firmware modules prevents IOMMU initialization on some UEFI-based motherboards",
+    "summary": "Overview A newly identified vulnerability in some UEFI-supported motherboard models leaves systems vulnerable to early-boot DMA attacks across architectures that implement UEFI and IOMMU. Although the firmware indicates that DMA protection is active, it fails to correctly initialize the IOMMU....",
+    "source_url": "https://kb.cert.org/vuls/id/382314",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "cloud",
+      "vulnerabilities",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Play"
+    ],
+    "malware_families": [
+      "Play"
+    ],
+    "env_tags": [
+      "aws"
+    ]
+  },
+  {
+    "id": "sec_1f744cc35e4d",
+    "source_name": "CERT/CC",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "critical",
+    "title": "VU#651499: Siemens Gridscale X Prepay username enumeration and account lock bypass vulnerability",
+    "summary": "Overview Vulnerabilities have been identified in Siemens Gridscale X Prepay that allows unauthenticated username enumeration and enables an attacker to bypass account lock functionality. These issues may permit unauthorized access or prolonged access to protected resources, even after an account...",
+    "source_url": "https://kb.cert.org/vuls/id/651499",
+    "source_date": "2026-02-02",
+    "tags": [
+      "advisories",
+      "CVE",
+      "credentials",
+      "vulnerabilities",
+      "ics"
+    ],
+    "cve_ids": [
+      "CVE-2025-40806",
+      "CVE-2025-40807"
+    ],
+    "threat_actors": [
+      "Conti",
+      "Play"
+    ],
+    "malware_families": [
+      "Play"
+    ],
+    "env_tags": []
+  },
+  {
+    "id": "sec_1240820be252",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Vulnerability Summary for the Week of January 26, 2026",
+    "summary": "&#32; submitted by &#32; /u/antdude [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu70mw/vulnerability_summary_for_the_week_of_january_26/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "community",
+      "news",
+      "discussions"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_95fd97a54541",
+    "source_name": "Exploit Database",
+    "source_type": "exploit_tracking",
+    "signal_category": "cve",
+    "severity": "medium",
+    "title": "[webapps] Piranha CMS 12.0 - Stored XSS in Text Block",
+    "summary": "Piranha CMS 12.0 - Stored XSS in Text Block",
+    "source_url": "https://www.exploit-db.com/exploits/52471",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "exploits",
+      "PoC"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_f2455e5ad9f0",
+    "source_name": "Exploit Database",
+    "source_type": "exploit_tracking",
+    "signal_category": "cve",
+    "severity": "medium",
+    "title": "[webapps] RPi-Jukebox-RFID 2.8.0 - Stored Cross-Site Scripting (XSS)",
+    "summary": "RPi-Jukebox-RFID 2.8.0 - Stored Cross-Site Scripting (XSS)",
+    "source_url": "https://www.exploit-db.com/exploits/52470",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "exploits",
+      "PoC"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_796c6eda6b46",
+    "source_name": "Exploit Database",
+    "source_type": "exploit_tracking",
+    "signal_category": "cve",
+    "severity": "medium",
+    "title": "[hardware] D-Link DIR-825 Rev.B 2.10 - Stack Buffer Overflow (DoS)",
+    "summary": "D-Link DIR-825 Rev.B 2.10 - Stack Buffer Overflow (DoS)",
+    "source_url": "https://www.exploit-db.com/exploits/52469",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "exploits",
+      "PoC"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_874647fee840",
+    "source_name": "The Record",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Netherlands latest European country to mull social media ban for children",
+    "summary": "The new Dutch minority government is pushing to raise the minimum age to access social media to 15 \u2014 the latest such proposal in Europe after France and the United Kingdom announced similar efforts.",
+    "source_url": "https://therecord.media/netherlands-social-media-ban-children",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "breaches",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_ec88222491c4",
+    "source_name": "The Record",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Notepad++ hijacked by suspected state-sponsored hackers",
+    "summary": "In a security update posted on the project\u2019s website, the development team said the attack did not exploit a flaw in the editor\u2019s source code itself. Instead, the compromise occurred at the infrastructure level, involving systems used to deliver software updates.",
+    "source_url": "https://therecord.media/popular-text-editor-hijacked-by-suspected-state-sponsored-hackers",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "breaches",
+      "security news",
+      "patch",
+      "exploit"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_b75798e11770",
+    "source_name": "The Record",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Spyware maker is hijacking diplomatic efforts to limit commercial hacking, civil society warns",
+    "summary": "Spyware maker NSO Group trumpeted the company\u2019s participation in the Pall Mall Process, which drew criticism from civil society leaders and government officials who called out human rights abuses.",
+    "source_url": "https://therecord.media/spyware-maker-pall-mall-process-reputation",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "breaches",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_fcf5423f0fef",
+    "source_name": "The Record",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Drone sightings have doubled near UK military bases, warns British government",
+    "summary": "The surge in sightings has prompted the government to expand the powers available to service personnel to deal with the threat from uncrewed aerial vehicles without having to first involve law enforcement.",
+    "source_url": "https://therecord.media/military-drone-sightings-double-uk-government",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "breaches",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_03460fd44e9a",
+    "source_name": "The Record",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Hackers attempt to extort parents after school refuses to pay ransom fee",
+    "summary": "The attackers are believed to have gained access to the internal networks of OLV Pulhof, a secondary school in the Berchem district of Antwerp, shortly after the Christmas break.",
+    "source_url": "https://therecord.media/hackers-attempt-to-extort-parents-after-school-refuses-ransom-demand",
+    "source_date": "2026-02-02",
+    "tags": [
+      "threat actors",
+      "breaches",
+      "ransomware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_aaa2b6184448",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Risky Bulletin: StopICE blames hack on \"a CBP agent here in SoCal\"",
+    "summary": "ICE tracking app blames a recent hack on a government agent, Microsoft will disable NTLM in the next release of Windows, Poland bans Chinese cars from military bases, and Ivanti patches two new zero-days.",
+    "source_url": "https://risky.biz/RBNEWS520/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "podcast",
+      "threat intel",
+      "patch",
+      "zero-day",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "windows",
+      "zero_day"
+    ]
+  },
+  {
+    "id": "sec_fd95b89a4459",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Sponsored: AI is critical to the future of cyber defence",
+    "summary": "In this sponsored interview, Casey Ellis chats to Edward Wu, founder of Dropzone AI about a recent Vanderbilt University report that reveals that foreign adversaries\u2019 resources are growing. Edward says AI capabilities are critical to the future of cyber defence, because the west can\u2019t hire itself...",
+    "source_url": "https://risky.biz/RBNEWSSI113/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "security news",
+      "threat intel",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
+  },
+  {
+    "id": "sec_972e46014d83",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "Russian hackers exploit recently patched Microsoft Office bug in attacks",
+    "summary": "Ukraine's Computer Emergency Response Team (CERT) says that Russian hackers are exploiting CVE-2026-21509, a recently patched vulnerability in multiple versions of Microsoft Office. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-recently-patched-microsoft-office-bug-in-attacks/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "exploit",
+      "patch",
+      "security news"
+    ],
+    "cve_ids": [
+      "CVE-2026-21509"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_6fc482c29ccc",
+    "source_name": "CrowdStrike Blog",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "How Three Companies Secure AI with CrowdStrike",
+    "summary": "",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/how-three-companies-secure-ai-with-crowdstrike/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "incident response",
+      "malware",
+      "threat actors"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "crowdstrike"
+    ]
+  },
+  {
+    "id": "sec_9aed8d1dc1f1",
+    "source_name": "CyberScoop",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "China-based espionage group compromised Notepad++ for six months",
+    "summary": "The Chinese APT group Lotus Blossom intruded the tool\u2019s internal systems to snoop on a limited set of users\u2019 activities, according to researchers. The post China-based espionage group compromised Notepad++ for six months appeared first on CyberScoop.",
+    "source_url": "https://cyberscoop.com/china-espionage-group-lotus-blossom-attacks-notepad/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "policy",
+      "national security",
+      "government"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_67576ae9e8f2",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Security+ study hours per week",
+    "summary": "Hi, I have decided to obtain the Securiy+ cert. How many hours of study should I do per week if I plan to take the exam sometime in July/August? I have about 20 years of exp as helpdesk and sys admin. Thank you! &#32; submitted by &#32; /u/Resident-War8004 [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu5pgk/security_study_hours_per_week/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "news",
+      "discussions",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_80cf384e550b",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "What Happens When You Click a Random Link on Social Media",
+    "summary": "https://medium.com/meetcyber/what-happens-when-you-click-a-random-link-on-social-media-27cb049c8bcd Clicking a random social-media link often triggers an invisible chain of HTTP redirects (shorteners, trackers, ad networks) that hides the final domain. The landing page may then fingerprint your...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qu7k55/what_happens_when_you_click_a_random_link_on/",
+    "source_date": "2026-02-02",
+    "tags": [
+      "discussions",
+      "news",
+      "phishing",
+      "credentials",
+      "community"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_535f4da09a9b",
@@ -1479,7 +2615,54 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
+  },
+  {
+    "id": "sec_42810d657159",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Exposed MongoDB instances still targeted in data extortion attacks",
+    "summary": "A threat actor is targeting exposed MongoDB instances in automated data extortion attacks demanding low ransoms from owners to restore the data. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/exposed-mongodb-instances-still-targeted-in-data-extortion-attacks/",
+    "source_date": "2026-02-01",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news",
+      "ransomware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "ransomware",
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_76d549b5c7cb",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "New Apple privacy feature limits location tracking on iPhones, iPads",
+    "summary": "Apple is introducing a new privacy feature that lets users limit the precision of location data shared with cellular networks on some iPhone and iPad models. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/apple/new-apple-privacy-feature-limits-location-tracking-on-iphones-ipads/",
+    "source_date": "2026-02-01",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_0f9f395510f8",
@@ -1498,7 +2681,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_639b4545debe",
@@ -1519,7 +2705,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware",
+      "phishing"
+    ]
   },
   {
     "id": "sec_722361472a96",
@@ -1538,7 +2728,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_e797d420d9e4",
@@ -1559,7 +2750,115 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
+  },
+  {
+    "id": "sec_54d79cb360f0",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "OpenAI says you can trust ChatGPT answers, as it kicks off ads rollout preparation",
+    "summary": "OpenAI previously confirmed that it's testing ads in ChatGPT for free and $8 Go accounts, and now we're seeing early signs of that rollout, at least on Android. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-you-can-trust-chatgpt-answers-as-it-kicks-off-ads-rollout-preparation/",
+    "source_date": "2026-01-31",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_6bdc87f734ce",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "OpenAI is retiring famous GPT-4o model, says GPT 5.2 is good enough",
+    "summary": "OpenAI has confirmed that it's retiring ChatGPT's most popular model called GPT-4o and several other models, including GPT-5 Instant, GPT-5 Thinking, GPT-4.1, GPT-4.1 mini, and o4-mini. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-retiring-famous-gpt-4o-model-says-gpt-52-is-good-enough/",
+    "source_date": "2026-01-31",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_7cca449436b0",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "U.S. convicts ex-Google engineer for sending AI tech data to China",
+    "summary": "A U.S. federal jury has convicted Linwei Ding, a former software engineer at Google, for stealing AI supercomputer data from his employer and secretly sharing it with Chinese tech firms. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/us-convicts-ex-google-engineer-for-sending-ai-tech-data-to-china/",
+    "source_date": "2026-01-31",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_7473ef07e696",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Cloud storage payment scam floods inboxes with fake renewals",
+    "summary": "Over the past few months, a large-scale cloud storage subscription scam campaign has been targeting users worldwide with repeated emails falsely warning recipients that their photos, files, and accounts are about to be blocked or deleted due to an alleged payment failure. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/cloud-storage-payment-scam-floods-inboxes-with-fake-renewals/",
+    "source_date": "2026-01-31",
+    "tags": [
+      "vulnerabilities",
+      "malware",
+      "security news",
+      "cloud"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_6d4244f6ffaa",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Mandiant details how ShinyHunters abuse SSO to steal cloud data",
+    "summary": "Mandiant says a wave of recent ShinyHunters SaaS data-theft attacks is being fueled by targeted voice phishing (vishing) attacks and company-branded phishing sites that steal single sign-on (SSO) credentials and multi-factor authentication (MFA) codes. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/",
+    "source_date": "2026-01-31",
+    "tags": [
+      "cloud",
+      "vulnerabilities",
+      "security news",
+      "credentials",
+      "malware"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_f2fdbc3d1608",
@@ -1581,7 +2880,8 @@
       "CVE-2025-0921"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_4f58518e266f",
@@ -1602,7 +2902,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
   },
   {
     "id": "sec_517bcddd77a6",
@@ -1621,7 +2924,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware",
+      "aws"
+    ]
   },
   {
     "id": "sec_a25f793acd3d",
@@ -1641,7 +2948,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_b21e9209d2cd",
@@ -1662,7 +2970,8 @@
     "threat_actors": [
       "Conti"
     ],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_a98c8773c9cd",
@@ -1683,7 +2992,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_50594190c7b7",
@@ -1704,7 +3016,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_7632ad57714c",
@@ -1723,7 +3038,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_1b9cd2d16397",
@@ -1743,7 +3061,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_d71995193df9",
@@ -1762,7 +3081,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_a420828e6d4d",
@@ -1781,7 +3103,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2303df09a7c8",
@@ -1800,7 +3123,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_40fee9be91eb",
@@ -1823,7 +3147,10 @@
       "CVE-2026-24423"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
   },
   {
     "id": "sec_f563b2a4983f",
@@ -1846,7 +3173,11 @@
       "CVE-2026-1281"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "zero_day"
+    ]
   },
   {
     "id": "sec_3890ae6b4bcc",
@@ -1866,7 +3197,12 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes",
+      "azure",
+      "sentinelone"
+    ]
   },
   {
     "id": "sec_60c970f74d91",
@@ -1887,7 +3223,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "phishing"
+    ]
   },
   {
     "id": "sec_6f34256a083e",
@@ -1906,7 +3246,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_259da0ed9dd3",
@@ -1926,7 +3267,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_4ba527b5e13e",
@@ -1947,7 +3289,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_e6d0fbd8c279",
@@ -1966,7 +3309,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes",
+      "apt"
+    ]
   },
   {
     "id": "sec_1bfbf2e5208c",
@@ -1987,7 +3334,197 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_227e87680873",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Torq Moves SOCs Beyond SOAR With AI-Powered Hyper Automation",
+    "summary": "Investors poured $140 million into Torq's Series D Round, raising the startup's valuation to $1.2 billion, to bring AI-based &quot;hyper automation&quot; to SOCs.",
+    "source_url": "https://www.darkreading.com/remote-workforce/torq-moves-socs-soar-ai-powered-hyper-automation",
+    "source_date": "2026-01-30",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_398a307e6d9f",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "2026: The Year Agentic AI Becomes the Attack-Surface Poster Child",
+    "summary": "Dark Reading asked readers whether agentic AI attacks, advanced deepfake threats, board recognition of cyber as a top priority, or password-less technology adoption would be most likely to become a trending reality for 2026.",
+    "source_url": "https://www.darkreading.com/threat-intelligence/2026-agentic-ai-attack-surface-poster-child",
+    "source_date": "2026-01-30",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
+  },
+  {
+    "id": "sec_d30bc2e4b7d5",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Out-of-the-Box Expectations for 2026 Reveal a Grab Bag of Risk",
+    "summary": "Security teams need to be thinking about this list of emerging cybersecurity realities to avoid rolling the dice on enterprise security risks (and opportunities).",
+    "source_url": "https://www.darkreading.com/threat-intelligence/cyber-expectations-2026-grab-bag-risk",
+    "source_date": "2026-01-30",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_04594ebb6e99",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Tenable Tackles AI Governance, Shadow AI Risks, Data Exposure",
+    "summary": "The Tenable One AI Exposure add-on discovers unsanctioned AI use in the organization and enforces policy compliance with approved tools.",
+    "source_url": "https://www.darkreading.com/cyber-risk/tenable-tackles-ai-governance-shadow-ai-risks-data-exposure",
+    "source_date": "2026-01-30",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_afb70f87b455",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "OpenClaw AI Runs Wild in Business Environments",
+    "summary": "The popular open source AI assistant (aka ClawdBot, MoltBot) has taken off, raising security concerns over its privileged, autonomous control within users' computers.",
+    "source_url": "https://www.darkreading.com/application-security/openclaw-ai-runs-wild-business-environments",
+    "source_date": "2026-01-30",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_baefae0edff4",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "Chinese APTs Hacking Asian Orgs With High-End Malware",
+    "summary": "Advanced persistent threat (APT) groups have deployed new cyber weapons against a variety of targets, highlighting the increasing threats to the region.",
+    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/chinese-apts-asian-orgs-high-end-malware",
+    "source_date": "2026-01-30",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_4da43b0fa0dd",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "This month in security with Tony Anscombe \u2013 January 2026 edition",
+    "summary": "The trends that emerged in January offer useful clues about the risks and priorities that security teams are likely to contend with throughout the year",
+    "source_url": "https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-january-2026-edition/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_ac2460e620f1",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "DynoWiper update: Technical analysis and attribution",
+    "summary": "ESET researchers present technical details on a recent data destruction incident affecting a company in Poland\u2019s energy sector",
+    "source_url": "https://www.welivesecurity.com/en/eset-research/dynowiper-update-technical-analysis-attribution/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "patch",
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_231df2876f76",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Risky Bulletin: eScan antivirus distributes backdoor in latest supply chain attack",
+    "summary": "Hackers breach eScan antivirus and distribute a backdoor, Google takes down the IPIDEA proxy botnet, most GDPR fines remain uncollected, and the Poland wiper attack hit 30 locations.",
+    "source_url": "https://risky.biz/RBNEWS519/",
+    "source_date": "2026-01-30",
+    "tags": [
+      "security news",
+      "threat intel",
+      "supply-chain",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
   },
   {
     "id": "sec_fece3639f6ba",
@@ -2006,7 +3543,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_4c60e85f376a",
@@ -2026,7 +3564,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_09cb22aec1b4",
@@ -2046,7 +3585,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_b3cb52c23e4d",
@@ -2069,7 +3609,10 @@
       "CVE-2026-21509"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_f9f3e2e04431",
@@ -2088,7 +3631,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_9d683f8d9b38",
@@ -2109,7 +3653,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware",
+      "phishing"
+    ]
   },
   {
     "id": "sec_58f414089952",
@@ -2128,7 +3676,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_586581682e78",
@@ -2147,7 +3696,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_9de73b803df1",
@@ -2168,7 +3718,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
   },
   {
     "id": "sec_2974f86a839f",
@@ -2187,7 +3740,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_08cb1f859de2",
@@ -2208,7 +3762,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_4e8f2e0c0a10",
@@ -2229,7 +3786,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
   },
   {
     "id": "sec_cf30c0ec60a2",
@@ -2252,7 +3812,11 @@
     "threat_actors": [
       "Conti"
     ],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_7582a93c5f31",
@@ -2271,7 +3835,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_50176c6c54ff",
@@ -2292,7 +3859,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_85e7ac6787df",
@@ -2312,7 +3880,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_e6aeb4629bfb",
@@ -2331,7 +3900,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_e3a300b7fe65",
@@ -2354,6 +3924,9 @@
     ],
     "malware_families": [
       "Play"
+    ],
+    "env_tags": [
+      "aws"
     ]
   },
   {
@@ -2373,7 +3946,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_7d119844fde9",
@@ -2394,7 +3968,218 @@
     "threat_actors": [
       "Lazarus"
     ],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "crowdstrike",
+      "splunk",
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_fdaf94d91a09",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Trump Administration Rescinds Biden-Era Software Guidance",
+    "summary": "Federal agencies will no longer be required to solicit software attestations that they comply with NIST's Secure Software Development Framework (SSDF). What that means long term is unclear.",
+    "source_url": "https://www.darkreading.com/application-security/trump-administration-rescinds-biden-era-sbom-guidance",
+    "source_date": "2026-01-29",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_676e99e0e93e",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Second Round of Critical RCE Bugs in n8n Spikes Corporate Risk",
+    "summary": "A new around of vulnerabilities in the popular AI automation platform could let attackers hijack servers and steal credentials, allowing full takeover.",
+    "source_url": "https://www.darkreading.com/vulnerabilities-threats/critical-flaws-n8n-compromise-customer-security",
+    "source_date": "2026-01-29",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_e7f0777d1d07",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "'Semantic Chaining' Jailbreak Dupes Gemini Nano Banana, Grok 4",
+    "summary": "If an attacker splits a malicious prompt into discrete chunks, some large language models (LLMs) will get lost in the details and miss the true intent.",
+    "source_url": "https://www.darkreading.com/vulnerabilities-threats/semantic-chaining-jailbreak-gemini-nano-banana-grok-4",
+    "source_date": "2026-01-29",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "splunk"
+    ]
+  },
+  {
+    "id": "sec_b0aa4d1929c9",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "From Quantum to AI Risks: Preparing for Cybersecurity's Future",
+    "summary": "In the latest edition of &quot;Reporters' Notebook,&quot; a trio of journalists urge the cybersecurity industry to prioritize patching vulnerabilities, preparing for quantum threats, and refining AI applications,",
+    "source_url": "https://www.darkreading.com/cybersecurity-operations/quantum-ai-risks-cybersecuritys-future",
+    "source_date": "2026-01-29",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence",
+      "patch"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_8af89fb95218",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Srsly Risky Biz: Punish the wicked and reward the righteous",
+    "summary": "Tom Uren and Amberleigh Jack talk about the Pall Mall Process, an international effort to reign in abusive spyware. Tom thinks the US has already stumbled into a viable carrots and sticks style strategy that will shape the industry more than coming up with standards will. The pair also discuss news...",
+    "source_url": "https://risky.biz/SRB152/",
+    "source_date": "2026-01-29",
+    "tags": [
+      "security news",
+      "threat intel",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
+  },
+  {
+    "id": "cisa_kev_cve_2026_1281",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2026-1281: Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability",
+    "summary": "Ivanti Endpoint Manager Mobile (EPMM) contains a code injection vulnerability that could allow attackers to achieve unauthenticated remote code execution. (Vendor: Ivanti, Product: Endpoint Manager Mobile (EPMM)) | Due: 2026-02-01",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1281",
+    "source_date": "2026-01-29",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "ivanti"
+    ],
+    "cve_ids": [
+      "CVE-2026-1281"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_029_01",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-029-01: KiloView Encoder Series",
+    "summary": "CISA ICS Advisory for KiloView Encoder Series. CVEs: CVE-2026-1453",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-029-01",
+    "source_date": "2026-01-29",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2026-1453"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_029_02",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-029-02: Rockwell Automation ArmorStart LT",
+    "summary": "CISA ICS Advisory for Rockwell Automation ArmorStart LT. CVEs: CVE-2025-9464, CVE-2025-9465, CVE-2025-9466",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-029-02",
+    "source_date": "2026-01-29",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2025-9464",
+      "CVE-2025-9465",
+      "CVE-2025-9466",
+      "CVE-2025-9278",
+      "CVE-2025-9279",
+      "CVE-2025-9280",
+      "CVE-2025-9281",
+      "CVE-2025-9282",
+      "CVE-2025-9283"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_029_03",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-029-03: Rockwell Automation ControlLogix",
+    "summary": "CISA ICS Advisory for Rockwell Automation ControlLogix. CVEs: CVE-2025-14027",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-029-03",
+    "source_date": "2026-01-29",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2025-14027"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_a0a63b498252",
@@ -2413,7 +4198,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_ee3f17e30f01",
@@ -2433,7 +4219,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_1b23e887b9e7",
@@ -2456,7 +4243,8 @@
       "CVE-2026-21962"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_69ba65ca0149",
@@ -2475,7 +4263,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_cd55a6b4c523",
@@ -2498,7 +4289,10 @@
       "CVE-2026-24858"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_dbe2d5f0cc40",
@@ -2517,7 +4311,215 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_c5c870215e11",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "high",
+    "title": "How Can CISOs Respond to Ransomware Getting More Violent?",
+    "summary": "Ransomware defense requires focusing on business resilience. This means patching issues promptly, improving user education, and deploying multifactor authentication.",
+    "source_url": "https://www.darkreading.com/cyber-risk/how-cisos-respond-ransomware-getting-more-violent",
+    "source_date": "2026-01-28",
+    "tags": [
+      "ransomware",
+      "enterprise security",
+      "patch",
+      "vulnerabilities",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
+  },
+  {
+    "id": "sec_240a8ec6a2a4",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "high",
+    "title": "Months After Patch, WinRAR Bug Poised to Hit SMBs Hardest",
+    "summary": "Russian and Chinese nation-state attackers are exploiting a months-old WinRAR vulnerability, despite a patch that came out last July.",
+    "source_url": "https://www.darkreading.com/application-security/months-after-patch-winrar-bug-poised-smbs-hardest",
+    "source_date": "2026-01-28",
+    "tags": [
+      "enterprise security",
+      "patch",
+      "vulnerabilities",
+      "threat intelligence",
+      "exploit"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_3de7ccdf7c83",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Fortinet Confirms New Zero-Day Behind Malicious SSO Logins",
+    "summary": "To stop the ongoing attacks, the cybersecurity vendor took the drastic step of temporarily disabling FortiCloud single sign-on (SSO) authentication for all devices.",
+    "source_url": "https://www.darkreading.com/vulnerabilities-threats/fortinet-new-zero-day-malicious-sso-logins",
+    "source_date": "2026-01-28",
+    "tags": [
+      "enterprise security",
+      "cloud",
+      "vulnerabilities",
+      "threat intelligence",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
+  },
+  {
+    "id": "sec_b200f56595e9",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "Consumers Reluctant to Shop at Stores That Don't Take Security Seriously",
+    "summary": "The retail sector must adapt as consumers become more cybersecurity-conscious. Increased attack transparency is a good place to start.",
+    "source_url": "https://www.darkreading.com/cyber-risk/consumers-reluctant-to-shop-at-stores-hit-by-cyberattacks",
+    "source_date": "2026-01-28",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing",
+      "apt"
+    ]
+  },
+  {
+    "id": "sec_8ad6aed7facf",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "China-Backed 'PeckBirdy' Takes Flight for Cross-Platform Attacks",
+    "summary": "In two separate campaigns, attackers used the JScript C2 framework to target Chinese gambling websites and Asian government entities with new backdoors.",
+    "source_url": "https://www.darkreading.com/threat-intelligence/china-backed-peckbirdy-cross-platform-attacks",
+    "source_date": "2026-01-28",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_669096e53d12",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Surging Cyberattacks Boost Latin America to Riskiest Region",
+    "summary": "The region is up against tactics like data-leak extortion, credential-stealing campaigns, edge-device exploitation, and attackers leveraging AI.",
+    "source_url": "https://www.darkreading.com/cyber-risk/surging-cyberattacks-latin-america-riskiest-region",
+    "source_date": "2026-01-28",
+    "tags": [
+      "enterprise security",
+      "vulnerabilities",
+      "threat intelligence",
+      "credentials",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
+  },
+  {
+    "id": "sec_9ea20c2018c4",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Love? Actually: Fake dating app used as lure in targeted spyware campaign in Pakistan",
+    "summary": "ESET researchers discover an Android spyware campaign targeting users in Pakistan via romance scam tactics, revealing links to a broader spy operation",
+    "source_url": "https://www.welivesecurity.com/en/eset-research/love-actually-fake-dating-app-used-lure-targeted-spyware-campaign-pakistan/",
+    "source_date": "2026-01-28",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT",
+      "ics"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_16d43c9956aa",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Risky Business #822 -- France will ditch American tech over security risks",
+    "summary": "In this week\u2019s show Patrick Gray and Adam Boileau discuss the week\u2019s cybersecurity news. They discuss: La France is tres s\u00e9rieux about ditching US productivity software China\u2019s Salt Typhoon was snooping on Downing Street Trump wields the mighty DISCOMBOBULATOR ESET says the Polish power grid wiper...",
+    "source_url": "https://risky.biz/RB822/",
+    "source_date": "2026-01-28",
+    "tags": [
+      "security news",
+      "phishing",
+      "threat intel",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Sandworm"
+    ],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_0d5da4906c88",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Risky Bulletin: Cyberattack cripples cars across Russia",
+    "summary": "A cyberattack has crippled cars in Russia, Microsoft patches an Office zero-day, WhatsApp rolls out an account lockdown feature, and a handful of Chrome extensions steal ChatGPT auth tokens.",
+    "source_url": "https://risky.biz/RBNEWS518/",
+    "source_date": "2026-01-28",
+    "tags": [
+      "podcast",
+      "threat intel",
+      "patch",
+      "zero-day",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_dbcb7fb5b5c1",
@@ -2536,7 +4538,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
   },
   {
     "id": "sec_6de2ba4fc8f4",
@@ -2558,7 +4563,10 @@
     "threat_actors": [
       "Mustang Panda"
     ],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_993622ca635f",
@@ -2578,7 +4586,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "phishing"
+    ]
   },
   {
     "id": "sec_8b0c62a5a30d",
@@ -2597,7 +4609,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_47b5780baa28",
@@ -2616,7 +4629,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_de801a15b52f",
@@ -2635,7 +4651,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_83e9f2d34c10",
@@ -2654,7 +4671,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_a4592f751b14",
@@ -2673,7 +4693,397 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_985c0a1fdb44",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "AI &amp; the Death of Accuracy: What It Means for Zero-Trust",
+    "summary": "AI &quot;model collapse,&quot; where LLMs over time train on more and more AI-generated data and become degraded as a result, can introduce inaccuracies, promulgate malicious activity, and impact PII protections.",
+    "source_url": "https://www.darkreading.com/application-security/ai-death-accuracy-zero-trust",
+    "source_date": "2026-01-27",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
+  },
+  {
+    "id": "sec_f924bfd14639",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "high",
+    "title": "Vibe-Coded 'Sicarii' Ransomware Can't Be Decrypted",
+    "summary": "A new ransomware strain that entered the scene last year has poorly designed code and uses Hebrew language that might be a false flag.",
+    "source_url": "https://www.darkreading.com/endpoint-security/vibe-coded-sicarii-ransomware-decrypted",
+    "source_date": "2026-01-27",
+    "tags": [
+      "vulnerabilities",
+      "enterprise security",
+      "ransomware",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
+  },
+  {
+    "id": "sec_4de36b05c730",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Critical Telnet Server Flaw Exposes Forgotten Attack Surface",
+    "summary": "While telnet is considered obsolete, the network protocol is still used by hundreds of thousands of legacy systems and IoT devices for remote access.",
+    "source_url": "https://www.darkreading.com/ics-ot-security/critical-telnet-server-flaw-forgotten-attack-surface",
+    "source_date": "2026-01-27",
+    "tags": [
+      "vulnerabilities",
+      "ics",
+      "enterprise security",
+      "threat intelligence"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_474698b2fb2d",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Drowning in spam or scam emails? Here\u2019s probably why",
+    "summary": "Has your inbox recently been deluged with unwanted and even outright malicious messages? Here are 10 possible reasons \u2013 and how to stem the tide.",
+    "source_url": "https://www.welivesecurity.com/en/cybersecurity/drowning-spam-scam-emails-why/",
+    "source_date": "2026-01-27",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_7ce13d012561",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Between Two Nerds: Getting pinged and the fog of war",
+    "summary": "In this edition of Between Two Nerds Tom Uren and The Grugq discuss how getting pinged hurts state hackers by introducing uncertainty. Publishing technical reports on the hack can actually improve the situation by removing uncertainty about how attackers were detected. This episode is also...",
+    "source_url": "https://risky.biz/BTN151/",
+    "source_date": "2026-01-27",
+    "tags": [
+      "security news",
+      "threat intel",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
+  },
+  {
+    "id": "sec_2c3a34e8ccd1",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "Sponsored: Push Security on ConsentFix attacks",
+    "summary": "In this Risky Business News sponsor interview, Catalin Cimpanu talks with Luke Jennings, VP of Research & Development at Push Security, about ConsentFix. It\u2019s a new form of email-based social engineering attack used in the wild, an evolution of the ClickFix attack that goes after your identity.",
+    "source_url": "https://risky.biz/RBNEWSSI112/",
+    "source_date": "2026-01-27",
+    "tags": [
+      "security news",
+      "threat intel",
+      "patch",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing",
+      "zero_day"
+    ]
+  },
+  {
+    "id": "cisa_kev_cve_2026_24858",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2026-24858: Fortinet Multiple Products Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+    "summary": "Fortinet FortiAnalyzer, FortiManager, FortiOS, and FortiProxy contain an authentication bypass using an alternate path or channel that could allow an attacker with a FortiCloud account and a registered device to log into other devices registered to other accounts, if FortiCloud SSO authentication is enabled on those devices. (Vendor: Fortinet, Product: Multiple Products) | Due: 2026-01-30",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+    "source_date": "2026-01-27",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "fortinet"
+    ],
+    "cve_ids": [
+      "CVE-2026-24858"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_027_01",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-027-01: iba Systems ibaPDA",
+    "summary": "CISA ICS Advisory for iba Systems ibaPDA. CVEs: CVE-2025-14988",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-01",
+    "source_date": "2026-01-27",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2025-14988"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_027_02",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-027-02: Festo Didactic SE MES PC",
+    "summary": "CISA ICS Advisory for Festo Didactic SE MES PC. CVEs: CVE-2019-11036, CVE-2023-25727, CVE-2021-2011",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-02",
+    "source_date": "2026-01-27",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2019-11036",
+      "CVE-2023-25727",
+      "CVE-2021-2011",
+      "CVE-2022-32083",
+      "CVE-2021-46668",
+      "CVE-2018-19518",
+      "CVE-2021-2194",
+      "CVE-2019-11049",
+      "CVE-2022-31626",
+      "CVE-2022-32084",
+      "CVE-2022-32088",
+      "CVE-2022-27377",
+      "CVE-2020-2922",
+      "CVE-2019-9638",
+      "CVE-2019-11044",
+      "CVE-2020-7068",
+      "CVE-2020-7069",
+      "CVE-2015-2301",
+      "CVE-2023-0568",
+      "CVE-2022-27458",
+      "CVE-2021-21706",
+      "CVE-2022-27452",
+      "CVE-2020-7071",
+      "CVE-2022-27387",
+      "CVE-2022-27376",
+      "CVE-2019-11043",
+      "CVE-2021-2032",
+      "CVE-2021-2007",
+      "CVE-2019-11045",
+      "CVE-2022-27445",
+      "CVE-2022-27457",
+      "CVE-2022-27384",
+      "CVE-2022-23808",
+      "CVE-2023-0567",
+      "CVE-2019-9025",
+      "CVE-2022-27379",
+      "CVE-2019-9637",
+      "CVE-2021-27928",
+      "CVE-2021-21703",
+      "CVE-2020-2760",
+      "CVE-2021-2166",
+      "CVE-2015-2787",
+      "CVE-2022-23807",
+      "CVE-2020-2752",
+      "CVE-2021-46666",
+      "CVE-2020-2814",
+      "CVE-2020-7065",
+      "CVE-2021-21705",
+      "CVE-2020-7062",
+      "CVE-2019-11039",
+      "CVE-2019-11035",
+      "CVE-2022-27447",
+      "CVE-2019-11046",
+      "CVE-2022-27446",
+      "CVE-2022-27386",
+      "CVE-2019-9639",
+      "CVE-2019-11042",
+      "CVE-2022-27385",
+      "CVE-2020-7059",
+      "CVE-2020-7070",
+      "CVE-2022-32091",
+      "CVE-2015-2348",
+      "CVE-2019-9020",
+      "CVE-2021-35604",
+      "CVE-2022-27444",
+      "CVE-2018-14883",
+      "CVE-2014-9705",
+      "CVE-2020-7064",
+      "CVE-2022-27382",
+      "CVE-2020-7063",
+      "CVE-2021-2372",
+      "CVE-2019-9021",
+      "CVE-2018-14851",
+      "CVE-2022-27448",
+      "CVE-2021-46663",
+      "CVE-2021-2180",
+      "CVE-2014-9709",
+      "CVE-2023-25690",
+      "CVE-2022-32082",
+      "CVE-2022-31629",
+      "CVE-2019-9022",
+      "CVE-2016-3078",
+      "CVE-2023-0662",
+      "CVE-2021-2022",
+      "CVE-2022-32089",
+      "CVE-2019-11048",
+      "CVE-2021-46669",
+      "CVE-2019-11047",
+      "CVE-2022-27383",
+      "CVE-2021-46667",
+      "CVE-2022-32087",
+      "CVE-2022-36760",
+      "CVE-2020-7060",
+      "CVE-2018-17082",
+      "CVE-2019-9640",
+      "CVE-2021-46661",
+      "CVE-2019-11034",
+      "CVE-2022-27456",
+      "CVE-2020-7061",
+      "CVE-2022-27455",
+      "CVE-2021-2144",
+      "CVE-2021-2154",
+      "CVE-2022-21595",
+      "CVE-2019-11040",
+      "CVE-2021-2389",
+      "CVE-2023-27522",
+      "CVE-2020-2812",
+      "CVE-2021-46665",
+      "CVE-2022-32086",
+      "CVE-2022-32085",
+      "CVE-2021-21704",
+      "CVE-2020-7066",
+      "CVE-2022-31628",
+      "CVE-2021-46662",
+      "CVE-2016-5385",
+      "CVE-2022-37436",
+      "CVE-2013-6501",
+      "CVE-2021-21702",
+      "CVE-2019-9024",
+      "CVE-2019-9023",
+      "CVE-2022-27449",
+      "CVE-2021-46664",
+      "CVE-2019-11050",
+      "CVE-2021-21708",
+      "CVE-2022-31625",
+      "CVE-2022-32081",
+      "CVE-2022-27378",
+      "CVE-2006-20001",
+      "CVE-2018-19935",
+      "CVE-2022-4900",
+      "CVE-2018-12882",
+      "CVE-2019-9641",
+      "CVE-2022-27380",
+      "CVE-2022-27381",
+      "CVE-2021-21707",
+      "CVE-2022-27451",
+      "CVE-2020-2780",
+      "CVE-2019-11041",
+      "CVE-2021-2174"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_027_03",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-027-03: Schneider Electric Zigbee Products",
+    "summary": "CISA ICS Advisory for Schneider Electric Zigbee Products. CVEs: CVE-2024-6350, CVE-2024-6351, CVE-2024-6352",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-03",
+    "source_date": "2026-01-27",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2024-6350",
+      "CVE-2024-6351",
+      "CVE-2024-6352",
+      "CVE-2024-10106",
+      "CVE-2024-7322"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_027_04",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-027-04: Johnson Controls Metasys Products",
+    "summary": "CISA ICS Advisory for Johnson Controls Metasys Products. CVEs: CVE-2025-26385",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-04",
+    "source_date": "2026-01-27",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2025-26385"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_3bcea3932bdd",
@@ -2692,7 +5102,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_41627d2fb925",
@@ -2712,7 +5123,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_607b207437ab",
@@ -2731,7 +5145,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "azure",
+      "sentinelone"
+    ]
   },
   {
     "id": "sec_4fde0f795f3a",
@@ -2751,7 +5169,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "zero_day"
+    ]
   },
   {
     "id": "sec_3bd84d362609",
@@ -2770,7 +5191,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2faa48747e25",
@@ -2789,7 +5211,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_ef2b45e1ca74",
@@ -2809,7 +5234,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_e8fb00a1fffd",
@@ -2828,7 +5254,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_7bed00f8168b",
@@ -2847,7 +5276,145 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_a80e206f00f0",
+    "source_name": "Risky Biz News",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Risky Bulletin: Russia deployed wipers on Poland's energy grid",
+    "summary": "Russia deployed wipers against Poland\u2019s energy grid, Microsoft shared BitLocker keys with the FBI, Romania dismantles a murder-for-hire portal, and the EU creates a new anti-spyware group.",
+    "source_url": "https://risky.biz/RBNEWS517/",
+    "source_date": "2026-01-26",
+    "tags": [
+      "security news",
+      "threat intel",
+      "podcast"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2018_14634",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2018-14634: Linux Kernel Integer Overflow Vulnerability",
+    "summary": "Linux Kernel contains an integer overflow vulnerability in the create_elf_tables() function which could allow an unprivileged local user with access to SUID (or otherwise privileged) binary to escalate their privileges on the system. (Vendor: Linux, Product: Kernal) | Due: 2026-02-16",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2018-14634",
+    "source_date": "2026-01-26",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "linux"
+    ],
+    "cve_ids": [
+      "CVE-2018-14634"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux"
+    ]
+  },
+  {
+    "id": "cisa_kev_cve_2025_52691",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2025-52691: SmarterTools SmarterMail Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "summary": "SmarterTools SmarterMail contains an unrestricted upload of file with dangerous type vulnerability that could allow an unauthenticated attacker to upload arbitrary files to any location on the mail server, potentially enabling remote code execution. (Vendor: SmarterTools, Product: SmarterMail) | Due: 2026-02-16",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52691",
+    "source_date": "2026-01-26",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "smartertools"
+    ],
+    "cve_ids": [
+      "CVE-2025-52691"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2026_23760",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2026-23760: SmarterTools SmarterMail Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+    "summary": "SmarterTools SmarterMail contains an authentication bypass using an alternate path or channel vulnerability in the password reset API. The force-reset-password endpoint permits anonymous requests and fails to verify the existing password or a reset token when resetting system administrator accounts. This could allow an unauthenticated attacker to supply a target administrator username and a new password to reset the account, resulting in full administrative compromise of the SmarterMail instance",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23760",
+    "source_date": "2026-01-26",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "smartertools"
+    ],
+    "cve_ids": [
+      "CVE-2026-23760"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2026_24061",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2026-24061: GNU InetUtils Argument Injection Vulnerability",
+    "summary": "GNU InetUtils contains an argument injection vulnerability in telnetd that could allow for remote authentication bypass via a \"-f root\" value for the USER environment variable. (Vendor: GNU, Product: InetUtils) | Due: 2026-02-16",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24061",
+    "source_date": "2026-01-26",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "gnu"
+    ],
+    "cve_ids": [
+      "CVE-2026-24061"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2026_21509",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2026-21509: Microsoft Office Security Feature Bypass Vulnerability",
+    "summary": "Microsoft Office contains a security feature bypass vulnerability in which reliance on untrusted inputs in a security decision in Microsoft Office could allow an unauthorized attacker to bypass a security feature locally. Some of the impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. (Vendor: Microsoft, Product: Office) | Due: 2026-02-16",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21509",
+    "source_date": "2026-01-26",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "microsoft"
+    ],
+    "cve_ids": [
+      "CVE-2026-21509"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_f1b8633dfca8",
@@ -2866,7 +5433,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_77427a17af6a",
@@ -2886,7 +5454,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_47181f4d6a2a",
@@ -2906,7 +5475,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_d7fb27bfeb79",
@@ -2927,7 +5499,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_d5db34a12943",
@@ -2949,7 +5522,8 @@
     "threat_actors": [
       "Hive"
     ],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2fcfe272db41",
@@ -2970,7 +5544,75 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_28d6a2b2e898",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "ESET Research: Sandworm behind cyberattack on Poland\u2019s power grid in late 2025",
+    "summary": "The attack involved data-wiping malware that ESET researchers have now analyzed and named DynoWiper",
+    "source_url": "https://www.welivesecurity.com/en/eset-research/eset-research-sandworm-cyberattack-poland-power-grid-late-2025/",
+    "source_date": "2026-01-23",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Sandworm"
+    ],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_a59f6e963511",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Children and chatbots: What parents should know",
+    "summary": "As children turn to AI chatbots for answers, advice, and companionship, questions emerge about their safety, privacy, and emotional development",
+    "source_url": "https://www.welivesecurity.com/en/kids-online/children-chatbots-what-parents-should-know/",
+    "source_date": "2026-01-23",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2024_37079",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2024-37079: Broadcom VMware vCenter Server Out-of-bounds Write Vulnerability",
+    "summary": "Broadcom VMware vCenter Server contains an out-of-bounds write vulnerability in the implementation of the DCERPC protocol. This could allow a malicious actor with network access to vCenter Server to send specially crafted network packets, potentially leading to remote code execution. (Vendor: Broadcom, Product: VMware vCenter Server) | Due: 2026-02-13",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-37079",
+    "source_date": "2026-01-23",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "broadcom"
+    ],
+    "cve_ids": [
+      "CVE-2024-37079"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "vmware"
+    ]
   },
   {
     "id": "sec_043828c77e61",
@@ -2990,7 +5632,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_2218305816c3",
@@ -3009,7 +5654,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_b5fcc86000fc",
@@ -3030,7 +5676,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_06b1ef2f9e80",
@@ -3049,7 +5696,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_0be969f5d6e9",
@@ -3069,7 +5717,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "microsoft_defender",
+      "phishing"
+    ]
   },
   {
     "id": "sec_e9bf72b2ed5e",
@@ -3088,7 +5740,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_80eb69fb58d4",
@@ -3108,7 +5761,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_8d7b05811439",
@@ -3127,7 +5783,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware"
+    ]
   },
   {
     "id": "sec_c42ea61f2ffa",
@@ -3148,7 +5807,193 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_f8497f7b9ff6",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Common Apple Pay scams, and how to stay safe",
+    "summary": "Here\u2019s how the most common scams targeting Apple Pay users work and what you can do to stay one step ahead",
+    "source_url": "https://www.welivesecurity.com/en/scams/common-apple-pay-scams-how-stay-safe/",
+    "source_date": "2026-01-22",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2025_68645",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2025-68645: Synacor Zimbra Collaboration Suite (ZCS) PHP Remote File Inclusion Vulnerability",
+    "summary": "Synacor Zimbra Collaboration Suite (ZCS) contains a PHP remote file inclusion vulnerability that could allow for remote attackers to craft requests to the /h/rest endpoint to influence internal request dispatching, allowing inclusion of arbitrary files from the WebRoot directory. (Vendor: Synacor, Product:  Zimbra Collaboration Suite (ZCS)) | Due: 2026-02-12",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68645",
+    "source_date": "2026-01-22",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "synacor"
+    ],
+    "cve_ids": [
+      "CVE-2025-68645"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2025_34026",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2025-34026: Versa Concerto Improper Authentication Vulnerability",
+    "summary": "Versa Concerto SD-WAN orchestration platform contains an improper authentication vulnerability in the Traefik reverse proxy configuration, allowing at attacker to access administrative endpoints. The internal Actuator endpoint can be leveraged for access to heap dumps and trace logs. (Vendor: Versa, Product: Concerto) | Due: 2026-02-12",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34026",
+    "source_date": "2026-01-22",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "versa"
+    ],
+    "cve_ids": [
+      "CVE-2025-34026"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2025_31125",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2025-31125: Vite Vitejs Improper Access Control Vulnerability",
+    "summary": "Vite Vitejs contains an improper access control vulnerability that exposes content of non-allowed files using ?inline&import or ?raw?import. Only apps explicitly exposing the Vite dev server to the network (using --host or server.host config option) are affected. (Vendor: Vite, Product: Vitejs) | Due: 2026-02-12",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-31125",
+    "source_date": "2026-01-22",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "vite"
+    ],
+    "cve_ids": [
+      "CVE-2025-31125"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2025_54313",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2025-54313: Prettier eslint-config-prettier Embedded Malicious Code Vulnerability",
+    "summary": "Prettier eslint-config-prettier contains an embedded malicious code vulnerability. Installing an affected package executes an install.js file that launches the node-gyp.dll malware on Windows. (Vendor: Prettier, Product: eslint-config-prettier) | Due: 2026-02-12",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54313",
+    "source_date": "2026-01-22",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "prettier"
+    ],
+    "cve_ids": [
+      "CVE-2025-54313"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "windows"
+    ]
+  },
+  {
+    "id": "cisa_ics_icsa_26_022_06",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-022-06: Hubitat Elevation Hubs",
+    "summary": "CISA ICS Advisory for Hubitat Elevation Hubs. CVEs: CVE-2026-1201",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-06",
+    "source_date": "2026-01-22",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2026-1201"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_022_07",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-022-07: Delta Electronics DIAView",
+    "summary": "CISA ICS Advisory for Delta Electronics DIAView. CVEs: CVE-2026-0975",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-07",
+    "source_date": "2026-01-22",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2026-0975"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_ics_icsa_26_022_08",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-022-08: EVMAPA",
+    "summary": "CISA ICS Advisory for EVMAPA. CVEs: CVE-2025-54816, CVE-2025-53968, CVE-2025-55705",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-08",
+    "source_date": "2026-01-22",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2025-54816",
+      "CVE-2025-53968",
+      "CVE-2025-55705"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_3690085d9195",
@@ -3167,7 +6012,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_cfc3eacff44f",
@@ -3186,7 +6032,31 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "cisa_kev_cve_2026_20045",
+    "source_name": "CISA KEV",
+    "source_type": "government",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CVE-2026-20045: Cisco Unified Communications Products Code Injection Vulnerability",
+    "summary": "Cisco Unified Communications Manager (Unified CM), Cisco Unified Communications Manager Session Management Edition (Unified CM SME), Cisco Unified Communications Manager IM & Presence Service (Unified CM IM&P), Cisco Unity Connection, and Cisco Webex Calling Dedicated Instance contain a code injection vulnerability that could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root. (Vendor: Cisco, Product: Unified Communications Manag",
+    "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20045",
+    "source_date": "2026-01-21",
+    "tags": [
+      "CISA",
+      "KEV",
+      "actively-exploited",
+      "cisco"
+    ],
+    "cve_ids": [
+      "CVE-2026-20045"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_f1289b4af7b5",
@@ -3206,7 +6076,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "azure"
+    ]
   },
   {
     "id": "sec_f58af3aec7de",
@@ -3225,7 +6098,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_735f2fec0dfc",
@@ -3245,7 +6119,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_faeb0f8ddada",
@@ -3268,6 +6143,30 @@
     ],
     "malware_families": [
       "Play"
+    ],
+    "env_tags": []
+  },
+  {
+    "id": "sec_19d71f6eefc9",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Old habits die hard: 2025\u2019s most common passwords were as predictable as ever",
+    "summary": "Once again, data shows an uncomfortable truth: the habit of choosing eminently hackable passwords is alive and well",
+    "source_url": "https://www.welivesecurity.com/en/cybersecurity/old-habits-die-hard-2025-most-common-passwords/",
+    "source_date": "2026-01-20",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "aws"
     ]
   },
   {
@@ -3287,7 +6186,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_053aaa77fee4",
@@ -3306,7 +6206,71 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "kubernetes",
+      "phishing"
+    ]
+  },
+  {
+    "id": "sec_e0a91350061a",
+    "source_name": "Exploit Database",
+    "source_type": "exploit_tracking",
+    "signal_category": "cve",
+    "severity": "informational",
+    "title": "[webapps] RPi-Jukebox-RFID 2.8.0 - Remote Command Execution",
+    "summary": "RPi-Jukebox-RFID 2.8.0 - Remote Command Execution",
+    "source_url": "https://www.exploit-db.com/exploits/52468",
+    "source_date": "2026-01-17",
+    "tags": [
+      "vulnerabilities",
+      "exploits",
+      "PoC"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_32db221e923b",
+    "source_name": "Exploit Database",
+    "source_type": "exploit_tracking",
+    "signal_category": "cve",
+    "severity": "informational",
+    "title": "[webapps] Siklu EtherHaul Series EH-8010 - Arbitrary File Upload",
+    "summary": "Siklu EtherHaul Series EH-8010 - Arbitrary File Upload",
+    "source_url": "https://www.exploit-db.com/exploits/52467",
+    "source_date": "2026-01-17",
+    "tags": [
+      "vulnerabilities",
+      "exploits",
+      "PoC"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_755970a08222",
+    "source_name": "Exploit Database",
+    "source_type": "exploit_tracking",
+    "signal_category": "cve",
+    "severity": "informational",
+    "title": "[webapps] Siklu EtherHaul Series EH-8010 - Remote Command Execution",
+    "summary": "Siklu EtherHaul Series EH-8010 - Remote Command Execution",
+    "source_url": "https://www.exploit-db.com/exploits/52466",
+    "source_date": "2026-01-17",
+    "tags": [
+      "vulnerabilities",
+      "exploits",
+      "PoC"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2e2da0c99f07",
@@ -3325,7 +6289,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_3970c481c164",
@@ -3345,7 +6310,30 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_3d749cfc7c3c",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "Why LinkedIn is a hunting ground for threat actors \u2013 and how to protect yourself",
+    "summary": "The business social networking site is a vast, publicly accessible database of corporate information. Don\u2019t believe everyone on the site is who they say they are.",
+    "source_url": "https://www.welivesecurity.com/en/social-media/linkedin-hunting-ground-threat-actors-how-protect-yourself/",
+    "source_date": "2026-01-16",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_89ff56f8cc88",
@@ -3366,7 +6354,8 @@
     "threat_actors": [
       "Conti"
     ],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_19f50a8ba38f",
@@ -3385,7 +6374,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_dfbdafe09658",
@@ -3406,7 +6398,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_41ce636e2009",
@@ -3426,7 +6419,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_b121710d2777",
@@ -3446,7 +6440,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_874e13cdcf38",
@@ -3467,7 +6462,32 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "windows"
+    ]
+  },
+  {
+    "id": "sec_f391de1e3e1f",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Is it time for internet services to adopt identity verification?",
+    "summary": "Should verified identities become the standard online? Australia\u2019s social media ban for under-16s shows why the question matters.",
+    "source_url": "https://www.welivesecurity.com/en/social-media/time-internet-services-adopt-identity-verification/",
+    "source_date": "2026-01-14",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ]
   },
   {
     "id": "sec_3d22a2611f9f",
@@ -3488,7 +6508,8 @@
       "CVE-2025-14847"
     ],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_3a5fab19d873",
@@ -3507,7 +6528,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_e40374bcbaa7",
@@ -3527,7 +6549,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_71370accf944",
@@ -3546,7 +6569,28 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_12216080dbbb",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Your personal information is on the dark web. What happens next?",
+    "summary": "If your data is on the dark web, it\u2019s probably only a matter of time before it\u2019s abused for fraud or account hijacking. Here\u2019s what to do.",
+    "source_url": "https://www.welivesecurity.com/en/privacy/information-dark-web-what-happens-next/",
+    "source_date": "2026-01-13",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_2b83b00c4615",
@@ -3569,6 +6613,9 @@
     "threat_actors": [],
     "malware_families": [
       "Asyncrat"
+    ],
+    "env_tags": [
+      "apt"
     ]
   },
   {
@@ -3589,7 +6636,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "linux"
+    ]
   },
   {
     "id": "sec_5761237f20ef",
@@ -3609,7 +6660,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "kubernetes"
+    ]
   },
   {
     "id": "sec_2682f2d8197b",
@@ -3628,7 +6683,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_3a72281efbe3",
@@ -3647,7 +6705,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "sec_c91c55ec567b",
@@ -3666,7 +6727,31 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
+  },
+  {
+    "id": "sec_3f1d4dd46335",
+    "source_name": "ESET WeLiveSecurity",
+    "source_type": "vendor_research",
+    "signal_category": "research",
+    "severity": "informational",
+    "title": "Credential stuffing: What it is and how to protect yourself",
+    "summary": "Reusing passwords may feel like a harmless shortcut \u2013 until a single breach opens the door to multiple accounts",
+    "source_url": "https://www.welivesecurity.com/en/cybersecurity/credential-stuffing-what-it-is-how-protect-yourself/",
+    "source_date": "2026-01-08",
+    "tags": [
+      "threat research",
+      "malware",
+      "APT",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
   },
   {
     "id": "sec_3703bf32e2b3",
@@ -3685,7 +6770,10 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "aws"
+    ]
   },
   {
     "id": "sec_917ba7328bd4",
@@ -3704,7 +6792,8 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": []
   },
   {
     "id": "sec_7efe093c827e",
@@ -3725,7 +6814,11 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "ransomware",
+      "azure"
+    ]
   },
   {
     "id": "sec_e2488a5d6039",
@@ -3745,6 +6838,9 @@
     ],
     "cve_ids": [],
     "threat_actors": [],
-    "malware_families": []
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ]
   }
 ]

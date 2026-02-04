@@ -6285,7 +6285,8 @@
     "source_date": "2026-02-02",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-02-02T12:05:34Z"
+    "source_timestamp": "2026-02-02T12:05:34Z",
+    "env_tags": []
   },
   {
     "id": "rss_7dd6a7948b51",
@@ -6300,7 +6301,8 @@
     "source_date": "2026-02-02",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-02-02T18:09:34Z"
+    "source_timestamp": "2026-02-02T18:09:34Z",
+    "env_tags": []
   },
   {
     "id": "rss_f88c600061d4",
@@ -8049,7 +8051,8 @@
     "source_date": "2026-02-01",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "rss_9feac6a243d0",
@@ -8285,7 +8288,8 @@
     "source_date": "2026-01-31",
     "confidence": "high",
     "suggested_outreach_window": "1week",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "linkedin_scan_ed_sim_rsac",
@@ -8300,7 +8304,10 @@
     "source_date": "2026-01-31",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": [
+      "palo_alto"
+    ]
   },
   {
     "id": "linkedin_scan_asheem_chandna_active",
@@ -8315,7 +8322,8 @@
     "source_date": "2026-01-31",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "linkedin_scan_jay_leek_portfolio_jan26",
@@ -8330,7 +8338,8 @@
     "source_date": "2026-01-31",
     "confidence": "medium",
     "suggested_outreach_window": "2weeks",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "linkedin_scan_ed_sim_fund_vii_jan26",
@@ -8345,7 +8354,10 @@
     "source_date": "2026-01-31",
     "confidence": "high",
     "suggested_outreach_window": "immediate",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": [
+      "palo_alto"
+    ]
   },
   {
     "id": "linkedin_scan_lior_simon_cyera_jan31",
@@ -8360,7 +8372,8 @@
     "source_date": "2026-01-31",
     "confidence": "high",
     "suggested_outreach_window": "2weeks",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "rss_bbcf00c5b1c6",
@@ -8375,7 +8388,10 @@
     "source_date": "2026-01-31",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-31T09:43:26Z"
+    "source_timestamp": "2026-01-31T09:43:26Z",
+    "env_tags": [
+      "ransomware"
+    ]
   },
   {
     "id": "rss_7a854a01bc40",
@@ -8509,7 +8525,8 @@
     "source_date": "2026-01-30",
     "confidence": "high",
     "suggested_outreach_window": "immediate",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "rss_4a98bab3d908",
@@ -8524,7 +8541,8 @@
     "source_date": "2026-01-30",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-30T22:05:11Z"
+    "source_timestamp": "2026-01-30T22:05:11Z",
+    "env_tags": []
   },
   {
     "id": "rss_bd6cce905500",
@@ -8539,7 +8557,8 @@
     "source_date": "2026-01-30",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-30T15:35:15Z"
+    "source_timestamp": "2026-01-30T15:35:15Z",
+    "env_tags": []
   },
   {
     "id": "rss_2c0397fd628c",
@@ -8554,7 +8573,8 @@
     "source_date": "2026-01-30",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-30T17:00:00Z"
+    "source_timestamp": "2026-01-30T17:00:00Z",
+    "env_tags": []
   },
   {
     "id": "rss_ee4b03aec0e0",
@@ -8943,7 +8963,8 @@
     "source_date": "2026-01-29",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-29T14:50:57Z"
+    "source_timestamp": "2026-01-29T14:50:57Z",
+    "env_tags": []
   },
   {
     "id": "rss_06c8e934adee",
@@ -8958,7 +8979,8 @@
     "source_date": "2026-01-29",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-29T21:18:36Z"
+    "source_timestamp": "2026-01-29T21:18:36Z",
+    "env_tags": []
   },
   {
     "id": "rss_c532fcad29ef",
@@ -8973,7 +8995,8 @@
     "source_date": "2026-01-29",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-29T18:17:28Z"
+    "source_timestamp": "2026-01-29T18:17:28Z",
+    "env_tags": []
   },
   {
     "id": "rss_8c36efac0548",
@@ -8988,7 +9011,8 @@
     "source_date": "2026-01-29",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-29T17:11:08Z"
+    "source_timestamp": "2026-01-29T17:11:08Z",
+    "env_tags": []
   },
   {
     "id": "rss_ee7bc560247c",
@@ -9003,7 +9027,10 @@
     "source_date": "2026-01-29",
     "confidence": "med",
     "suggested_outreach_window": "anytime",
-    "source_timestamp": "2026-01-29T00:30:58Z"
+    "source_timestamp": "2026-01-29T00:30:58Z",
+    "env_tags": [
+      "kubernetes"
+    ]
   },
   {
     "id": "rss_be66bd78c292",
@@ -9018,7 +9045,8 @@
     "source_date": "2026-01-29",
     "confidence": "high",
     "suggested_outreach_window": "anytime",
-    "source_timestamp": "2026-01-29T00:00:28Z"
+    "source_timestamp": "2026-01-29T00:00:28Z",
+    "env_tags": []
   },
   {
     "id": "rss_b7452cc7cecc",
@@ -9220,7 +9248,8 @@
     "source_date": "2026-01-28",
     "confidence": "high",
     "suggested_outreach_window": "1week",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "linkedin_scan_liran_grinberg_vc_survey_jan31",
@@ -9235,7 +9264,8 @@
     "source_date": "2026-01-28",
     "confidence": "high",
     "suggested_outreach_window": "2weeks",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "rss_1003250507b4",
@@ -9250,7 +9280,8 @@
     "source_date": "2026-01-28",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-28T17:30:24Z"
+    "source_timestamp": "2026-01-28T17:30:24Z",
+    "env_tags": []
   },
   {
     "id": "rss_c9f44212ca1d",
@@ -9265,7 +9296,8 @@
     "source_date": "2026-01-28",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-28T15:22:37Z"
+    "source_timestamp": "2026-01-28T15:22:37Z",
+    "env_tags": []
   },
   {
     "id": "rss_77f496ee8fbd",
@@ -9280,7 +9312,8 @@
     "source_date": "2026-01-28",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-28T19:18:16Z"
+    "source_timestamp": "2026-01-28T19:18:16Z",
+    "env_tags": []
   },
   {
     "id": "rss_e9472425f9d1",
@@ -9295,7 +9328,8 @@
     "source_date": "2026-01-28",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-28T07:16:27Z"
+    "source_timestamp": "2026-01-28T07:16:27Z",
+    "env_tags": []
   },
   {
     "id": "rss_9b5108a69fe5",
@@ -9310,7 +9344,8 @@
     "source_date": "2026-01-28",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-28T15:55:53Z"
+    "source_timestamp": "2026-01-28T15:55:53Z",
+    "env_tags": []
   },
   {
     "id": "rss_a390e5f1ff66",
@@ -9529,7 +9564,8 @@
     "source_date": "2026-01-27",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T17:56:47Z"
+    "source_timestamp": "2026-01-27T17:56:47Z",
+    "env_tags": []
   },
   {
     "id": "rss_1628a7503eab",
@@ -9544,7 +9580,8 @@
     "source_date": "2026-01-27",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T09:50:05Z"
+    "source_timestamp": "2026-01-27T09:50:05Z",
+    "env_tags": []
   },
   {
     "id": "rss_b99c77918c20",
@@ -9559,7 +9596,8 @@
     "source_date": "2026-01-27",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T12:01:47Z"
+    "source_timestamp": "2026-01-27T12:01:47Z",
+    "env_tags": []
   },
   {
     "id": "rss_02a2fad51ff8",
@@ -9574,7 +9612,8 @@
     "source_date": "2026-01-27",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T22:52:58Z"
+    "source_timestamp": "2026-01-27T22:52:58Z",
+    "env_tags": []
   },
   {
     "id": "rss_8f541baf574a",
@@ -9589,7 +9628,8 @@
     "source_date": "2026-01-27",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T18:23:13Z"
+    "source_timestamp": "2026-01-27T18:23:13Z",
+    "env_tags": []
   },
   {
     "id": "rss_875493ae7805",
@@ -9604,7 +9644,8 @@
     "source_date": "2026-01-27",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T20:13:30Z"
+    "source_timestamp": "2026-01-27T20:13:30Z",
+    "env_tags": []
   },
   {
     "id": "rss_812c1cfe6e14",
@@ -9619,7 +9660,8 @@
     "source_date": "2026-01-27",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T01:46:29Z"
+    "source_timestamp": "2026-01-27T01:46:29Z",
+    "env_tags": []
   },
   {
     "id": "rss_b4fb51499643",
@@ -9634,7 +9676,8 @@
     "source_date": "2026-01-27",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-27T19:28:20Z"
+    "source_timestamp": "2026-01-27T19:28:20Z",
+    "env_tags": []
   },
   {
     "id": "rss_5f383b0dc5c3",
@@ -9836,7 +9879,8 @@
     "source_date": "2026-01-26",
     "confidence": "high",
     "suggested_outreach_window": "1week",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "linkedin_scan_arif_janmohamed_zocks_jan26",
@@ -9851,7 +9895,8 @@
     "source_date": "2026-01-26",
     "confidence": "high",
     "suggested_outreach_window": "1week",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "rss_4964e7553a8d",
@@ -9866,7 +9911,8 @@
     "source_date": "2026-01-26",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-26T17:20:07Z"
+    "source_timestamp": "2026-01-26T17:20:07Z",
+    "env_tags": []
   },
   {
     "id": "rss_aca708236cd9",
@@ -9881,7 +9927,8 @@
     "source_date": "2026-01-26",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-26T23:16:32Z"
+    "source_timestamp": "2026-01-26T23:16:32Z",
+    "env_tags": []
   },
   {
     "id": "rss_ba00636b16a0",
@@ -9896,7 +9943,8 @@
     "source_date": "2026-01-26",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-26T19:03:50Z"
+    "source_timestamp": "2026-01-26T19:03:50Z",
+    "env_tags": []
   },
   {
     "id": "rss_265a8444b1f6",
@@ -10047,7 +10095,10 @@
     "source_date": "2026-01-25",
     "confidence": "high",
     "suggested_outreach_window": "2weeks",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": [
+      "supply_chain"
+    ]
   },
   {
     "id": "linkedin_scan_kobi_samboursky_ai_cyber",
@@ -10062,7 +10113,8 @@
     "source_date": "2026-01-24",
     "confidence": "high",
     "suggested_outreach_window": "1week",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "linkedin_scan_dave_dewalt_thesis_jan31",
@@ -10077,7 +10129,8 @@
     "source_date": "2026-01-24",
     "confidence": "high",
     "suggested_outreach_window": "2weeks",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "rss_dd82a47653f0",
@@ -10092,7 +10145,8 @@
     "source_date": "2026-01-24",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-24T19:08:06Z"
+    "source_timestamp": "2026-01-24T19:08:06Z",
+    "env_tags": []
   },
   {
     "id": "rss_3360b598560b",
@@ -10107,7 +10161,8 @@
     "source_date": "2026-01-24",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-24T01:09:20Z"
+    "source_timestamp": "2026-01-24T01:09:20Z",
+    "env_tags": []
   },
   {
     "id": "rss_cd2a9c7cdbbb",
@@ -10122,7 +10177,8 @@
     "source_date": "2026-01-23",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-23T20:17:24Z"
+    "source_timestamp": "2026-01-23T20:17:24Z",
+    "env_tags": []
   },
   {
     "id": "rss_c475ae467840",
@@ -10137,7 +10193,10 @@
     "source_date": "2026-01-23",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-23T15:54:09Z"
+    "source_timestamp": "2026-01-23T15:54:09Z",
+    "env_tags": [
+      "apt"
+    ]
   },
   {
     "id": "rss_7e3ea9314560",
@@ -10152,7 +10211,8 @@
     "source_date": "2026-01-23",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-23T22:03:20Z"
+    "source_timestamp": "2026-01-23T22:03:20Z",
+    "env_tags": []
   },
   {
     "id": "rss_3ef2789e8773",
@@ -10167,7 +10227,8 @@
     "source_date": "2026-01-23",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-23T12:01:19Z"
+    "source_timestamp": "2026-01-23T12:01:19Z",
+    "env_tags": []
   },
   {
     "id": "rss_c10051fc0b55",
@@ -10182,7 +10243,8 @@
     "source_date": "2026-01-23",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-23T19:50:44Z"
+    "source_timestamp": "2026-01-23T19:50:44Z",
+    "env_tags": []
   },
   {
     "id": "rss_e6e1031dcfd3",
@@ -10197,7 +10259,8 @@
     "source_date": "2026-01-23",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-23T00:27:22Z"
+    "source_timestamp": "2026-01-23T00:27:22Z",
+    "env_tags": []
   },
   {
     "id": "rss_74f2987d7353",
@@ -10297,7 +10360,8 @@
     "source_date": "2026-01-22",
     "confidence": "high",
     "suggested_outreach_window": "1week",
-    "scan_source": "claude_chrome_scan"
+    "scan_source": "claude_chrome_scan",
+    "env_tags": []
   },
   {
     "id": "rss_974b53723f70",
@@ -10312,7 +10376,8 @@
     "source_date": "2026-01-22",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-22T12:35:46Z"
+    "source_timestamp": "2026-01-22T12:35:46Z",
+    "env_tags": []
   },
   {
     "id": "rss_a01afed3b708",
@@ -10327,7 +10392,8 @@
     "source_date": "2026-01-22",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-22T21:08:35Z"
+    "source_timestamp": "2026-01-22T21:08:35Z",
+    "env_tags": []
   },
   {
     "id": "rss_e6f17017fde5",
@@ -10342,7 +10408,8 @@
     "source_date": "2026-01-22",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-22T06:13:18Z"
+    "source_timestamp": "2026-01-22T06:13:18Z",
+    "env_tags": []
   },
   {
     "id": "rss_e0e50eae1fe0",
@@ -10357,7 +10424,8 @@
     "source_date": "2026-01-22",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-22T00:00:25Z"
+    "source_timestamp": "2026-01-22T00:00:25Z",
+    "env_tags": []
   },
   {
     "id": "rss_5672ac29e10f",
@@ -10372,7 +10440,8 @@
     "source_date": "2026-01-22",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-22T15:55:34Z"
+    "source_timestamp": "2026-01-22T15:55:34Z",
+    "env_tags": []
   },
   {
     "id": "rss_a847e90bf1e1",
@@ -10506,7 +10575,8 @@
     "source_date": "2026-01-21",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-21T12:05:50Z"
+    "source_timestamp": "2026-01-21T12:05:50Z",
+    "env_tags": []
   },
   {
     "id": "rss_dd384de80c3c",
@@ -10521,7 +10591,8 @@
     "source_date": "2026-01-21",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-21T19:28:10Z"
+    "source_timestamp": "2026-01-21T19:28:10Z",
+    "env_tags": []
   },
   {
     "id": "rss_14480033a102",
@@ -10536,7 +10607,8 @@
     "source_date": "2026-01-21",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-21T14:00:58Z"
+    "source_timestamp": "2026-01-21T14:00:58Z",
+    "env_tags": []
   },
   {
     "id": "rss_15a7cd28bd40",
@@ -10551,7 +10623,8 @@
     "source_date": "2026-01-21",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-21T23:14:02Z"
+    "source_timestamp": "2026-01-21T23:14:02Z",
+    "env_tags": []
   },
   {
     "id": "rss_a5dfb007b629",
@@ -10651,7 +10724,8 @@
     "source_date": "2026-01-20",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-20T20:56:25Z"
+    "source_timestamp": "2026-01-20T20:56:25Z",
+    "env_tags": []
   },
   {
     "id": "rss_5deb90db6800",
@@ -10666,7 +10740,8 @@
     "source_date": "2026-01-20",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-20T12:08:09Z"
+    "source_timestamp": "2026-01-20T12:08:09Z",
+    "env_tags": []
   },
   {
     "id": "rss_e63705c3340e",
@@ -10681,7 +10756,8 @@
     "source_date": "2026-01-20",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-20T08:00:00Z"
+    "source_timestamp": "2026-01-20T08:00:00Z",
+    "env_tags": []
   },
   {
     "id": "rss_49f2ca3e151a",
@@ -10696,7 +10772,8 @@
     "source_date": "2026-01-20",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-20T18:50:45Z"
+    "source_timestamp": "2026-01-20T18:50:45Z",
+    "env_tags": []
   },
   {
     "id": "rss_2ed34217a0d2",
@@ -10711,7 +10788,8 @@
     "source_date": "2026-01-20",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-20T19:46:55Z"
+    "source_timestamp": "2026-01-20T19:46:55Z",
+    "env_tags": []
   },
   {
     "id": "rss_51157a80baca",
@@ -10726,7 +10804,8 @@
     "source_date": "2026-01-20",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-20T15:55:05Z"
+    "source_timestamp": "2026-01-20T15:55:05Z",
+    "env_tags": []
   },
   {
     "id": "rss_2b6fb8ada5e1",
@@ -10792,7 +10871,8 @@
     "source_date": "2026-01-19",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-19T12:02:24Z"
+    "source_timestamp": "2026-01-19T12:02:24Z",
+    "env_tags": []
   },
   {
     "id": "rss_5cc776b34439",
@@ -10807,7 +10887,8 @@
     "source_date": "2026-01-18",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-18T08:43:10Z"
+    "source_timestamp": "2026-01-18T08:43:10Z",
+    "env_tags": []
   },
   {
     "id": "rss_2d2942d328f8",
@@ -10873,7 +10954,8 @@
     "source_date": "2026-01-16",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-16T20:01:12Z"
+    "source_timestamp": "2026-01-16T20:01:12Z",
+    "env_tags": []
   },
   {
     "id": "rss_dc5113f066ae",
@@ -10888,7 +10970,8 @@
     "source_date": "2026-01-16",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-16T21:05:37Z"
+    "source_timestamp": "2026-01-16T21:05:37Z",
+    "env_tags": []
   },
   {
     "id": "rss_c542c7b14901",
@@ -10903,7 +10986,8 @@
     "source_date": "2026-01-16",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-16T06:39:10Z"
+    "source_timestamp": "2026-01-16T06:39:10Z",
+    "env_tags": []
   },
   {
     "id": "rss_70fa68c93e0e",
@@ -10918,7 +11002,8 @@
     "source_date": "2026-01-16",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-16T17:00:00Z"
+    "source_timestamp": "2026-01-16T17:00:00Z",
+    "env_tags": []
   },
   {
     "id": "rss_3ad2b7f4553c",
@@ -10933,7 +11018,8 @@
     "source_date": "2026-01-16",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-16T18:11:30Z"
+    "source_timestamp": "2026-01-16T18:11:30Z",
+    "env_tags": []
   },
   {
     "id": "rss_95f82000991a",
@@ -10965,7 +11051,8 @@
     "source_date": "2026-01-15",
     "confidence": "high",
     "suggested_outreach_window": "1week",
-    "source_timestamp": "2026-01-15T14:00:46Z"
+    "source_timestamp": "2026-01-15T14:00:46Z",
+    "env_tags": []
   },
   {
     "id": "rss_5a4063bb8493",
@@ -10980,7 +11067,8 @@
     "source_date": "2026-01-15",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-15T00:00:57Z"
+    "source_timestamp": "2026-01-15T00:00:57Z",
+    "env_tags": []
   },
   {
     "id": "rss_bfe3acf99482",
@@ -10995,7 +11083,8 @@
     "source_date": "2026-01-15",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-15T15:55:47Z"
+    "source_timestamp": "2026-01-15T15:55:47Z",
+    "env_tags": []
   },
   {
     "id": "rss_0d010a999f95",
@@ -11095,7 +11184,8 @@
     "source_date": "2026-01-13",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-13T14:30:08Z"
+    "source_timestamp": "2026-01-13T14:30:08Z",
+    "env_tags": []
   },
   {
     "id": "rss_993a7f96dacc",
@@ -11110,7 +11200,8 @@
     "source_date": "2026-01-13",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-13T11:41:40Z"
+    "source_timestamp": "2026-01-13T11:41:40Z",
+    "env_tags": []
   },
   {
     "id": "rss_6f16a47dc15d",
@@ -11125,7 +11216,8 @@
     "source_date": "2026-01-13",
     "confidence": "high",
     "suggested_outreach_window": "anytime",
-    "source_timestamp": "2026-01-13T18:52:30Z"
+    "source_timestamp": "2026-01-13T18:52:30Z",
+    "env_tags": []
   },
   {
     "id": "rss_7bc611caf909",
@@ -11140,7 +11232,8 @@
     "source_date": "2026-01-13",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-13T19:36:04Z"
+    "source_timestamp": "2026-01-13T19:36:04Z",
+    "env_tags": []
   },
   {
     "id": "rss_09707efea197",
@@ -11155,7 +11248,8 @@
     "source_date": "2026-01-13",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-13T17:33:03Z"
+    "source_timestamp": "2026-01-13T17:33:03Z",
+    "env_tags": []
   },
   {
     "id": "rss_717861ff98ba",
@@ -11221,7 +11315,8 @@
     "source_date": "2026-01-12",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-12T18:14:10Z"
+    "source_timestamp": "2026-01-12T18:14:10Z",
+    "env_tags": []
   },
   {
     "id": "rss_d53576c98e54",
@@ -11236,7 +11331,8 @@
     "source_date": "2026-01-10",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-10T08:01:23Z"
+    "source_timestamp": "2026-01-10T08:01:23Z",
+    "env_tags": []
   },
   {
     "id": "rss_0692434089ca",
@@ -11251,7 +11347,8 @@
     "source_date": "2026-01-09",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-09T15:55:51Z"
+    "source_timestamp": "2026-01-09T15:55:51Z",
+    "env_tags": []
   },
   {
     "id": "rss_4a61ef7713f6",
@@ -11266,7 +11363,8 @@
     "source_date": "2026-01-08",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-08T23:23:43Z"
+    "source_timestamp": "2026-01-08T23:23:43Z",
+    "env_tags": []
   },
   {
     "id": "rss_e5c3da487e24",
@@ -11281,7 +11379,8 @@
     "source_date": "2026-01-08",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-08T19:40:27Z"
+    "source_timestamp": "2026-01-08T19:40:27Z",
+    "env_tags": []
   },
   {
     "id": "rss_51eb15c0a6c2",
@@ -11296,7 +11395,8 @@
     "source_date": "2026-01-08",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-08T06:48:01Z"
+    "source_timestamp": "2026-01-08T06:48:01Z",
+    "env_tags": []
   },
   {
     "id": "rss_dbcd95acb6ad",
@@ -11311,7 +11411,8 @@
     "source_date": "2026-01-08",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-08T12:00:00Z"
+    "source_timestamp": "2026-01-08T12:00:00Z",
+    "env_tags": []
   },
   {
     "id": "rss_d7abf9565c56",
@@ -11326,7 +11427,8 @@
     "source_date": "2026-01-08",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-08T00:00:00Z"
+    "source_timestamp": "2026-01-08T00:00:00Z",
+    "env_tags": []
   },
   {
     "id": "rss_3a66b041c7cc",
@@ -11341,7 +11443,8 @@
     "source_date": "2026-01-08",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-08T15:55:51Z"
+    "source_timestamp": "2026-01-08T15:55:51Z",
+    "env_tags": []
   },
   {
     "id": "rss_70615a4dc7fc",
@@ -11390,7 +11493,8 @@
     "source_date": "2026-01-07",
     "confidence": "med",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-07T06:26:04Z"
+    "source_timestamp": "2026-01-07T06:26:04Z",
+    "env_tags": []
   },
   {
     "id": "rss_0b0c175340c1",
@@ -11405,7 +11509,8 @@
     "source_date": "2026-01-07",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-07T12:00:00Z"
+    "source_timestamp": "2026-01-07T12:00:00Z",
+    "env_tags": []
   },
   {
     "id": "rss_ffaff72996a3",
@@ -11437,7 +11542,8 @@
     "source_date": "2026-01-06",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-06T08:00:00Z"
+    "source_timestamp": "2026-01-06T08:00:00Z",
+    "env_tags": []
   },
   {
     "id": "rss_569f0b32602a",
@@ -11452,7 +11558,8 @@
     "source_date": "2026-01-06",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-06T18:12:41Z"
+    "source_timestamp": "2026-01-06T18:12:41Z",
+    "env_tags": []
   },
   {
     "id": "rss_2a4fa49a7875",
@@ -11467,7 +11574,8 @@
     "source_date": "2026-01-06",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-06T19:52:27Z"
+    "source_timestamp": "2026-01-06T19:52:27Z",
+    "env_tags": []
   },
   {
     "id": "rss_27607aabc3a9",
@@ -11533,6 +11641,7 @@
     "source_date": "2026-01-03",
     "confidence": "high",
     "suggested_outreach_window": "contextual",
-    "source_timestamp": "2026-01-03T15:00:46Z"
+    "source_timestamp": "2026-01-03T15:00:46Z",
+    "env_tags": []
   }
 ]

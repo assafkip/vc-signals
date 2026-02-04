@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created": "2026-02-01",
-    "last_updated": "2026-02-01",
+    "last_updated": "2026-02-03",
     "description": "Industry publications, press releases, conferences, and platform feeds for VC signal monitoring",
     "schema_version": "1.0"
   },
@@ -44,7 +44,7 @@
       "source_type": "news",
       "category": "security_news",
       "rss_feeds": [
-        "https://www.darkreading.com/rss.xml"
+        "https://www.darkreading.com/rss/all.xml"
       ],
       "topics": ["security news", "vulnerabilities", "threat intel", "enterprise security"],
       "priority": 1,
@@ -66,7 +66,7 @@
       "source_type": "news",
       "category": "security_news",
       "rss_feeds": [
-        "https://therecord.media/feed"
+        "https://therecord.media/feed/"
       ],
       "topics": ["cybercrime", "nation-state", "threat intel", "policy"],
       "priority": 1,
@@ -80,7 +80,7 @@
         "https://www.bleepingcomputer.com/feed/"
       ],
       "topics": ["malware", "ransomware", "vulnerabilities", "tech news"],
-      "priority": 2,
+      "priority": 1,
       "notes": "Security and tech news"
     },
     {
@@ -207,23 +207,11 @@
       "source_type": "conference",
       "category": "conference",
       "rss_feeds": [
-        "https://www.helpnetsecurity.com/feed/",
-        "https://krebsonsecurity.com/feed/"
+        "https://www.helpnetsecurity.com/feed/"
       ],
       "topics": ["conference news", "security trends", "industry insights", "security research"],
       "priority": 2,
       "notes": "Security news and conference coverage (RSA/Black Hat feeds blocked by Cloudflare)"
-    },
-    {
-      "source_name": "DISABLED - Black Hat Blog",
-      "source_type": "conference",
-      "category": "conference",
-      "rss_feeds": [
-        "https://www.blackhat.com/rss/blog.xml"
-      ],
-      "topics": ["conference news", "research", "briefings", "tools"],
-      "priority": 2,
-      "notes": "Black Hat conference news and research"
     },
     {
       "source_name": "X - SecurityWeek",
@@ -324,6 +312,897 @@
       "topics": ["tech news", "startups", "security", "AI", "programming", "VC discussions"],
       "priority": 1,
       "notes": "Y Combinator's Hacker News - tech community discussions, startup news, security topics"
+    },
+    {
+      "source_name": "nao_sec",
+      "source_type": "blog",
+      "category": "security_analyst",
+      "rss_feeds": [
+        "https://nao-sec.org/feed"
+      ],
+      "topics": ["malware analysis", "threat research", "exploit analysis"],
+      "priority": 2,
+      "notes": "Security research team blog"
+    },
+    {
+      "source_name": "Seb Draven",
+      "source_type": "medium",
+      "category": "security_analyst",
+      "rss_feeds": [
+        "https://medium.com/feed/@sebdraven"
+      ],
+      "topics": ["threat intel", "malware analysis", "security research"],
+      "priority": 2,
+      "notes": "Security researcher on Medium"
+    },
+    {
+      "source_name": "Darknet",
+      "source_type": "blog",
+      "category": "security_news",
+      "rss_feeds": [
+        "http://www.darknet.org.uk/feed/"
+      ],
+      "topics": ["hacking news", "security tools", "exploits"],
+      "priority": 2,
+      "notes": "Ethical hacking and security news"
+    },
+    {
+      "source_name": "Reddit Cybersecurity",
+      "source_type": "community",
+      "category": "security_community",
+      "rss_feeds": [
+        "https://www.reddit.com/r/cybersecurity/.rss",
+        "https://www.reddit.com/r/netsec/.rss"
+      ],
+      "topics": ["security discussions", "news", "career", "tools"],
+      "priority": 2,
+      "notes": "Reddit r/cybersecurity and r/netsec communities"
+    },
+    {
+      "source_name": "BSI Germany",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.bsi.bund.de/SiteGlobals/Functions/RSSFeed/RSSNewsfeed/RSSNewsfeed.xml"
+      ],
+      "topics": ["government security", "advisories", "standards"],
+      "priority": 2,
+      "notes": "German Federal Office for Information Security"
+    },
+    {
+      "source_name": "CIS Advisories",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.cisecurity.org/feed/advisories"
+      ],
+      "topics": ["security advisories", "benchmarks", "best practices"],
+      "priority": 1,
+      "notes": "Center for Internet Security advisories"
+    },
+    {
+      "source_name": "Infosec Institute",
+      "source_type": "news",
+      "category": "security_education",
+      "rss_feeds": [
+        "https://resources.infosecinstitute.com/topics/malware-analysis/feed/",
+        "https://resources.infosecinstitute.com/topics/news/feed/",
+        "https://resources.infosecinstitute.com/topics/threat-intelligence/feed/"
+      ],
+      "topics": ["malware analysis", "threat intel", "security education"],
+      "priority": 2,
+      "notes": "Infosec Institute - malware analysis, news, and threat intel feeds"
+    },
+    {
+      "source_name": "NIST Cybersecurity Insights",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.nist.gov/blogs/cybersecurity-insights/rss.xml"
+      ],
+      "topics": ["standards", "frameworks", "best practices", "research"],
+      "priority": 1,
+      "notes": "NIST cybersecurity blog and insights"
+    },
+    {
+      "source_name": "SANS Internet Storm Center",
+      "source_type": "research",
+      "category": "security_research",
+      "rss_feeds": [
+        "https://isc.sans.edu/rssfeed_full.xml"
+      ],
+      "topics": ["threat intel", "malware", "vulnerabilities", "network security"],
+      "priority": 1,
+      "notes": "SANS ISC daily handlers diary and threat intel"
+    },
+    {
+      "source_name": "CISA Feeds",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://us-cert.cisa.gov/ics/advisories/advisories.xml",
+        "https://us-cert.cisa.gov/ncas/alerts.xml",
+        "https://us-cert.cisa.gov/ncas/analysis-reports.xml",
+        "https://us-cert.cisa.gov/ncas/current-activity.xml"
+      ],
+      "topics": ["ICS advisories", "alerts", "analysis reports", "vulnerabilities"],
+      "priority": 1,
+      "notes": "US-CERT/CISA official feeds - ICS advisories, alerts, analysis reports, current activity"
+    },
+    {
+      "source_name": "Anton on Security",
+      "source_type": "medium",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://medium.com/feed/anton-on-security"
+      ],
+      "topics": ["cloud security", "SIEM", "detection", "security operations"],
+      "priority": 1,
+      "notes": "Anton Chuvakin's security blog"
+    },
+    {
+      "source_name": "Ars Technica Security",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://arstechnica.com/tag/security/feed/"
+      ],
+      "topics": ["security news", "tech news", "policy"],
+      "priority": 2,
+      "notes": "Ars Technica security section"
+    },
+    {
+      "source_name": "Bellingcat",
+      "source_type": "news",
+      "category": "osint",
+      "rss_feeds": [
+        "https://www.bellingcat.com/feed/"
+      ],
+      "topics": ["OSINT", "investigations", "geopolitics"],
+      "priority": 2,
+      "notes": "Open source intelligence investigations"
+    },
+    {
+      "source_name": "CIO Security",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.cio.com/category/security/index.rss"
+      ],
+      "topics": ["enterprise security", "CISO", "strategy"],
+      "priority": 2,
+      "notes": "CIO Magazine security section"
+    },
+    {
+      "source_name": "Graham Cluley",
+      "source_type": "blog",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://www.grahamcluley.com/feed/"
+      ],
+      "topics": ["security news", "privacy", "malware"],
+      "priority": 2,
+      "notes": "Graham Cluley's security blog"
+    },
+    {
+      "source_name": "The Guardian Security",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.theguardian.com/technology/data-computer-security/rss"
+      ],
+      "topics": ["security news", "privacy", "data breaches"],
+      "priority": 2,
+      "notes": "The Guardian data and computer security section"
+    },
+    {
+      "source_name": "HackerOne Blog",
+      "source_type": "blog",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://www.hackerone.com/blog.rss"
+      ],
+      "topics": ["bug bounty", "vulnerability disclosure", "hacker community"],
+      "priority": 2,
+      "notes": "HackerOne official blog"
+    },
+    {
+      "source_name": "Hackmageddon",
+      "source_type": "blog",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://www.hackmageddon.com/feed/"
+      ],
+      "topics": ["cyber attacks", "statistics", "timeline"],
+      "priority": 2,
+      "notes": "Cyber attack timelines and statistics"
+    },
+    {
+      "source_name": "HackRead",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.hackread.com/feed/"
+      ],
+      "topics": ["hacking news", "data breaches", "cybercrime"],
+      "priority": 2,
+      "notes": "Latest hacking news and cybersecurity"
+    },
+    {
+      "source_name": "Infosecurity Magazine",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "http://www.infosecurity-magazine.com/rss/news/"
+      ],
+      "topics": ["security news", "industry news", "events"],
+      "priority": 1,
+      "notes": "Infosecurity Magazine news feed"
+    },
+    {
+      "source_name": "Intezer Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.intezer.com/blog/feed/"
+      ],
+      "topics": ["malware analysis", "threat research", "detection"],
+      "priority": 2,
+      "notes": "Intezer malware analysis and research"
+    },
+    {
+      "source_name": "Krebs on Security",
+      "source_type": "blog",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://krebsonsecurity.com/feed/"
+      ],
+      "topics": ["cybercrime", "investigations", "breaches"],
+      "priority": 1,
+      "notes": "Brian Krebs investigative security journalism"
+    },
+    {
+      "source_name": "Lohrmann on Cybersecurity",
+      "source_type": "blog",
+      "category": "security_blog",
+      "rss_feeds": [
+        "http://feeds.feedburner.com/govtech/blogs/lohrmann_on_infrastructure"
+      ],
+      "topics": ["government security", "policy", "leadership"],
+      "priority": 2,
+      "notes": "Dan Lohrmann's government security blog"
+    },
+    {
+      "source_name": "Malware Traffic Analysis",
+      "source_type": "blog",
+      "category": "security_research",
+      "rss_feeds": [
+        "http://www.malware-traffic-analysis.net/blog-entries.rss"
+      ],
+      "topics": ["malware analysis", "PCAP", "network forensics"],
+      "priority": 1,
+      "notes": "Malware traffic analysis and PCAPs"
+    },
+    {
+      "source_name": "VICE Tech",
+      "source_type": "news",
+      "category": "tech_news",
+      "rss_feeds": [
+        "https://www.vice.com/en_us/rss/section/tech"
+      ],
+      "topics": ["tech news", "hacking", "privacy", "surveillance"],
+      "priority": 2,
+      "notes": "VICE Motherboard tech section"
+    },
+    {
+      "source_name": "Schneier on Security",
+      "source_type": "blog",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://www.schneier.com/blog/atom.xml"
+      ],
+      "topics": ["security commentary", "cryptography", "privacy", "policy"],
+      "priority": 1,
+      "notes": "Bruce Schneier's security blog"
+    },
+    {
+      "source_name": "Security Affairs",
+      "source_type": "blog",
+      "category": "security_news",
+      "rss_feeds": [
+        "http://securityaffairs.co/wordpress/feed"
+      ],
+      "topics": ["hacking", "cyber warfare", "threat intel"],
+      "priority": 1,
+      "notes": "Pierluigi Paganini's Security Affairs"
+    },
+    {
+      "source_name": "TechRepublic Security",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "http://www.techrepublic.com/rssfeeds/topic/security/?feedType=rssfeeds"
+      ],
+      "topics": ["enterprise security", "how-to", "tools"],
+      "priority": 2,
+      "notes": "TechRepublic security section"
+    },
+    {
+      "source_name": "Threatpost",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://threatpost.com/feed/"
+      ],
+      "topics": ["vulnerabilities", "threats", "malware", "breaches"],
+      "priority": 1,
+      "notes": "Threatpost security news"
+    },
+    {
+      "source_name": "Troy Hunt",
+      "source_type": "blog",
+      "category": "security_blog",
+      "rss_feeds": [
+        "https://www.troyhunt.com/rss/"
+      ],
+      "topics": ["web security", "breaches", "HIBP", "authentication"],
+      "priority": 1,
+      "notes": "Troy Hunt's blog (Have I Been Pwned creator)"
+    },
+    {
+      "source_name": "WIRED Security",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.wired.com/feed/category/security/latest/rss"
+      ],
+      "topics": ["security news", "privacy", "surveillance", "hacking"],
+      "priority": 1,
+      "notes": "WIRED security section"
+    },
+    {
+      "source_name": "ZDNet Security",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.zdnet.com/topic/security/rss.xml"
+      ],
+      "topics": ["enterprise security", "vulnerabilities", "breaches"],
+      "priority": 2,
+      "notes": "ZDNet security topic feed"
+    },
+    {
+      "source_name": "0patch Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.0patch.com/feeds/posts/default"
+      ],
+      "topics": ["micropatches", "vulnerabilities", "Windows security"],
+      "priority": 2,
+      "notes": "0patch micropatching blog"
+    },
+    {
+      "source_name": "Anomali Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.anomali.com/site/blog-rss"
+      ],
+      "topics": ["threat intel", "threat detection", "analysis"],
+      "priority": 2,
+      "notes": "Anomali threat intelligence blog"
+    },
+    {
+      "source_name": "AT&T Cybersecurity",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://cybersecurity.att.com/site/blog-all-rss"
+      ],
+      "topics": ["threat intel", "malware", "security research"],
+      "priority": 2,
+      "notes": "AT&T Alien Labs security research"
+    },
+    {
+      "source_name": "Bitdefender Labs",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.bitdefender.com/blog/api/rss/labs/"
+      ],
+      "topics": ["malware analysis", "threat research", "ransomware"],
+      "priority": 1,
+      "notes": "Bitdefender Labs research"
+    },
+    {
+      "source_name": "Broadcom Symantec",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://sed-cms.broadcom.com/rss/v1/blogs/rss.xml"
+      ],
+      "topics": ["threat research", "malware", "APT"],
+      "priority": 2,
+      "notes": "Broadcom/Symantec security blogs"
+    },
+    {
+      "source_name": "Check Point Research",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://research.checkpoint.com/feed/"
+      ],
+      "topics": ["threat research", "malware", "vulnerabilities", "APT"],
+      "priority": 1,
+      "notes": "Check Point Research threat intelligence"
+    },
+    {
+      "source_name": "Cisco Security",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blogs.cisco.com/security/feed"
+      ],
+      "topics": ["network security", "threats", "enterprise"],
+      "priority": 2,
+      "notes": "Cisco Security blog"
+    },
+    {
+      "source_name": "Cisco Talos",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://feeds.feedburner.com/feedburner/Talos"
+      ],
+      "topics": ["threat intel", "malware", "vulnerabilities", "zero-days"],
+      "priority": 1,
+      "notes": "Cisco Talos Intelligence Group"
+    },
+    {
+      "source_name": "Cloudflare Security",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.cloudflare.com/tag/security/rss"
+      ],
+      "topics": ["web security", "DDoS", "WAF", "zero trust"],
+      "priority": 1,
+      "notes": "Cloudflare security-tagged posts"
+    },
+    {
+      "source_name": "Cofense Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://cofense.com/feed/"
+      ],
+      "topics": ["phishing", "email security", "threat intel"],
+      "priority": 2,
+      "notes": "Cofense phishing defense blog"
+    },
+    {
+      "source_name": "Digital Shadows",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.digitalshadows.com/blog-and-research/feed/"
+      ],
+      "topics": ["digital risk", "threat intel", "dark web"],
+      "priority": 2,
+      "notes": "Digital Shadows (ReliaQuest) research"
+    },
+    {
+      "source_name": "EclecticIQ Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.eclecticiq.com/rss.xml"
+      ],
+      "topics": ["threat intel", "analysis", "CTI"],
+      "priority": 2,
+      "notes": "EclecticIQ threat intelligence blog"
+    },
+    {
+      "source_name": "ESET WeLiveSecurity",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://eset.com/int/rss.xml"
+      ],
+      "topics": ["malware", "threat research", "privacy"],
+      "priority": 1,
+      "notes": "ESET WeLiveSecurity research"
+    },
+    {
+      "source_name": "Mandiant Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://www.fireeye.com/blog/feed"
+      ],
+      "topics": ["APT", "threat intel", "incident response", "malware"],
+      "priority": 1,
+      "notes": "Mandiant/FireEye threat research"
+    },
+    {
+      "source_name": "Fox-IT Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.fox-it.com/feed/"
+      ],
+      "topics": ["incident response", "forensics", "threat research"],
+      "priority": 2,
+      "notes": "Fox-IT (NCC Group) security research"
+    },
+    {
+      "source_name": "Fortinet Threat Research",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://feeds.feedburner.com/fortinet/blog/threat-research"
+      ],
+      "topics": ["threat research", "malware", "vulnerabilities"],
+      "priority": 2,
+      "notes": "Fortinet FortiGuard Labs threat research"
+    },
+    {
+      "source_name": "Google Security Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://googleonlinesecurity.blogspot.com/atom.xml"
+      ],
+      "topics": ["web security", "authentication", "Chrome security"],
+      "priority": 1,
+      "notes": "Google Online Security Blog"
+    },
+    {
+      "source_name": "Google Project Zero",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://googleprojectzero.blogspot.com/feeds/posts/default"
+      ],
+      "topics": ["zero-days", "vulnerability research", "exploitation"],
+      "priority": 1,
+      "notes": "Google Project Zero vulnerability research"
+    },
+    {
+      "source_name": "IBM Security Intelligence",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://securityintelligence.com/feed/"
+      ],
+      "topics": ["threat intel", "SIEM", "enterprise security"],
+      "priority": 1,
+      "notes": "IBM X-Force Security Intelligence"
+    },
+    {
+      "source_name": "Malwarebytes Labs",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.malwarebytes.com/feed/"
+      ],
+      "topics": ["malware", "ransomware", "threats"],
+      "priority": 1,
+      "notes": "Malwarebytes Labs threat research"
+    },
+    {
+      "source_name": "McAfee Blogs",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.mcafee.com/blogs/feed"
+      ],
+      "topics": ["threat research", "malware", "consumer security"],
+      "priority": 2,
+      "notes": "McAfee security blogs"
+    },
+    {
+      "source_name": "Microsoft Security Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.microsoft.com/security/blog/feed/"
+      ],
+      "topics": ["threat intel", "Windows security", "Azure security", "detection"],
+      "priority": 1,
+      "notes": "Microsoft Security Blog"
+    },
+    {
+      "source_name": "Microsoft Security Response Center",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://msrc-blog.microsoft.com/feed/"
+      ],
+      "topics": ["vulnerabilities", "patches", "security updates"],
+      "priority": 1,
+      "notes": "MSRC security updates and vulnerability info"
+    },
+    {
+      "source_name": "Naked Security (Sophos)",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://nakedsecurity.sophos.com/feed/"
+      ],
+      "topics": ["security news", "malware", "privacy"],
+      "priority": 1,
+      "notes": "Sophos Naked Security blog"
+    },
+    {
+      "source_name": "Palo Alto Networks Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.paloaltonetworks.com/blog/rss"
+      ],
+      "topics": ["network security", "cloud security", "product news"],
+      "priority": 2,
+      "notes": "Palo Alto Networks official blog"
+    },
+    {
+      "source_name": "Palo Alto Unit 42",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://researchcenter.paloaltonetworks.com/unit42/feed/"
+      ],
+      "topics": ["threat intel", "malware", "APT", "ransomware"],
+      "priority": 1,
+      "notes": "Unit 42 threat intelligence research"
+    },
+    {
+      "source_name": "PhishLabs Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://blog.phishlabs.com/rss.xml"
+      ],
+      "topics": ["phishing", "BEC", "social engineering"],
+      "priority": 2,
+      "notes": "PhishLabs phishing research"
+    },
+    {
+      "source_name": "Proofpoint Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.proofpoint.com/us/rss.xml"
+      ],
+      "topics": ["email security", "threat intel", "phishing"],
+      "priority": 1,
+      "notes": "Proofpoint threat research"
+    },
+    {
+      "source_name": "Qualys Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.qualys.com/feed"
+      ],
+      "topics": ["vulnerability management", "compliance", "cloud security"],
+      "priority": 2,
+      "notes": "Qualys security blog"
+    },
+    {
+      "source_name": "Quarkslab Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.quarkslab.com/feeds/all.rss.xml"
+      ],
+      "topics": ["reverse engineering", "vulnerability research", "exploitation"],
+      "priority": 2,
+      "notes": "Quarkslab security research"
+    },
+    {
+      "source_name": "Quick Heal Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blogs.quickheal.com/feed/"
+      ],
+      "topics": ["malware", "threats", "security tips"],
+      "priority": 2,
+      "notes": "Quick Heal security blog"
+    },
+    {
+      "source_name": "Recorded Future Blogs",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.recordedfuture.com/category/cyber/feed/",
+        "https://www.recordedfuture.com/category/threat-intelligence/feed/",
+        "https://www.recordedfuture.com/category/vulnerability-management/feed/",
+        "https://www.recordedfuture.com/category/research/vulnerability-management/feed/",
+        "https://www.recordedfuture.com/category/geopolitical/feed/"
+      ],
+      "topics": ["threat intel", "geopolitical", "vulnerabilities", "cyber"],
+      "priority": 1,
+      "notes": "Recorded Future category feeds - cyber, threat intel, vuln mgmt, geopolitical"
+    },
+    {
+      "source_name": "RiskIQ Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.riskiq.com/feed/"
+      ],
+      "topics": ["attack surface", "threat intel", "digital footprint"],
+      "priority": 2,
+      "notes": "RiskIQ (Microsoft) security research"
+    },
+    {
+      "source_name": "Kaspersky SecureList",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://securelist.com/feed/"
+      ],
+      "topics": ["APT", "malware", "threat intel", "vulnerabilities"],
+      "priority": 1,
+      "notes": "Kaspersky GReAT threat research"
+    },
+    {
+      "source_name": "Secureworks Research",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.secureworks.com/rss?feed=blog&category=research-intelligence"
+      ],
+      "topics": ["threat intel", "incident response", "threat actors"],
+      "priority": 1,
+      "notes": "Dell Secureworks Counter Threat Unit research"
+    },
+    {
+      "source_name": "SensePost Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://sensepost.com/rss.xml"
+      ],
+      "topics": ["red team", "pentesting", "tools"],
+      "priority": 2,
+      "notes": "SensePost (Orange Cyberdefense) research"
+    },
+    {
+      "source_name": "SentinelOne Labs",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.sentinelone.com/labs/feed/"
+      ],
+      "topics": ["malware", "threat research", "macOS security"],
+      "priority": 1,
+      "notes": "SentinelOne Labs threat research"
+    },
+    {
+      "source_name": "SOC Prime Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://socprime.com/blog/feed/"
+      ],
+      "topics": ["detection rules", "SIEM", "threat detection", "Sigma"],
+      "priority": 1,
+      "notes": "SOC Prime detection content and threat research"
+    },
+    {
+      "source_name": "Signals Corps",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.signalscorps.com/feed.xml"
+      ],
+      "topics": ["threat intel", "OSINT", "analysis"],
+      "priority": 2,
+      "notes": "Signals Corps threat intelligence"
+    },
+    {
+      "source_name": "SpecterOps Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://posts.specterops.io/feed"
+      ],
+      "topics": ["red team", "Active Directory", "detection", "adversary simulation"],
+      "priority": 1,
+      "notes": "SpecterOps adversary research and tools"
+    },
+    {
+      "source_name": "Trend Micro Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://feeds.trendmicro.com/TrendMicroSimplySecurity"
+      ],
+      "topics": ["threat research", "malware", "ransomware"],
+      "priority": 1,
+      "notes": "Trend Micro Simply Security blog"
+    },
+    {
+      "source_name": "Tripwire State of Security",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.tripwire.com/state-of-security/feed/"
+      ],
+      "topics": ["compliance", "vulnerabilities", "security news"],
+      "priority": 2,
+      "notes": "Tripwire State of Security blog"
+    },
+    {
+      "source_name": "TrustArc Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.trustarc.com/blog/feed/"
+      ],
+      "topics": ["privacy", "compliance", "GDPR"],
+      "priority": 2,
+      "notes": "TrustArc privacy and compliance blog"
+    },
+    {
+      "source_name": "UpGuard Feeds",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.upguard.com/news/rss.xml",
+        "https://www.upguard.com/breaches/rss.xml"
+      ],
+      "topics": ["data breaches", "third-party risk", "security news"],
+      "priority": 2,
+      "notes": "UpGuard news and breaches feeds"
+    },
+    {
+      "source_name": "Veracode Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "http://www.veracode.com/blog/feed/"
+      ],
+      "topics": ["application security", "DevSecOps", "SAST/DAST"],
+      "priority": 2,
+      "notes": "Veracode application security blog"
+    },
+    {
+      "source_name": "Virus Bulletin",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.virusbulletin.com/rss"
+      ],
+      "topics": ["malware", "AV testing", "threat research"],
+      "priority": 2,
+      "notes": "Virus Bulletin security research and testing"
+    },
+    {
+      "source_name": "VirusTotal Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://blog.virustotal.com/feeds/posts/default"
+      ],
+      "topics": ["malware analysis", "threat intel", "file analysis"],
+      "priority": 1,
+      "notes": "VirusTotal official blog"
+    },
+    {
+      "source_name": "Webroot Threat Blog",
+      "source_type": "blog",
+      "category": "vendor_research",
+      "rss_feeds": [
+        "https://www.webroot.com/blog/feed/"
+      ],
+      "topics": ["malware", "phishing", "threats"],
+      "priority": 2,
+      "notes": "Webroot threat research blog"
     }
   ]
 }

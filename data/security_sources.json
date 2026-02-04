@@ -51,6 +51,28 @@
       "notes": "Industrial Control Systems advisories"
     },
     {
+      "source_name": "US-CERT Current Activity",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.cisa.gov/uscert/ncas/current-activity.xml"
+      ],
+      "topics": ["current activity", "vulnerabilities", "threats"],
+      "priority": 1,
+      "notes": "US-CERT Current Activity feed"
+    },
+    {
+      "source_name": "US-CERT Alerts",
+      "source_type": "government",
+      "category": "government_advisory",
+      "rss_feeds": [
+        "https://www.cisa.gov/uscert/ncas/alerts.xml"
+      ],
+      "topics": ["alerts", "technical advisories", "vulnerabilities"],
+      "priority": 1,
+      "notes": "US-CERT Technical Alerts & Analyst Notes"
+    },
+    {
       "source_name": "NCSC UK",
       "source_type": "government",
       "category": "government_advisory",
@@ -62,26 +84,115 @@
       "notes": "UK National Cyber Security Centre"
     },
     {
-      "source_name": "BSI Germany",
+      "source_name": "CERT/CC",
       "source_type": "government",
-      "category": "government_advisory",
+      "category": "vulnerability_advisory",
       "rss_feeds": [
-        "https://www.bsi.bund.de/SiteGlobals/Functions/RSSFeed/RSSNewsfeed/RSSNewsfeed.xml"
+        "https://www.kb.cert.org/vuls/atomfeed/"
       ],
-      "topics": ["Germany", "government", "advisories"],
-      "priority": 2,
-      "notes": "German Federal Office for Information Security"
+      "topics": ["CVE", "vulnerabilities", "advisories", "coordination"],
+      "priority": 1,
+      "notes": "Carnegie Mellon CERT Coordination Center - Vulnerability Notes"
     },
     {
-      "source_name": "NVD Vulnerabilities",
-      "source_type": "vulnerability_db",
-      "category": "cve_database",
+      "source_name": "Exploit Database",
+      "source_type": "exploit_tracking",
+      "category": "vulnerability_research",
       "rss_feeds": [
-        "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"
+        "https://www.exploit-db.com/rss.xml"
       ],
-      "topics": ["CVE", "vulnerabilities", "CVSS", "NVD"],
+      "topics": ["exploits", "vulnerabilities", "PoC", "offensive security"],
       "priority": 1,
-      "notes": "National Vulnerability Database"
+      "notes": "Offensive Security Exploit Database RSS"
+    },
+    {
+      "source_name": "ESET WeLiveSecurity",
+      "source_type": "vendor_research",
+      "category": "threat_research",
+      "rss_feeds": [
+        "https://www.welivesecurity.com/feed/"
+      ],
+      "topics": ["malware", "threat research", "APT", "campaigns"],
+      "priority": 1,
+      "notes": "ESET threat research blog"
+    },
+    {
+      "source_name": "AlienVault OTX",
+      "source_type": "threat_intelligence",
+      "category": "threat_intel_platform",
+      "rss_feeds": [
+        "https://otx.alienvault.com/feeds/pulses/rss"
+      ],
+      "topics": ["IOC", "threat intel", "community pulses", "indicators"],
+      "priority": 1,
+      "notes": "AlienVault Labs (AT&T) Open Threat Exchange"
+    },
+    {
+      "source_name": "PhishTank",
+      "source_type": "threat_tracking",
+      "category": "phishing_tracking",
+      "rss_feeds": [
+        "https://www.phishtank.com/rss/verified_online_phish_feed.xml"
+      ],
+      "topics": ["phishing", "URLs", "brand abuse", "credentials"],
+      "priority": 1,
+      "notes": "PhishTank Verified Phishing URLs"
+    },
+    {
+      "source_name": "The Record",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://therecord.media/feed"
+      ],
+      "topics": ["security news", "breaches", "threat actors", "investigations"],
+      "priority": 1,
+      "notes": "The Record by Recorded Future"
+    },
+    {
+      "source_name": "Risky Biz News",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://risky.biz/rss.xml",
+        "https://srslyriskybiz.substack.com/feed"
+      ],
+      "topics": ["security news", "podcast", "threat intel"],
+      "priority": 1,
+      "notes": "Risky Biz News (Podcast + Intel)"
+    },
+    {
+      "source_name": "Bleeping Computer",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.bleepingcomputer.com/feed/"
+      ],
+      "topics": ["security news", "vulnerabilities", "malware", "breaches"],
+      "priority": 1,
+      "notes": "Popular security news with CVE coverage"
+    },
+    {
+      "source_name": "Dark Reading",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://www.darkreading.com/rss.xml"
+      ],
+      "topics": ["enterprise security", "vulnerabilities", "threat intelligence"],
+      "priority": 1,
+      "notes": "Enterprise security news and analysis"
+    },
+    {
+      "source_name": "Threatpost",
+      "source_type": "news",
+      "category": "security_news",
+      "rss_feeds": [
+        "https://threatpost.com/feed/"
+      ],
+      "topics": ["vulnerabilities", "malware", "threat research"],
+      "priority": 1,
+      "notes": "Security news and vulnerability coverage"
     },
     {
       "source_name": "Unit 42 (Palo Alto)",
