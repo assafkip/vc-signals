@@ -30,6 +30,23 @@ When the user says **"Run RSS monitor"**:
 
 Full scan of all profiles - use specific commands above instead.
 
+## Data Quality Rules (CRITICAL)
+
+**1. Always extract names from the actual profile, not from source files.**
+- When scanning LinkedIn/X, read the person's name from the profile header or browser tab title
+- Source files (watchlist, manifest) may contain typos - the profile is the source of truth
+- If the actual name differs from source data, update both the signal AND the source file
+
+**2. Always capture specific post URLs, not profile URLs.**
+- ❌ BAD: `source_url: "https://linkedin.com/in/jsomaini/"`
+- ✅ GOOD: `source_url: "https://linkedin.com/posts/jsomaini_activity-123456789..."`
+- Click into the post to get the direct link before creating a signal
+
+**3. Every claim must cite a specific source with a link.**
+- ❌ BAD: "Multiple VCs seeking founders"
+- ✅ GOOD: "VCs seeking founders - Justin Somaini: 'reach out' (2/2)" + link to post
+- Include: insight, person name, quote/fact, date, URL
+
 ## Lookback Rules (IMPORTANT)
 
 **Never look at posts older than 14 days from today.**

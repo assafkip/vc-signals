@@ -46,6 +46,27 @@ Look for posts/activity indicating:
 - **Thesis statements**: "investing in", "focused on", "our thesis"
 - **Security-specific**: Mentions of SOC, detection, AI security, agentic security
 
+### 🎯 "PITCH ME" Pattern (HIGHEST VALUE)
+
+**Example post (Justin Somaini, Feb 2026):**
+> "I'm spending time on two things:
+> 1. Security leaders who are genuinely interested in early-stage cyber (Seed/A)
+> 2. Founders who are ideating on what to build and want a thought partner
+> If that's you, reach out."
+
+**Look for these patterns:**
+- "If that's you, reach out" / "DM me" / "happy to chat"
+- "Helping founders" / "advising startups" / "thought partner"
+- Career transition: "left [firm]" / "taking time" / "what's next"
+- Stage-specific focus: "Seed/A" / "early-stage" / "pre-seed"
+- Availability signals: "spending time on" / "open to" / "looking to help"
+
+**When you find this pattern:**
+- Signal type: `hard`
+- Signal category: `actively_looking`
+- Outreach window: `immediate`
+- Confidence: `high`
+
 ### SOFT Signals (Context Value - Create signal entry)
 
 Look for posts/activity indicating:
@@ -88,23 +109,67 @@ These keywords should trigger HIGH confidence signals:
 
 ## Scanning Process
 
+### ⚠️ CRITICAL: Name Extraction Rule
+
+**NEVER use pre-populated names from source files (watchlist, manifest, etc.)**
+
+When creating a signal entry, you MUST extract the person's name directly from:
+1. **LinkedIn**: The profile page header or browser tab title (e.g., "Justin Somaini | LinkedIn")
+2. **X/Twitter**: The profile display name on the page
+
+**Why:** Source files may contain typos or outdated names. The actual profile is the source of truth.
+
+**How to verify:**
+- After navigating to a profile, check the browser tab title or page header
+- Use that exact name in the `person_name` field
+- If the name differs from source data, update the source data file too
+
+### ⚠️ CRITICAL: Post URL Extraction Rule
+
+**NEVER use profile URLs as source_url. Always get the specific post URL.**
+
+When you find a signal post:
+1. **Click on the post** to open it in detail view
+2. **Copy the specific post URL** from the browser address bar
+3. **Use that URL** in the `source_url` field
+
+**LinkedIn post URLs look like:**
+- `https://www.linkedin.com/posts/username_activity-1234567890123456789-xxxx`
+- `https://www.linkedin.com/feed/update/urn:li:activity:1234567890123456789`
+
+**X/Twitter post URLs look like:**
+- `https://x.com/username/status/1234567890123456789`
+
+**Why:** Profile URLs don't link to the specific insight. Users need to click and see the exact post that supports the claim.
+
+❌ BAD: `source_url: "https://www.linkedin.com/in/jsomaini/"`
+✅ GOOD: `source_url: "https://www.linkedin.com/posts/jsomaini_activity-7292123456789012345-abcd"`
+
 ### For Each Profile:
 
 1. **Navigate** to the profile URL
 2. **Wait** for page to load (2-3 seconds)
-3. **Check recent activity** (last 2-4 weeks of posts)
-4. **Look for signal keywords** in posts
-5. **If signal found**, create a signal entry
-6. **Screenshot** if needed for complex signals
+3. **Extract the actual name** from the profile header/tab title ← CRITICAL
+4. **Check recent activity** (last 2-4 weeks of posts)
+5. **Look for signal keywords** in posts
+6. **If signal found:**
+   - Click into the post to get the specific post URL ← CRITICAL
+   - Create a signal entry using the extracted name AND post URL
+7. **Screenshot** if needed for complex signals
 
 ### LinkedIn Scanning
 
 ```
 1. Navigate to linkedin.com/in/[username]
-2. Scroll to "Activity" section
-3. Look for recent posts (not just reposts)
-4. Check for: fund announcements, thesis posts, security commentary
-5. Note follower count and engagement levels
+2. VERIFY the actual name from the profile header (not from watchlist)
+3. Scroll to "Activity" section
+4. Look for recent posts (not just reposts)
+5. When you find a signal post:
+   a. Click on the post timestamp or "..." menu → "Copy link to post"
+   b. Or click into the post and copy URL from address bar
+   c. Use this specific URL as source_url
+6. Check for: fund announcements, thesis posts, security commentary
+7. Note follower count and engagement levels
 ```
 
 ### X/Twitter Scanning
@@ -125,13 +190,13 @@ When a signal is detected, create an entry in this format:
 ```json
 {
   "id": "[platform]_scan_[person_lastname]_[unique_id]",
-  "person_name": "Full Name",
+  "person_name": "Full Name (EXTRACTED FROM PROFILE, not from watchlist)",
   "firm": "Firm Name or Outlet",
   "signal_type": "hard" or "soft",
   "signal_category": "[category from taxonomy]",
   "summary": "Brief description of what was found",
   "excerpt": "Key quote if applicable (keep short)",
-  "source_url": "https://www.linkedin.com/in/username or https://twitter.com/username",
+  "source_url": "SPECIFIC POST URL - e.g. https://www.linkedin.com/posts/username_activity-123... or https://x.com/username/status/123...",
   "source_type": "linkedin" or "x_twitter",
   "source_date": "YYYY-MM-DD",
   "confidence": "high" or "medium",
@@ -174,6 +239,23 @@ Broader VC network and general security media
 
 ### Priority 3 (Weekly rotation) - ~1 profile
 Lower relevance but worth occasional monitoring
+
+---
+
+## ⚠️ CRITICAL: Citation Requirements
+
+**Every claim in summaries must cite a specific source.**
+
+❌ BAD: "Multiple VCs actively seeking early-stage cyber founders"
+✅ GOOD: "Justin Somaini seeking cyber founders: 'If that's you, reach out' (post 2/2)"
+
+❌ BAD: "Agentic Security emerging as funded category"
+✅ GOOD: "WitnessAI $58M Agentic Security round (Barmak Meftah post 2/2)"
+
+**For every theme or summary point, include:**
+- Person name
+- Specific quote or fact
+- Post date (MM/DD format)
 
 ---
 

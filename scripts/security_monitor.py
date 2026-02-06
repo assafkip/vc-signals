@@ -79,6 +79,20 @@ class SecuritySignal:
     threat_actors: List[str]  # Any threat actor names mentioned
     malware_families: List[str]  # Any malware families mentioned
     env_tags: List[str] = None  # Environment/infrastructure tags for filtering
+    # Extended contextual attributes
+    mitre_tactics: List[str] = None  # MITRE ATT&CK tactics
+    mitre_techniques: List[str] = None  # MITRE ATT&CK technique IDs
+    campaign_names: List[str] = None  # Named campaigns/operations
+    motivation: str = None  # espionage, financial, hacktivism, destruction
+    target_industries: List[str] = None  # Targeted sectors
+    target_regions: List[str] = None  # Geographic targeting
+    attack_phase: str = None  # recon, weaponization, delivery, exploitation, installation, c2, exfiltration
+    confidence_level: str = None  # high, medium, low
+    first_seen: str = None  # When indicator was first observed
+    ioc_types: List[str] = None  # Types of IOCs (ip, domain, hash, url, email)
+    affected_products: List[str] = None  # Specific products/vendors affected
+    exploit_type: str = None  # Type of exploit (buffer overflow, injection, etc.)
+    is_fraud_trust_safety: bool = False  # Fraud, Trust & Safety related signal
 
 
 # CVE pattern
@@ -123,6 +137,126 @@ HIGH_KEYWORDS = [
 MEDIUM_KEYWORDS = [
     'medium severity', 'information disclosure', 'denial of service',
     'dos', 'xss', 'cross-site', 'cvss 4', 'cvss 5', 'cvss 6'
+]
+
+# MITRE ATT&CK Tactics
+MITRE_TACTICS = {
+    'reconnaissance': ['reconnaissance', 'recon', 'scanning', 'enumeration', 'osint', 'footprinting'],
+    'resource_development': ['resource development', 'infrastructure', 'acquire infrastructure', 'develop capabilities'],
+    'initial_access': ['initial access', 'phishing', 'spearphishing', 'drive-by', 'exploit public', 'valid accounts', 'supply chain'],
+    'execution': ['execution', 'command and scripting', 'powershell', 'cmd', 'wmi', 'scheduled task', 'user execution'],
+    'persistence': ['persistence', 'boot or logon', 'registry run', 'scheduled task', 'create account', 'implant'],
+    'privilege_escalation': ['privilege escalation', 'privesc', 'uac bypass', 'token manipulation', 'sudo', 'setuid'],
+    'defense_evasion': ['defense evasion', 'obfuscation', 'masquerading', 'disable security', 'rootkit', 'timestomp'],
+    'credential_access': ['credential access', 'credential dumping', 'keylogging', 'brute force', 'password spray', 'mimikatz'],
+    'discovery': ['discovery', 'network scanning', 'system information', 'account discovery', 'permission groups'],
+    'lateral_movement': ['lateral movement', 'pass the hash', 'pass the ticket', 'remote services', 'rdp', 'smb', 'psexec'],
+    'collection': ['collection', 'data from local', 'screen capture', 'keylogging', 'clipboard', 'email collection'],
+    'command_and_control': ['command and control', 'c2', 'c&c', 'beacon', 'encrypted channel', 'proxy', 'tunneling'],
+    'exfiltration': ['exfiltration', 'data exfil', 'exfiltrate', 'transfer data', 'staging'],
+    'impact': ['impact', 'ransomware', 'data destruction', 'defacement', 'disk wipe', 'resource hijacking', 'cryptomining']
+}
+
+# Common MITRE Technique patterns
+MITRE_TECHNIQUE_PATTERN = re.compile(r'T\d{4}(?:\.\d{3})?', re.IGNORECASE)
+
+# Threat Actor Motivations
+MOTIVATION_KEYWORDS = {
+    'espionage': ['espionage', 'cyber espionage', 'nation-state', 'state-sponsored', 'intelligence gathering', 'surveillance'],
+    'financial': ['financial', 'ransomware', 'extortion', 'banking trojan', 'cryptojacking', 'fraud', 'payment card'],
+    'hacktivism': ['hacktivist', 'hacktivism', 'activist', 'political', 'ddos protest', 'anonymous'],
+    'destruction': ['wiper', 'destructive', 'sabotage', 'disk wipe', 'data destruction']
+}
+
+# Target Industries
+INDUSTRY_KEYWORDS = {
+    'finance': ['bank', 'banking', 'financial', 'fintech', 'payment', 'credit card', 'insurance', 'trading'],
+    'healthcare': ['healthcare', 'hospital', 'medical', 'pharma', 'health system', 'patient data', 'hipaa'],
+    'government': ['government', 'federal', 'state agency', 'municipal', 'public sector', 'defense', 'military'],
+    'energy': ['energy', 'power grid', 'utility', 'oil', 'gas', 'nuclear', 'renewable', 'pipeline'],
+    'technology': ['tech', 'software', 'saas', 'cloud provider', 'it services', 'semiconductor'],
+    'manufacturing': ['manufacturing', 'industrial', 'ics', 'scada', 'ot', 'plc', 'factory'],
+    'retail': ['retail', 'e-commerce', 'pos', 'point of sale', 'merchant'],
+    'telecom': ['telecom', 'telecommunications', 'carrier', 'isp', '5g', 'mobile network'],
+    'education': ['education', 'university', 'school', 'academic', 'research institution'],
+    'transportation': ['transportation', 'aviation', 'airline', 'shipping', 'logistics', 'rail']
+}
+
+# Geographic Regions
+REGION_KEYWORDS = {
+    'north_america': ['united states', 'us', 'usa', 'canada', 'north america', 'american'],
+    'europe': ['europe', 'european', 'eu', 'uk', 'germany', 'france', 'nato'],
+    'asia_pacific': ['asia', 'apac', 'china', 'japan', 'korea', 'taiwan', 'australia', 'india'],
+    'middle_east': ['middle east', 'israel', 'iran', 'saudi', 'uae', 'gulf'],
+    'russia_cis': ['russia', 'russian', 'ukraine', 'cis', 'eastern europe'],
+    'latin_america': ['latin america', 'brazil', 'mexico', 'south america']
+}
+
+# Attack Phases (Kill Chain)
+ATTACK_PHASE_KEYWORDS = {
+    'recon': ['reconnaissance', 'scanning', 'enumeration', 'osint', 'target selection'],
+    'weaponization': ['weaponization', 'payload', 'exploit kit', 'malware creation'],
+    'delivery': ['delivery', 'phishing email', 'malicious attachment', 'drive-by download', 'watering hole'],
+    'exploitation': ['exploitation', 'exploit', 'vulnerability exploitation', 'code execution'],
+    'installation': ['installation', 'implant', 'backdoor', 'persistence mechanism', 'dropper'],
+    'command_control': ['command and control', 'c2', 'c&c', 'beacon', 'callback'],
+    'actions_on_objectives': ['exfiltration', 'data theft', 'ransomware deployment', 'impact', 'objective']
+}
+
+# IOC Types
+IOC_TYPE_KEYWORDS = {
+    'ip': ['ip address', 'ipv4', 'ipv6', 'c2 ip', 'malicious ip'],
+    'domain': ['domain', 'malicious domain', 'c2 domain', 'dga'],
+    'hash': ['hash', 'md5', 'sha256', 'sha1', 'file hash', 'ioc hash'],
+    'url': ['url', 'malicious url', 'phishing url', 'payload url'],
+    'email': ['email address', 'sender', 'phishing email', 'malicious email'],
+    'file': ['filename', 'file name', 'malicious file', 'dropper']
+}
+
+# Affected Products/Vendors
+PRODUCT_KEYWORDS = [
+    'microsoft', 'windows', 'office', 'exchange', 'sharepoint', 'azure',
+    'cisco', 'fortinet', 'palo alto', 'juniper', 'checkpoint',
+    'vmware', 'citrix', 'ivanti', 'pulse secure', 'sonicwall',
+    'apache', 'nginx', 'wordpress', 'drupal', 'joomla',
+    'oracle', 'sap', 'salesforce', 'atlassian', 'confluence', 'jira',
+    'linux', 'ubuntu', 'redhat', 'centos', 'debian',
+    'android', 'ios', 'chrome', 'firefox', 'safari', 'edge',
+    'aws', 'gcp', 'google cloud', 'kubernetes', 'docker',
+    'zoom', 'slack', 'teams', 'webex'
+]
+
+# Fraud, Trust & Safety Keywords (precise terms only - avoid generic security terms)
+FRAUD_TRUST_SAFETY_KEYWORDS = [
+    # Fraud schemes (specific)
+    'scam', 'scammer', 'scams', 'fraudster',
+    'business email compromise', 'bec scam', 'ceo fraud', 'invoice fraud', 'wire fraud',
+    'payment fraud', 'credit card fraud', 'card fraud', 'chargeback fraud',
+    'synthetic identity', 'identity theft', 'identity fraud', 'stolen identity',
+    'account takeover attack', 'credential stuffing attack',
+    'romance scam', 'pig butchering', 'investment scam', 'crypto scam',
+    'advance fee fraud', '419 scam', 'nigerian prince',
+    'tech support scam', 'refund scam', 'lottery scam', 'prize scam',
+    'elder fraud', 'senior scam', 'grandparent scam',
+    # Trust & Safety (platform-specific)
+    'trust and safety', 'trust & safety', 'trust safety team',
+    'content moderation', 'platform abuse', 'abuse detection',
+    'fake account', 'fake accounts', 'bot network', 'bot farm',
+    'coordinated inauthentic', 'influence operation',
+    'disinformation campaign', 'misinformation campaign',
+    'deepfake fraud', 'deepfake scam', 'voice cloning scam',
+    'impersonation scam', 'impersonator',
+    # Financial crime (specific)
+    'money laundering scheme', 'money mule', 'mule account', 'mule network',
+    'terrorist financing',
+    # Consumer protection
+    'ftc warning', 'consumer alert', 'fraud alert', 'scam alert',
+    # Marketplace fraud
+    'seller fraud', 'buyer fraud', 'marketplace fraud', 'fake review',
+    'counterfeit goods', 'fake product',
+    # Specific phishing contexts (not general phishing)
+    'phishing kit', 'phishing-as-a-service', 'phishing campaign targets',
+    'vishing attack', 'smishing attack', 'quishing'
 ]
 
 
@@ -224,6 +358,86 @@ class SecurityMonitor:
             return "medium"
 
         return "informational"
+
+    def _detect_mitre_tactics(self, text: str) -> List[str]:
+        """Detect MITRE ATT&CK tactics from content."""
+        text_lower = text.lower()
+        detected = []
+        for tactic, keywords in MITRE_TACTICS.items():
+            if any(kw in text_lower for kw in keywords):
+                detected.append(tactic)
+        return detected[:5]  # Limit to top 5
+
+    def _detect_mitre_techniques(self, text: str) -> List[str]:
+        """Extract MITRE ATT&CK technique IDs (e.g., T1059)."""
+        return list(set(MITRE_TECHNIQUE_PATTERN.findall(text)))[:10]
+
+    def _detect_motivation(self, text: str) -> Optional[str]:
+        """Detect threat actor motivation."""
+        text_lower = text.lower()
+        for motivation, keywords in MOTIVATION_KEYWORDS.items():
+            if any(kw in text_lower for kw in keywords):
+                return motivation
+        return None
+
+    def _detect_industries(self, text: str) -> List[str]:
+        """Detect targeted industries."""
+        text_lower = text.lower()
+        detected = []
+        for industry, keywords in INDUSTRY_KEYWORDS.items():
+            if any(kw in text_lower for kw in keywords):
+                detected.append(industry)
+        return detected[:5]
+
+    def _detect_regions(self, text: str) -> List[str]:
+        """Detect geographic targeting."""
+        text_lower = text.lower()
+        detected = []
+        for region, keywords in REGION_KEYWORDS.items():
+            if any(kw in text_lower for kw in keywords):
+                detected.append(region)
+        return detected[:3]
+
+    def _detect_attack_phase(self, text: str) -> Optional[str]:
+        """Detect attack lifecycle phase."""
+        text_lower = text.lower()
+        for phase, keywords in ATTACK_PHASE_KEYWORDS.items():
+            if any(kw in text_lower for kw in keywords):
+                return phase
+        return None
+
+    def _detect_ioc_types(self, text: str) -> List[str]:
+        """Detect types of IOCs mentioned."""
+        text_lower = text.lower()
+        detected = []
+        for ioc_type, keywords in IOC_TYPE_KEYWORDS.items():
+            if any(kw in text_lower for kw in keywords):
+                detected.append(ioc_type)
+        return detected
+
+    def _detect_products(self, text: str) -> List[str]:
+        """Detect affected products/vendors."""
+        text_lower = text.lower()
+        detected = []
+        for product in PRODUCT_KEYWORDS:
+            if product in text_lower:
+                detected.append(product.title())
+        return list(set(detected))[:8]
+
+    def _determine_confidence(self, source_type: str, has_cves: bool, has_actors: bool) -> str:
+        """Determine confidence level based on source and content."""
+        # Government and major vendor sources are high confidence
+        if source_type in ['government', 'vendor_research']:
+            return 'high'
+        # If has specific CVEs or threat actors, medium-high
+        if has_cves or has_actors:
+            return 'medium'
+        return 'low'
+
+    def _detect_fraud_trust_safety(self, text: str) -> bool:
+        """Detect if content is related to fraud, trust & safety."""
+        text_lower = text.lower()
+        return any(kw in text_lower for kw in FRAUD_TRUST_SAFETY_KEYWORDS)
 
     def _determine_category(self, text: str, source_category: str, cves: List[str],
                            threat_actors: List[str], malware: List[str]) -> str:
@@ -379,6 +593,22 @@ class SecurityMonitor:
         if ENV_TAGGER_AVAILABLE:
             env_tags = tag_with_llm(title, summary)
 
+        # Detect contextual attributes
+        mitre_tactics = self._detect_mitre_tactics(full_text)
+        mitre_techniques = self._detect_mitre_techniques(full_text)
+        motivation = self._detect_motivation(full_text)
+        target_industries = self._detect_industries(full_text)
+        target_regions = self._detect_regions(full_text)
+        attack_phase = self._detect_attack_phase(full_text)
+        ioc_types = self._detect_ioc_types(full_text)
+        affected_products = self._detect_products(full_text)
+        is_fraud_trust_safety = self._detect_fraud_trust_safety(full_text)
+        confidence = self._determine_confidence(
+            source.get("source_type", "unknown"),
+            bool(cves),
+            bool(threat_actors)
+        )
+
         # Create signal
         signal = SecuritySignal(
             id=self._generate_signal_id(link, source.get("source_name", "")),
@@ -394,7 +624,18 @@ class SecurityMonitor:
             cve_ids=cves,
             threat_actors=threat_actors,
             malware_families=malware,
-            env_tags=env_tags
+            env_tags=env_tags,
+            mitre_tactics=mitre_tactics,
+            mitre_techniques=mitre_techniques,
+            motivation=motivation,
+            target_industries=target_industries,
+            target_regions=target_regions,
+            attack_phase=attack_phase,
+            confidence_level=confidence,
+            first_seen=source_date,
+            ioc_types=ioc_types,
+            affected_products=affected_products,
+            is_fraud_trust_safety=is_fraud_trust_safety
         )
 
         return signal
@@ -487,6 +728,18 @@ class SecurityMonitor:
                                 if "on_prem" not in ics_env_tags:
                                     ics_env_tags.append("on_prem")  # ICS typically on-prem
 
+                            # Detect contextual attributes for ICS advisories
+                            ics_full_text = f"{title} {summary}"
+                            ics_mitre_tactics = self._detect_mitre_tactics(ics_full_text)
+                            ics_mitre_techniques = self._detect_mitre_techniques(ics_full_text)
+                            ics_industries = self._detect_industries(ics_full_text)
+                            ics_regions = self._detect_regions(ics_full_text)
+                            ics_products = self._detect_products(ics_full_text)
+                            ics_fraud = self._detect_fraud_trust_safety(ics_full_text)
+                            # ICS advisories are typically about manufacturing/energy
+                            if not ics_industries:
+                                ics_industries = ["manufacturing", "energy"]
+
                             signal = SecuritySignal(
                                 id=signal_id,
                                 source_name="CISA ICS-CERT",
@@ -501,7 +754,18 @@ class SecurityMonitor:
                                 cve_ids=cves,
                                 threat_actors=[],
                                 malware_families=[],
-                                env_tags=ics_env_tags
+                                env_tags=ics_env_tags,
+                                mitre_tactics=ics_mitre_tactics if ics_mitre_tactics else ["initial_access"],
+                                mitre_techniques=ics_mitre_techniques,
+                                motivation=None,  # ICS attacks can be various motivations
+                                target_industries=ics_industries,
+                                target_regions=ics_regions,
+                                attack_phase="exploitation",  # ICS advisories are about exploitation
+                                confidence_level="high",  # Government source
+                                first_seen=release_date,
+                                ioc_types=[],
+                                affected_products=ics_products,
+                                is_fraud_trust_safety=ics_fraud
                             )
                             signals.append(signal)
 
@@ -591,6 +855,24 @@ class SecurityMonitor:
                         if ransomware == "Known" and "ransomware" not in kev_env_tags:
                             kev_env_tags.append("ransomware")
 
+                    # Detect contextual attributes for KEV entries
+                    kev_full_text = f"{title} {summary} {vendor} {product}"
+                    kev_mitre_tactics = self._detect_mitre_tactics(kev_full_text)
+                    kev_mitre_techniques = self._detect_mitre_techniques(kev_full_text)
+                    kev_industries = self._detect_industries(kev_full_text)
+                    kev_regions = self._detect_regions(kev_full_text)
+                    kev_products = self._detect_products(kev_full_text)
+                    # Add vendor/product if not already detected
+                    if vendor and vendor.title() not in kev_products:
+                        kev_products.append(vendor.title())
+                    if product and product.title() not in kev_products:
+                        kev_products.append(product.title())
+                    kev_products = kev_products[:8]  # Limit
+
+                    # KEV entries are actively exploited, so motivation varies
+                    kev_motivation = "financial" if ransomware == "Known" else self._detect_motivation(kev_full_text)
+                    kev_fraud = self._detect_fraud_trust_safety(kev_full_text)
+
                     signal = SecuritySignal(
                         id=signal_id,
                         source_name="CISA KEV",
@@ -605,7 +887,18 @@ class SecurityMonitor:
                         cve_ids=[cve_id],
                         threat_actors=[],
                         malware_families=["ransomware"] if ransomware == "Known" else [],
-                        env_tags=kev_env_tags
+                        env_tags=kev_env_tags,
+                        mitre_tactics=kev_mitre_tactics if kev_mitre_tactics else ["exploitation"],
+                        mitre_techniques=kev_mitre_techniques,
+                        motivation=kev_motivation,
+                        target_industries=kev_industries,
+                        target_regions=kev_regions,
+                        attack_phase="exploitation",  # KEV = actively exploited
+                        confidence_level="high",  # Government source, confirmed exploitation
+                        first_seen=date_added,
+                        ioc_types=[],
+                        affected_products=kev_products,
+                        is_fraud_trust_safety=kev_fraud
                     )
                     signals.append(signal)
 

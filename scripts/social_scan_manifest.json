@@ -11,122 +11,736 @@
       "note": "Never look at posts older than 14 days from today. After initial 2-week lookback, only check for new activity since last_scan_date."
     },
     "linkedin_scan": {
-      "last_run": "2026-02-01T14:00:00",
-      "profiles_scanned": 16,
+      "last_run": "2026-02-05T18:15:00",
+      "profiles_scanned": [
+        "Ed Sim (Boldstart)",
+        "Chenxi Wang (Rain Capital)",
+        "Asheem Chandna (Greylock)",
+        "Jay Leek (SYN Ventures)",
+        "Kobi Samboursky (Glilot)",
+        "Lior Simon (Cyberstarts)",
+        "Ofer Schreiber (YL Ventures)",
+        "Liran Grinberg (Team8)",
+        "Barmak Meftah (Ballistic Ventures)",
+        "Dave DeWalt (NightDragon)",
+        "Mark Hatfield (Ten Eleven)",
+        "Alberto Yépez (ForgePoint)",
+        "Ping Li (Accel)",
+        "Arif Janmohamed (Lightspeed)",
+        "Bogomil Balkansky (Sequoia)",
+        "Sunil Dhaliwal (Amplify)",
+        "Dharmesh Thakker (Battery)"
+      ],
       "requires_user_trigger": true,
-      "trigger_phrase": "research linkedin now"
+      "trigger_phrase": "research linkedin now",
+      "signals_added": 16
     }
   },
   "linkedin_profiles": [
-    {"name": "Lior Simon", "firm": "Cyberstarts", "url": "https://www.linkedin.com/in/lior-simon-b4610577/", "priority": 1, "category": "vc"},
-    {"name": "Ofer Schreiber", "firm": "YL Ventures", "url": "https://www.linkedin.com/in/oferschr/", "priority": 1, "category": "vc"},
-    {"name": "Liran Grinberg", "firm": "Team8", "url": "https://linkedin.com/in/lirangrinberg", "priority": 1, "category": "vc"},
-    {"name": "Barmak Meftah", "firm": "Ballistic Ventures", "url": "https://www.linkedin.com/in/barmakmeftah/", "priority": 1, "category": "vc"},
-    {"name": "Chenxi Wang", "firm": "Rain Capital", "url": "https://www.linkedin.com/in/chenxiwang88", "priority": 1, "category": "vc"},
-    {"name": "Dave DeWalt", "firm": "NightDragon", "url": "https://www.linkedin.com/in/ddewalt/", "priority": 1, "category": "vc"},
-    {"name": "Mark Hatfield", "firm": "Ten Eleven Ventures", "url": "https://linkedin.com/in/mh1011", "priority": 1, "category": "vc"},
-    {"name": "Alberto Yepez", "firm": "ForgePoint Capital", "url": "https://www.linkedin.com/in/albertoyepez", "priority": 1, "category": "vc"},
-    {"name": "Kobi Samboursky", "firm": "Glilot Capital", "url": "https://linkedin.com/in/kobisamboursky", "priority": 1, "category": "vc"},
-    {"name": "Jay Leek", "firm": "SYN Ventures", "url": "https://www.linkedin.com/in/jayleek", "priority": 1, "category": "vc"},
-    {"name": "Hadar Paz", "firm": "Hyperplane", "url": "https://linkedin.com/in/hadarpaz", "priority": 1, "category": "vc"},
-    {"name": "Ed Sim", "firm": "Boldstart Ventures", "url": "https://www.linkedin.com/in/edsim", "priority": 1, "category": "vc"},
-    {"name": "Jon Sakoda", "firm": "Decibel Partners", "url": "https://www.linkedin.com/in/jonsakoda/", "priority": 2, "category": "vc"},
-    {"name": "Josh Kopelman", "firm": "First Round Capital", "url": "https://www.linkedin.com/in/jkopelman", "priority": 2, "category": "vc"},
-    {"name": "Jonathan Lehr", "firm": "Work-Bench", "url": "https://www.linkedin.com/in/jlehr1", "priority": 2, "category": "vc"},
-    {"name": "Saar Gur", "firm": "CRV", "url": "https://www.linkedin.com/in/saargur/", "priority": 2, "category": "vc"},
-    {"name": "Ping Li", "firm": "Accel", "url": "https://www.linkedin.com/in/pingli8/", "priority": 1, "category": "vc"},
-    {"name": "Arif Janmohamed", "firm": "Lightspeed Venture Partners", "url": "https://www.linkedin.com/in/arifj/", "priority": 1, "category": "vc"},
-    {"name": "Bogomil Balkansky", "firm": "Sequoia Capital", "url": "https://www.linkedin.com/in/balkansky", "priority": 1, "category": "vc"},
-    {"name": "Asheem Chandna", "firm": "Greylock", "url": "https://www.linkedin.com/in/chandna", "priority": 1, "category": "vc"},
-    {"name": "Theresia Gouw", "firm": "Acrew Capital", "url": "https://www.linkedin.com/in/theresiagouw", "priority": 2, "category": "vc"},
-    {"name": "Sunil Dhaliwal", "firm": "Amplify Partners", "url": "https://www.linkedin.com/in/sunildhaliwal/", "priority": 1, "category": "vc"},
-    {"name": "Pejman Nozad", "firm": "Pear VC", "url": "https://www.linkedin.com/in/pejman/", "priority": 2, "category": "vc"},
-    {"name": "Jeff Clavier", "firm": "Uncork Capital", "url": "https://www.linkedin.com/in/jeffclavier", "priority": 2, "category": "vc"},
-    {"name": "Mark Gorenberg", "firm": "Zetta Venture Partners", "url": "https://www.linkedin.com/in/markgorenberg/", "priority": 2, "category": "vc"},
-    {"name": "Tomasz Tunguz", "firm": "Theory Ventures", "url": "https://www.linkedin.com/in/tomasztunguz/", "priority": 2, "category": "vc"},
-    {"name": "Samir Kaul", "firm": "Khosla Ventures", "url": "https://www.linkedin.com/in/samir-kaul-9227b64/", "priority": 2, "category": "vc"},
-    {"name": "Dharmesh Thakker", "firm": "Battery Ventures", "url": "https://www.linkedin.com/in/dthakker", "priority": 1, "category": "vc"},
-    {"name": "Adam Fisher", "firm": "Bessemer Venture Partners", "url": "https://il.linkedin.com/in/adamrfisher", "priority": 1, "category": "vc"},
-    {"name": "Shardul Shah", "firm": "Index Ventures", "url": "https://www.linkedin.com/in/shardul-shah-3589062/", "priority": 1, "category": "vc"},
-    {"name": "Greg Reichow", "firm": "Eclipse Ventures", "url": "https://www.linkedin.com/in/gregreichow/", "priority": 3, "category": "vc"},
-    {"name": "Arun Mathew", "firm": "Accel", "url": "https://www.linkedin.com/in/arun-mathew-b7186412/", "priority": 2, "category": "vc"},
-    {"name": "Timothy Chen", "firm": "Essence VC", "url": "https://www.linkedin.com/in/timchen/", "priority": 2, "category": "vc"},
-    {"name": "Greg Sands", "firm": "Costanoa Ventures", "url": "https://www.linkedin.com/in/gregsands/", "priority": 2, "category": "vc"},
-    {"name": "Aydin Senkut", "firm": "Felicis Ventures", "url": "https://www.linkedin.com/in/aydins/", "priority": 2, "category": "vc"},
-    {"name": "Emanuel Timor", "firm": "Vertex Ventures Israel", "url": "https://www.linkedin.com/in/emanuel-timor-79959/", "priority": 2, "category": "vc"},
-    {"name": "Robin Vasan", "firm": "Mango Capital", "url": "https://www.linkedin.com/in/robinvasan/", "priority": 2, "category": "vc"},
-    {"name": "Steve Vassallo", "firm": "Foundation Capital", "url": "https://www.linkedin.com/in/stevevassallo", "priority": 2, "category": "vc"},
-    {"name": "Niko Bonatsos", "firm": "General Catalyst", "url": "https://www.linkedin.com/in/bonatsos/", "priority": 2, "category": "vc"},
-    {"name": "Ali Partovi", "firm": "Neo", "url": "https://www.linkedin.com/in/apartovi/", "priority": 2, "category": "vc"},
-    {"name": "Chris Farmer", "firm": "SignalFire", "url": "https://www.linkedin.com/in/chriswfarmer/", "priority": 2, "category": "vc"},
-    {"name": "Zack Whittaker", "outlet": "TechCrunch", "url": "https://www.linkedin.com/in/zaborowitz/", "priority": 2, "category": "media"},
-    {"name": "Lorenzo Franceschi-Bicchierai", "outlet": "TechCrunch", "url": "https://www.linkedin.com/in/lorenzofb/", "priority": 2, "category": "media"},
-    {"name": "Andy Greenberg", "outlet": "Wired", "url": "https://www.linkedin.com/in/andygreenberg/", "priority": 2, "category": "media"},
-    {"name": "Ross Haleliuk", "outlet": "Venture in Security", "url": "https://www.linkedin.com/in/rosshaleliuk", "priority": 1, "category": "media"},
-    {"name": "Troy Hunt", "outlet": "Have I Been Pwned", "url": "https://www.linkedin.com/in/troyhunt/", "priority": 2, "category": "media"},
-    {"name": "Bruce Schneier", "outlet": "Harvard Kennedy School", "url": "https://www.linkedin.com/in/bruceSchneier/", "priority": 2, "category": "media"},
-    {"name": "Mikko Hypponen", "outlet": "WithSecure", "url": "https://www.linkedin.com/in/maborak/", "priority": 2, "category": "media"},
-    {"name": "Robert M. Lee", "outlet": "Dragos", "url": "https://www.linkedin.com/in/robertmlee/", "priority": 2, "category": "media"},
-    {"name": "Jack Rhysider", "outlet": "Darknet Diaries", "url": "https://www.linkedin.com/in/jackrhysider/", "priority": 2, "category": "media"},
-    {"name": "David Spark", "outlet": "CISO Series", "url": "https://www.linkedin.com/in/davidspark/", "priority": 2, "category": "media"},
-    {"name": "John Hammond", "outlet": "Huntress Labs", "url": "https://www.linkedin.com/in/johnhammond010/", "priority": 2, "category": "media"},
-    {"name": "Heath Adams", "outlet": "TCM Security", "url": "https://www.linkedin.com/in/hikikomori/", "priority": 2, "category": "media"},
-    {"name": "Sherrod DeGrippo", "outlet": "Microsoft", "url": "https://www.linkedin.com/in/sherroddegrippo/", "priority": 2, "category": "media"},
-    {"name": "Eva Galperin", "outlet": "EFF", "url": "https://www.linkedin.com/in/eva-galperin/", "priority": 2, "category": "media"},
-    {"name": "Daniel Miessler", "outlet": "Unsupervised Learning", "url": "https://www.linkedin.com/in/danielmiessler/", "priority": 1, "category": "media"},
-    {"name": "Dave Bittner", "outlet": "CyberWire", "url": "https://www.linkedin.com/in/davebittner/", "priority": 2, "category": "media"},
-    {"name": "Keren Elazari", "outlet": "Tel Aviv University", "url": "https://www.linkedin.com/in/kerenelazari/", "priority": 2, "category": "media"},
-    {"name": "Geoff Belknap", "outlet": "LinkedIn", "url": "https://www.linkedin.com/in/geoffbelknap/", "priority": 2, "category": "media"},
-    {"name": "Chuck Brooks", "outlet": "Georgetown University", "url": "https://www.linkedin.com/in/chuckbrooks/", "priority": 2, "category": "media"},
-    {"name": "Katie Nickels", "outlet": "Red Canary", "url": "https://www.linkedin.com/in/katie-nickels/", "priority": 1, "category": "media"},
-    {"name": "Graham Cluley", "outlet": "Smashing Security", "url": "https://www.linkedin.com/in/grahamcluley/", "priority": 2, "category": "media"},
-    {"name": "Nicole Perlroth", "outlet": "Former NYT", "url": "https://www.linkedin.com/in/nicoleperlroth/", "priority": 2, "category": "media"},
-    {"name": "Renee Burton", "outlet": "Infoblox", "url": "https://www.linkedin.com/in/renee-burton/", "priority": 2, "category": "media"},
-    {"name": "Kim Zetter", "outlet": "Zero Day", "url": "https://www.linkedin.com/in/kimzetter/", "priority": 1, "category": "media"}
+    {
+      "name": "Lior Simon",
+      "firm": "Cyberstarts",
+      "url": "https://www.linkedin.com/in/lior-simon-b4610577/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Ofer Schreiber",
+      "firm": "YL Ventures",
+      "url": "https://www.linkedin.com/in/oferschr/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Liran Grinberg",
+      "firm": "Team8",
+      "url": "https://linkedin.com/in/lirangrinberg",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Barmak Meftah",
+      "firm": "Ballistic Ventures",
+      "url": "https://www.linkedin.com/in/barmakmeftah/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Chenxi Wang",
+      "firm": "Rain Capital",
+      "url": "https://www.linkedin.com/in/chenxiwang88",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Dave DeWalt",
+      "firm": "NightDragon",
+      "url": "https://www.linkedin.com/in/ddewalt/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Mark Hatfield",
+      "firm": "Ten Eleven Ventures",
+      "url": "https://linkedin.com/in/mh1011",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Alberto Yepez",
+      "firm": "ForgePoint Capital",
+      "url": "https://www.linkedin.com/in/albertoyepez",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Kobi Samboursky",
+      "firm": "Glilot Capital",
+      "url": "https://linkedin.com/in/kobisamboursky",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Jay Leek",
+      "firm": "SYN Ventures",
+      "url": "https://www.linkedin.com/in/jayleek",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Hadar Paz",
+      "firm": "Hyperplane",
+      "url": "https://linkedin.com/in/hadarpaz",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Ed Sim",
+      "firm": "Boldstart Ventures",
+      "url": "https://www.linkedin.com/in/edsim",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Jon Sakoda",
+      "firm": "Decibel Partners",
+      "url": "https://www.linkedin.com/in/jonsakoda/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Josh Kopelman",
+      "firm": "First Round Capital",
+      "url": "https://www.linkedin.com/in/jkopelman",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Jonathan Lehr",
+      "firm": "Work-Bench",
+      "url": "https://www.linkedin.com/in/jlehr1",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Saar Gur",
+      "firm": "CRV",
+      "url": "https://www.linkedin.com/in/saargur/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Ping Li",
+      "firm": "Accel",
+      "url": "https://www.linkedin.com/in/pingli8/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Arif Janmohamed",
+      "firm": "Lightspeed Venture Partners",
+      "url": "https://www.linkedin.com/in/arifj/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Bogomil Balkansky",
+      "firm": "Sequoia Capital",
+      "url": "https://www.linkedin.com/in/balkansky",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Asheem Chandna",
+      "firm": "Greylock",
+      "url": "https://www.linkedin.com/in/chandna",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Theresia Gouw",
+      "firm": "Acrew Capital",
+      "url": "https://www.linkedin.com/in/theresiagouw",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Sunil Dhaliwal",
+      "firm": "Amplify Partners",
+      "url": "https://www.linkedin.com/in/sunildhaliwal/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Pejman Nozad",
+      "firm": "Pear VC",
+      "url": "https://www.linkedin.com/in/pejman/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Jeff Clavier",
+      "firm": "Uncork Capital",
+      "url": "https://www.linkedin.com/in/jeffclavier",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Mark Gorenberg",
+      "firm": "Zetta Venture Partners",
+      "url": "https://www.linkedin.com/in/markgorenberg/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Tomasz Tunguz",
+      "firm": "Theory Ventures",
+      "url": "https://www.linkedin.com/in/tomasztunguz/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Samir Kaul",
+      "firm": "Khosla Ventures",
+      "url": "https://www.linkedin.com/in/samir-kaul-9227b64/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Dharmesh Thakker",
+      "firm": "Battery Ventures",
+      "url": "https://www.linkedin.com/in/dthakker",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Adam Fisher",
+      "firm": "Bessemer Venture Partners",
+      "url": "https://il.linkedin.com/in/adamrfisher",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Shardul Shah",
+      "firm": "Index Ventures",
+      "url": "https://www.linkedin.com/in/shardul-shah-3589062/",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Greg Reichow",
+      "firm": "Eclipse Ventures",
+      "url": "https://www.linkedin.com/in/gregreichow/",
+      "priority": 3,
+      "category": "vc"
+    },
+    {
+      "name": "Arun Mathew",
+      "firm": "Accel",
+      "url": "https://www.linkedin.com/in/arun-mathew-b7186412/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Timothy Chen",
+      "firm": "Essence VC",
+      "url": "https://www.linkedin.com/in/timchen/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Greg Sands",
+      "firm": "Costanoa Ventures",
+      "url": "https://www.linkedin.com/in/gregsands/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Aydin Senkut",
+      "firm": "Felicis Ventures",
+      "url": "https://www.linkedin.com/in/aydins/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Emanuel Timor",
+      "firm": "Vertex Ventures Israel",
+      "url": "https://www.linkedin.com/in/emanuel-timor-79959/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Robin Vasan",
+      "firm": "Mango Capital",
+      "url": "https://www.linkedin.com/in/robinvasan/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Steve Vassallo",
+      "firm": "Foundation Capital",
+      "url": "https://www.linkedin.com/in/stevevassallo",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Niko Bonatsos",
+      "firm": "General Catalyst",
+      "url": "https://www.linkedin.com/in/bonatsos/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Ali Partovi",
+      "firm": "Neo",
+      "url": "https://www.linkedin.com/in/apartovi/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Chris Farmer",
+      "firm": "SignalFire",
+      "url": "https://www.linkedin.com/in/chriswfarmer/",
+      "priority": 2,
+      "category": "vc"
+    },
+    {
+      "name": "Zack Whittaker",
+      "outlet": "TechCrunch",
+      "url": "https://www.linkedin.com/in/zaborowitz/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Lorenzo Franceschi-Bicchierai",
+      "outlet": "TechCrunch",
+      "url": "https://www.linkedin.com/in/lorenzofb/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Andy Greenberg",
+      "outlet": "Wired",
+      "url": "https://www.linkedin.com/in/andygreenberg/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Ross Haleliuk",
+      "outlet": "Venture in Security",
+      "url": "https://www.linkedin.com/in/rosshaleliuk",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Troy Hunt",
+      "outlet": "Have I Been Pwned",
+      "url": "https://www.linkedin.com/in/troyhunt/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Bruce Schneier",
+      "outlet": "Harvard Kennedy School",
+      "url": "https://www.linkedin.com/in/bruceSchneier/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Mikko Hypponen",
+      "outlet": "WithSecure",
+      "url": "https://www.linkedin.com/in/maborak/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Robert M. Lee",
+      "outlet": "Dragos",
+      "url": "https://www.linkedin.com/in/robertmlee/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Jack Rhysider",
+      "outlet": "Darknet Diaries",
+      "url": "https://www.linkedin.com/in/jackrhysider/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "David Spark",
+      "outlet": "CISO Series",
+      "url": "https://www.linkedin.com/in/davidspark/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "John Hammond",
+      "outlet": "Huntress Labs",
+      "url": "https://www.linkedin.com/in/johnhammond010/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Heath Adams",
+      "outlet": "TCM Security",
+      "url": "https://www.linkedin.com/in/hikikomori/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Sherrod DeGrippo",
+      "outlet": "Microsoft",
+      "url": "https://www.linkedin.com/in/sherroddegrippo/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Eva Galperin",
+      "outlet": "EFF",
+      "url": "https://www.linkedin.com/in/eva-galperin/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Daniel Miessler",
+      "outlet": "Unsupervised Learning",
+      "url": "https://www.linkedin.com/in/danielmiessler/",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Dave Bittner",
+      "outlet": "CyberWire",
+      "url": "https://www.linkedin.com/in/davebittner/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Keren Elazari",
+      "outlet": "Tel Aviv University",
+      "url": "https://www.linkedin.com/in/kerenelazari/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Geoff Belknap",
+      "outlet": "LinkedIn",
+      "url": "https://www.linkedin.com/in/geoffbelknap/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Chuck Brooks",
+      "outlet": "Georgetown University",
+      "url": "https://www.linkedin.com/in/chuckbrooks/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Katie Nickels",
+      "outlet": "Red Canary",
+      "url": "https://www.linkedin.com/in/katie-nickels/",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Graham Cluley",
+      "outlet": "Smashing Security",
+      "url": "https://www.linkedin.com/in/grahamcluley/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Nicole Perlroth",
+      "outlet": "Former NYT",
+      "url": "https://www.linkedin.com/in/nicoleperlroth/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Renee Burton",
+      "outlet": "Infoblox",
+      "url": "https://www.linkedin.com/in/renee-burton/",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Kim Zetter",
+      "outlet": "Zero Day",
+      "url": "https://www.linkedin.com/in/kimzetter/",
+      "priority": 1,
+      "category": "media"
+    }
   ],
   "x_twitter_profiles": [
-    {"name": "Ed Sim", "firm": "Boldstart Ventures", "url": "https://twitter.com/edsim", "priority": 1, "category": "vc"},
-    {"name": "Bogomil Balkansky", "firm": "Sequoia Capital", "url": "https://twitter.com/balkansky", "priority": 1, "category": "vc"},
-    {"name": "Zack Whittaker", "outlet": "TechCrunch", "url": "https://twitter.com/zaborowitz", "priority": 2, "category": "media"},
-    {"name": "Lorenzo Franceschi-Bicchierai", "outlet": "TechCrunch", "url": "https://twitter.com/lorenzofb", "priority": 2, "category": "media"},
-    {"name": "Brian Krebs", "outlet": "KrebsOnSecurity", "url": "https://twitter.com/briankrebs", "priority": 1, "category": "media"},
-    {"name": "Dan Goodin", "outlet": "Ars Technica", "url": "https://twitter.com/dangoodin001", "priority": 2, "category": "media"},
-    {"name": "Andy Greenberg", "outlet": "Wired", "url": "https://twitter.com/a_greenberg", "priority": 2, "category": "media"},
-    {"name": "Ross Haleliuk", "outlet": "Venture in Security", "url": "https://twitter.com/rosshaleliuk", "priority": 1, "category": "media"},
-    {"name": "Troy Hunt", "outlet": "Have I Been Pwned", "url": "https://twitter.com/troyhunt", "priority": 1, "category": "media"},
-    {"name": "Bruce Schneier", "outlet": "Harvard Kennedy School", "url": "https://twitter.com/schneierblog", "priority": 2, "category": "media"},
-    {"name": "Mikko Hypponen", "outlet": "WithSecure", "url": "https://twitter.com/mikko", "priority": 2, "category": "media"},
-    {"name": "Maddie Stone", "outlet": "ex-Google Project Zero", "url": "https://twitter.com/maddiestone", "priority": 2, "category": "media"},
-    {"name": "Robert M. Lee", "outlet": "Dragos", "url": "https://twitter.com/robertmlee", "priority": 2, "category": "media"},
-    {"name": "Jack Rhysider", "outlet": "Darknet Diaries", "url": "https://twitter.com/jackrhysider", "priority": 2, "category": "media"},
-    {"name": "David Spark", "outlet": "CISO Series", "url": "https://twitter.com/dspark", "priority": 2, "category": "media"},
-    {"name": "John Hammond", "outlet": "Huntress Labs", "url": "https://twitter.com/_JohnHammond", "priority": 2, "category": "media"},
-    {"name": "Heath Adams", "outlet": "TCM Security", "url": "https://twitter.com/thecybermentor", "priority": 2, "category": "media"},
-    {"name": "Sherrod DeGrippo", "outlet": "Microsoft", "url": "https://twitter.com/sheraborhodes", "priority": 2, "category": "media"},
-    {"name": "Eva Galperin", "outlet": "EFF", "url": "https://twitter.com/evacide", "priority": 2, "category": "media"},
-    {"name": "Daniel Miessler", "outlet": "Unsupervised Learning", "url": "https://twitter.com/danielmiessler", "priority": 1, "category": "media"},
-    {"name": "Dave Bittner", "outlet": "CyberWire", "url": "https://twitter.com/baborowitz", "priority": 2, "category": "media"},
-    {"name": "Keren Elazari", "outlet": "Tel Aviv University", "url": "https://twitter.com/k3r3n3", "priority": 2, "category": "media"},
-    {"name": "Geoff Belknap", "outlet": "LinkedIn", "url": "https://twitter.com/geoffbelknap", "priority": 2, "category": "media"},
-    {"name": "Aleksandra Doniec", "outlet": "Malwarebytes", "url": "https://twitter.com/hasherezade", "priority": 2, "category": "media"},
-    {"name": "Steve Gibson", "outlet": "Security Now", "url": "https://twitter.com/SGgrc", "priority": 2, "category": "media"},
-    {"name": "Chuck Brooks", "outlet": "Georgetown University", "url": "https://twitter.com/ChuckDBrooks", "priority": 2, "category": "media"},
-    {"name": "Katie Nickels", "outlet": "Red Canary", "url": "https://twitter.com/likethecoins", "priority": 1, "category": "media"},
-    {"name": "Marcus Hutchins", "outlet": "MalwareTech", "url": "https://twitter.com/MalwareTechBlog", "priority": 2, "category": "media"},
-    {"name": "Graham Cluley", "outlet": "Smashing Security", "url": "https://twitter.com/gcluley", "priority": 2, "category": "media"},
-    {"name": "Nicole Perlroth", "outlet": "Former NYT", "url": "https://twitter.com/nicoleperlroth", "priority": 2, "category": "media"},
-    {"name": "Kim Zetter", "outlet": "Zero Day", "url": "https://twitter.com/KimZetter", "priority": 1, "category": "media"}
+    {
+      "name": "Ed Sim",
+      "firm": "Boldstart Ventures",
+      "url": "https://twitter.com/edsim",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Bogomil Balkansky",
+      "firm": "Sequoia Capital",
+      "url": "https://twitter.com/balkansky",
+      "priority": 1,
+      "category": "vc"
+    },
+    {
+      "name": "Zack Whittaker",
+      "outlet": "TechCrunch",
+      "url": "https://twitter.com/zaborowitz",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Lorenzo Franceschi-Bicchierai",
+      "outlet": "TechCrunch",
+      "url": "https://twitter.com/lorenzofb",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Brian Krebs",
+      "outlet": "KrebsOnSecurity",
+      "url": "https://twitter.com/briankrebs",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Dan Goodin",
+      "outlet": "Ars Technica",
+      "url": "https://twitter.com/dangoodin001",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Andy Greenberg",
+      "outlet": "Wired",
+      "url": "https://twitter.com/a_greenberg",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Ross Haleliuk",
+      "outlet": "Venture in Security",
+      "url": "https://twitter.com/rosshaleliuk",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Troy Hunt",
+      "outlet": "Have I Been Pwned",
+      "url": "https://twitter.com/troyhunt",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Bruce Schneier",
+      "outlet": "Harvard Kennedy School",
+      "url": "https://twitter.com/schneierblog",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Mikko Hypponen",
+      "outlet": "WithSecure",
+      "url": "https://twitter.com/mikko",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Maddie Stone",
+      "outlet": "ex-Google Project Zero",
+      "url": "https://twitter.com/maddiestone",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Robert M. Lee",
+      "outlet": "Dragos",
+      "url": "https://twitter.com/robertmlee",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Jack Rhysider",
+      "outlet": "Darknet Diaries",
+      "url": "https://twitter.com/jackrhysider",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "David Spark",
+      "outlet": "CISO Series",
+      "url": "https://twitter.com/dspark",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "John Hammond",
+      "outlet": "Huntress Labs",
+      "url": "https://twitter.com/_JohnHammond",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Heath Adams",
+      "outlet": "TCM Security",
+      "url": "https://twitter.com/thecybermentor",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Sherrod DeGrippo",
+      "outlet": "Microsoft",
+      "url": "https://twitter.com/sheraborhodes",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Eva Galperin",
+      "outlet": "EFF",
+      "url": "https://twitter.com/evacide",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Daniel Miessler",
+      "outlet": "Unsupervised Learning",
+      "url": "https://twitter.com/danielmiessler",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Dave Bittner",
+      "outlet": "CyberWire",
+      "url": "https://twitter.com/baborowitz",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Keren Elazari",
+      "outlet": "Tel Aviv University",
+      "url": "https://twitter.com/k3r3n3",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Geoff Belknap",
+      "outlet": "LinkedIn",
+      "url": "https://twitter.com/geoffbelknap",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Aleksandra Doniec",
+      "outlet": "Malwarebytes",
+      "url": "https://twitter.com/hasherezade",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Steve Gibson",
+      "outlet": "Security Now",
+      "url": "https://twitter.com/SGgrc",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Chuck Brooks",
+      "outlet": "Georgetown University",
+      "url": "https://twitter.com/ChuckDBrooks",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Katie Nickels",
+      "outlet": "Red Canary",
+      "url": "https://twitter.com/likethecoins",
+      "priority": 1,
+      "category": "media"
+    },
+    {
+      "name": "Marcus Hutchins",
+      "outlet": "MalwareTech",
+      "url": "https://twitter.com/MalwareTechBlog",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Graham Cluley",
+      "outlet": "Smashing Security",
+      "url": "https://twitter.com/gcluley",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Nicole Perlroth",
+      "outlet": "Former NYT",
+      "url": "https://twitter.com/nicoleperlroth",
+      "priority": 2,
+      "category": "media"
+    },
+    {
+      "name": "Kim Zetter",
+      "outlet": "Zero Day",
+      "url": "https://twitter.com/KimZetter",
+      "priority": 1,
+      "category": "media"
+    }
   ],
   "signal_keywords": {
     "hard_signals": [
-      "looking for", "seeking", "open to meeting", "investing in",
-      "just led", "announced investment", "portfolio company",
-      "office hours", "pitch me", "new fund", "raising", "closed fund"
+      "looking for",
+      "seeking",
+      "open to meeting",
+      "investing in",
+      "just led",
+      "announced investment",
+      "portfolio company",
+      "office hours",
+      "pitch me",
+      "new fund",
+      "raising",
+      "closed fund"
     ],
     "soft_signals": [
-      "SOC", "detection", "alert fatigue", "security operations",
-      "AI security", "agentic", "autonomous", "threat intel",
-      "SIEM", "XDR", "SOAR", "incident response", "triage"
+      "SOC",
+      "detection",
+      "alert fatigue",
+      "security operations",
+      "AI security",
+      "agentic",
+      "autonomous",
+      "threat intel",
+      "SIEM",
+      "XDR",
+      "SOAR",
+      "incident response",
+      "triage"
     ]
   }
 }
