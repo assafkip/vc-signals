@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-02-06T08:50:25.771004",
+  "pitch_me_signals": {
+    "title": "Investors Open to Pitches",
+    "description": "Active signals from VC investors explicitly welcoming cybersecurity and early-stage startup pitches (LinkedIn activity only)",
+    "signals": [
+      {
+        "investor": "Justin Somaini",
+        "firm": "Independent (ex-YL Ventures)",
+        "profile_url": "https://www.linkedin.com/in/jsomaini/",
+        "signal_date": "2026-02-02",
+        "summary": "Left YL Ventures, now helping founders ideating on what to build. Explicitly offering to be a thought partner for early-stage cyber founders (Seed/A).",
+        "excerpt": "Founders who are ideating on what to build and want a thought partner on where to focus. If that's you, reach out.",
+        "source_type": "linkedin",
+        "relevance": "high",
+        "ktlyst_alignment": "PERFECT - explicitly seeking early-stage cyber founders to advise"
+      },
+      {
+        "investor": "Barmak Meftah",
+        "firm": "Ballistic Ventures",
+        "profile_url": "https://www.linkedin.com/in/barmakmeftah/recent-activity/all/",
+        "signal_date": "2026-02-02",
+        "summary": "WitnessAI raised $58M strategic round, launching WitnessAI Agentic Security - directly relevant to KTLYST's agentic security positioning",
+        "excerpt": "Incredibly excited to share that WitnessAI has raised a $58M strategic round. At the same time, today the company is launching WitnessAI Agentic Security",
+        "source_type": "linkedin",
+        "relevance": "high",
+        "ktlyst_alignment": "PERFECT - Agentic Security is directly in KTLYST's space"
+      },
+      {
+        "investor": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "profile_url": "https://www.linkedin.com/in/edsim/recent-activity/all/",
+        "signal_date": "2026-02-01",
+        "summary": "Actively building AI agent tools (OpenClaw, Moltbook, Chewbarka) - demonstrates hands-on engagement with agentic AI technology. Posted 'The dreaming/just build it mindset' showing personal experimentation with AI assistants that do calendar alerts, Twitter monitoring, daily briefings.",
+        "excerpt": "As I've been hacking away at OpenClaw and Moltbook... Chewbarka - I'm your AI assistant living on your server.",
+        "source_type": "linkedin",
+        "relevance": "high",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Chenxi Wang",
+        "firm": "Rain Capital",
+        "profile_url": "https://www.linkedin.com/in/chenxiwang88/recent-activity/all/",
+        "signal_date": "2026-01-30",
+        "summary": "Actively receiving agentic startup pitches: 'As an investor, I am getting many Agentic startup pitches every day'",
+        "excerpt": "As an investor, I am getting many Agentic startup pitches every day",
+        "source_type": "linkedin",
+        "relevance": "high",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Chenxi Wang",
+        "firm": "Rain Capital",
+        "profile_url": "https://www.linkedin.com/in/chenxiwang88",
+        "signal_date": "2026-01-30",
+        "summary": "Actively receiving agentic startup pitches including Agentic platforms for Security - RSAC 2025 keynote speaker",
+        "excerpt": "As an investor, I am getting many Agentic startup pitches every day... Agentic platforms for Security, Agentic platforms for IT",
+        "source_type": "linkedin",
+        "relevance": "high",
+        "ktlyst_alignment": ""
+      }
+    ],
+    "count": 5,
+    "last_updated": "2026-02-06"
+  },
+  "new_funds": {
+    "title": "Recent Fund Announcements",
+    "description": "New funds raised by investors relevant to cybersecurity and AI (actual investor activity)",
+    "signals": [
+      {
+        "investor": "Chenxi Wang",
+        "firm": "Rain Capital",
+        "profile_url": "https://raincapital.substack.com/p/november-and-december-the-momentum",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-02-01",
+        "thesis": "November & December -- The Momentum Issue",
+        "source_type": "substack",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "profile_url": "https://www.linkedin.com/in/edsim",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-01-31",
+        "thesis": "Boldstart Fund VII ($250M) announcement on LinkedIn - targeting AI founders at early/embryonic stages for autonomous enterprise",
+        "source_type": "linkedin",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "profile_url": "https://www.linkedin.com/in/edsim/",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-01-31",
+        "thesis": "Boldstart Ventures Fund VII announced - $250M AI fund targeting early/embryonic stage founders building autonomous enterprise. Also celebrated Protect AI acquisition by Palo Alto Networks at RSAC2025.",
+        "source_type": "linkedin",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Adam Fisher",
+        "firm": "Bessemer Venture Partners",
+        "profile_url": "https://www.linkedin.com/in/adamrfisher/",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-01-26",
+        "thesis": "Bessemer invested in Upwind Security - $250M Series B at $1.5B valuation for cloud security startup",
+        "source_type": "linkedin",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Liran Grinberg",
+        "firm": "Team8",
+        "profile_url": "https://www.linkedin.com/in/lirangr/recent-activity/all/",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-01-22",
+        "thesis": "Claroty raised $150M+ at $3B valuation - third mega round from Team8 portfolio (following Port.io $100M and Classiq $130M)",
+        "source_type": "linkedin",
+        "ktlyst_alignment": ""
+      }
+    ],
+    "count": 5,
+    "last_updated": "2026-02-06"
+  },
+  "time_periods": {
+    "daily": {
+      "executive_summary": "Strong market momentum around AI agents and security convergence, with Ed Sim from Boldstart actively discussing AI agent skills security - directly relevant to KTLYST's agentic AI thesis. The cybersecurity funding landscape shows continued interest in AI-powered security solutions, while broader market data indicates 108% growth in AI spend, creating favorable conditions for AI security startups.",
+      "key_themes": [
+        "AI Agent Security & Skills Management",
+        "Enterprise AI Adoption Surge",
+        "Detection & Security Automation"
+      ],
+      "hot_investors": [
+        {
+          "name": "Ed Sim",
+          "firm": "Boldstart Ventures",
+          "profile_url": "https://www.linkedin.com/in/edsim/recent-activity/all/",
+          "reason": "Actively posting about AI agent skills security and startup commoditization - perfectly aligned with KTLYST's detection-as-code and agentic AI positioning",
+          "recent_activity": "Posted about AI agent skills security and how Snyk can scan for safe deployable skills, comparing it to early days of open source"
+        }
+      ],
+      "recommended_actions": [
+        "Engage with Ed Sim's recent posts on AI agent skills security - comment with KTLYST's perspective on detection-as-code for agent security",
+        "Leverage the recruitment fraud/cloud IAM attack surface news to position KTLYST's detection engineering platform as a solution for emerging threat vectors",
+        "Target the 108% AI spend increase trend by developing messaging around ROI and cost reduction for SOC teams implementing AI-powered detection"
+      ],
+      "period": "daily",
+      "period_days": 1,
+      "generated_at": "2026-02-06T08:49:51.880322",
+      "signal_count": 43,
+      "hard_signal_count": 22,
+      "soft_signal_count": 21
+    },
+    "weekly": {
+      "executive_summary": "This week shows exceptional activity in agentic AI security, with multiple VCs actively building and investing in autonomous security platforms. Key signals include Boldstart's new $250M AI fund, WitnessAI's $58M agentic security round, and several investors explicitly seeking cybersecurity founders, creating prime timing for KTLYST's detection engineering platform.",
+      "key_themes": [
+        "Agentic AI Security Explosion",
+        "Fresh Capital Deployment",
+        "Detection & SOC Automation Focus"
+      ],
+      "hot_investors": [
+        {
+          "name": "Ed Sim",
+          "firm": "Boldstart Ventures",
+          "profile_url": "https://www.linkedin.com/in/edsim/",
+          "reason": "Just announced $250M Fund VII targeting AI founders at early/embryonic stages for autonomous enterprise. Personally building AI agent tools and posting about AI agent security concerns.",
+          "recent_activity": "Announced Boldstart Fund VII ($250M) for autonomous enterprise AI, built OpenClaw/Moltbook/Chewbarka AI tools, posted about AI agent security risks and skills commoditization"
+        },
+        {
+          "name": "Chenxi Wang",
+          "firm": "Rain Capital",
+          "profile_url": "https://www.linkedin.com/in/chenxiwang88/",
+          "reason": "Actively receiving agentic startup pitches daily and specifically mentioned agentic platforms for security. RSA Conference involvement shows deep security network.",
+          "recent_activity": "Posted 'As an investor, I am getting many Agentic startup pitches every day' and commented on autonomous AI agents going viral"
+        },
+        {
+          "name": "Justin Somaini",
+          "firm": "Independent (ex-YL Ventures)",
+          "profile_url": "https://www.linkedin.com/in/jsomaini/",
+          "reason": "Just left YL Ventures and explicitly offering to be thought partner for early-stage cyber founders at Seed/A stage. Perfect timing for new deal flow.",
+          "recent_activity": "Left YL Ventures, now helping founders ideating on what to build and explicitly seeking early-stage cybersecurity founders"
+        },
+        {
+          "name": "Barmak Meftah",
+          "firm": "Ballistic Ventures",
+          "profile_url": "https://www.linkedin.com/in/barmakmeftah/",
+          "reason": "Just backed WitnessAI's $58M strategic round for 'Agentic Security' - directly validates KTLYST's positioning and shows active deployment in this exact space.",
+          "recent_activity": "Posted about WitnessAI raising $58M strategic round and launching WitnessAI Agentic Security platform"
+        },
+        {
+          "name": "Asheem Chandna",
+          "firm": "Greylock Partners",
+          "profile_url": "https://www.linkedin.com/in/chandna/",
+          "reason": "Just celebrated Resolve.ai going from seed to $1B unicorn in 18 months with AI SRE platform. Shows appetite for AI-powered operational security tools.",
+          "recent_activity": "Posted about Resolve.ai $125M Series A at $1B valuation (Greylock led seed) and hiring AI Product Engineer for VC decisioning"
+        }
+      ],
+      "recommended_actions": [
+        "Immediately reach out to Justin Somaini while he's in transition and explicitly helping cyber founders - perfect timing for thought partnership",
+        "Position KTLYST directly against WitnessAI's agentic security messaging when approaching Barmak Meftah and other Ballistic portfolio discussions",
+        "Leverage Ed Sim's hands-on AI agent building experience - reference his OpenClaw/security concerns posts when reaching out about detection-as-code automation",
+        "Connect with Chenxi Wang's daily agentic startup flow by emphasizing SOC automation and alert fatigue reduction in detection engineering context",
+        "Use Resolve.ai's 18-month unicorn trajectory as validation point when approaching Asheem Chandna about AI-powered operational security platforms"
+      ],
+      "period": "weekly",
+      "period_days": 7,
+      "generated_at": "2026-02-06T08:50:10.689523",
+      "signal_count": 129,
+      "hard_signal_count": 68,
+      "soft_signal_count": 61
+    },
+    "monthly": {
+      "executive_summary": "February shows strong investor appetite for agentic AI security solutions with multiple VCs actively seeking cyber founders. Ed Sim's $250M Boldstart Fund VII targets early-stage autonomous enterprise companies, while WitnessAI's $58M agentic security raise validates the market timing for KTLYST's detection engineering platform.",
+      "key_themes": [
+        "Agentic AI Security",
+        "Early-Stage Fund Activity",
+        "Detection & SOC Automation"
+      ],
+      "hot_investors": [
+        {
+          "name": "Ed Sim",
+          "firm": "Boldstart Ventures",
+          "profile_url": "https://www.linkedin.com/in/edsim/",
+          "reason": "Just announced $250M Fund VII targeting early-stage AI founders building autonomous enterprise solutions, plus actively experimenting with AI agent tools",
+          "recent_activity": "Launched Fund VII for AI/autonomous enterprise, built AI agent tools (OpenClaw, Moltbook), posted about AI agent security concerns and skills security"
+        },
+        {
+          "name": "Justin Somaini",
+          "firm": "Independent (ex-YL Ventures)",
+          "profile_url": "https://www.linkedin.com/in/jsomaini/",
+          "reason": "Explicitly seeking early-stage cyber founders (Seed/A) and offering to be a thought partner for ideation",
+          "recent_activity": "Left YL Ventures and actively helping founders ideate on what to build in cybersecurity"
+        },
+        {
+          "name": "Chenxi Wang",
+          "firm": "Rain Capital",
+          "profile_url": "https://www.linkedin.com/in/chenxiwang88/",
+          "reason": "Actively receiving agentic startup pitches daily and involved in RSA Conference planning, showing deep security market engagement",
+          "recent_activity": "Receiving many agentic startup pitches every day, curating RSAC 2026 events, commenting on autonomous AI agents"
+        },
+        {
+          "name": "Barmak Meftah",
+          "firm": "Ballistic Ventures",
+          "profile_url": "https://www.linkedin.com/in/barmakmeftah/",
+          "reason": "Portfolio company WitnessAI just raised $58M for agentic security, showing direct investment validation in KTLYST's space",
+          "recent_activity": "Celebrating WitnessAI's $58M strategic round and launch of WitnessAI Agentic Security platform"
+        },
+        {
+          "name": "Alberto Y\u00e9pez",
+          "firm": "ForgePoint Capital",
+          "profile_url": "https://www.linkedin.com/in/albertoyepez/",
+          "reason": "Investment thesis focused on convergence of cyber, AI, and infrastructure - perfect alignment with KTLYST",
+          "recent_activity": "Posted about ForgePoint's investment thesis on cyber-AI-infrastructure convergence"
+        }
+      ],
+      "recommended_actions": [
+        "Prioritize outreach to Ed Sim at Boldstart given fresh $250M fund targeting early-stage autonomous enterprise - emphasize KTLYST's detection-as-code and agentic approach",
+        "Connect with Justin Somaini who is explicitly helping early-stage cyber founders ideate - position KTLYST as solving SOC automation and alert fatigue",
+        "Engage Chenxi Wang at Rain Capital who is actively reviewing agentic security pitches - leverage her RSA involvement to discuss detection engineering trends"
+      ],
+      "period": "monthly",
+      "period_days": 30,
+      "generated_at": "2026-02-06T08:50:25.769668",
+      "signal_count": 159,
+      "hard_signal_count": 78,
+      "soft_signal_count": 81
+    }
+  }
+}
