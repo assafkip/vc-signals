@@ -1,145 +1,567 @@
 {
-  "generated_at": "2026-02-06T08:52:59.633828",
+  "generated_at": "2026-02-09T17:11:10.359366",
   "time_periods": {
     "daily": {
-      "executive_summary": "Today's intelligence highlights critical vulnerabilities in SolarWinds, SmarterMail, and React Native CLI being actively exploited in ransomware campaigns. State-backed group TGR-STA-1030 has compromised 70 government and infrastructure entities, while supply chain attacks targeting dYdX npm/PyPI packages deliver wallet stealers and RAT malware.",
+      "executive_summary": "Today's intelligence reveals critical zero-day exploits in SolarWinds and Ivanti products affecting nearly 100 organizations, while APT28 continues RTF-based attacks using CVE-2026-21509. AI-powered attack capabilities are rapidly advancing, with LLMs increasingly effective at discovering and exploiting zero-day vulnerabilities, and attackers impersonating security tools to target cybersecurity professionals.",
       "key_threats": [
-        "SolarWinds CVE-2025-40551 vulnerability requiring immediate patching",
-        "SmarterMail exploitation in active ransomware campaigns",
-        "Supply chain compromise of dYdX npm and PyPI packages",
-        "TGR-STA-1030 state-backed campaign against 70 government entities",
-        "Large-scale web traffic hijacking via malicious NGINX configurations"
+        {
+          "text": "SolarWinds zero-day vulnerabilities are being actively exploited in the wild",
+          "refs": [
+            9
+          ]
+        },
+        {
+          "text": "Ivanti zero-day exploitation has spread to nearly 100 victims including European Commission",
+          "refs": [
+            15
+          ]
+        },
+        {
+          "text": "APT28 conducting RTF-based attacks leveraging CVE-2026-21509",
+          "refs": [
+            3
+          ]
+        },
+        {
+          "text": "BeyondTrust remote support software contains critical RCE vulnerability",
+          "refs": [
+            5
+          ]
+        },
+        {
+          "text": "Threat actors impersonating security tools to target cybersecurity professionals",
+          "refs": [
+            12
+          ]
+        },
+        {
+          "text": "Chinese state actors rehearsing cyberattacks on neighboring countries' critical infrastructure",
+          "refs": [
+            7
+          ]
+        },
+        {
+          "text": "Senegal's national ID card department breached by ransomware operators",
+          "refs": [
+            6
+          ]
+        },
+        {
+          "text": "Fake 7-Zip downloads converting home PCs into proxy nodes",
+          "refs": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Integrating With Cisco XDR at Black Hat Europe",
+          "url": "https://blogs.cisco.com/security/integrating-cisco-xdr-black-hat-europe/"
+        },
+        {
+          "id": 2,
+          "title": "Fake 7-Zip downloads are turning home PCs into proxy nodes",
+          "url": "https://www.malwarebytes.com/blog/threat-intel/2026/02/fake-7-zip-downloads-are-turning-home-pcs-into-proxy-nodes"
+        },
+        {
+          "id": 3,
+          "title": "Quick Howto: Extract URLs from RTF files",
+          "url": "https://isc.sans.edu/diary/rss/32692"
+        },
+        {
+          "id": 4,
+          "title": "LLMs are Getting a Lot Better and Faster at Finding and Exploiting Zero-Days",
+          "url": "https://www.schneier.com/blog/archives/2026/02/llms-are-getting-a-lot-better-and-faster-at-finding-and-exploiting-zero-days.html"
+        },
+        {
+          "id": 5,
+          "title": "BeyondTrust warns of critical RCE flaw in remote support software",
+          "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-warns-of-critical-rce-flaw-in-remote-support-software/"
+        },
+        {
+          "id": 6,
+          "title": "Senegal confirms breach of national ID card department after ransomware claims",
+          "url": "https://therecord.media/senegal-breach-national-id-agency"
+        },
+        {
+          "id": 7,
+          "title": "Leaked technical documents show China rehearsing cyberattacks on neighbors' critical infrastructure",
+          "url": "https://therecord.media/leaked-china-documents-show-testing-cyber-neighbors"
+        },
+        {
+          "id": 9,
+          "title": "Recent SolarWinds Flaws Potentially Exploited as Zero-Days",
+          "url": "https://www.securityweek.com/recent-solarwinds-flaws-potentially-exploited-as-zero-days/"
+        },
+        {
+          "id": 12,
+          "title": "Hackers Are Impersonating Security Tools to Hack Security Professionals",
+          "url": "https://www.reddit.com/r/cybersecurity/comments/1r0113f/hackers_are_impersonating_security_tools_to_hack/"
+        },
+        {
+          "id": 15,
+          "title": "Fallout from latest Ivanti zero-days spreads to nearly 100 victims",
+          "url": "https://cyberscoop.com/ivanti-zero-day-vulnerabilities-netherlands-european-commission-shadowserver/"
+        }
       ],
       "key_cves": [
-        "CVE-2025-40551 - Critical SolarWinds vulnerability",
-        "CVE-2025-11953 - React Native Community CLI OS command injection",
-        "CVE-2026-24423 - SmarterTools SmarterMail authentication bypass",
-        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS",
-        "CVE-2026-25049 - Critical n8n system command execution flaw"
+        "CVE-2026-21509 - RTF file vulnerability being exploited by APT28 for malicious URL extraction",
+        "CVE-2026-2103 - Infor Syteline ERP vulnerability with embedded keys requiring no assembly"
       ],
       "threat_actors": [
-        "TGR-STA-1030 - Asian state-backed group targeting government and infrastructure with 70 confirmed breaches",
-        "Akira - Ransomware group published new victim TriPartum",
-        "Dragonforce - Ransomware group targeting Esposito Bros. Construction Ltd",
-        "Play - Active in automation-based infections using reverse shells and cognitive rootkits",
-        "Conti - Ongoing operations with AI-enhanced tradecraft and backdoor deployments"
+        "APT28 - Actively exploiting RTF vulnerabilities (CVE-2026-21509) for targeted attacks",
+        "Conti - Maintaining operational presence with continuous improvement tactics",
+        "Hive - Distributing fake software downloads to build proxy botnets"
       ],
-      "trends": "State-backed actors are intensifying campaigns against critical infrastructure while ransomware groups maintain steady victim publication rates. Supply chain attacks are increasingly targeting developer tools and cryptocurrency-related packages.",
+      "trends": "AI-powered attack capabilities are rapidly advancing with LLMs becoming increasingly effective at zero-day discovery and exploitation. Attackers are increasingly targeting cybersecurity professionals through impersonation of trusted security tools and platforms.",
       "recommendations": [
-        "Immediately patch SolarWinds systems affected by CVE-2025-40551",
-        "Review and secure SmarterMail deployments against authentication bypass attacks",
-        "Audit npm and PyPI package dependencies for dYdX-related compromises",
-        "Enhance monitoring of government and infrastructure networks for TGR-STA-1030 indicators",
-        "Implement additional validation for NGINX configurations to prevent traffic hijacking"
+        "Immediately patch SolarWinds and Ivanti products or isolate affected systems",
+        "Update BeyondTrust remote support software to address critical RCE vulnerability",
+        "Implement enhanced monitoring for RTF file processing and suspicious URL extraction",
+        "Verify authenticity of security tools and downloads through official channels only",
+        "Deploy advanced email security to detect APT28 RTF-based phishing campaigns"
       ],
-      "detection_opportunities": "Monitor for unusual DDNS configuration changes in ZYXEL devices and suspicious command execution patterns in React Native development environments. Watch for anomalous package installations and unexpected network traffic redirection through compromised NGINX servers.",
+      "detection_opportunities": "Monitor for suspicious RTF file processing, unusual network proxy traffic from home users, and authentication attempts to security vendor platforms. Focus on detecting lateral movement patterns consistent with SolarWinds and Ivanti exploitation.",
       "period": "daily",
       "period_days": 1,
-      "generated_at": "2026-02-06T08:52:32.645908",
-      "signal_count": 197,
-      "critical_count": 37,
-      "high_count": 12,
+      "generated_at": "2026-02-09T17:09:15.959710",
+      "signal_count": 115,
+      "critical_count": 21,
+      "high_count": 11,
       "category_breakdown": {
-        "advisory": 2,
-        "news": 108,
-        "research": 39,
-        "apt": 25,
-        "cve": 7,
-        "malware": 16
+        "research": 14,
+        "news": 73,
+        "apt": 12,
+        "cve": 2,
+        "malware": 14
       }
     },
     "weekly": {
-      "executive_summary": "This week saw 599 security signals with 165 critical alerts, highlighting significant supply chain attacks including compromised dYdX npm/PyPI packages and a sophisticated NGINX traffic hijacking campaign. State-backed group TGR-STA-1030 breached 70 government entities while ransomware groups Akira and Dragonforce continued operations, alongside critical vulnerabilities in SolarWinds, SmarterMail, and React Native requiring immediate patching.",
+      "executive_summary": "This week saw critical zero-day exploits in SolarWinds and Ivanti products affecting nearly 100 organizations, while threat actors increasingly weaponize AI capabilities for vulnerability discovery and exploitation. Multiple critical RCE vulnerabilities in enterprise software require immediate patching.",
       "key_threats": [
-        "Compromised dYdX npm and PyPI packages delivering wallet stealers and RAT malware",
-        "Asian state-backed TGR-STA-1030 group targeting 70 government and infrastructure entities",
-        "Critical SolarWinds CVE-2025-40551 vulnerability exploitation",
-        "SmarterMail vulnerability being actively exploited in ransomware attacks",
-        "Large-scale web traffic hijacking via malicious NGINX configurations"
+        {
+          "text": "SolarWinds zero-day vulnerabilities being actively exploited in the wild, requiring immediate patching of affected systems",
+          "refs": [
+            1,
+            2
+          ]
+        },
+        {
+          "text": "Ivanti zero-day exploitation has spread to nearly 100 victims, indicating widespread compromise of enterprise networks",
+          "refs": [
+            3
+          ]
+        },
+        {
+          "text": "BeyondTrust remote support software contains critical RCE flaw allowing complete system compromise",
+          "refs": [
+            4
+          ]
+        },
+        {
+          "text": "SmarterMail RCE vulnerability (CVE-2026-24423) being used in active ransomware attacks",
+          "refs": [
+            5,
+            6
+          ]
+        },
+        {
+          "text": "APT28 actively exploiting RTF document vulnerabilities (CVE-2026-21509) in targeted campaigns",
+          "refs": [
+            7
+          ]
+        },
+        {
+          "text": "Threat actors impersonating security tools to target security professionals in sophisticated social engineering attacks",
+          "refs": [
+            8
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Recent SolarWinds Flaws Potentially Exploited as Zero-Days",
+          "url": "https://www.securityweek.com/recent-solarwinds-flaws-potentially-exploited-as-zero-days/"
+        },
+        {
+          "id": 2,
+          "title": "SolarWinds Vulnerability Summary",
+          "url": "https://www.upguard.com/news/solarwinds-vulnerability-summary-2026-02-05"
+        },
+        {
+          "id": 3,
+          "title": "Fallout from latest Ivanti zero-days spreads to nearly 100 victims",
+          "url": "https://cyberscoop.com/ivanti-zero-day-vulnerabilities-netherlands-european-commission-shadowserver/"
+        },
+        {
+          "id": 4,
+          "title": "BeyondTrust warns of critical RCE flaw in remote support software",
+          "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-warns-of-critical-rce-flaw-in-remote-support-software/"
+        },
+        {
+          "id": 5,
+          "title": "CISA warns of SmarterMail RCE flaw used in ransomware attacks",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-smartermail-rce-flaw-used-in-ransomware-attacks/"
+        },
+        {
+          "id": 6,
+          "title": "SmarterTools hacked via its own product",
+          "url": "https://risky.biz/RBNEWS523/"
+        },
+        {
+          "id": 7,
+          "title": "Quick Howto: Extract URLs from RTF files",
+          "url": "https://isc.sans.edu/diary/rss/32692"
+        },
+        {
+          "id": 8,
+          "title": "Hackers Are Impersonating Security Tools to Hack Security Professionals",
+          "url": "https://www.reddit.com/r/cybersecurity/comments/1r0113f/hackers_are_impersonating_security_tools_to_hack/"
+        }
       ],
       "key_cves": [
-        "CVE-2025-40551 - Critical SolarWinds vulnerability requiring immediate patching",
-        "CVE-2025-11953 - React Native Community CLI OS command injection flaw",
-        "CVE-2026-24423 - SmarterTools SmarterMail missing authentication vulnerability",
-        "CVE-2025-55182 - NGINX configuration flaw enabling traffic hijacking",
-        "CVE-2026-25049 - Critical n8n system command execution vulnerability"
+        "CVE-2025-40551 - SolarWinds vulnerability being exploited as zero-day",
+        "CVE-2026-24423 - SmarterMail RCE flaw used in ransomware attacks",
+        "CVE-2026-21509 - RTF file vulnerability exploited by APT28",
+        "CVE-2026-25049 - Critical n8n workflow automation RCE vulnerability",
+        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS configuration"
       ],
       "threat_actors": [
-        "TGR-STA-1030 - Asian state-backed group compromising government and infrastructure entities",
-        "Akira - Ransomware group publishing new victim TriPartum",
-        "Dragonforce - Ransomware group targeting Esposito Bros. Construction Ltd",
-        "Play - Involved in advanced automation-based infection techniques",
-        "Conti - Continuing operations with focus on AI-powered tradecraft evolution"
+        "APT28 - Actively exploiting RTF document vulnerabilities in targeted campaigns",
+        "Conti - Continued ransomware operations with focus on enterprise targets",
+        "Play - Ransomware group expanding operations across multiple sectors"
       ],
-      "trends": "Supply chain attacks are intensifying with compromised package repositories and AI-generated code security flaws becoming prominent attack vectors. State-backed groups are increasingly targeting critical infrastructure while ransomware operations maintain steady victim publication rates.",
+      "trends": "AI-powered vulnerability discovery is accelerating zero-day exploitation timelines, while threat actors increasingly target security professionals through sophisticated impersonation attacks. Enterprise remote access solutions continue to be prime targets for initial access.",
       "recommendations": [
-        "Immediately patch SolarWinds CVE-2025-40551 and SmarterMail vulnerabilities",
-        "Audit and validate all npm and PyPI package dependencies for integrity",
-        "Review NGINX configurations for malicious modifications and implement monitoring",
-        "Enhance monitoring for state-backed APT indicators targeting government infrastructure",
-        "Deploy AI-assisted code security scanners for development environments"
+        "Immediately patch SolarWinds products and review for signs of compromise",
+        "Update Ivanti systems and conduct thorough security assessments",
+        "Apply critical patches for BeyondTrust and SmarterMail products",
+        "Implement enhanced monitoring for RTF document processing systems",
+        "Verify authenticity of security tools and communications before installation"
       ],
-      "detection_opportunities": "Monitor for unusual outbound connections from development environments, package installation anomalies, and NGINX configuration changes. Implement enhanced logging for government and infrastructure networks to detect TGR-STA-1030 TTPs including lateral movement and persistence mechanisms.",
+      "detection_opportunities": "Monitor for unusual RTF document processing, unexpected network connections from remote support software, and verify the integrity of security tools. Focus on detecting lateral movement patterns consistent with zero-day exploitation campaigns.",
       "period": "weekly",
       "period_days": 7,
-      "generated_at": "2026-02-06T08:52:46.546812",
-      "signal_count": 599,
-      "critical_count": 165,
-      "high_count": 50,
+      "generated_at": "2026-02-09T17:10:02.326445",
+      "signal_count": 704,
+      "critical_count": 187,
+      "high_count": 62,
       "category_breakdown": {
-        "advisory": 23,
-        "news": 276,
-        "research": 98,
-        "apt": 88,
-        "cve": 64,
-        "malware": 50
+        "research": 104,
+        "news": 345,
+        "apt": 100,
+        "cve": 63,
+        "malware": 64,
+        "advisory": 28
       }
     },
     "monthly": {
-      "executive_summary": "This month saw 848 security signals with 234 critical alerts, highlighting significant supply chain attacks including compromised dYdX packages and a state-backed campaign affecting 70 government entities. Critical vulnerabilities in SolarWinds, SmarterMail, and React Native components require immediate patching, while ransomware groups Akira and Dragonforce continue active operations.",
+      "executive_summary": "February 2026 saw significant threats from state-sponsored actors, critical vulnerabilities in enterprise software, and emerging AI-powered attack techniques. Organizations face active exploitation of zero-day vulnerabilities in SolarWinds and remote management tools, while APT28 continues sophisticated campaigns targeting critical infrastructure.",
       "key_threats": [
-        "Compromised npm and PyPI packages in dYdX delivering wallet stealers and RAT malware",
-        "Asian state-backed group TGR-STA-1030 breaching 70 government and infrastructure entities",
-        "Critical SmarterMail vulnerability actively exploited in ransomware campaigns",
-        "SolarWinds CVE-2025-40551 vulnerability requiring immediate attention",
-        "Large-scale web traffic hijacking campaign exploiting malicious NGINX configurations"
+        {
+          "text": "Critical RCE vulnerabilities in BeyondTrust remote support software and SmarterMail being actively exploited in ransomware campaigns",
+          "refs": [
+            5,
+            24
+          ]
+        },
+        {
+          "text": "APT28 conducting sophisticated attacks using RTF file exploits with CVE-2026-21509",
+          "refs": [
+            3
+          ]
+        },
+        {
+          "text": "SolarWinds zero-day vulnerabilities being exploited in the wild with potential for widespread enterprise compromise",
+          "refs": [
+            9,
+            33
+          ]
+        },
+        {
+          "text": "AI-powered attacks breaking LLM safety alignment and accelerating zero-day discovery capabilities",
+          "refs": [
+            2,
+            4
+          ]
+        },
+        {
+          "text": "Chinese state actors rehearsing cyberattacks against neighboring countries' critical infrastructure",
+          "refs": [
+            7
+          ]
+        },
+        {
+          "text": "Ivanti zero-day exploitation spreading to nearly 100 organizations across government and enterprise sectors",
+          "refs": [
+            15
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Integrating With Cisco XDR at Black Hat Europe",
+          "url": "https://blogs.cisco.com/security/integrating-cisco-xdr-black-hat-europe/"
+        },
+        {
+          "id": 2,
+          "title": "A one-prompt attack that breaks LLM safety alignment",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/02/09/prompt-attack-breaks-llm-safety/"
+        },
+        {
+          "id": 3,
+          "title": "Quick Howto: Extract URLs from RTF files",
+          "url": "https://isc.sans.edu/diary/rss/32692"
+        },
+        {
+          "id": 4,
+          "title": "LLMs are Getting a Lot Better and Faster at Finding and Exploiting Zero-Days",
+          "url": "https://www.schneier.com/blog/archives/2026/02/llms-are-getting-a-lot-better-and-faster-at-finding-and-exploiting-zero-days.html"
+        },
+        {
+          "id": 5,
+          "title": "BeyondTrust warns of critical RCE flaw in remote support software",
+          "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-warns-of-critical-rce-flaw-in-remote-support-software/"
+        },
+        {
+          "id": 6,
+          "title": "Senegal confirms breach of national ID card department",
+          "url": "https://therecord.media/senegal-breach-national-id-agency"
+        },
+        {
+          "id": 7,
+          "title": "Leaked technical documents show China rehearsing cyberattacks",
+          "url": "https://therecord.media/leaked-china-documents-show-testing-cyber-neighbors"
+        },
+        {
+          "id": 9,
+          "title": "Recent SolarWinds Flaws Potentially Exploited as Zero-Days",
+          "url": "https://www.securityweek.com/recent-solarwinds-flaws-potentially-exploited-as-zero-days/"
+        },
+        {
+          "id": 15,
+          "title": "Fallout from latest Ivanti zero-days spreads to nearly 100 victims",
+          "url": "https://cyberscoop.com/ivanti-zero-day-vulnerabilities-netherlands-european-commission-shadowserver/"
+        },
+        {
+          "id": 24,
+          "title": "CISA warns of SmarterMail RCE flaw used in ransomware attacks",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-smartermail-rce-flaw-used-in-ransomware-attacks/"
+        },
+        {
+          "id": 33,
+          "title": "SolarWinds Vulnerability Summary",
+          "url": "https://www.upguard.com/news/solarwinds-vulnerability-summary-2026-02-05"
+        }
       ],
       "key_cves": [
-        "CVE-2025-40551 - Critical SolarWinds vulnerability",
-        "CVE-2025-11953 - React Native Community CLI OS command injection",
-        "CVE-2026-24423 - SmarterTools SmarterMail missing authentication",
-        "CVE-2026-25049 - n8n system command execution flaw",
-        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS"
+        "CVE-2026-21509 - RTF file exploit being used by APT28 for malicious URL extraction attacks",
+        "CVE-2026-24423 - SmarterMail RCE vulnerability with missing authentication actively exploited in ransomware campaigns",
+        "CVE-2025-40551 - SolarWinds zero-day vulnerability with evidence of active exploitation",
+        "CVE-2026-25049 - Critical n8n workflow automation flaw enabling system command execution",
+        "CVE-2026-1207 - Django SQL injection vulnerability in RasterField lookup functionality"
       ],
       "threat_actors": [
-        "Play - Advanced automation attacks including reverse shells and cognitive rootkits",
-        "Conti - Living off AI techniques and backdoor deployment in popular tools",
-        "Akira - Active ransomware operations with new victim TriPartum",
-        "Dragonforce - Ongoing ransomware campaign targeting Esposito Bros. Construction",
-        "TGR-STA-1030 - State-backed APT compromising government and critical infrastructure"
+        "APT28 - Conducting sophisticated campaigns using RTF file exploits and targeting critical infrastructure",
+        "Conti - Continued ransomware operations with focus on enterprise targets and remote management tools",
+        "Hive - Distributing fake software downloads to establish proxy networks on compromised systems"
       ],
-      "trends": "AI-powered vulnerability discovery is accelerating with Claude Opus identifying 500+ high-severity flaws across major libraries. Supply chain attacks are increasingly targeting development environments through compromised packages and development tools.",
+      "trends": "AI-powered attack techniques are rapidly evolving with LLMs being weaponized for both breaking safety controls and accelerating zero-day discovery. State-sponsored actors are increasingly targeting remote management and collaboration tools as primary attack vectors.",
       "recommendations": [
-        "Immediately patch SolarWinds CVE-2025-40551 and SmarterMail vulnerabilities",
-        "Audit and validate all npm and PyPI package dependencies, especially dYdX-related packages",
-        "Implement enhanced monitoring for state-backed APT indicators targeting government entities",
-        "Review and harden NGINX configurations to prevent traffic hijacking",
-        "Deploy additional scrutiny on AI-generated code using AST-based security scanners"
+        "Immediately patch BeyondTrust remote support software and SmarterMail systems or isolate if patching unavailable",
+        "Review and update SolarWinds installations, implementing additional monitoring for suspicious activities",
+        "Implement enhanced email security controls to detect RTF-based attacks from APT28 campaigns",
+        "Deploy AI/ML-based detection systems to identify prompt injection attempts against LLM implementations",
+        "Conduct emergency assessments of Ivanti systems and implement workarounds per CISA guidance"
       ],
-      "detection_opportunities": "Monitor for unusual package installation activities, especially from npm/PyPI repositories, and implement behavioral detection for reverse shell communications. Focus on NGINX configuration changes and anomalous traffic routing patterns that could indicate hijacking attempts.",
+      "detection_opportunities": "Monitor for unusual RTF file processing, unexpected outbound connections from management tools, and anomalous AI model behaviors. Focus detection efforts on remote access tools showing signs of lateral movement or privilege escalation attempts.",
       "period": "monthly",
       "period_days": 30,
-      "generated_at": "2026-02-06T08:52:59.633772",
-      "signal_count": 848,
-      "critical_count": 234,
-      "high_count": 65,
+      "generated_at": "2026-02-09T17:10:48.213113",
+      "signal_count": 970,
+      "critical_count": 260,
+      "high_count": 82,
       "category_breakdown": {
-        "advisory": 42,
-        "news": 342,
-        "research": 192,
-        "apt": 115,
-        "cve": 95,
-        "malware": 62
+        "research": 200,
+        "news": 420,
+        "apt": 128,
+        "cve": 97,
+        "malware": 79,
+        "advisory": 46
+      }
+    }
+  },
+  "industry_focus": {
+    "daily": {
+      "detection_engineering": {
+        "summary": "Critical security research reveals widespread vulnerabilities in MCP (Model Context Protocol) servers with 8,000+ servers scanned, highlighting new attack vectors that detection teams need to monitor. YARA-X 1.13.0 release provides updated detection capabilities, while research on non-AI password guessing techniques reveals evolving credential attack methodologies that require updated detection rules.",
+        "relevant_threats": [
+          "MCP server exploitation and unauthorized access",
+          "Advanced password guessing attacks using targeted wordlists",
+          "Supply chain attacks through private repository scanning vulnerabilities"
+        ],
+        "recommendations": [
+          "Create detection rules for MCP server reconnaissance and exploitation attempts, focusing on unusual connection patterns and authentication failures",
+          "Update credential stuffing and password spray detection rules to identify non-AI wordlist-based attacks with custom dictionaries",
+          "Implement behavioral monitoring for private repository access anomalies and unexpected scanning activities"
+        ],
+        "impact_assessment": "Detection teams need immediate rule updates to identify MCP server attacks and evolving credential-based threats that bypass traditional AI-detection methods. The widespread MCP vulnerabilities create new blind spots requiring enhanced network monitoring and authentication event correlation.",
+        "focus": "detection_engineering",
+        "period": "daily",
+        "generated_at": "2026-02-09T17:09:23.872607",
+        "signal_count": 9
+      },
+      "soc_operations": {
+        "summary": "Today's signals highlight critical concerns around the evolving cybersecurity landscape with potential shifts in penetration testing practices and Ring's 'Search Party' feature raising privacy concerns. SOC teams should focus on monitoring for unusual authentication patterns and privacy-related incidents while staying informed about new threat intelligence integrations.",
+        "relevant_threats": [
+          "Ring Search Party privacy exploitation",
+          "Authentication bypass attempts on platforms implementing new verification",
+          "Conti ransomware group activities"
+        ],
+        "recommendations": [
+          "Prioritize alerts related to Ring device network traffic and unusual location-based queries",
+          "Update playbooks to include new Criminal IP threat intelligence feeds in QRadar workflows",
+          "Monitor for increased social engineering attacks leveraging scam ad techniques on social platforms"
+        ],
+        "impact_assessment": "The potential end of traditional pentesting practices may reduce proactive security testing visibility, requiring SOC teams to enhance monitoring capabilities. New privacy concerns around IoT devices like Ring require updated incident response procedures for privacy breach scenarios.",
+        "focus": "soc_operations",
+        "period": "daily",
+        "generated_at": "2026-02-09T17:09:31.662083",
+        "signal_count": 10
+      },
+      "ransomware": {
+        "summary": "Multiple high-profile ransomware incidents this week demonstrate continued targeting of government and financial services, with notable attacks on Senegal's national ID department and payment processors serving Texas and Florida governments. The Reynolds gang is innovating by bundling BYOVD (Bring Your Own Vulnerable Driver) techniques with ransomware payloads, while intelligence suggests groups may pivot back to encryption-focused attacks as data theft extortion tactics prove less effective.",
+        "relevant_threats": [
+          "Reynolds gang using BYOVD with ransomware payloads",
+          "Government sector targeting (Senegal national ID, US state payment systems)",
+          "SmarterTools exploitation via own product vulnerabilities"
+        ],
+        "recommendations": [
+          "Monitor for BYOVD techniques in ransomware attacks and update driver allowlists accordingly",
+          "Increase monitoring of government and payment processing infrastructure for early ransomware indicators",
+          "Review vendor security practices and patch management for products used in critical infrastructure"
+        ],
+        "impact_assessment": "The shift back to encryption-focused attacks may complicate recovery efforts for victims who have relied on backup strategies alone. Government sector targeting indicates potential for significant operational disruption and national security implications requiring enhanced threat hunting capabilities.",
+        "focus": "ransomware",
+        "period": "daily",
+        "generated_at": "2026-02-09T17:09:44.545981",
+        "signal_count": 21
+      }
+    },
+    "weekly": {
+      "detection_engineering": {
+        "summary": "This week's signals highlight critical vulnerabilities in security infrastructure including Safetica kernel driver exploits and emerging threats like CrashFix Python RAT deployments via ClickFix campaigns. Detection teams should prioritize updating signatures for web shell detection, implementing behavioral monitoring for infostealer campaigns targeting software installers, and leveraging new YARA-X 1.13.0 capabilities for enhanced malware detection.",
+        "relevant_threats": [
+          "CrashFix Python Remote Access Trojan via ClickFix variants",
+          "Safetica kernel driver vulnerability (VU#818729)",
+          "Infostealer campaigns using spoofed software installers"
+        ],
+        "recommendations": [
+          "Update YARA-X to version 1.13.0 and create new detection rules for CrashFix Python RAT behavioral patterns",
+          "Implement enhanced web shell detection signatures using CrowdStrike's Linux sensor methodologies",
+          "Deploy monitoring for software installer abuse and create IOCs for Hive and Play actor campaign artifacts"
+        ],
+        "impact_assessment": "Detection teams face increased workload with multiple critical vulnerabilities requiring immediate signature updates and new behavioral detection rules. The emergence of AI-powered evasion techniques and kernel-level exploits demands enhanced detection capabilities and more sophisticated monitoring of MITRE ATT&CK techniques T1059 (Command and Scripting Interpreter) and T1105 (Ingress Tool Transfer).",
+        "focus": "detection_engineering",
+        "period": "weekly",
+        "generated_at": "2026-02-09T17:10:10.567701",
+        "signal_count": 34
+      },
+      "soc_operations": {
+        "summary": "This week's signals highlight critical threats from AI-generated attacks and advanced malware including Play ransomware with Beacon payloads, alongside significant data exposure incidents from Ring Search Party and Moltbook social network. SOC teams should prioritize detection capabilities for AI-enhanced phishing campaigns and reverse shell techniques while addressing identity verification bypass methods.",
+        "relevant_threats": [
+          "AI-generated phishing campaigns bypassing automated detection",
+          "Play ransomware group deploying Beacon malware and reverse shell techniques",
+          "Social platform data exposure incidents affecting user privacy and corporate accounts"
+        ],
+        "recommendations": [
+          "Update phishing detection playbooks to include manual review processes for AI-generated content that bypasses automation",
+          "Enhance monitoring for Play ransomware indicators and Beacon C2 communications with immediate escalation procedures",
+          "Implement additional monitoring for corporate social media accounts and review data exposure incident response workflows"
+        ],
+        "impact_assessment": "SOC teams face increased manual workload due to AI-generated threats bypassing automated detection systems, requiring enhanced analyst skills and updated playbooks. The emergence of sophisticated malware campaigns and data exposure incidents demands immediate triage priority adjustments and cross-platform monitoring capabilities.",
+        "focus": "soc_operations",
+        "period": "weekly",
+        "generated_at": "2026-02-09T17:10:18.790161",
+        "signal_count": 82
+      },
+      "ransomware": {
+        "summary": "This week showed significant ransomware activity targeting critical infrastructure and government entities, including attacks on Senegal's national ID department and payment processors serving Texas and Florida governments. Notable technical developments include the Reynolds gang bundling BYOVD (Bring Your Own Vulnerable Driver) techniques with ransomware payloads and SmarterTools being compromised through vulnerabilities in their own software products.",
+        "relevant_threats": [
+          "Reynolds gang using BYOVD techniques with ransomware",
+          "Government and critical infrastructure targeting (Senegal ID department, US state payment systems)",
+          "Supply chain attacks via software vendors (SmarterTools breach)",
+          "Potential ransomware group tactical shifts back to encryption methods"
+        ],
+        "recommendations": [
+          "Monitor for BYOVD techniques being incorporated into ransomware deployments and update detection rules accordingly",
+          "Prioritize patch management for government and payment processing systems, especially those handling citizen data",
+          "Implement enhanced monitoring for software vendors and supply chain partners to detect early compromise indicators"
+        ],
+        "impact_assessment": "The targeting of government ID systems and payment processors indicates ransomware groups are successfully penetrating high-value critical infrastructure targets. The integration of BYOVD techniques suggests increased sophistication in bypassing security controls, requiring enhanced detection capabilities.",
+        "focus": "ransomware",
+        "period": "weekly",
+        "generated_at": "2026-02-09T17:10:26.214050",
+        "signal_count": 171
+      }
+    },
+    "monthly": {
+      "detection_engineering": {
+        "summary": "Detection Engineering teams face emerging threats from CrashFix Python RATs and new infostealer campaigns using spoofed installers, while benefiting from enhanced tooling through YARA-X 1.13.0 updates and improved Google Threat Intelligence capabilities. Critical vulnerabilities in Safetica kernel drivers and widespread MCP server exposures require immediate detection rule development.",
+        "relevant_threats": [
+          "CrashFix Python Remote Access Trojan via Clickfix variants",
+          "Infostealer campaigns using spoofed software installers",
+          "Safetica kernel driver vulnerability exploitation"
+        ],
+        "recommendations": [
+          "Develop detection rules for Python-based RAT execution patterns and CrashFix behavioral indicators",
+          "Create signatures for spoofed installer campaigns targeting software download sources",
+          "Update YARA-X rulesets to version 1.13.0 and leverage new Google Threat Intelligence saved search capabilities for IOC hunting"
+        ],
+        "impact_assessment": "These threats require immediate detection rule updates focusing on T1566 (Phishing), T1059.006 (Python execution), and T1068 (Exploitation for Privilege Escalation) techniques. Enhanced tooling capabilities provide improved threat hunting and malware detection opportunities for proactive defense.",
+        "focus": "detection_engineering",
+        "period": "monthly",
+        "generated_at": "2026-02-09T17:10:56.936076",
+        "signal_count": 54
+      },
+      "soc_operations": {
+        "summary": "SOC teams face emerging threats from AI-generated phishing campaigns that bypass traditional automation and sophisticated malware including reverse shells and cognitive rootkits from Play ransomware group. Critical data exposure incidents at social platforms highlight the need for enhanced monitoring of third-party integrations and AI agent security controls.",
+        "relevant_threats": [
+          "AI-generated phishing campaigns evading automated detection",
+          "Play ransomware group deploying Beacon malware with reverse shells",
+          "Data exposure from AI agent platforms affecting user privacy"
+        ],
+        "recommendations": [
+          "Update phishing detection playbooks to include manual review processes for AI-generated content and semantic analysis",
+          "Create high-priority alerts for Play ransomware indicators and implement enhanced monitoring for reverse shell activities",
+          "Establish monitoring protocols for AI agent integrations and third-party platform data exposure incidents"
+        ],
+        "impact_assessment": "These threats require SOC analysts to shift from purely automated detection to hybrid approaches combining AI tools with manual analysis. Teams will need additional training on AI-generated threat identification and updated escalation procedures for sophisticated malware campaigns.",
+        "focus": "soc_operations",
+        "period": "monthly",
+        "generated_at": "2026-02-09T17:11:04.442315",
+        "signal_count": 117
+      },
+      "ransomware": {
+        "summary": "Ransomware groups are targeting critical infrastructure and government entities, with notable attacks on Senegal's national ID department and payment processors serving Texas/Florida governments. The Warlock Gang is leveraging BYOVD (Bring Your Own Vulnerable Driver) techniques with their ransomware payloads, while groups may be pivoting back to encryption-based attacks as data theft tactics lose effectiveness.",
+        "relevant_threats": [
+          "Warlock Gang BYOVD ransomware attacks",
+          "Government infrastructure targeting",
+          "SmarterTools vulnerability exploitation"
+        ],
+        "recommendations": [
+          "Monitor for BYOVD techniques and vulnerable driver abuse in ransomware attacks",
+          "Increase protection posture for government payment systems and critical infrastructure",
+          "Prioritize patching of SmarterMail vulnerabilities used by ransomware groups"
+        ],
+        "impact_assessment": "Government and critical infrastructure attacks indicate escalating threat levels requiring enhanced monitoring capabilities. The shift back to encryption-focused attacks may complicate data recovery efforts and require updated response procedures.",
+        "focus": "ransomware",
+        "period": "monthly",
+        "generated_at": "2026-02-09T17:11:10.359162",
+        "signal_count": 218
       }
     }
   }
