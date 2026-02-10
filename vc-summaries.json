@@ -5,17 +5,6 @@
     "description": "Active signals from VC investors explicitly welcoming cybersecurity and early-stage startup pitches (LinkedIn activity only)",
     "signals": [
       {
-        "investor": "Justin Somaini",
-        "firm": "Independent (ex-YL Ventures)",
-        "profile_url": "https://www.linkedin.com/in/jsomaini/",
-        "signal_date": "2026-02-02",
-        "summary": "Left YL Ventures, now helping founders ideating on what to build. Explicitly offering to be a thought partner for early-stage cyber founders (Seed/A).",
-        "excerpt": "Founders who are ideating on what to build and want a thought partner on where to focus. If that's you, reach out.",
-        "source_type": "linkedin",
-        "relevance": "high",
-        "ktlyst_alignment": "PERFECT - explicitly seeking early-stage cyber founders to advise"
-      },
-      {
         "investor": "Bob Ackerman",
         "firm": "DataTribe",
         "profile_url": "https://www.linkedin.com/in/bob-ackerman/",
@@ -102,53 +91,9 @@
         "source_type": "linkedin",
         "relevance": "medium",
         "ktlyst_alignment": "MEDIUM - national security expertise valuable for government sector positioning"
-      },
-      {
-        "investor": "Barmak Meftah",
-        "firm": "Ballistic Ventures",
-        "profile_url": "https://www.linkedin.com/in/barmakmeftah/recent-activity/all/",
-        "signal_date": "2026-02-02",
-        "summary": "WitnessAI raised $58M strategic round, launching WitnessAI Agentic Security - directly relevant to KTLYST's agentic security positioning",
-        "excerpt": "Incredibly excited to share that WitnessAI has raised a $58M strategic round. At the same time, today the company is launching WitnessAI Agentic Security",
-        "source_type": "linkedin",
-        "relevance": "high",
-        "ktlyst_alignment": "PERFECT - Agentic Security is directly in KTLYST's space"
-      },
-      {
-        "investor": "Ed Sim",
-        "firm": "Boldstart Ventures",
-        "profile_url": "https://www.linkedin.com/in/edsim/recent-activity/all/",
-        "signal_date": "2026-02-01",
-        "summary": "Actively building AI agent tools (OpenClaw, Moltbook, Chewbarka) - demonstrates hands-on engagement with agentic AI technology. Posted 'The dreaming/just build it mindset' showing personal experimentation with AI assistants that do calendar alerts, Twitter monitoring, daily briefings.",
-        "excerpt": "As I've been hacking away at OpenClaw and Moltbook... Chewbarka - I'm your AI assistant living on your server.",
-        "source_type": "linkedin",
-        "relevance": "high",
-        "ktlyst_alignment": ""
-      },
-      {
-        "investor": "Chenxi Wang",
-        "firm": "Rain Capital",
-        "profile_url": "https://www.linkedin.com/in/chenxiwang88/recent-activity/all/",
-        "signal_date": "2026-01-30",
-        "summary": "Actively receiving agentic startup pitches: 'As an investor, I am getting many Agentic startup pitches every day'",
-        "excerpt": "As an investor, I am getting many Agentic startup pitches every day",
-        "source_type": "linkedin",
-        "relevance": "high",
-        "ktlyst_alignment": ""
-      },
-      {
-        "investor": "Chenxi Wang",
-        "firm": "Rain Capital",
-        "profile_url": "https://www.linkedin.com/in/chenxiwang88",
-        "signal_date": "2026-01-30",
-        "summary": "Actively receiving agentic startup pitches including Agentic platforms for Security - RSAC 2025 keynote speaker",
-        "excerpt": "As an investor, I am getting many Agentic startup pitches every day... Agentic platforms for Security, Agentic platforms for IT",
-        "source_type": "linkedin",
-        "relevance": "high",
-        "ktlyst_alignment": ""
       }
     ],
-    "count": 14,
+    "count": 8,
     "last_updated": "2026-02-09"
   },
   "new_funds": {
