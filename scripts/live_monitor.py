@@ -22,6 +22,8 @@ import hashlib
 import re
 import sys
 import argparse
+import urllib.parse
+import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -45,6 +47,10 @@ logger = logging.getLogger(__name__)
 # Lookback window - signals older than this are ignored
 # 30 days to support monthly trend analysis; engagement UI highlights recent signals
 LOOKBACK_DAYS = 30
+ARCTIC_BASE = "https://arctic-shift.photon-reddit.com"
+PULLPUSH_BASE = "https://api.pullpush.io"
+HTTP_TIMEOUT = 20
+USER_AGENT = "vc-signals/1.0 (+https://ktlystlabs.com)"
 
 # Paths - relative to github-pages directory
 SCRIPT_DIR = Path(__file__).parent
@@ -60,6 +66,81 @@ MONITOR_STATE_PATH = DATA_DIR / "monitor_state.json"
 # Outreach tracker - located in output directory (parent of github-pages)
 OUTPUT_DIR = PROJECT_ROOT.parent / "output"
 OUTREACH_TRACKER_PATH = OUTPUT_DIR / "outreach-tracker.json"
+
+
+def reddit_feed_entries(feed_url: str, fetch_json=None, limit: int = 10) -> List[Dict]:
+    """Return feedparser-shaped entries for Reddit feeds via Arctic/PullPush."""
+    subreddit = _reddit_subreddit_from_feed(feed_url)
+    if not subreddit:
+        return []
+    fetch_json = fetch_json or _fetch_json
+    after = (datetime.utcnow() - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
+    raw_posts = _reddit_archive_posts(subreddit, after, limit, fetch_json)
+    entries = []
+    for post in raw_posts[:limit]:
+        title = str(post.get("title") or "").strip()
+        post_id = str(post.get("id") or "").strip()
+        if not title or not post_id:
+            continue
+        permalink = str(post.get("permalink") or "")
+        link = f"https://www.reddit.com{permalink}" if permalink else str(post.get("url") or "")
+        entries.append(
+            {
+                "title": title,
+                "summary": str(post.get("selftext") or ""),
+                "description": str(post.get("selftext") or ""),
+                "link": link,
+                "published": _epoch_to_iso(post.get("created_utc")),
+                "updated": _epoch_to_iso(post.get("created_utc")),
+            }
+        )
+    return entries
+
+
+def _is_reddit_feed(feed_url: str) -> bool:
+    return bool(_reddit_subreddit_from_feed(feed_url))
+
+
+def _reddit_subreddit_from_feed(feed_url: str) -> Optional[str]:
+    match = re.search(r"reddit\.com/r/([^/.]+)", feed_url, re.IGNORECASE)
+    return match.group(1) if match else None
+
+
+def _reddit_archive_posts(subreddit: str, after: str, limit: int, fetch_json) -> List[Dict]:
+    try:
+        return _archive_items(fetch_json(_arctic_posts_url(subreddit, after, limit)))
+    except Exception:
+        return _archive_items(fetch_json(_pullpush_posts_url(subreddit, limit)))
+
+
+def _archive_items(payload) -> List[Dict]:
+    if isinstance(payload, dict):
+        data = payload.get("data", [])
+        return data if isinstance(data, list) else []
+    return payload if isinstance(payload, list) else []
+
+
+def _arctic_posts_url(subreddit: str, after: str, limit: int) -> str:
+    query = urllib.parse.urlencode({"subreddit": subreddit, "after": after, "limit": limit, "sort": "desc"})
+    return f"{ARCTIC_BASE}/api/posts/search?{query}"
+
+
+def _pullpush_posts_url(subreddit: str, limit: int) -> str:
+    query = urllib.parse.urlencode({"subreddit": subreddit, "size": limit, "sort": "desc"})
+    return f"{PULLPUSH_BASE}/reddit/search/submission?{query}"
+
+
+def _fetch_json(url: str):
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(request, timeout=HTTP_TIMEOUT) as response:
+        return json.loads(response.read().decode("utf-8", "replace"))
+
+
+def _epoch_to_iso(value) -> str:
+    try:
+        return datetime.utcfromtimestamp(float(value)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    except (TypeError, ValueError, OSError):
+        return ""
 
 
 @dataclass
@@ -441,6 +522,8 @@ class FeedMonitor:
             return "linkedin"
         elif "twitter.com" in url_lower or "x.com" in url_lower or "nitter" in url_lower or "rsshub.app/twitter" in url_lower:
             return "x"
+        elif "reddit.com" in url_lower:
+            return "reddit"
         elif "youtube.com" in url_lower:
             return "youtube"
         elif "crunchbase.com" in url_lower:
@@ -521,7 +604,7 @@ class FeedMonitor:
             person = person_hint
             firm = firm_hint or ""
             # For industry sources, use the configured source_type instead of URL detection
-            if firm_hint and firm_hint in ['crunchbase', 'conference', 'hackernews', 'substack', 'producthunt', 'podcast', 'press', 'news']:
+            if firm_hint and firm_hint in ['crunchbase', 'conference', 'hackernews', 'substack', 'producthunt', 'podcast', 'press', 'news', 'reddit']:
                 source_type = firm_hint
 
         if not person:
@@ -606,8 +689,13 @@ class FeedMonitor:
             if self.verbose:
                 logger.info(f"Fetching: {feed_url}")
 
-            feed = await self._fetch_feed(session, feed_url)
-            if not feed or not feed.get("entries"):
+            if _is_reddit_feed(feed_url):
+                entries = reddit_feed_entries(feed_url, limit=10)
+            else:
+                feed = await self._fetch_feed(session, feed_url)
+                entries = feed.get("entries") if feed else None
+
+            if not entries:
                 continue
 
             feeds_fetched += 1
@@ -616,7 +704,7 @@ class FeedMonitor:
             self.monitor_state["feeds_checked"][feed_url] = datetime.utcnow().isoformat()
 
             # Process entries (last 10)
-            for entry in feed.entries[:10]:
+            for entry in entries[:10]:
                 signal = self._process_feed_entry(entry, feed_url, person, firm)
                 if signal:
                     signals.append(signal)
