@@ -1,9 +1,7 @@
 name: Signal Monitor
 
 on:
-  schedule:
-    # Run every hour
-    - cron: '0 * * * *'
+  # Schedule paused. Run manually from the Actions tab when needed.
   workflow_dispatch:
     # Allow manual trigger
 
