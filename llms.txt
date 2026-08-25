@@ -1,0 +1,5 @@
+# vc-signals
+
+> Data comes from an hourly RSS monitor (see the helios project). Static HTML, deployable to GitHub Pages.
+
+
